@@ -169,6 +169,7 @@ try{
       for(const route of ['', 'timeline/','people/dirk-willems/','stories/mm-dirk-willems-a-d-1569/']){
         await page.goto(url(route));
         assert.equal(await page.locator('.archive-name').count(),0);
+        if(route===''||route==='timeline/')assert.equal(await page.locator('.atlas-intro > .eyebrow').textContent(),'A True Christian Church · history');
         assert.equal(await page.locator('.utility-bar').getByRole('link',{name:'Anabaptist Church History',exact:true}).count(),0);
         assert.ok(await page.locator('[data-tcc-global-header] a').first().isVisible());
         assert.ok(await page.getByRole('combobox',{name:'Appearance',exact:true}).isVisible());
