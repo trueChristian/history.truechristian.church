@@ -46,3 +46,11 @@ Contribution links encode the title, canonical page URL, record slug, current da
 ## Validation
 
 `npm run check` runs behavioural tests, builds the site, and validates every generated page’s internal links, required page chrome, Markdown equivalent, source-image credits, and protected theme assets. The same checks run against the repository project path in CI. The Pages publication build uses the actual configured base path and origin.
+
+## Astro and the vertical timeline
+
+`scripts/prepare.mjs` prepares source fragments, Markdown equivalents, the catalogue, and search data in ignored build directories. Astro generates the routes with `SiteLayout.astro` and renders the central timeline through `Timeline.astro`. `src/lib/model.ts` defines the shared types; `src/lib/timeline.ts` supplies selection and internal card navigation; `src/timeline.ts` draws and highlights the SVG connections.
+
+`content/branches.json` contains the named families, dated nodes, and connections. Each connection has a type, explanation, and reference. `place` records generate `/places/` pages; their dates identify events or activity, not the founding date of a city.
+
+The preparation step copies only Martyrs’ Mirror source assets into publication. Exhibit photographs and Behalt media remain research records in the repository. External links in historical overviews are presented in numbered references.

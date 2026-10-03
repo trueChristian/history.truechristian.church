@@ -1,89 +1,59 @@
 # Anabaptist Church History
 
-A static, source-linked history explorer for GitHub Pages, using the shared [True Christian Church theme](https://github.com/trueChristian/theme).
+An Astro 7 and TypeScript archive for A True Christian Church, using the shared [True Christian Church theme](https://github.com/trueChristian/theme). The vertical timeline is the main navigation: people, places, events, streams, and Martyrs’ Mirror accounts connect through internal detail pages.
 
-## Run locally
+## Run
 
-Node.js 22 or later is the only runtime dependency. No npm packages or external services are required.
+Use Node.js 24 and the pinned dependencies:
 
 ```bash
+npm ci
 npm run check
 npm run serve
 ```
 
-Open http://127.0.0.1:8080. `npm run build` creates the publishable site in `_site/`.
+Open http://127.0.0.1:8080. `npm run build` prepares the source data and generates `_site/` through Astro. `npm run dev` starts Astro’s development server. `npm run typecheck` validates the Astro components and TypeScript navigation.
 
 ## Included
 
-- A horizontal era navigator from the present back to Acts, with selectable era views and event milestones.
-- Six daily stories, selected consistently by UTC date and updated in the browser without a server or daily rebuild.
-- All 1,272 sections of the supplied Martyrs’ Mirror, with all 45 original images and the intact edition.
-- Full-text search in a browser worker, with alternate names, record type, era, and overlapping date-range filters.
-- People profiles linked to source accounts mentioning their names, event overviews, and tradition pages.
-- Forty supplied Church History photographs, including timeline overviews and close-ups.
-- System-linked light/dark appearance with a saved manual override.
-- A Markdown equivalent for every generated page, including every source account.
-- Prefilled GitHub contribution links carrying the page title, URL, record, and current date label into an issue draft.
-- The shared logo, responsive accessible menu, scroll-direction header, complete link directory, and copyright footer.
+- A vertical timeline with SVG branch connections, era/stream/type filters, chronology controls, title/name search, and source-account pagination.
+- Original historical overviews for 42 traditions and shared institutions, 30 events, 14 people, and 10 places.
+- All 1,272 supplied Martyrs’ Mirror sections and 45 book illustrations, the intact edition, source anchors, and readable Markdown equivalents.
+- Century guides integrated into the timeline, with direct links to the corresponding accounts.
+- Six daily source accounts and full-text search with aliases, types, eras, and date ranges.
+- Internal links connecting people, places, events, branch histories, and source accounts.
+- Numbered references; the historical explanation is written and presented on this site.
+- Contextual GitHub issue drafts for corrections and additions.
+- System-linked appearance with a saved override, accessible mobile menus, and unchanged shared-theme assets.
 
-## Publish on GitHub Pages
+The supplied exhibit photographs and IMG_9359 recording are research inputs. They are excluded from the published assets and never embedded in the site. The repository preserves the source photographs and the existing research still. Their information is recreated in the timeline and articles. Martyrs’ Mirror’s original book illustrations remain part of the source collection.
 
-1. In **Settings → Pages**, set **Build and deployment → Source** to **GitHub Actions**.
-2. Merge the reviewed implementation to `main`.
-3. The workflow tests and builds the site, reads the configured Pages URL, and publishes it.
+## Verification and publication
 
-Pull requests run validation and produce a downloadable `history-site-preview` artifact. Publishing happens only from `main`. The build supports both the repository’s project URL and a configured custom domain; it obtains the base path from `actions/configure-pages`.
-
-The browser job checks nine scenarios in Chromium, including daily refresh,
-appearance persistence, the real search worker, filters, source pages,
-contribution links, mobile menus, and overflow at five viewport widths. It saves
-desktop and mobile screenshots as the `history-browser-review` artifact.
-Publishing depends on both validation jobs passing.
-
-To run those browser checks locally after building:
+`npm run check` runs the behavioural tests, builds all pages, checks the TypeScript/Astro components, and validates internal links, Markdown equivalents, theme assets, and exclusion of exhibit media. CI adds Chromium checks for the actual timeline, filters, linked histories, source accounts, search worker, daily selection, mobile menus, appearance, and 404 behavior.
 
 ```bash
-npm install --no-save --package-lock=false playwright@1.62.1
 npx playwright install chromium
 npm run test:browser
 ```
 
-The browser tooling is used only for verification; the published site has no npm
-runtime dependencies. See [docs/handover.md](docs/handover.md) for review status
-and the outstanding historical research and publishing steps.
+Pull requests create `history-site-preview` and `history-browser-review` artifacts. Merged changes on `main` publish through GitHub Pages after both validation jobs pass. The workflow reads the configured Pages origin and base path.
 
-To check a project-path deployment locally:
+To validate the repository project path locally:
 
 ```bash
 SITE_BASE_PATH=/history.truechristian.church npm run check
 SITE_BASE_PATH=/history.truechristian.church npm run serve
 ```
 
-Open http://127.0.0.1:8080/history.truechristian.church/.
+## Edit the history
 
-## Add or correct history
+Edit `content/curated.json` for dated people, events, traditions, places, summaries, full paragraphs, relationships, and references. Edit `content/branches.json` for the branch families and documented connections. Every page’s contribution link opens an issue draft carrying its title, canonical URL, record, and current date label.
 
-Readers use **Contribute** or a page’s correction link. This opens an issue draft; the reader adds evidence and submits it through GitHub. Nothing is published automatically.
-
-Maintainers edit `content/curated.json` for people, events, and traditions. Each record includes a stable slug, title, kind, summary, paragraphs, source references, and optional dated activity and relationships. Existing records show complete examples.
-
-Use `content/overrides.json`, keyed by the imported record’s slug, for reviewed metadata corrections or added relationships. The original imported heading and text remain available alongside editorial metadata. Changes to the source import are made through `scripts/import_martyrs_mirror.py`.
-
-## Reproduce the book import
-
-Python 3 is needed only when reimporting the supplied book. The importer uses the standard library.
+Use `content/overrides.json` for reviewed metadata changes to imported accounts. The book’s wording and original heading remain preserved. Reimport with:
 
 ```bash
 python3 scripts/import_martyrs_mirror.py '/path/to/Martyrs Mirror.zip'
-npm run check
 ```
 
-The compressed normalized source is stored reproducibly in `content/martyrs-mirror.json.gz`. The importer preserves original source wording, source anchors, page markers, and illustrations. It derives dates only from explicit heading dates or a containing source century. It does not treat those dates as independently verified facts.
-
-## Sources and attribution
-
-See [docs/sources.md](docs/sources.md) for import details and attribution, [docs/content-model.md](docs/content-model.md) for editing, and [docs/theme-integration.md](docs/theme-integration.md) for the shared-theme contract.
-
-Book text and illustrations are distinct from Behalt imagery. **Behalt** is credited to **Heinz Gaugel** and the [Amish & Mennonite Heritage Center](https://behalt.com/), with credits on every page displaying the mural or its exhibit-panel reproductions. The supplied timeline material is described as public domain by the contributor; this does not classify the Behalt painting as public domain.
-
-The repository’s GPL license remains in `LICENSE`. Source notices and artwork credits are preserved separately.
+See [docs/content-model.md](docs/content-model.md), [docs/sources.md](docs/sources.md), and [docs/verification.md](docs/verification.md). The unchanged theme snapshot and its contract are described in [docs/theme-integration.md](docs/theme-integration.md).
