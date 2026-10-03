@@ -1,0 +1,102 @@
+name: Build and deploy church history
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: history-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate history site
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test and build the GitHub Pages project URL
+        run: npm run check
+        env:
+          SITE_BASE_PATH: /history.truechristian.church
+          SITE_ORIGIN: https://truechristian.github.io
+      - name: Upload the reviewable site
+        uses: actions/upload-artifact@v4
+        with:
+          name: history-site-preview
+          path: _site/
+          include-hidden-files: true
+          retention-days: 7
+
+  browser:
+    name: Check desktop and mobile navigation
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Download the validated site
+        uses: actions/download-artifact@v4
+        with:
+          name: history-site-preview
+          path: _site/
+      - name: Install browser test tooling
+        run: |
+          npm install --no-save --package-lock=false playwright@1.62.1
+          npx playwright install --with-deps chromium
+      - name: Exercise the browser runtime
+        run: npm run test:browser
+      - name: Upload browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: history-browser-review
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 7
+
+  publish:
+    name: Publish to GitHub Pages
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: [validate, browser]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Read Pages settings
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build for the configured Pages URL or custom domain
+        run: npm run build
+        env:
+          SITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          SITE_ORIGIN: ${{ steps.pages.outputs.origin }}
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

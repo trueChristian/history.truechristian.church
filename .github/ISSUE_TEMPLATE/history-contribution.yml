@@ -1,0 +1,30 @@
+name: Contribute church history
+description: Add a documented account, person, event, or tradition.
+title: 'History contribution: '
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page or topic
+      description: Include the page URL, if one exists.
+    validations:
+      required: true
+  - type: textarea
+    id: history
+    attributes:
+      label: History you can add
+      description: Include people, dates, places, and the event or relationship.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources and evidence
+      description: Book and page references, archive records, links, or clearly identified first-hand accounts.
+    validations:
+      required: true
+  - type: textarea
+    id: image_credit
+    attributes:
+      label: Image credit and rights
+      description: If contributing an image, identify the creator, source, and permission or public-domain basis.
