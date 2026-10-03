@@ -5,7 +5,7 @@ import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../_site');
 const port=Number(process.env.PORT||8080);
 const mime={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.jpg':'image/jpeg','.png':'image/png','.ico':'image/x-icon','.md':'text/plain; charset=utf-8','.xml':'application/xml; charset=utf-8'};
-http.createServer(async(req,res)=>{
+const server=http.createServer(async(req,res)=>{
   try{
     let pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
     const base=(process.env.SITE_BASE_PATH||'').replace(/\/$/,'');
@@ -21,4 +21,5 @@ http.createServer(async(req,res)=>{
     res.writeHead(404,{'Content-Type':'text/html; charset=utf-8'});
     res.end(await fs.readFile(path.join(root,'404.html')).catch(()=>Buffer.from('Run npm run build first.')));
   }
-}).listen(port,'127.0.0.1',()=>console.log(`History preview: http://127.0.0.1:${port}`));
+});
+server.listen(port,'127.0.0.1',()=>console.log(`History preview: http://127.0.0.1:${server.address().port}`));

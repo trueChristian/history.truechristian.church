@@ -124,8 +124,9 @@ def extract_date(title: str, century: int | None):
         if 1 <= year <= 1700 and year <= end <= 1700:
             return {"start": year, "end": end, "label": ("c. " if re.search(r"ABOUT|TOWARDS|CIRCA", title, re.I) else "") + str(year) + (f"–{end}" if end != year else ""), "basis": "Source heading; not independently verified"}
     if century:
+        suffix = "th" if 11 <= century % 100 <= 13 else {1: "st", 2: "nd", 3: "rd"}.get(century % 10, "th")
         return {"start": (century - 1) * 100 + 1, "end": century * 100,
-                "label": f"{century}th century (source section)", "basis": "Century of containing source section; exact event date not assigned"}
+                "label": f"{century}{suffix} century (source section)", "basis": "Century of containing source section; exact event date not assigned"}
     return None
 
 
@@ -161,7 +162,8 @@ def import_archive(path: Path) -> dict:
         paragraphs = [compact(n.text()) for n in blocks if isinstance(n, Element) and n.tag == "p" and compact(n.text())]
         text = compact(" ".join(n.text(True) if isinstance(n, Element) else n for n in blocks))
         current["text"] = text
-        current["summary"] = (paragraphs[0] if paragraphs else text)[:280].rsplit(" ", 1)[0] + ("…" if len((paragraphs[0] if paragraphs else text)) > 280 else "")
+        first = paragraphs[0] if paragraphs else text
+        current["summary"] = first[:280].rsplit(" ", 1)[0] + "…" if len(first) > 280 else first
         images = [n for b in blocks if isinstance(b, Element) for n in b.walk() if n.tag == "img"]
         current["images"] = ["sources/martyrs-mirror/images/" + Path(n.attrs.get("src", "")).name for n in images]
         pages = [n.attrs["id"].replace("Page_", "") for b in blocks if isinstance(b, Element) for n in b.walk() if n.attrs.get("id", "").startswith("Page_")]
@@ -193,7 +195,7 @@ def import_archive(path: Path) -> dict:
             if node.tag in {"h2", "h3"}:
                 chapter = title
                 chapter_id = node.attrs.get("id", "")
-                m = re.search(r"_(\d{1,2})C?$", chapter_id)
+                m = re.search(r"(\d{1,2})C?$", chapter_id)
                 if m and 1 <= int(m[1]) <= 17:
                     century = int(m[1])
                 elif node.tag == "h2":

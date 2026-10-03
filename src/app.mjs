@@ -35,7 +35,7 @@ function loadCatalog(){
   return catalogPromise||=fetch(new URL('./catalog.json',import.meta.url)).then(response=>{
     if(!response.ok)throw new Error('Could not load the archive. Please refresh and try again.');
     return response.json();
-  });
+  }).catch(error=>{catalogPromise=undefined;throw error;});
 }
 function card(record){
   return `<article class="story-card"><div class="card-meta"><span>${esc(record.date?.label||'Date to document')}</span><span>${esc(record.kind==='story'?record.category:record.kind)}</span></div><h3><a href="${route(record.route)}">${esc(record.title)}</a></h3><p>${esc(record.summary||'Read this section in the source collection.')}</p><span class="card-action">${record.status==='Research needed'?'Help document this history':'Read the story'} <span aria-hidden="true">→</span></span></article>`;
@@ -92,9 +92,10 @@ if(searchForm){
   const initial=new URLSearchParams(location.search);
   for(const control of searchForm.elements)if(control.name && initial.has(control.name))control.value=initial.get(control.name);
   function submit(updateURL=true){
+    const id=++requestId;
     const values=Object.fromEntries(new FormData(searchForm));
-    if(values.from && values.to && Number(values.from)>Number(values.to)){status.textContent='The start year must be before the end year.';return;}
-    if(!values.q.trim() && !values.kind && !values.era && !values.from && !values.to){status.textContent='Enter a word, phrase, or name to begin.';output.innerHTML='';more.hidden=true;++requestId;return;}
+    if(values.from && values.to && Number(values.from)>Number(values.to)){status.textContent='The start year must be before the end year.';results=[];output.innerHTML='';more.hidden=true;return;}
+    if(!values.q.trim() && !values.kind && !values.era && !values.from && !values.to){status.textContent='Enter a word, phrase, or name to begin.';results=[];output.innerHTML='';more.hidden=true;if(updateURL)history.replaceState(null,'',location.pathname);return;}
     status.textContent='Searching the complete archive…';more.hidden=true;
     if(updateURL){const params=new URLSearchParams(Object.entries(values).filter(([,v])=>v));history.replaceState(null,'',location.pathname+'?'+params);}
     if(!worker){
@@ -108,7 +109,7 @@ if(searchForm){
         worker.onerror=()=>{status.textContent='Search could not start. Refresh the page, or use the story collection and timeline.';worker?.terminate();worker=null;};
       }catch{status.textContent='Search could not start in this browser. Use the story collection and timeline.';return;}
     }
-    worker.postMessage({id:++requestId,query:values.q,filters:{kind:values.kind,era:values.era,from:values.from,to:values.to}});
+    worker.postMessage({id,query:values.q,filters:{kind:values.kind,era:values.era,from:values.from,to:values.to}});
   }
   searchForm.addEventListener('submit',event=>{event.preventDefault();clearTimeout(timer);submit();});
   searchForm.querySelectorAll('select').forEach(el=>el.addEventListener('change',()=>submit()));
