@@ -1,4 +1,4 @@
-import {selectTimeline,timelineMarkup} from './lib/timeline';
+import {selectTimeline,timelineMarkup,timelineEras,timelineDirection,readTimelineDirection,saveTimelineDirection} from './lib/timeline';
 import type {TimelineFilters} from './lib/timeline';
 import type {HistoryRecord,BranchData} from './lib/model';
 import {t,messages,contentBase,catalogURL,branchesURL} from './ui.mjs';
@@ -16,7 +16,7 @@ if(form){
   function restoreURL(){
     const params=new URLSearchParams(location.search);
     for(const name of ['q','era','family','kind','direction']){
-      const el=control(name),fallback=name==='direction'?'newest':name==='kind'?initialKind:'';
+      const el=control(name),fallback=name==='direction'?(timelineDirection(history.state?.timelineDirection)||readTimelineDirection()):name==='kind'?initialKind:'';
       const value=params.get(name)||fallback;
       if(el instanceof HTMLInputElement||[...el.options].some(o=>o.value===value))el.value=value;
       else el.value=fallback;
@@ -56,11 +56,18 @@ if(form){
     entries.innerHTML=visible.length?timelineMarkup(visible,records,branches,contentBase,messages):`<div class="atlas-empty"><h2>${t('No histories match this view')}</h2><p>${t('Choose a wider era, another stream, or reset the filters.')}</p></div>`;
     status.textContent=t('{count} histories · showing {shown} · {direction}',{count:matches.length.toLocaleString(),shown:visible.length,direction:t(filters.direction==='oldest'?'beginnings to present':'present to beginnings')});
     more.hidden=limit>=matches.length;
-    if(updateURL){
-      const p=new URLSearchParams();for(const [key,value]of Object.entries(filters))if(value&&!(key==='direction'&&value==='newest'))p.set(key,value===true?'1':String(value));
-      const next=location.pathname+(p.size?'?'+p:'');
-      if(next!==location.pathname+location.search+location.hash)history.pushState(null,'',next);
+    for(const era of timelineEras(filters.direction)){
+      const link=document.querySelector<HTMLAnchorElement>(`[data-atlas-era="${era.id}"]`);
+      if(link)link.parentElement!.append(link);
+      const option=control('era').querySelector<HTMLOptionElement>(`option[value="${era.id}"]`);
+      if(option)control('era').append(option);
     }
+    if(updateURL){
+      const p=new URLSearchParams();for(const [key,value]of Object.entries(filters))if(value)p.set(key,value===true?'1':String(value));
+      const next=location.pathname+(p.size?'?'+p:'');
+      if(next!==location.pathname+location.search+location.hash)history.pushState({...history.state,timelineDirection:filters.direction},'',next);
+    }
+    history.replaceState({...history.state,timelineDirection:filters.direction},'',location.href);
     document.querySelectorAll<HTMLAnchorElement>('[data-atlas-era]').forEach(link=>{
       if(link.dataset.atlasEra===filters.era)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');
     });
@@ -68,10 +75,13 @@ if(form){
   }
   function filter(){limit=200;render();}
   form.addEventListener('submit',e=>{e.preventDefault();filter();});
-  form.addEventListener('change',filter);
+  form.addEventListener('change',event=>{
+    if(event.target===control('direction'))saveTimelineDirection(timelineDirection(control('direction').value)||'oldest');
+    filter();
+  });
   let timer:ReturnType<typeof setTimeout>;
   control('q').addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(filter,180);});
-  form.addEventListener('reset',()=>{clearTimeout(timer);setTimeout(()=>{control('kind').value=initialKind;limit=200;render();},0);});
+  form.addEventListener('reset',()=>{const direction=control('direction').value;clearTimeout(timer);setTimeout(()=>{control('direction').value=direction;control('kind').value=initialKind;limit=200;render();},0);});
   more.addEventListener('click',()=>{limit+=100;render(false);});
   document.querySelectorAll<HTMLAnchorElement>('[data-atlas-era]').forEach(link=>link.addEventListener('click',event=>{
     if(!branches||initialKind)return;event.preventDefault();control('era').value=link.dataset.atlasEra!;filter();
@@ -88,5 +98,5 @@ if(form){
   addEventListener('hashchange',()=>{restoreURL();limit=200;render(false);});
   new ResizeObserver(drawConnections).observe(entries);
   document.fonts.ready.then(drawConnections);
-  Promise.all([fetch(catalogURL!).then(r=>{if(!r.ok)throw Error('Timeline catalogue unavailable');return r.json();}),fetch(branchesURL!).then(r=>{if(!r.ok)throw Error('Branch catalogue unavailable');return r.json();})]).then(([r,b]:[HistoryRecord[],BranchData])=>{records=r;branches=b;render(false);document.querySelector<HTMLElement>('.history-atlas')!.dataset.ready='true';}).catch(()=>{status.textContent=t('The timeline is readable below. Reload to use the filters.');});
+  Promise.all([fetch(catalogURL!).then(r=>{if(!r.ok)throw Error('Timeline catalogue unavailable');return r.json();}),fetch(branchesURL!).then(r=>{if(!r.ok)throw Error('Branch catalogue unavailable');return r.json();})]).then(([r,b]:[HistoryRecord[],BranchData])=>{records=r;branches=b;render(false);control('direction').disabled=false;document.querySelector<HTMLElement>('.history-atlas')!.dataset.ready='true';}).catch(()=>{status.textContent=t('The timeline is readable below. Reload to use the filters.');});
 }
