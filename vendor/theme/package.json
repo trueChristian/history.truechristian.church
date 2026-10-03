@@ -1,0 +1,14 @@
+{
+  "name": "@truechristian/theme",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Unified theme and mandatory site chrome for True Christian Church websites",
+  "repository": "https://github.com/trueChristian/theme",
+  "style": "dist/truechristian-theme.css",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-css.mjs",
+    "validate": "node --check src/js/site-header.js && node --check dist/truechristian-theme.js && node scripts/validate.mjs",
+    "check": "npm run build && npm run validate"
+  }
+}
