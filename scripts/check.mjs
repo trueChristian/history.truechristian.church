@@ -63,6 +63,7 @@ assert.equal(info.publishedExhibitMedia,0);
 assert.ok(!files.some(f=>/\/sources\/(church-history|behalt)\/.*\.(?:jpe?g|png|webp|gif|mp4|mov|heic)$/i.test(f)),'Exhibit research media must not be published');
 for(const filename of htmlFiles){
   const html=await fs.readFile(filename,'utf8');
+  assert.ok(!html.includes('class="archive-name"'),`Repeated archive title in ${filename}`);
   assert.ok(!/<(?:img|video|source)\b[^>]*(?:church-history|behalt)/i.test(html),`Exhibit media embedded in ${filename}`);
 }
 const timeline=await fs.readFile(path.join(OUT,info.defaultLocale,'timeline/index.html'),'utf8');
