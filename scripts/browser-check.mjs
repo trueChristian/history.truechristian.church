@@ -163,6 +163,25 @@ try{
     }
   });
 
+  await check('Shared pages omit the repeated archive title and keep compact accessible settings',async()=>{
+    for(const width of [390,1440]){
+      await page.setViewportSize({width,height:900});
+      for(const route of ['', 'timeline/','people/dirk-willems/','stories/mm-dirk-willems-a-d-1569/']){
+        await page.goto(url(route));
+        assert.equal(await page.locator('.archive-name').count(),0);
+        assert.equal(await page.locator('.utility-bar').getByRole('link',{name:'Anabaptist Church History',exact:true}).count(),0);
+        assert.ok(await page.locator('[data-tcc-global-header] a').first().isVisible());
+        assert.ok(await page.getByRole('combobox',{name:'Appearance',exact:true}).isVisible());
+        assert.ok(await page.locator('.language-control summary').isVisible());
+        const dimensions=await page.locator('.utility-bar').evaluate(element=>({height:element.getBoundingClientRect().height,padding:getComputedStyle(element).paddingBlockStart}));
+        assert.equal(dimensions.padding,'0px');assert.ok(dimensions.height<=40,`Settings should occupy only their compact controls: ${dimensions.height}px`);
+      }
+      await page.goto(url(''));
+      await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
+      await page.screenshot({path:path.join(screenshots,`compact-header-${width<500?'mobile':'desktop'}.png`)});
+    }
+  });
+
   await check('Vertical timeline filters eras and opens an internal milestone',async()=>{
     await page.goto(url('timeline/'));
     await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');

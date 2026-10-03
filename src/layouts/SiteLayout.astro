@@ -35,7 +35,6 @@ const contentBase=`${base}/${page.locale}`;
     <a class="skip-link" href="#main">{t("Skip to content")}</a>
     <Fragment set:html={page.header} />
     <div class="utility-bar tcc-container">
-      <a class="archive-name" href={`${contentBase}/`}>{t('Anabaptist Church History')}</a>
       <div class="utility-controls"><details class="language-control"><summary>{t("Language")}: {page.locales.find(l=>l.id===page.locale)?.nativeName}</summary><nav aria-label={t("Available languages")}>{page.availableLocales.map(locale=><a href={asset(`${locale.id}/${page.logicalRoute}`)} lang={locale.id} hreflang={locale.id} aria-current={locale.id===page.locale?"page":undefined}>{locale.nativeName}</a>)}{page.availableLocales.length===1&&<p>{t("This page is currently available in English.")}</p>}</nav></details><label class="theme-control">{t("Appearance")} <select id="theme-mode" aria-label={t("Appearance")}><option value="system">{t("System")}</option><option value="light">{t("Light")}</option><option value="dark">{t("Dark")}</option></select></label></div>
     </div>
     <main id="main" class="tcc-container" tabindex="-1">
