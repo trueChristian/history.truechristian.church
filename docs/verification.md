@@ -30,3 +30,13 @@ Pull request checks produce a static preview artifact and a screenshot artifact.
 - Browser review includes legacy era deep links, Back/Forward/reset/repeated filtering, same-record language availability, direct source-account links and visible timeline/detail screenshots in desktop, mobile, light and dark views.
 
 The local Chromium executable cannot start in this cloud container because its socket syscall is unavailable. Browser execution is therefore verified on the GitHub Actions runner; test code and screenshots accompany the exact tested commit. A successful earlier checkpoint is not represented as final-head verification.
+
+## Final review scope (3 October 2026)
+
+The authored collection contains 224 histories: 74 people, 83 events, 47 traditions and shared institutions, and 20 places. All 1,272 book sections and 45 physical image files remain intact. Every in-scope overview-panel subject and every prominent branch/leader label is mapped to a sourced internal history or its documented context. The seven smaller named chart figures and distinct Old Order/Swiss regional histories also have researched accounts.
+
+This does not claim an exhaustive independent article for each of the 201 small chart annotations: the inventory explicitly distinguishes 64 mapped narratives, 84 related overviews, 50 detailed history invitations, and three context/credit entries. Seven source regions need clearer evidence; the panels leave some local mission participants unnamed. These boundaries are visible in the public coverage guide with contextual issue drafts.
+
+Final visual checks must include the page-body dark-heading contrast regression (4.5:1 minimum), connection-line contrast (3:1 minimum), six visible daily title links near the top, expanded detail views, mobile layout, and no-JavaScript visibility. Header/footer brand assets remain unchanged.
+
+The approved shared-theme font stylesheet loads Montserrat 400/500 and Raleway 400 with `display=swap`. Browser behavioral tests deliberately stub that external stylesheet, so their artifacts use documented fallback fonts; the production head retains the real font request. The build validator checks that the font loading contract remains present.

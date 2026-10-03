@@ -110,3 +110,50 @@ test('adjacent chart movements have contextual histories with primary-account li
   assert.equal(coverage.branchLabels.find(row => row.label === 'Batenburgers').coverage, 'source-linked-narrative');
   assert.equal(coverage.branchLabels.find(row => row.label === 'St. Gallen').coverage, 'source-linked-narrative');
 });
+
+test('the final named branch gaps have distinct substantive regional histories', () => {
+  const expected = {
+    Wisler: ['wisler-mennonite-beginnings'],
+    Martinites: ['woolwich-old-order-beginnings', 'weaverland-groffdale-division'],
+    'Wenger Mennonites': ['weaverland-groffdale-division'],
+    Woolwichers: ['woolwich-old-order-beginnings'],
+    'Horning Church': ['weaverland-groffdale-division'],
+    'Swiss Mennonites': ['swiss-mennonite-congregational-life']
+  };
+  for (const [label, slugs] of Object.entries(expected)) {
+    const row = coverage.branchLabels.find(item => item.label === label);
+    assert.equal(row.coverage, 'source-linked-narrative', label);
+    for (const slug of slugs) {
+      assert.ok(row.recordSlugs.includes(slug), `${label}: ${slug}`);
+      assert.equal(all.get(slug).kind, 'event');
+      assert.ok(all.get(slug).paragraphs.length >= 2, slug);
+      assert.ok(words(all.get(slug)) >= 80, slug);
+    }
+  }
+  assert.ok(coverage.remainingNamedGaps.every(row => row.name === 'Indigenous and local church participants in mission histories'));
+  assert.match(all.get('woolwich-old-order-beginnings').paragraphs.join(' '), /Abraham Martin/u);
+  assert.match(all.get('weaverland-groffdale-division').paragraphs.join(' '), /Jonas H\. Martin/u);
+});
+
+test('all seven chart figures are mapped while original photo uncertainty is retained', () => {
+  const expected = {
+    'chart-9376-025': 'hans-de-ries',
+    'chart-9377-039': 'cornelis-ris',
+    'chart-9377-058': 'christopher-dock',
+    'chart-9378-071': 'johann-cornies',
+    'chart-9378-079': 'claas-epp-jr',
+    'chart-9379-101': 'daniel-hege',
+    'chart-9379-137': 'john-fretz-funk'
+  };
+  assert.deepEqual(coverage.remainingChartNamedFigures, []);
+  for (const [id, slug] of Object.entries(expected)) {
+    const row = coverage.chartMicroannotations.find(item => item.id === id);
+    assert.equal(row.coverage, 'mapped-narrative', id);
+    assert.ok(row.recordSlugs.includes(slug), id);
+    assert.equal(row.independentVerification.recordSlug, slug);
+    assert.ok(row.independentVerification.finding && row.independentVerification.references.length >= 2, id);
+  }
+  const ris = coverage.chartMicroannotations.find(row => row.id === 'chart-9377-039');
+  assert.ok(ris.uncertainty_flags.length, 'External verification must not erase photo legibility uncertainty');
+  assert.equal(coverage.counts.panelHistoryRecords, panels.length);
+});

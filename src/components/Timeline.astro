@@ -18,6 +18,7 @@ const initial=selectTimeline(records,branches,{q:'',era:'',kind:initialKind,fami
   <p class="lead">{t('A connected history of faith, discipleship, and community. Follow the Radical Reformation and its branches, and read the witnesses preserved in Martyrs’ Mirror.')}</p>
   <div class="atlas-statistics"><span><strong>{records.filter(r=>r.kind==='story').length.toLocaleString(locale)}</strong>{t('source accounts & sections')}</span><span><strong>{records.filter(r=>r.kind==='tradition').length}</strong>{t('traditions & shared histories')}</span><span><strong>{branches.edges.length}</strong>{t('branch connections')}</span></div>
 </section>
+<slot name="discovery" />
 <section class="history-atlas" data-initial-kind={initialKind} aria-label={t("Interactive Anabaptist history timeline")}>
   <aside class="atlas-navigation">
     <p class="eyebrow">{t('Navigate the history')}</p>

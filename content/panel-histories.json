@@ -2611,7 +2611,7 @@
     "summary": "Old Order Mennonite fellowships developed through several regional divisions beginning in the later nineteenth century.",
     "paragraphs": [
       "In 1872 Jacob Wisler and supporters formed separate Mennonite conferences in Indiana and Ohio after disagreements over innovations in church life. Related regional separations followed in Ontario in 1889, Pennsylvania in 1893, and Virginia in 1901. These dates describe a sequence of decisions among different communities, not one universal founding meeting.",
-      "The Old Order line on the exhibit names several later fellowships, including Wisler, Martinite, Wenger, Woolwich, and Horning communities. They share concerns about ordered congregational life and continuity of practice, while particular rules and relationships differ. Each named fellowship needs its own local records; the regional chronology provides a starting framework without assigning every group an identical story."
+      "The Old Order line on the exhibit names Wisler, Martinites, Wenger Mennonites, Woolwichers, and Horning Church. The linked regional histories distinguish the Indiana–Ohio Wisler development, Abraham Martin’s Ontario fellowship, and Jonas Martin’s Pennsylvania fellowship with its later Wenger and Horning divisions. Martinites was used in both Ontario and Pennsylvania; the shared name does not make the two communities one undifferentiated branch."
     ],
     "aliases": [],
     "references": [
@@ -2622,6 +2622,10 @@
       {
         "label": "Supplied timeline photograph 9379",
         "url": "sources/church-history/photos/IMG_9379.jpg"
+      },
+      {
+        "label": "Regional histories: Wisler, Woolwichers, Martinites, Wenger, and Horning fellowships",
+        "url": "events/weaverland-groffdale-division/"
       }
     ],
     "people": [],
@@ -2629,7 +2633,12 @@
       "old-order-mennonites"
     ],
     "status": "Overview",
-    "category": "Event"
+    "category": "Event",
+    "relatedAccounts": [
+      "wisler-mennonite-beginnings",
+      "woolwich-old-order-beginnings",
+      "weaverland-groffdale-division"
+    ]
   },
   {
     "slug": "bruderhof-1920",
@@ -3218,5 +3227,225 @@
     "sourceAccounts": [
       "mm-four-brethren-and-four-sisters"
     ]
+  },
+  {
+    "slug": "swiss-mennonite-congregational-life",
+    "title": "Swiss Mennonite congregations: chapels and conference",
+    "kind": "event",
+    "date": {
+      "start": 1847,
+      "end": 1990,
+      "label": "1847–early 1990s",
+      "basis": "The overview begins with the Basel meetinghouse permission of 1847 and follows documented conference and language developments into the early 1990s. These dates describe the selected history, not the beginning or end of Swiss Mennonite faith."
+    },
+    "summary": "Swiss Mennonite congregations continued through local worship, new meetinghouses, shared conference work, and the preservation of their community records.",
+    "paragraphs": [
+      "Meetinghouses and local worship. Swiss Mennonite life continued in the Emmental, Jura, and Basel region after the early persecutions and migrations. The Swiss Mennonite guide records permission for a Basel prayer house in 1847 and later meetinghouses at Cernil in 1883, Langnau-Kehr in 1888, Moron in 1892, Les Bulles in 1894, Jeanguisboden in 1900, and La Chaux-d’Abel in 1905. These dates mark buildings, not the first existence of their congregations. Farmhouse worship also continued alongside chapel life.",
+      "A shared conference. Surviving minutes document a fifth joint meeting at Sonnenberg on 2 March 1892 and a continuous record from the seventeenth meeting on 24 March 1898. The association was entered in the register at Langnau on 5 May 1898. Its constituent congregations included Basel, Bressels, Chaux-d’Abel, La Chaux-de-Fonds, Cortebert Matte, Emmental, Gross Lützel, Kleinthal, and Sonnenberg. The conference helped these local churches consult and cooperate while retaining congregational responsibility.",
+      "Preserving the congregation’s memory. At the March 1898 meeting, the churches agreed to keep membership registers. The Swiss Anabaptist Historical Society explains that fear of renewed persecution had previously discouraged such lists. The surviving books record baptisms, family connections, and transfers between congregations; they are generally held in local church archives. They provide evidence for following particular communities beyond a single branch label.",
+      "Continuity across generations. Conference statutes were revised in 1950, and delegates adopted new statutes, a confession, and the name Konferenz der Mennoniten der Schweiz (Alttäufer) in 1983. From the early 1990s, conference work was conducted in German and French as language use changed in Jura congregations. Its stated faith centres on Scripture, following Jesus, believers’ baptism, the Lord’s Supper, peace witness, and service."
+    ],
+    "aliases": [
+      "Swiss Mennonite congregations",
+      "Konferenz der Mennoniten der Schweiz",
+      "Conférence Mennonite Suisse",
+      "Alttäufer",
+      "Swiss Mennonite Conference"
+    ],
+    "references": [
+      {
+        "label": "Swiss Mennonite Conference: Täuferführer der Schweiz (2018), Emmental and historical chronologies, pages 48, 85, and 93",
+        "url": "https://www.menno.ch/wp-content/uploads/2021/01/Taeuferfuehrer_de_2018_compressed.pdf"
+      },
+      {
+        "label": "MennLex: Konferenz der Mennoniten der Schweiz (Alttäufer), sections 1–4",
+        "url": "https://www.mennlex.de/doku.php?id=loc:konferenz-der-mennoniten-der-schweiz"
+      },
+      {
+        "label": "Swiss Anabaptist Historical Society: Hanspeter Jecker, Mitgliederverzeichnisse von Täufergemeinden (2014)",
+        "url": "https://www.mennonitica.ch/mitgliederverzeichnisse-von-taeufergemeinden/"
+      },
+      {
+        "label": "Supplied Church History chart, IMG_9380: Swiss Mennonites endpoint",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "swiss-brethren",
+      "swiss-south-german-mennonites"
+    ],
+    "places": [],
+    "relatedAccounts": [
+      "mwc-1925"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "wisler-mennonite-beginnings",
+    "title": "Wisler Mennonites: Indiana and Ohio beginnings",
+    "kind": "event",
+    "date": {
+      "start": 1872,
+      "end": 1907,
+      "label": "1872; further division in 1907",
+      "basis": "The Mennonite Archives of Ontario and GAMEO's Jacob Wisler biography date the original separation to 1872; GAMEO's Ohio-Indiana conference history dates the later division to 1907."
+    },
+    "summary": "The Wisler name connects the Indiana–Ohio Old Order beginnings with a later conference that retained the name after a further division.",
+    "paragraphs": [
+      "Jacob Wisler served as a Mennonite bishop at Yellow Creek in Elkhart County, Indiana. Disagreements over Sunday schools and other changes in church life persisted despite attempts at reconciliation. In 1872 Wisler and his followers began separate worship, and like-minded congregations in Ohio joined them. These beginnings formed part of the wider Old Order Mennonite fellowship.",
+      "The name continued through later changes. In 1907 the Ohio and Indiana fellowship divided over questions including telephone use and preaching in English. The group allowing these practices retained the Wisler name and became known more formally as the Ohio-Indiana Mennonite Conference. Thus a reference to Wisler Mennonites may concern either the original nineteenth-century movement or this particular later conference; the date and location help identify the intended community."
+    ],
+    "aliases": [
+      "Wisler",
+      "Wisler Mennonites",
+      "Ohio-Indiana (Wisler) Mennonite Conference",
+      "Ohio-Indiana Mennonite Conference",
+      "Jacob Wisler"
+    ],
+    "references": [
+      {
+        "label": "Mennonite Archives of Ontario: Old Order Mennonites, administrative history",
+        "url": "https://uwaterloo.ca/mennonite-archives-ontario/catalogs/archives/old-order-mennonites"
+      },
+      {
+        "label": "GAMEO: Jacob Wisler (1808–1889)",
+        "url": "https://gameo.org/index.php?title=Wisler%2C_Jacob_%281808-1889%29"
+      },
+      {
+        "label": "GAMEO: Ohio-Indiana (Wisler) Mennonite Conference",
+        "url": "https://gameo.org/index.php?title=Ohio-Indiana_%28Wisler%29_Mennonite_Conference"
+      },
+      {
+        "label": "Supplied Church History chart, IMG_9380: named Old Order Mennonite subgroups",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "old-order-mennonites"
+    ],
+    "places": [],
+    "relatedAccounts": [
+      "old-order-divisions"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "woolwich-old-order-beginnings",
+    "title": "Woolwichers and the Ontario Old Order beginning",
+    "kind": "event",
+    "date": {
+      "start": 1889,
+      "end": 1889,
+      "label": "1889",
+      "basis": "The Mennonite Archives of Ontario dates the Ontario affiliated conference to 1889; the institutional history Mennonites in Canada describes the final separation that spring."
+    },
+    "summary": "Woolwichers was a local name for Ontario Old Order Mennonites associated with Bishop Abraham Martin and the division of 1889.",
+    "paragraphs": [
+      "In 1889 Ontario Mennonites divided after years of disagreement about changes in congregational practice, including Sunday schools and evangelistic meetings. Abraham Martin of Woolwich Township was among the bishops leading the Old Order fellowship. Many of his supporters lived in northern Waterloo County, giving rise to the local name Woolwichers. The name identifies a regional community within the wider Old Order story.",
+      "Martinite was another name associated with this Ontario division. It needs a geographical qualification: Jonas H. Martin's followers in Pennsylvania, who separated in 1893, were also called Martinites. Abraham Martin and Jonas Martin therefore belong to distinct regional histories, even though their fellowships came to recognize a shared Old Order relationship. Woolwichers and Martinites should be read with those local contexts in view."
+    ],
+    "aliases": [
+      "Woolwichers",
+      "Woolwich Mennonites",
+      "Ontario Old Order Mennonites",
+      "Ontario Martinites",
+      "Abraham Martin"
+    ],
+    "references": [
+      {
+        "label": "Mennonite Archives of Ontario: Old Order Mennonites, administrative history",
+        "url": "https://uwaterloo.ca/mennonite-archives-ontario/catalogs/archives/old-order-mennonites"
+      },
+      {
+        "label": "Conrad Grebel University College: Mennonites in Canada, volume I, chapter 11, page 267",
+        "url": "https://uwaterloo.ca/grebel/sites/default/files/uploads/files/mic_i_11_0.pdf"
+      },
+      {
+        "label": "GAMEO: Old Order Mennonites, Ontario beginnings and regional names",
+        "url": "https://gameo.org/index.php?title=Old_Order_Mennonites"
+      },
+      {
+        "label": "GAMEO: Weaverland Mennonite Conference, the two Martinite usages",
+        "url": "https://gameo.org/index.php?title=Weaverland_Mennonite_Conference"
+      },
+      {
+        "label": "Supplied Church History chart, IMG_9380: named Old Order Mennonite subgroups",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "old-order-mennonites"
+    ],
+    "places": [],
+    "relatedAccounts": [
+      "old-order-divisions",
+      "weaverland-groffdale-division"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "weaverland-groffdale-division",
+    "title": "Martinites, Wenger Mennonites, and the Horning fellowship",
+    "kind": "event",
+    "date": {
+      "start": 1893,
+      "end": 1927,
+      "label": "1893; division in 1926–1927",
+      "basis": "GAMEO dates Weaverland's beginning to 6 October 1893. Its conference histories describe separation in 1926 and Groffdale's establishment and Joseph O. Wenger's ordination as bishop in 1927."
+    },
+    "summary": "Pennsylvania's Martinite fellowship became the shared historical background of the Weaverland or Horning and Groffdale or Wenger conferences.",
+    "paragraphs": [
+      "In 1893 Bishop Jonas H. Martin and fellow believers withdrew from the Lancaster Mennonite Conference amid disagreements over Sunday schools, church furnishings, and other practices. Their fellowship became the Weaverland Conference and was popularly known as the Martinites. This Pennsylvania use of the name refers to Jonas Martin, distinct from Abraham Martin's Ontario fellowship.",
+      "After Jonas Martin's death in 1925, automobile ownership became a dividing question. Moses Horning declined to continue excluding members who owned cars. Those maintaining the prohibition separated under Joseph O. Wenger in 1926–1927 and formed the Groffdale Old Order Mennonite Conference; Wenger became its bishop in 1927. Wenger Mennonites and Wengerites refer to that fellowship. Those continuing with Weaverland became known as Horning Mennonites or Horning people, explaining the chart's Horning Church label. Both conferences shared an earlier congregational history and continued to share some meetinghouses."
+    ],
+    "aliases": [
+      "Martinites",
+      "Martinite",
+      "Pennsylvania Martinites",
+      "Wenger Mennonites",
+      "Wengerites",
+      "Groffdale Old Order Mennonite Conference",
+      "Horning Church",
+      "Horning Mennonites",
+      "Horning people",
+      "Weaverland Mennonite Conference"
+    ],
+    "references": [
+      {
+        "label": "GAMEO: Weaverland Mennonite Conference, Martinite beginnings and Horning name",
+        "url": "https://gameo.org/index.php?title=Weaverland_Mennonite_Conference"
+      },
+      {
+        "label": "GAMEO: Groffdale Old Order Mennonite Conference, separation and establishment",
+        "url": "https://gameo.org/index.php?title=Groffdale_Old_Order_Mennonite_Conference"
+      },
+      {
+        "label": "GAMEO: Old Order Mennonites, Pennsylvania, shared history and meetinghouses",
+        "url": "https://gameo.org/index.php?title=Old_Order_Mennonites%2C_Pennsylvania"
+      },
+      {
+        "label": "Supplied Church History chart, IMG_9380: named Old Order Mennonite subgroups",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "old-order-mennonites"
+    ],
+    "places": [
+      "pennsylvania"
+    ],
+    "relatedAccounts": [
+      "old-order-divisions",
+      "woolwich-old-order-beginnings"
+    ],
+    "status": "Overview",
+    "category": "Event"
   }
 ]

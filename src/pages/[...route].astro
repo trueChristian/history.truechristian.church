@@ -12,6 +12,7 @@ const {page}=Astro.props;
 const isAtlas=['','timeline/','branches/'].includes(page.logicalRoute);
 ---
 <SiteLayout page={page}>
-  {isAtlas ? <Timeline locale={page.locale} ui={page.ui} initialKind={page.logicalRoute==='branches/'?'tradition':''} /> : <Fragment set:html={page.body} />}
-  {isAtlas && page.logicalRoute==='' && <Fragment set:html={page.body} />}
+  {isAtlas ? <Timeline locale={page.locale} ui={page.ui} initialKind={page.logicalRoute==='branches/'?'tradition':''}>
+    {page.logicalRoute==='' && <Fragment slot="discovery" set:html={page.body} />}
+  </Timeline> : <Fragment set:html={page.body} />}
 </SiteLayout>

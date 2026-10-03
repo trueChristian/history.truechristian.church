@@ -30,12 +30,12 @@
     "branchLabels": 60,
     "chartLeaderLines": 12,
     "currentAuthoredRecords": {
-      "event": 79,
-      "person": 67,
+      "event": 83,
+      "person": 74,
       "tradition": 47,
       "place": 20
     },
-    "panelHistoryRecords": 82,
+    "panelHistoryRecords": 86,
     "recoveredCoverage": {
       "longer-overview": 6,
       "short-overview": 59,
@@ -46,9 +46,9 @@
     "chartUncertainEntries": 71,
     "chartUnresolvedRegions": 8,
     "chartAnnotationCoverage": {
-      "mapped-narrative": 57,
+      "mapped-narrative": 64,
       "partial-overview": 84,
-      "scoped-gap": 57,
+      "scoped-gap": 50,
       "source-context": 2,
       "source-credit": 1
     },
@@ -3892,10 +3892,11 @@
         "sources/church-history/photos/IMG_9380.jpg"
       ],
       "recordSlugs": [
-        "old-order-mennonites"
+        "old-order-mennonites",
+        "wisler-mennonite-beginnings"
       ],
-      "notes": "Printed subgroup name. BroadOld Order history represented, but this specific fellowship’s separate dates and relations remain a scoped detail gap.",
-      "coverage": "partial-overview",
+      "notes": "The original Indiana–Ohio fellowship began in 1872; a later conference retained the Wisler name after the 1907 division.",
+      "coverage": "source-linked-narrative",
       "baselineCoverage": "represented",
       "preservedSourceAccounts": []
     },
@@ -3906,10 +3907,12 @@
         "sources/church-history/photos/IMG_9380.jpg"
       ],
       "recordSlugs": [
-        "old-order-mennonites"
+        "old-order-mennonites",
+        "woolwich-old-order-beginnings",
+        "weaverland-groffdale-division"
       ],
-      "notes": "Printed subgroup name. BroadOld Order history represented, but this specific fellowship’s separate dates and relations remain a scoped detail gap.",
-      "coverage": "partial-overview",
+      "notes": "The name was used for Abraham Martin’s Ontario fellowship and Jonas H. Martin’s Pennsylvania fellowship. The photograph supplies no regional qualifier, so both histories are linked without conflating them.",
+      "coverage": "source-linked-narrative",
       "baselineCoverage": "represented",
       "preservedSourceAccounts": []
     },
@@ -3920,10 +3923,11 @@
         "sources/church-history/photos/IMG_9380.jpg"
       ],
       "recordSlugs": [
-        "old-order-mennonites"
+        "old-order-mennonites",
+        "weaverland-groffdale-division"
       ],
-      "notes": "Printed subgroup name. BroadOld Order history represented, but this specific fellowship’s separate dates and relations remain a scoped detail gap.",
-      "coverage": "partial-overview",
+      "notes": "Groffdale/Wenger history is distinguished from the continuing Weaverland/Horning fellowship; 1926 separation and 1927 establishment are preserved as a transition.",
+      "coverage": "source-linked-narrative",
       "baselineCoverage": "represented",
       "preservedSourceAccounts": []
     },
@@ -3934,10 +3938,11 @@
         "sources/church-history/photos/IMG_9380.jpg"
       ],
       "recordSlugs": [
-        "old-order-mennonites"
+        "old-order-mennonites",
+        "woolwich-old-order-beginnings"
       ],
-      "notes": "Printed subgroup name. BroadOld Order history represented, but this specific fellowship’s separate dates and relations remain a scoped detail gap.",
-      "coverage": "partial-overview",
+      "notes": "Local name for Ontario Old Order believers connected with Woolwich Township and the 1889 division.",
+      "coverage": "source-linked-narrative",
       "baselineCoverage": "represented",
       "preservedSourceAccounts": []
     },
@@ -3948,10 +3953,11 @@
         "sources/church-history/photos/IMG_9380.jpg"
       ],
       "recordSlugs": [
-        "old-order-mennonites"
+        "old-order-mennonites",
+        "weaverland-groffdale-division"
       ],
-      "notes": "Printed subgroup name. BroadOld Order history represented, but this specific fellowship’s separate dates and relations remain a scoped detail gap.",
-      "coverage": "partial-overview",
+      "notes": "Informal Horning naming identifies the continuing Weaverland fellowship in the Pennsylvania history; no separate unrelated foundation is invented.",
+      "coverage": "source-linked-narrative",
       "baselineCoverage": "represented",
       "preservedSourceAccounts": []
     },
@@ -4226,11 +4232,12 @@
       ],
       "recordSlugs": [
         "swiss-brethren",
-        "swiss-south-german-mennonites"
+        "swiss-south-german-mennonites",
+        "swiss-mennonite-congregational-life"
       ],
-      "notes": "Continuation label represented broadly; modern Swiss congregational chronology remains a specific research gap.",
+      "notes": "Later congregational chronology is now covered through documented meetinghouse dates, the 1892 and 1898 conference records, 1898 membership registers, and subsequent statutes and bilingual conference work. Building dates are distinguished from congregation foundations.",
       "baselineCoverage": "represented",
-      "coverage": "short-overview",
+      "coverage": "source-linked-narrative",
       "preservedSourceAccounts": []
     }
   ],
@@ -5176,7 +5183,7 @@
       "paragraphs": 1,
       "bodyWords": 35,
       "coverage": "summary-stub",
-      "currentBodyWords": 109,
+      "currentBodyWords": 112,
       "currentParagraphs": 2
     },
     {
@@ -5362,28 +5369,10 @@
   ],
   "remainingNamedGaps": [
     {
-      "name": "Wisler, Martinites, Wenger Mennonites, Woolwichers, Horning Church",
-      "evidence": "IMG_9379–IMG_9380, Old Order line",
-      "status": "partial-overview",
-      "detail": "Regional Old Order history is covered. The printed subgroup labels are inventoried, but separate institutional histories remain to be researched."
-    },
-    {
-      "name": "Swiss Mennonites",
-      "evidence": "IMG_9380, lower endpoint",
-      "status": "partial-overview",
-      "detail": "Broad Swiss Brethren and Swiss–South German ancestry covered; later Swiss congregational chronology remains open."
-    },
-    {
       "name": "Indigenous and local church participants in mission histories",
       "evidence": "IMG_9365 F/I/L/N/O and IMG_9366 C",
       "status": "scoped-gap",
       "detail": "Source panels identify regions, peoples, agencies, and some sending missionaries. They do not name many local believers; no names or local accounts are invented."
-    },
-    {
-      "name": "Smaller named figures on the branch chart",
-      "evidence": "IMG_9376–IMG_9379; see remainingChartNamedFigures and chartMicroannotations",
-      "status": "scoped-gap",
-      "detail": "Hans de Ries, Cornelius Ris, Christopher Dock, Cornies, Claas Epp, Daniel Hege, and John Funk are inventoried with exact source annotations. Dedicated sourced biographies or histories remain missing; incomplete dates and names are not expanded from inference."
     }
   ],
   "chartMicroannotations": [
@@ -5917,11 +5906,31 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9376.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "hans-de-ries"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "The named figure and activity are covered by the linked archival or institutional history. Original photo transcription and legibility flags remain unchanged; corroboration is recorded separately.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "independentVerification": {
+        "recordSlug": "hans-de-ries",
+        "finding": "Hans de Ries (1553–1638); the 1615 marker refers to Historie der Martelaren.",
+        "references": [
+          {
+            "label": "GAMEO: Hans de Ries (1553–1638)",
+            "url": "https://gameo.org/index.php?title=Ries%2C_Hans_de_%281553%E2%80%931638%29"
+          },
+          {
+            "label": "GAMEO: the publication history of Mennonite martyr books",
+            "url": "https://gameo.org/index.php?title=Martyr_Books"
+          },
+          {
+            "label": "The later Martyrs’ Mirror collection",
+            "url": "events/martyrs-mirror-1660/"
+          }
+        ]
+      }
     },
     {
       "id": "chart-9376-026",
@@ -6240,11 +6249,31 @@
         "1762"
       ],
       "photo": "sources/church-history/photos/IMG_9377.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "cornelis-ris"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "The named figure and activity are covered by the linked archival or institutional history. Original photo transcription and legibility flags remain unchanged; corroboration is recorded separately.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "independentVerification": {
+        "recordSlug": "cornelis-ris",
+        "finding": "Cornelis Ris (1717–1790), called Cornelius on the chart; the confession was published in 1766 and recognized in 1773. This does not alter the unreadable photographed date.",
+        "references": [
+          {
+            "label": "GAMEO: Ris family and the Hoorn minister Cornelis Ris",
+            "url": "https://gameo.org/index.php?title=Ris_family"
+          },
+          {
+            "label": "GAMEO: doctrinal confessions, including the Ris Confession",
+            "url": "https://gameo.org/index.php?title=Confessions%2C_Doctrinal"
+          },
+          {
+            "label": "Contemporary 1776 discussion of Ris’s confession in the Dutch literary archive",
+            "url": "https://www.dbnl.org/tekst/_vad003177601_01/_vad003177601_01_0104.php"
+          }
+        ]
+      }
     },
     {
       "id": "chart-9377-040",
@@ -6677,11 +6706,31 @@
         "1714–1771"
       ],
       "photo": "sources/church-history/photos/IMG_9377.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "christopher-dock"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "The named figure and activity are covered by the linked archival or institutional history. Original photo transcription and legibility flags remain unchanged; corroboration is recorded separately.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "independentVerification": {
+        "recordSlug": "christopher-dock",
+        "finding": "Christopher Dock; approximately 1714 is his arrival in America, teaching at Skippack begins in 1718, and 1771 is his death. The chart interval is not a lifespan.",
+        "references": [
+          {
+            "label": "Dock Mennonite Academy: Christopher Dock, Lamplighter Summer 2016, page 4",
+            "url": "https://www.dock.org/uploaded/photos/About/Media_Gallery/Publications/Lamplighter/Summer_2016/LL_Summer_2016_final_-_web.pdf"
+          },
+          {
+            "label": "Dock’s writings in Samuel Pennypacker’s Historical and Biographical Sketches (1883)",
+            "url": "https://en.wikisource.org/wiki/Historical_and_biographical_sketches/03_Christopher_Dock"
+          },
+          {
+            "label": "Original German school-management text in The Life and Works of Christopher Dock",
+            "url": "https://de.wikisource.org/wiki/Seite%3AThe_Life_and_Works_of_Christopher_Dock.djvu/56"
+          }
+        ]
+      }
     },
     {
       "id": "chart-9377-059",
@@ -6997,11 +7046,27 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9378.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "johann-cornies"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "The named figure and activity are covered by the linked archival or institutional history. Original photo transcription and legibility flags remain unchanged; corroboration is recorded separately.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "independentVerification": {
+        "recordSlug": "johann-cornies",
+        "finding": "Johann Cornies (1789–1848); Mennonite biography identifies his agricultural society chairmanship by 1817.",
+        "references": [
+          {
+            "label": "GAMEO: Johann Cornies (1789–1848)",
+            "url": "https://gameo.org/index.php?title=Cornies%2C_Johann_%281789-1848%29"
+          },
+          {
+            "label": "Mennonite Archives of Ontario: Johann Cornies fonds, Hist. Mss. 1.70",
+            "url": "https://uwaterloo.ca/mennonite-archives-ontario/catalogs/archives/johann-cornies"
+          }
+        ]
+      }
     },
     {
       "id": "chart-9378-072",
@@ -7177,11 +7242,27 @@
       ],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9378.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "claas-epp-jr"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "The named figure and activity are covered by the linked archival or institutional history. Original photo transcription and legibility flags remain unchanged; corroboration is recorded separately.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "independentVerification": {
+        "recordSlug": "claas-epp-jr",
+        "finding": "Claas Epp Jr. (1838–1913) led the 1880 trek toward Central Asia and settled with his group at Ak-Mechet in 1882; he is distinct from his father, associated with the 1853 migration.",
+        "references": [
+          {
+            "label": "GAMEO: Claas Epp (1838–1913) and the Great Trek",
+            "url": "https://gameo.org/index.php?title=Epp%2C_Claas_%281838-1913%29"
+          },
+          {
+            "label": "Centre for Mennonite Brethren Studies: the elder Claas Epp fonds and family distinction",
+            "url": "https://cmbs.mennonitebrethren.ca/personal_papers/epp-claas-1803-unknown/"
+          }
+        ]
+      }
     },
     {
       "id": "chart-9378-080",
@@ -7666,11 +7747,31 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "daniel-hege"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "The named figure and activity are covered by the linked archival or institutional history. Original photo transcription and legibility flags remain unchanged; corroboration is recorded separately.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "independentVerification": {
+        "recordSlug": "daniel-hege",
+        "finding": "Daniel Hege (1826–1862); the Reiseprediger appointment is documented in 1861.",
+        "references": [
+          {
+            "label": "GAMEO: Daniel Hege (1826–1862)",
+            "url": "https://gameo.org/index.php?title=Hege%2C_Daniel_%281826-1862%29"
+          },
+          {
+            "label": "Mennonite Historian, March 2010: General Conference beginnings, page 4",
+            "url": "https://www.mennonitehistorian.ca/36.1.MHMar10.pdf"
+          },
+          {
+            "label": "Mennonite Life: Daniel Hege’s travels and the Wadsworth school",
+            "url": "https://mla.bethelks.edu/ml-archive/2002dec/shelly.php"
+          }
+        ]
+      }
     },
     {
       "id": "chart-9379-102",
@@ -8434,11 +8535,31 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "john-fretz-funk"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "The named figure and activity are covered by the linked archival or institutional history. Original photo transcription and legibility flags remain unchanged; corroboration is recorded separately.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "independentVerification": {
+        "recordSlug": "john-fretz-funk",
+        "finding": "John Fretz Funk (1835–1930); his publishing business began in Chicago in 1864 and moved to Elkhart in 1867.",
+        "references": [
+          {
+            "label": "Mennonite Church USA Archives: John Fretz Funk Papers, HM1/001",
+            "url": "https://archives.mhsc.ca/index.php/john-f-john-fretz-funk-papers-1852-1929"
+          },
+          {
+            "label": "GAMEO: John Fretz Funk (1835–1930)",
+            "url": "https://gameo.org/index.php?title=Funk%2C_John_Fretz_%281835-1930%29"
+          },
+          {
+            "label": "The Martyrs’ Mirror collection",
+            "url": "events/martyrs-mirror-1660/"
+          }
+        ]
+      }
     },
     {
       "id": "chart-9379-138",
@@ -9927,48 +10048,36 @@
       "sourceScope": "Sattler’s source-based account says the baptism count is unknown; do not repeat the older encyclopedia’s several-hundred estimate as an established number. The Agatha passage explicitly begins In the year 1529, although the generated source record date is only the 16th century. A witness baptized near St. Gall is not proof that she belonged to a particular 1525 town congregation."
     }
   ],
-  "remainingChartNamedFigures": [
+  "remainingChartNamedFigures": [],
+  "closedNamedGaps": [
     {
-      "nameAsPrinted": "Hans de Ries",
-      "annotationId": "chart-9376-025",
-      "photo": "IMG_9376.jpg",
-      "detail": "1615 History of Martyrs marker; dedicated author biography and source history remain to be added."
+      "name": "Swiss Mennonites: later congregational chronology",
+      "recordSlugs": [
+        "swiss-mennonite-congregational-life"
+      ],
+      "sourceScope": "Uses Swiss Mennonite Conference guide, Swiss Anabaptist Historical Society archive explanation, and MennLex conference history. Historical snapshots are not presented as current membership statistics."
     },
     {
-      "nameAsPrinted": "Cornelius Ris",
-      "annotationId": "chart-9377-039",
-      "photo": "IMG_9377.jpg",
-      "detail": "Confession marker; tiny date digits are not confidently readable."
+      "name": "Seven smaller named figures on the branch chart",
+      "recordSlugs": [
+        "hans-de-ries",
+        "cornelis-ris",
+        "christopher-dock",
+        "johann-cornies",
+        "claas-epp-jr",
+        "daniel-hege",
+        "john-fretz-funk"
+      ],
+      "sourceScope": "All seven readable names now have substantive archival or institutional profiles. Cornelis Ris, Johann Cornies, Claas Epp Jr., and John Fretz Funk are independently identified; ambiguous or unreadable original photo wording remains preserved."
     },
     {
-      "nameAsPrinted": "Christopher Dock",
-      "annotationId": "chart-9377-058",
-      "photo": "IMG_9377.jpg",
-      "detail": "Schoolmaster illustration caption includes 1714–1771; do not assume this is a lifespan without corroboration."
-    },
-    {
-      "nameAsPrinted": "Cornies",
-      "annotationId": "chart-9378-071",
-      "photo": "IMG_9378.jpg",
-      "detail": "1817 Agriculture Improvement Society marker; given name is not expanded from this photograph alone."
-    },
-    {
-      "nameAsPrinted": "Claas Epp",
-      "annotationId": "chart-9378-079",
-      "photo": "IMG_9378.jpg",
-      "detail": "1880 trek marker; the chart’s geographical wording needs corroboration before an authored narrative."
-    },
-    {
-      "nameAsPrinted": "Daniel Hege",
-      "annotationId": "chart-9379-101",
-      "photo": "IMG_9379.jpg",
-      "detail": "1861 Reiseprediger appointment; dedicated ministry history remains missing."
-    },
-    {
-      "nameAsPrinted": "John Funk",
-      "annotationId": "chart-9379-137",
-      "photo": "IMG_9379.jpg",
-      "detail": "1867 Elkhart publishing marker; dedicated person/publication history remains missing."
+      "name": "Old Order distinct chart sublabels",
+      "recordSlugs": [
+        "wisler-mennonite-beginnings",
+        "woolwich-old-order-beginnings",
+        "weaverland-groffdale-division"
+      ],
+      "sourceScope": "Three archival and institutional histories preserve five printed labels. Martinites is explicitly mapped to two regional uses, and the 1926–1927 Wenger/Horning division is distinguished from earlier fellowship beginnings. No new tradition node or unverified lineage edge is introduced."
     }
   ]
 }
