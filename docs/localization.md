@@ -26,3 +26,5 @@ A missing translation is never represented as a reviewed translation. A configur
 5. Commit the source and all translations together in this repository. There is no external translation pipeline.
 
 The tests include an in-memory future-language fixture to verify translation identity, explicit English fallback, escaped UI labels and Unicode search without publishing a new language.
+
+GitHub edit links use `GITHUB_HEAD_REF` for pull-request previews and `main` for production. Local preview builds may set `HISTORY_SOURCE_REF` explicitly. This keeps source-edit links pointed at files that exist in the reviewed branch before merge.

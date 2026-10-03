@@ -13,6 +13,8 @@ await fs.mkdir(CACHE,{recursive:true});
 const pages=[];
 const readJSON=async name=>JSON.parse(await fs.readFile(path.join(ROOT,name),'utf8'));
 const site=await readJSON('content/site.json');
+const sourceRef=process.env.HISTORY_SOURCE_REF||process.env.GITHUB_HEAD_REF||'main';
+if(!/^[a-zA-Z0-9._/-]+$/.test(sourceRef))throw new Error('Invalid source edit ref');
 const authored=new Map((await readJSON('content/curated.json')).map(r=>[r.slug,{...r,sourcePath:'content/curated.json'}]));
 for(const file of ['source-enrichments.json','panel-histories.json']){
   const extra=await readJSON('content/'+file).catch(e=>{if(e.code==='ENOENT')return [];throw e;});
@@ -107,7 +109,7 @@ function card(r){
 const cards=list=>`<div class="card-grid">${list.map(card).join('')}</div>`;
 function pageLinks(title,route,record={}){
   const sourcePath=locale.id!==localeConfig.defaultLocale?`content/locales/${locale.id}/records.json`:record.sourcePath||(record.source==='martyrs-mirror'?'content/overrides.json':['','timeline/','branches/'].includes(route)?'src/components/Timeline.astro':'scripts/prepare.mjs');
-  const edit=`${REPOSITORY}/edit/main/${sourcePath}`;
+  const edit=`${REPOSITORY}/edit/${sourceRef}/${sourcePath}`;
   return `<aside class="page-tools" aria-label="Page sources and contributions">${record.slug?`<a href="${url('timeline/')}?kind=${record.kind}&q=${encodeURIComponent(record.title)}">Open this record on the timeline</a>`:''}<a href="${url(route+'README.md')}">Read this page as Markdown</a><a href="${esc(contributionURL({...record,title:record.title||title},canonical(route)))}" rel="noopener">${record.status==='Research needed'?'Add the missing history':'Suggest a correction or addition'}</a><a href="${esc(edit)}" rel="noopener">Edit this page’s source on GitHub</a></aside>`;
 }
 function lead(kicker,title,description){return `<div class="page-lead"><p class="eyebrow">${esc(kicker)}</p><h1>${esc(title)}</h1><p class="lead">${esc(description)}</p></div>`;}
@@ -190,7 +192,7 @@ await page('not-found/','Page not found',lead('Find your way back','This page co
 await fs.writeFile(path.join(OUT,'.nojekyll'),'');
 await fs.writeFile(path.join(OUT,'robots.txt'),`User-agent: *\nAllow: /\nSitemap: ${origin}${base}/sitemap.xml\n`);
 await fs.writeFile(path.join(OUT,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${pages.map(p=>`<url><loc>${esc(origin+asset(p.route))}</loc>${p.availableLocales.map(l=>`<xhtml:link rel="alternate" hreflang="${l.id}" href="${esc(origin+asset(`${l.id}/${p.logicalRoute}`))}"/>`).join('')}</url>`).join('')}</urlset>`);
-await fs.writeFile(path.join(OUT,'build-info.json'),JSON.stringify({records:imported.recordCount+curated.length,locales:locales.map(l=>l.id),defaultLocale:localeConfig.defaultLocale,sourceSections:imported.recordCount,sourceImages:imported.imageCount,photographs:photos.length,branches:branches.nodes.length,connections:branches.edges.length,publishedExhibitMedia:0,pages:routes.length,base,themeCommit:site.themeCommit}));
+await fs.writeFile(path.join(OUT,'build-info.json'),JSON.stringify({records:imported.recordCount+curated.length,locales:locales.map(l=>l.id),defaultLocale:localeConfig.defaultLocale,sourceSections:imported.recordCount,sourceImages:imported.imageCount,photographs:photos.length,branches:branches.nodes.length,connections:branches.edges.length,publishedExhibitMedia:0,pages:routes.length,base,sourceRef,themeCommit:site.themeCommit}));
 await fs.writeFile(path.join(CACHE,'pages.json'),JSON.stringify(pages));
 await fs.rm(TARGET,{recursive:true,force:true,maxRetries:3,retryDelay:100});
 await fs.rename(OUT,TARGET);
