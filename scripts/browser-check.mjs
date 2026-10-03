@@ -58,6 +58,17 @@ try{
   const dailyLinks=()=>page.locator('#daily-stories h3 a').evaluateAll(links=>links.map(link=>link.getAttribute('href')));
   const waitForResults=()=>page.waitForFunction(()=>/results · showing/.test(document.querySelector('#search-status')?.textContent||''));
   const waitForArchive=()=>page.waitForFunction(()=>/source sections · showing/.test(document.querySelector('#archive-count')?.textContent||''));
+  const settledHeader=async()=>{
+    await page.evaluate(()=>document.fonts.ready.then(()=>true));
+    await page.waitForFunction(()=>{
+      const header=document.querySelector('[data-tcc-global-header]');
+      const navigation=document.querySelector('.tcc-header__navigation');
+      if(!header||!navigation||header.getAnimations({subtree:true}).some(animation=>animation.playState==='running'))return false;
+      return innerWidth>=960||(header.dataset.menuOpen==='false'&&navigation.getAttribute('aria-hidden')==='true'&&getComputedStyle(navigation).visibility==='hidden'&&navigation.getBoundingClientRect().right<=1);
+    });
+  };
+  const capture=async filename=>{await settledHeader();await page.screenshot({path:path.join(screenshots,filename)});};
+
 
   await check('Six daily stories are distinct, stable, and refresh on the next UTC day',async()=>{
     await page.goto(url(''));
@@ -75,7 +86,7 @@ try{
     await page.evaluate(()=>document.dispatchEvent(new Event('visibilitychange')));
     await page.waitForFunction(()=>document.querySelector('#daily-date')?.textContent.startsWith('2026-10-04'));
     assert.equal((await dailyLinks()).filter(link=>first.includes(link)).length,0);
-    await page.screenshot({path:path.join(screenshots,'home-desktop.png')});
+    await capture('home-desktop.png');
   });
 
   await check('System appearance tracks the browser and saved overrides survive reload',async()=>{
@@ -101,7 +112,7 @@ try{
     const rail=()=>page.locator('[data-atlas-era]').evaluateAll(nodes=>nodes.map(n=>n.dataset.atlasEra));
     const oldestRail=await rail();assert.equal(oldestRail[0],'acts-and-early-church');
     await page.locator('.atlas-entry').first().scrollIntoViewIfNeeded();
-    await page.screenshot({path:path.join(screenshots,'timeline-oldest-desktop.png')});
+    await capture('timeline-oldest-desktop.png');
     await order().selectOption('newest');assert.equal(await order().inputValue(),'newest');
     assert.equal(await page.evaluate(()=>localStorage.getItem('history-timeline-direction')),'newest');
     assert.deepEqual(await rail(),[...oldestRail].reverse());
@@ -117,7 +128,9 @@ try{
     await page.goto(url(''));await ready();assert.equal(await first(),'christian-beginnings');
     await page.setViewportSize({width:390,height:844});
     await page.locator('.atlas-entry').first().scrollIntoViewIfNeeded();
-    await page.screenshot({path:path.join(screenshots,'timeline-oldest-mobile.png')});
+    await settledHeader();
+    assert.equal(await page.locator('.tcc-header__navigation').isVisible(),false,'Closed mobile navigation must not cover the opening timeline');
+    await capture('timeline-oldest-mobile.png');
     await page.setViewportSize({width:1440,height:1000});
   });
 
@@ -179,7 +192,7 @@ try{
       }
       await page.goto(url(''));
       await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
-      await page.screenshot({path:path.join(screenshots,`compact-header-${width<500?'mobile':'desktop'}.png`)});
+      await capture(`compact-header-${width<500?'mobile':'desktop'}.png`);
     }
   });
 
@@ -258,7 +271,7 @@ try{
     assert.ok(await page.locator('.prose').innerText());
     await page.goto(url('timeline/?era=radical-reformation'));
     await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
-    await page.screenshot({path:path.join(screenshots,'timeline-desktop.png')});
+    await capture('timeline-desktop.png');
   });
 
   await check('Martyrs’ Mirror is integrated into the timeline and research media is excluded',async()=>{
@@ -342,27 +355,22 @@ try{
     }
     await page.setViewportSize({width:1440,height:1000});
     await page.locator('.reader-heading').scrollIntoViewIfNeeded();
-    await page.screenshot({path:path.join(screenshots,'reader-desktop.png')});
+    await capture('reader-desktop.png');
     await page.locator('.reader-original').scrollIntoViewIfNeeded();
-    await page.screenshot({path:path.join(screenshots,'reader-source-footer.png')});
+    await capture('reader-source-footer.png');
     await page.setViewportSize({width:390,height:844});
-    const settledReaderMenu=()=>page.waitForFunction(()=>{
-      const header=document.querySelector('[data-tcc-global-header]');
-      const navigation=document.querySelector('.tcc-header__navigation');
-      return header?.dataset.menuOpen==='false'&&navigation?.getAttribute('aria-hidden')==='true'&&getComputedStyle(navigation).visibility==='hidden'&&header.getAnimations({subtree:true}).every(animation=>animation.playState!=='running');
-    });
-    await settledReaderMenu();
+    await settledHeader();
     await page.selectOption('#theme-mode','dark');
     await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
-    await settledReaderMenu();
+    await settledHeader();
     await page.waitForFunction(()=>window.scrollY===0&&document.querySelector('[data-tcc-global-header]').getBoundingClientRect().top>=-1);
     assert.equal(await page.locator('.reader-section-pages').evaluate(element=>element.open),false,'Optional page outline should start closed');
     const headingTop=await page.locator('.reader-heading').evaluate(element=>element.getBoundingClientRect().top);
     assert.ok(headingTop<744,'Mobile entry view must expose the account heading');
-    await page.screenshot({path:path.join(screenshots,'reader-mobile-top.png')});
+    await capture('reader-mobile-top.png');
     await page.locator('.reader-heading').scrollIntoViewIfNeeded();
-    await settledReaderMenu();
-    await page.screenshot({path:path.join(screenshots,'reader-mobile-dark.png')});
+    await settledHeader();
+    await capture('reader-mobile-dark.png');
     await page.selectOption('#theme-mode','light');
     for(const route of ['stories/mm-front-matter/','stories/mm-to-my-beloved-friends-and-companions-in-christ-jesus-our-savior/']){
       await page.goto(url(route));
@@ -371,7 +379,7 @@ try{
     }
     assert.ok(await page.locator('.source-poetry').count()>0);
     await page.locator('.source-poetry').first().scrollIntoViewIfNeeded();
-    await page.screenshot({path:path.join(screenshots,'reader-poetry-mobile.png')});
+    await capture('reader-poetry-mobile.png');
   });
 
   await check('Mobile menus support Escape and restore focus without page overflow',async()=>{
@@ -397,10 +405,10 @@ try{
     await page.setViewportSize({width:390,height:844});
     await page.goto(url(''));
     await page.waitForFunction(()=>document.querySelector('#daily-date')?.textContent);
-    await page.screenshot({path:path.join(screenshots,'home-mobile.png')});
+    await capture('home-mobile.png');
     await page.goto(url('timeline/?era=radical-reformation'));
     await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
-    await page.screenshot({path:path.join(screenshots,'timeline-mobile.png')});
+    await capture('timeline-mobile.png');
   });
 
   await check('English routes preserve legacy era links and expose truthful same-record language availability',async()=>{
@@ -453,7 +461,7 @@ try{
       const a=luminance(mixed),b=luminance(paper);return (Math.max(a,b)+.05)/(Math.min(a,b)+.05);
     });
     assert.ok(lineContrast>=3,`Connection lines need readable contrast: ${lineContrast}`);
-    await page.screenshot({path:path.join(screenshots,'timeline-connections-desktop.png')});
+    await capture('timeline-connections-desktop.png');
     await page.selectOption('#theme-mode','dark');
     await page.locator('[data-record="amish"] h3 a').focus();
     const contrast=await page.locator('[data-record="amish"] h3').evaluate(element=>{
@@ -463,19 +471,19 @@ try{
       return (Math.max(ink,paper)+.05)/(Math.min(ink,paper)+.05);
     });
     assert.ok(contrast>=4.5,`Dark timeline headings need readable contrast: ${contrast}`);
-    await page.screenshot({path:path.join(screenshots,'timeline-connections-dark.png')});
+    await capture('timeline-connections-dark.png');
     await page.selectOption('#theme-mode','light');
     await page.goto(url('people/dirk-willems/'));
     await page.locator('.prose').scrollIntoViewIfNeeded();
-    await page.screenshot({path:path.join(screenshots,'sourced-history-desktop.png')});
+    await capture('sourced-history-desktop.png');
     await page.setViewportSize({width:390,height:844});
     await page.goto(url('branches/?family=amish'));
     await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
     await page.locator('.atlas-entry').first().scrollIntoViewIfNeeded();
-    await page.screenshot({path:path.join(screenshots,'timeline-connections-mobile.png')});
+    await capture('timeline-connections-mobile.png');
     await page.goto(url('people/dirk-willems/'));
     await page.locator('.prose p').first().scrollIntoViewIfNeeded();
-    await page.screenshot({path:path.join(screenshots,'sourced-history-mobile.png')});
+    await capture('sourced-history-mobile.png');
     await page.setViewportSize({width:1440,height:1000});
   });
 
