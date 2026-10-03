@@ -63,11 +63,13 @@ overflow at 320/390/768/1024/1440 pixels, and the 404 page. It also detects unca
 browser errors and failed local requests. Font-service access is stubbed so
 behavioural tests do not depend on that external service.
 
-**Browser execution is not yet verified locally.** This workspace's browser
-download returned invalid archives. Syntax checking is not presented as a
-substitute for browser execution. The GitHub workflow runs the browser suite
-after validating the generated site and uploads desktop/mobile screenshots.
-Treat that job as pending until its actual result is available on this PR.
+**Browser execution passed in GitHub Actions.** This workspace's local browser
+download returned invalid archives, so verification was completed on the runner
+in [run 37120575900](https://github.com/trueChristian/history.truechristian.church/actions/runs/37120575900)
+for runtime commit `f08ca25798b04158a877cc3828ac5d890ad79cfb`. All nine browser
+scenarios passed with no uncaught errors or failed local assets. Desktop and
+mobile screenshots were downloaded and visually reviewed. The screenshots use
+fallback fonts because the behavioural check stubs the external font service.
 
 CI artifacts are `history-site-preview` and `history-browser-review`. Download
 the first into `_site/` to review the exact build with `npm run serve`; the second
@@ -81,8 +83,8 @@ workflow permits publication.
 - [x] Shared theme validation passes locally.
 - [x] Source date uncertainty and the Felix Mantz 1526/1527 discrepancy remain visible.
 - [x] Modern research requests are labelled and excluded from daily stories.
-- [ ] PR validation and browser jobs pass on the final pushed commit.
-- [ ] Review desktop/mobile screenshots and the actual navigation in a browser.
+- [x] PR validation and all nine browser scenarios pass for the implementation commit.
+- [x] Desktop/mobile screenshots are visually reviewed; Chromium exercises the actual navigation.
 - [ ] Enable GitHub Pages using the GitHub Actions source, if not already configured.
 - [ ] Merge after owner review; verify the resulting Pages deployment and final URL.
 - [ ] Review the transcribed timeline coverage and historical references as editorial work.
