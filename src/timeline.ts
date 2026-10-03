@@ -1,6 +1,8 @@
 import {selectTimeline,timelineMarkup} from './lib/timeline';
 import type {TimelineFilters} from './lib/timeline';
 import type {HistoryRecord,BranchData} from './lib/model';
+import {t,messages,contentBase,catalogURL} from './ui.mjs';
+import {ERAS} from './lib/history.mjs';
 
 const form=document.querySelector<HTMLFormElement>('#timeline-filters');
 if(form){
@@ -9,23 +11,35 @@ if(form){
   const status=document.querySelector<HTMLParagraphElement>('#timeline-status')!;
   const more=document.querySelector<HTMLButtonElement>('#timeline-more')!;
   const base=document.documentElement.dataset.base||'';
-  let records:HistoryRecord[]=[],branches:BranchData,matches:HistoryRecord[]=[],limit=200;
-  const params=new URLSearchParams(location.search);
+  let records:HistoryRecord[]=[],branches:BranchData|undefined,matches:HistoryRecord[]=[],limit=200;
   const control=(name:string)=>form.elements.namedItem(name) as HTMLInputElement|HTMLSelectElement;
-  for(const name of ['q','era','family','kind','direction'])if(params.has(name)){
-    const value=params.get(name)!;const el=control(name);
-    if(el instanceof HTMLInputElement||[...el.options].some(o=>o.value===value))el.value=value;
+  const initialKind=document.querySelector<HTMLElement>('.history-atlas')?.dataset.initialKind||'';
+  function restoreURL(){
+    const params=new URLSearchParams(location.search);
+    for(const name of ['q','era','family','kind','direction']){
+      const el=control(name),fallback=name==='direction'?'newest':name==='kind'?initialKind:'';
+      const value=params.get(name)||fallback;
+      if(el instanceof HTMLInputElement||[...el.options].some(o=>o.value===value))el.value=value;
+      else el.value=fallback;
+    }
+    (control('sources') as HTMLInputElement).checked=params.get('sources')==='1';
+    const hashEra=location.hash.replace(/^#(?:era-)?/,'');
+    if(!params.has('era')&&ERAS.some(era=>era.id===hashEra))control('era').value=hashEra;
   }
-  (control('sources') as HTMLInputElement).checked=params.get('sources')==='1';
+  restoreURL();
   function readFilters():TimelineFilters{return {q:control('q').value,era:control('era').value,kind:control('kind').value,family:control('family').value,direction:control('direction').value,sources:(control('sources') as HTMLInputElement).checked};}
   const svgNS='http://www.w3.org/2000/svg';
   function drawConnections(){
     if(!branches)return;
     threads.replaceChildren();
     const height=entries.offsetHeight;
-    threads.setAttribute('viewBox',`0 0 64 ${height}`);threads.style.height=`${height}px`;
+    threads.setAttribute('viewBox',`0 0 64 ${height}`);threads.setAttribute('preserveAspectRatio','none');threads.style.height=`${height}px`;
     const positions=new Map<string,number>();
-    entries.querySelectorAll<HTMLElement>('[data-record]').forEach(el=>positions.set(el.dataset.record!,el.offsetTop+35));
+    const canvasTop=entries.getBoundingClientRect().top;
+    entries.querySelectorAll<HTMLElement>('[data-record]').forEach(el=>{
+      const port=el.querySelector<HTMLElement>('.atlas-port')!;
+      const box=port.getBoundingClientRect();positions.set(el.dataset.record!,box.top-canvasTop+box.height/2);
+    });
     const spine=document.createElementNS(svgNS,'path');spine.setAttribute('d',`M54 0V${height}`);spine.classList.add('timeline-spine');threads.append(spine);
     const connected=branches.edges.filter(e=>positions.has(e.from)&&positions.has(e.to));
     connected.forEach((edge,i)=>{
@@ -37,30 +51,43 @@ if(form){
     });
   }
   function render(updateURL=true){
+    if(!branches)return;
     const filters=readFilters();matches=selectTimeline(records,branches,filters);
     const visible=matches.slice(0,limit);
-    entries.innerHTML=visible.length?timelineMarkup(visible,records,branches,base):'<div class="atlas-empty"><h2>No histories match this view</h2><p>Choose a wider era, another stream, or reset the filters.</p></div>';
-    status.textContent=`${matches.length.toLocaleString()} histories · showing ${visible.length}${filters.direction==='oldest'?' · beginnings to present':' · present to beginnings'}`;
+    entries.innerHTML=visible.length?timelineMarkup(visible,records,branches,contentBase,messages):`<div class="atlas-empty"><h2>${t('No histories match this view')}</h2><p>${t('Choose a wider era, another stream, or reset the filters.')}</p></div>`;
+    status.textContent=t('{count} histories · showing {shown} · {direction}',{count:matches.length.toLocaleString(),shown:visible.length,direction:t(filters.direction==='oldest'?'beginnings to present':'present to beginnings')});
     more.hidden=limit>=matches.length;
-    if(updateURL){const p=new URLSearchParams();for(const [key,value]of Object.entries(filters))if(value && !(key==='direction'&&value==='newest'))p.set(key,value===true?'1':String(value));history.replaceState(null,'',location.pathname+(p.size?'?'+p:''));}
+    if(updateURL){
+      const p=new URLSearchParams();for(const [key,value]of Object.entries(filters))if(value&&!(key==='direction'&&value==='newest'))p.set(key,value===true?'1':String(value));
+      const next=location.pathname+(p.size?'?'+p:'');
+      if(next!==location.pathname+location.search+location.hash)history.pushState(null,'',next);
+    }
+    document.querySelectorAll<HTMLAnchorElement>('[data-atlas-era]').forEach(link=>{
+      if(link.dataset.atlasEra===filters.era)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');
+    });
     requestAnimationFrame(drawConnections);
   }
   function filter(){limit=200;render();}
-  form.addEventListener('submit',e=>e.preventDefault());
+  form.addEventListener('submit',e=>{e.preventDefault();filter();});
   form.addEventListener('change',filter);
   let timer:ReturnType<typeof setTimeout>;
   control('q').addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(filter,180);});
-  form.addEventListener('reset',()=>{setTimeout(()=>{control('kind').value='';limit=200;render();},0);});
+  form.addEventListener('reset',()=>{clearTimeout(timer);setTimeout(()=>{control('kind').value=initialKind;limit=200;render();},0);});
   more.addEventListener('click',()=>{limit+=100;render(false);});
   document.querySelectorAll<HTMLAnchorElement>('[data-atlas-era]').forEach(link=>link.addEventListener('click',event=>{
-    event.preventDefault();control('era').value=link.dataset.atlasEra!;filter();document.querySelector('.atlas-main')?.scrollIntoView({block:'start',behavior:'smooth'});
+    if(!branches)return;event.preventDefault();control('era').value=link.dataset.atlasEra!;filter();
+    document.querySelector('.atlas-main')?.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});
   }));
   function highlight(event:Event){
     const entry=(event.target as Element).closest<HTMLElement>('[data-record]');
     threads.querySelectorAll<SVGPathElement>('.timeline-thread').forEach(path=>path.classList.toggle('is-focused',!!entry&&[path.dataset.from,path.dataset.to].includes(entry.dataset.record)));
   }
+  const clearFocus=()=>threads.querySelectorAll('.is-focused').forEach(p=>p.classList.remove('is-focused'));
   entries.addEventListener('pointerover',highlight);entries.addEventListener('focusin',highlight);
-  entries.addEventListener('pointerleave',()=>threads.querySelectorAll('.is-focused').forEach(p=>p.classList.remove('is-focused')));
+  entries.addEventListener('pointerleave',clearFocus);entries.addEventListener('focusout',clearFocus);
+  addEventListener('popstate',()=>{restoreURL();limit=200;render(false);});
+  addEventListener('hashchange',()=>{restoreURL();limit=200;render(false);});
   new ResizeObserver(drawConnections).observe(entries);
-  Promise.all([fetch(`${base}/assets/catalog.json`).then(r=>{if(!r.ok)throw Error('Timeline catalogue unavailable');return r.json();}),fetch(`${base}/assets/branches.json`).then(r=>{if(!r.ok)throw Error('Branch catalogue unavailable');return r.json();})]).then(([r,b]:[HistoryRecord[],BranchData])=>{records=r;branches=b;render(false);}).catch(()=>{status.textContent='The timeline is readable below. Reload to use the filters.';});
+  document.fonts.ready.then(drawConnections);
+  Promise.all([fetch(catalogURL!).then(r=>{if(!r.ok)throw Error('Timeline catalogue unavailable');return r.json();}),fetch(`${base}/assets/branches.json`).then(r=>{if(!r.ok)throw Error('Branch catalogue unavailable');return r.json();})]).then(([r,b]:[HistoryRecord[],BranchData])=>{records=r;branches=b;render(false);}).catch(()=>{status.textContent=t('The timeline is readable below. Reload to use the filters.');});
 }

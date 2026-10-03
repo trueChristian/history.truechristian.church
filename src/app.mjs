@@ -1,7 +1,8 @@
+import {t,contentBase,catalogURL,indexURL} from './ui.mjs';
 import {dailySelection,ERAS,escapeHTML as esc,searchRecords} from './lib/history.mjs';
 
 const base=document.documentElement.dataset.base||'';
-const route=value=>`${base}/${value}`;
+const route=value=>`${contentBase}/${value}`;
 const prefersDark=matchMedia('(prefers-color-scheme: dark)');
 const themeControl=document.querySelector('#theme-mode');
 let theme='system';
@@ -20,13 +21,13 @@ prefersDark.addEventListener('change',applyTheme);applyTheme();
 
 let catalogPromise;
 function loadCatalog(){
-  return catalogPromise||=fetch(new URL('./catalog.json',import.meta.url)).then(response=>{
-    if(!response.ok)throw new Error('Could not load the archive. Please refresh and try again.');
+  return catalogPromise||=fetch(catalogURL).then(response=>{
+    if(!response.ok)throw new Error(t("Could not load the archive. Please refresh and try again."));
     return response.json();
   }).catch(error=>{catalogPromise=undefined;throw error;});
 }
 function card(record){
-  return `<article class="story-card"><div class="card-meta"><span>${esc(record.date?.label||'Source context')}</span><span>${esc(record.kind==='story'?record.category:record.kind)}</span></div><h3><a href="${route(record.route)}">${esc(record.title)}</a></h3><p>${esc(record.summary||'Read this section in the source collection.')}</p><span class="card-action">${record.status==='Research needed'?'Help document this history':'Read the story'} <span aria-hidden="true">→</span></span></article>`;
+  return `<article class="story-card"><div class="card-meta"><span>${esc(record.date?.label||t("Source context"))}</span><span>${esc(record.kind==='story'?record.category:record.kind)}</span></div><h3><a href="${route(record.route)}">${esc(record.title)}</a></h3><p>${esc(record.summary||t("Read this section in the source collection."))}</p><span class="card-action">${record.status==='Research needed'?t("Help document this history"):t("Read the story")} <span aria-hidden="true">→</span></span></article>`;
 }
 const cards=items=>`<div class="card-grid">${items.map(card).join('')}</div>`;
 let dailyDay='';
@@ -49,8 +50,8 @@ if(archiveForm){
   const output=document.querySelector('#archive-results'),count=document.querySelector('#archive-count'),more=document.querySelector('#archive-more');
   let matches=[],limit=36,sequence=0;
   const render=()=>{
-    output.innerHTML=matches.length?cards(matches.slice(0,limit)):'<p>No source sections match these filters. Try a different spelling or era.</p>';
-    count.textContent=`${matches.length.toLocaleString()} source sections · showing ${Math.min(limit,matches.length)}`;
+    output.innerHTML=matches.length?cards(matches.slice(0,limit)):`<p>${esc(t('No source sections match these filters. Try a different spelling or era.'))}</p>`;
+    count.textContent=t('{count} source sections · showing {shown}',{count:matches.length.toLocaleString(),shown:Math.min(limit,matches.length)});
     more.hidden=limit>=matches.length;
   };
   async function filter(updateURL=true){
@@ -73,8 +74,8 @@ if(searchForm){
   const status=document.querySelector('#search-status'),output=document.querySelector('#search-results'),more=document.querySelector('#search-more');
   let worker,results=[],limit=30,requestId=0,timer;
   const render=()=>{
-    output.innerHTML=results.length?cards(results.slice(0,limit)):'<p>No results found. Try an alternate spelling, fewer words, or a wider date range.</p>';
-    status.textContent=`${results.length.toLocaleString()} results · showing ${Math.min(limit,results.length)}`;
+    output.innerHTML=results.length?cards(results.slice(0,limit)):`<p>${esc(t('No results found. Try an alternate spelling, fewer words, or a wider date range.'))}</p>`;
+    status.textContent=t('{count} results · showing {shown}',{count:results.length.toLocaleString(),shown:Math.min(limit,results.length)});
     more.hidden=limit>=results.length;
   };
   const initial=new URLSearchParams(location.search);
@@ -82,9 +83,9 @@ if(searchForm){
   function submit(updateURL=true){
     const id=++requestId;
     const values=Object.fromEntries(new FormData(searchForm));
-    if(values.from && values.to && Number(values.from)>Number(values.to)){status.textContent='The start year must be before the end year.';results=[];output.innerHTML='';more.hidden=true;return;}
-    if(!values.q.trim() && !values.kind && !values.era && !values.from && !values.to){status.textContent='Enter a word, phrase, or name to begin.';results=[];output.innerHTML='';more.hidden=true;if(updateURL)history.replaceState(null,'',location.pathname);return;}
-    status.textContent='Searching the complete archive…';more.hidden=true;
+    if(values.from && values.to && Number(values.from)>Number(values.to)){status.textContent=t("The start year must be before the end year.");results=[];output.innerHTML='';more.hidden=true;return;}
+    if(!values.q.trim() && !values.kind && !values.era && !values.from && !values.to){status.textContent=t("Enter a word, phrase, or name to begin.");results=[];output.innerHTML='';more.hidden=true;if(updateURL)history.replaceState(null,'',location.pathname);return;}
+    status.textContent=t("Searching the complete archive…");more.hidden=true;
     if(updateURL){const params=new URLSearchParams(Object.entries(values).filter(([,v])=>v));history.replaceState(null,'',location.pathname+'?'+params);}
     if(!worker){
       try{
@@ -94,10 +95,10 @@ if(searchForm){
           if(event.data.error){status.textContent=event.data.error;return;}
           results=event.data.results;limit=30;render();
         };
-        worker.onerror=()=>{status.textContent='Search could not start. Refresh the page, or use the story collection and timeline.';worker?.terminate();worker=null;};
-      }catch{status.textContent='Search could not start in this browser. Use the story collection and timeline.';return;}
+        worker.onerror=()=>{status.textContent=t("Search could not start. Refresh the page, or use the story collection and timeline.");worker?.terminate();worker=null;};
+      }catch{status.textContent=t("Search could not start in this browser. Use the story collection and timeline.");return;}
     }
-    worker.postMessage({id,query:values.q,filters:{kind:values.kind,era:values.era,from:values.from,to:values.to}});
+    worker.postMessage({id,indexURL,query:values.q,filters:{kind:values.kind,era:values.era,from:values.from,to:values.to}});
   }
   searchForm.addEventListener('submit',event=>{event.preventDefault();clearTimeout(timer);submit();});
   searchForm.querySelectorAll('select').forEach(el=>el.addEventListener('change',()=>submit()));

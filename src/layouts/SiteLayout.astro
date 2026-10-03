@@ -1,20 +1,26 @@
 ---
 import type {PreparedPage} from '../lib/model';
 import '../atlas.css';
+import {translate} from '../lib/localization.mjs';
 interface Props {page:PreparedPage}
 const {page}=Astro.props;
 const base=import.meta.env.BASE_URL.replace(/\/$/,'');
 const asset=(path:string)=>`${base}/${path}`;
+const t=(key:string,vars:Record<string,string|number>={})=>translate(page.ui,key,vars);
+const contentBase=`${base}/${page.locale}`;
 ---
 <!doctype html>
-<html lang="en" data-base={base}>
+<html lang={page.locale} dir={page.dir} data-base={base} data-content-base={contentBase} data-catalog-url={asset(`assets/${page.locale}/catalog.json`)} data-index-url={asset(`assets/${page.locale}/search-index.json`)}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <title>{page.title} · Anabaptist Church History</title>
+    <title>{page.title} · {t("Anabaptist Church History")}</title>
     <meta name="description" content={page.description} />
     <link rel="canonical" href={new URL(asset(page.route),Astro.site).href} />
+    {page.availableLocales.map(locale=><link rel="alternate" hreflang={locale.id} href={new URL(asset(`${locale.id}/${page.logicalRoute}`),Astro.site).href} />)}
+    <link rel="alternate" hreflang="x-default" href={new URL(asset(`en/${page.logicalRoute}`),Astro.site).href} />
+    <script is:inline type="application/json" id="history-ui" set:html={JSON.stringify(page.ui).replace(/</g,"\\u003c")} />
     <link rel="icon" href={asset('assets/favicons/favicon.ico')} />
     <script is:inline>try{var mode=localStorage.getItem('history-theme')||'system';document.documentElement.dataset.theme=(mode==='light'||mode==='dark')?mode:(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch(e){document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
     <link rel="stylesheet" href={asset('assets/theme/truechristian-theme.css')} />
@@ -23,11 +29,11 @@ const asset=(path:string)=>`${base}/${path}`;
     <script is:inline type="module" src={asset('assets/app.mjs')}></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">{t("Skip to content")}</a>
     <Fragment set:html={page.header} />
     <div class="utility-bar tcc-container">
-      <a class="archive-name" href={asset('')}>Anabaptist Church History</a>
-      <label class="theme-control">Appearance <select id="theme-mode" aria-label="Appearance"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
+      <a class="archive-name" href={`${contentBase}/`}>{t('Anabaptist Church History')}</a>
+      <div class="utility-controls"><details class="language-control"><summary>{t("Language")}: {page.locales.find(l=>l.id===page.locale)?.nativeName}</summary><nav aria-label={t("Available languages")}>{page.availableLocales.map(locale=><a href={asset(`${locale.id}/${page.logicalRoute}`)} lang={locale.id} hreflang={locale.id} aria-current={locale.id===page.locale?"page":undefined}>{locale.nativeName}</a>)}{page.availableLocales.length===1&&<p>{t("This page is currently available in English.")}</p>}</nav></details><label class="theme-control">{t("Appearance")} <select id="theme-mode" aria-label={t("Appearance")}><option value="system">{t("System")}</option><option value="light">{t("Light")}</option><option value="dark">{t("Dark")}</option></select></label></div>
     </div>
     <main id="main" class="tcc-container" tabindex="-1">
       <slot />
