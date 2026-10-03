@@ -1,0 +1,604 @@
+{
+  "mm-felix-mantz-a-d-1526": {
+    "people": [
+      "felix-manz"
+    ],
+    "places": []
+  },
+  "mm-george-blaurock-and-hans-van-der-reve-a-d-1529": {
+    "people": [
+      "george-blaurock",
+      "jakob-hutter"
+    ],
+    "places": []
+  },
+  "mm-here-follows-another-consolatory-admonition-left-by-george-blaurock-to-his-descendants": {
+    "people": [
+      "george-blaurock"
+    ],
+    "places": []
+  },
+  "mm-michael-sattler-a-d-1527": {
+    "people": [
+      "michael-sattler"
+    ],
+    "relatedAccounts": [
+      "mm-articles-or-charges-against-michael-sattler",
+      "mm-a-letter-written-by-michael-sattler-in-prison-to-the-church-of-god-at-horb"
+    ],
+    "places": []
+  },
+  "mm-articles-or-charges-against-michael-sattler": {
+    "people": [
+      "michael-sattler"
+    ],
+    "relatedAccounts": [
+      "mm-michael-sattler-a-d-1527",
+      "mm-a-letter-written-by-michael-sattler-in-prison-to-the-church-of-god-at-horb"
+    ],
+    "places": []
+  },
+  "mm-a-letter-written-by-michael-sattler-in-prison-to-the-church-of-god-at-horb": {
+    "people": [
+      "michael-sattler"
+    ],
+    "relatedAccounts": [
+      "mm-michael-sattler-a-d-1527",
+      "mm-articles-or-charges-against-michael-sattler"
+    ],
+    "places": []
+  },
+  "mm-george-zaunringerad-a-d-1531": {
+    "people": [
+      "jakob-hutter"
+    ],
+    "places": []
+  },
+  "mm-disputation-between-herman-vleckwijk-imprisoned-by-the-lords-of-the-country-van-den-vrye-in-bruges-and-friar-cornelis-in": {
+    "people": [
+      "menno-simons"
+    ],
+    "places": []
+  },
+  "mm-dirk-willems-a-d-1569": {
+    "people": [
+      "dirk-willems"
+    ],
+    "places": []
+  },
+  "mm-anna-of-rotterdam-put-to-death-in-that-place-a-d-1539": {
+    "people": [
+      "anna-jans"
+    ],
+    "places": []
+  },
+  "mm-hans-landis-a-d-1614": {
+    "people": [
+      "hans-landis"
+    ],
+    "places": []
+  },
+  "mm-further-observations-touching-the-person-and-the-death-of-hans-landis": {
+    "people": [
+      "hans-landis"
+    ],
+    "places": []
+  },
+  "mm-valedictory": {
+    "people": [
+      "thieleman-van-braght"
+    ],
+    "places": []
+  },
+  "mm-to-my-beloved-friends-and-fellow-believers-in-christ-jesus-our-savior": {
+    "people": [
+      "thieleman-van-braght"
+    ],
+    "places": []
+  },
+  "mm-how-the-apostles-executed-this-command-of-christ-to-teach-and-baptize-after-the-ascension-of-christ": {
+    "people": [
+      "simon-peter",
+      "paul-the-apostle",
+      "jesus-christ"
+    ],
+    "places": [
+      "jerusalem"
+    ]
+  },
+  "mm-stephen-one-of-the-seven-deacons-of-the-church-at-jerusalem-stoned-without-the-gate-of-that-city-by-the-libertines-a-d-3": {
+    "people": [
+      "stephen-of-jerusalem"
+    ],
+    "places": [
+      "jerusalem"
+    ]
+  },
+  "mm-simon-peter-the-holy-apostle-crucified-with-his-head-downward-under-emperor-nero-a-d-69": {
+    "people": [
+      "simon-peter"
+    ],
+    "places": [
+      "rome"
+    ]
+  },
+  "mm-paul-the-apostle-of-christ-sorely-persecuted-and-finally-beheaded-at-rome-under-the-emperor-nero-a-d-69": {
+    "people": [
+      "paul-the-apostle"
+    ],
+    "places": [
+      "rome"
+    ]
+  },
+  "mm-ignatius-a-disciple-of-the-apostle-john-devoured-by-wild-beasts-in-a-circus-at-rome-for-the-testimony-of-the-son-of-god": {
+    "people": [
+      "ignatius-of-antioch"
+    ],
+    "places": [
+      "rome"
+    ]
+  },
+  "mm-polycarp-a-disciple-of-the-apostle-john-and-bishop-of-the-church-at-smyrna-put-to-death-with-fire-and-sword-for-his-fait": {
+    "people": [
+      "polycarp-of-smyrna"
+    ],
+    "places": []
+  },
+  "mm-maturus-sanctus-blandina-and-a-youth-from-pontus-most-miserably-tormented-on-the-river-rhone-about-the-year-172": {
+    "people": [
+      "blandina"
+    ],
+    "places": [
+      "lyons"
+    ]
+  },
+  "mm-perpetua-and-felicitas-of-tuburbi-in-mauritania-and-others-violently-put-to-death-for-the-faith-of-the-son-of-god-about": {
+    "people": [],
+    "places": []
+  },
+  "mm-eulalia-a-christian-maiden-burned-with-lamps-and-torches-and-suffocated-thereby-for-the-faith-in-jesus-christ-at-emerita": {
+    "people": [
+      "eulalia-of-emerita"
+    ],
+    "places": []
+  },
+  "mm-albanus-a-pious-teacher-at-mentz-with-others-martyred-for-the-faith-a-d-424": {
+    "people": [
+      "albanus-of-mentz"
+    ],
+    "places": []
+  },
+  "mm-arnold-a-teacher-of-the-gospel-and-the-christian-faith-martyred-in-a-forest-near-paris-a-d-511": {
+    "people": [
+      "arnold-near-paris"
+    ],
+    "places": []
+  },
+  "mm-adrian-a-christian-bishop-or-teacher-criminally-punished-for-rejecting-infant-baptism-about-the-close-of-the-year-606": {
+    "people": [
+      "adrian-the-teacher"
+    ],
+    "places": []
+  },
+  "mm-clement-of-scotland-a-companion-of-albert-excommunicated-and-then-burned-as-a-heretic-by-the-romanists-according-to-the": {
+    "people": [
+      "clement-of-scotland"
+    ],
+    "places": []
+  },
+  "mm-special-account-of-clement-according-to-p-j-twisck": {
+    "people": [
+      "clement-of-scotland"
+    ],
+    "places": []
+  },
+  "mm-further-observations-touching-the-case-of-albert-and-clement-according-to-the-account-of-sebastian-franck": {
+    "people": [
+      "clement-of-scotland"
+    ],
+    "places": []
+  },
+  "mm-john-a-tradesman-at-cordova-severely-scourged-for-the-testimony-of-jesus-christ-set-reversely-upon-an-ass-mocked-and-mis": {
+    "people": [
+      "john-of-cordova"
+    ],
+    "places": [
+      "cordova"
+    ],
+    "relatedAccounts": [
+      "mm-grievous-and-lamentable-persecution-of-the-christians-by-the-saracens-at-cordova-in-spain-about-a-d-850"
+    ]
+  },
+  "mm-grievous-and-lamentable-persecution-of-the-christians-by-the-saracens-at-cordova-in-spain-about-a-d-850": {
+    "people": [
+      "john-of-cordova"
+    ],
+    "relatedAccounts": [
+      "mm-john-a-tradesman-at-cordova-severely-scourged-for-the-testimony-of-jesus-christ-set-reversely-upon-an-ass-mocked-and-mis"
+    ],
+    "places": []
+  },
+  "mm-johannes-erigena-a-scotchman-put-to-death-by-his-scholars-for-the-confession-of-the-evangelical-truth-through-the-instig": {
+    "people": [
+      "johannes-erigena"
+    ],
+    "relatedAccounts": [
+      "mm-concerning-the-time-of-this-history"
+    ],
+    "places": []
+  },
+  "mm-concerning-the-time-of-this-history": {
+    "people": [
+      "johannes-erigena"
+    ],
+    "relatedAccounts": [
+      "mm-johannes-erigena-a-scotchman-put-to-death-by-his-scholars-for-the-confession-of-the-evangelical-truth-through-the-instig"
+    ],
+    "places": []
+  },
+  "mm-eugenia-an-upright-christian-woman-beheaded-for-the-testimony-of-jesus-christ-near-the-city-of-cordova-a-d-923": {
+    "people": [
+      "eugenia-of-cordova"
+    ],
+    "places": [
+      "cordova"
+    ]
+  },
+  "mm-fourteen-persons-the-chiefest-of-whom-was-called-stephen-burned-as-heretics-for-the-testimony-of-the-truth-by-the-papist": {
+    "places": [
+      "orleans"
+    ],
+    "date": {
+      "start": 1022,
+      "end": 1023,
+      "label": "1022–1023 (source account)",
+      "basis": "Heading gives the close of 1022; opening paragraph allows 1023 at the latest."
+    },
+    "relatedAccounts": [
+      "mm-further-observations-touching-said-fourteen-martyrs-according-to-the-accounts-of-various-papistic-and-other-writers-note"
+    ],
+    "people": []
+  },
+  "mm-further-observations-touching-said-fourteen-martyrs-according-to-the-accounts-of-various-papistic-and-other-writers-note": {
+    "places": [
+      "orleans"
+    ],
+    "relatedAccounts": [
+      "mm-fourteen-persons-the-chiefest-of-whom-was-called-stephen-burned-as-heretics-for-the-testimony-of-the-truth-by-the-papist"
+    ],
+    "people": []
+  },
+  "mm-bruno-bishop-of-angiers-and-berengarius-his-deacon-condemned-in-several-councils-through-the-roman-pope-on-account-of-th": {
+    "people": [
+      "berengarius"
+    ],
+    "date": {
+      "start": 1059,
+      "end": 1079,
+      "label": "1059–1079 (source heading)",
+      "basis": "Heading states first proceedings in 1059 and last in 1079."
+    },
+    "places": []
+  },
+  "mm-many-of-the-followers-of-berengarius-called-berengarians-anathematized-by-order-of-the-pope-at-piacenza-in-italy-a-d-109": {
+    "people": [
+      "berengarius"
+    ],
+    "places": [],
+    "date": {
+      "start": 1095,
+      "end": 1100,
+      "label": "1095 to c. 1100 (source heading)",
+      "basis": "Heading places the anathema in 1095 and later persecution about 1100; “about” qualifies the later date."
+    }
+  },
+  "mm-peter-bruis-burnt-at-st-giles-henry-of-toulouse-apprehended-and-put-out-of-the-way-by-the-popes-legate-and-many-other-pe": {
+    "people": [
+      "peter-bruis",
+      "henry-of-toulouse"
+    ],
+    "date": {
+      "start": 1145,
+      "end": 1147,
+      "label": "c. 1145–1147 (source heading)",
+      "basis": "Heading names “about the years 1145, 1147”; narrative assigns Peter’s death to 1145 and Henry’s apprehension to 1147."
+    },
+    "places": []
+  },
+  "mm-of-the-conversion-of-peter-waldo-and-the-rise-of-the-waldenses-etc": {
+    "people": [
+      "peter-waldo"
+    ],
+    "places": [
+      "lyons"
+    ],
+    "relatedAccounts": [
+      "mm-concerning-the-time-of-the-waldenses"
+    ]
+  },
+  "mm-concerning-the-time-of-the-waldenses": {
+    "people": [
+      "peter-waldo"
+    ],
+    "relatedAccounts": [
+      "mm-of-the-conversion-of-peter-waldo-and-the-rise-of-the-waldenses-etc"
+    ],
+    "places": []
+  },
+  "mm-the-views-of-the-ancient-waldenses-against-war": {
+    "people": [],
+    "places": []
+  },
+  "mm-the-views-of-the-ancient-waldenses-against-the-swearing-of-oaths": {
+    "people": [],
+    "places": []
+  },
+  "mm-gerard-sagarellus-burnt-in-the-city-of-parma-for-the-faith-of-the-waldensian-anabaptists-a-d-1285": {
+    "people": [
+      "gerard-sagarellus"
+    ],
+    "date": {
+      "start": 1285,
+      "end": 1285,
+      "label": "c. 1285 (source narrative)",
+      "basis": "Heading gives 1285; narrative qualifies the year of death with “it is supposed.”"
+    },
+    "places": []
+  },
+  "mm-their-views-in-regard-to-the-oath": {
+    "people": [
+      "john-wycliffe"
+    ],
+    "places": []
+  },
+  "mm-touching-the-articles-of-faith-which-john-huss-had-derived-from-the-writings-of-john-wickliffe": {
+    "people": [
+      "john-wycliffe",
+      "john-huss"
+    ],
+    "places": []
+  },
+  "mm-touching-the-articles-of-their-faith-laid-before-them-by-the-inquisition-for-recantation": {
+    "people": [
+      "john-huss"
+    ],
+    "places": []
+  },
+  "mm-notice-concerning-the-followers-of-john-huss-who-according-to-the-accounts-of-jacob-mehrning-were-very-different-from-th": {
+    "people": [
+      "john-huss"
+    ],
+    "places": []
+  },
+  "mm-further-observation-concerning-the-misdeeds-of-the-followers-of-john-huss": {
+    "people": [
+      "john-huss"
+    ],
+    "places": []
+  },
+  "mm-william-white-father-abraham-of-cholchester-and-john-waddon-burnt-for-the-faith-at-norwich-in-england-a-d-1428": {
+    "people": [
+      "william-white"
+    ],
+    "places": [
+      "norwich"
+    ],
+    "relatedAccounts": [
+      "mm-special-account-of-william-white-touching-his-doctrine-suffering-and-death"
+    ]
+  },
+  "mm-confession-of-faith-of-said-three-martyrs-touching-their-belief-against-the-roman-church": {
+    "people": [
+      "william-white"
+    ],
+    "places": []
+  },
+  "mm-special-account-of-william-white-touching-his-doctrine-suffering-and-death": {
+    "people": [
+      "william-white"
+    ],
+    "places": [
+      "norwich"
+    ],
+    "relatedAccounts": [
+      "mm-william-white-father-abraham-of-cholchester-and-john-waddon-burnt-for-the-faith-at-norwich-in-england-a-d-1428"
+    ]
+  },
+  "mm-stephen-an-elder-of-the-waldenses-burnt-for-the-faith-at-vienna-in-austria-about-a-d-1471": {
+    "people": [
+      "stephen-of-vienna"
+    ],
+    "places": [
+      "vienna"
+    ]
+  },
+  "mm-basileus-bishop-at-pontus-ammon-a-deacon-about-forty-women-and-others-put-to-death-by-fire-water-and-ice-a-d-316": {
+    "date": {
+      "start": 316,
+      "end": 316,
+      "label": "316",
+      "basis": "Explicit year in source heading. “About” describes a number of people, or “towards” names the object of an action; neither qualifies the year."
+    },
+    "people": [],
+    "places": []
+  },
+  "mm-the-cruelty-of-the-arian-king-honoricus-also-called-hunnericus-the-second-king-of-the-vandals-towards-some-bishops-and-e": {
+    "date": {
+      "start": 477,
+      "end": 477,
+      "label": "477",
+      "basis": "Explicit year in source heading. “About” describes a number of people, or “towards” names the object of an action; neither qualifies the year."
+    },
+    "people": [],
+    "places": []
+  },
+  "mm-about-forty-pious-christians-seized-by-the-longobards-in-italy-and-most-of-them-put-to-death-with-the-sword-for-refusing": {
+    "date": {
+      "start": 566,
+      "end": 566,
+      "label": "566",
+      "basis": "Explicit year in source heading. “About” describes a number of people, or “towards” names the object of an action; neither qualifies the year."
+    },
+    "people": [],
+    "places": []
+  },
+  "mm-the-great-cruelty-of-elvelid-the-moham-medan-towards-all-christian-prisoners-whom-he-without-mercy-caused-to-be-put-to-d": {
+    "date": {
+      "start": 739,
+      "end": 739,
+      "label": "739",
+      "basis": "Explicit year in source heading. “About” describes a number of people, or “towards” names the object of an action; neither qualifies the year."
+    },
+    "people": [],
+    "places": []
+  },
+  "mm-gerard-with-about-thirty-others-men-as-well-as-women-for-maintaining-the-apostolical-doctrine-at-oxford-in-england-are-b": {
+    "date": {
+      "start": 1161,
+      "end": 1161,
+      "label": "1161",
+      "basis": "Explicit year in source heading. “About” describes a number of people, or “towards” names the object of an action; neither qualifies the year."
+    },
+    "people": [],
+    "places": []
+  },
+  "mm-about-one-hundred-persons-called-waldenses-burnt-for-the-faith-at-strasburg-thirty-nine-at-bingen-and-eighteen-at-mentz": {
+    "date": {
+      "start": 1212,
+      "end": 1212,
+      "label": "1212",
+      "basis": "Explicit year in source heading. “About” describes a number of people, or “towards” names the object of an action; neither qualifies the year."
+    },
+    "people": [],
+    "places": []
+  },
+  "mm-about-eighty-persons-called-waldenses-burnt-for-the-faith-at-strasburg-a-d-1215": {
+    "date": {
+      "start": 1215,
+      "end": 1215,
+      "label": "1215",
+      "basis": "Explicit year in source heading. “About” describes a number of people, or “towards” names the object of an action; neither qualifies the year."
+    },
+    "people": [],
+    "places": []
+  },
+  "mm-leonhard-schoener-a-d-1528-and-after-him-about-seventy-others": {
+    "date": {
+      "start": 1528,
+      "end": 1528,
+      "label": "1528",
+      "basis": "Explicit year in source heading. “About” describes a number of people, or “towards” names the object of an action; neither qualifies the year."
+    },
+    "people": [],
+    "places": []
+  },
+  "mm-wolfgang-brandhuber-hans-niedermair-and-many-others-about-seventy-in-all-a-d-1529": {
+    "date": {
+      "start": 1529,
+      "end": 1529,
+      "label": "1529",
+      "basis": "Explicit year in source heading. “About” describes a number of people, or “towards” names the object of an action; neither qualifies the year."
+    },
+    "people": [],
+    "places": []
+  },
+  "mm-about-three-hundred-and-fifty-persons-put-to-death-for-the-faith-near-altzey-pursuant-to-the-imperial-mandate-a-d-1529": {
+    "date": {
+      "start": 1529,
+      "end": 1529,
+      "label": "1529",
+      "basis": "Explicit year in source heading. “About” describes a number of people, or “towards” names the object of an action; neither qualifies the year."
+    },
+    "people": [],
+    "places": []
+  },
+  "mm-of-the-persecutions-which-took-place-after-the-time-of-justin-the-great-from-a-d-518-to-the-close-of-this-century": {
+    "date": {
+      "start": 518,
+      "end": 600,
+      "label": "518–600 (source heading)",
+      "basis": "Heading extends from 518 to the close of the sixth century."
+    },
+    "people": [],
+    "places": []
+  },
+  "mm-of-eight-severe-persecutions-instituted-against-christian-believers-from-a-d-622-to-the-close-of-this-century": {
+    "date": {
+      "start": 622,
+      "end": 700,
+      "label": "622–700 (source heading)",
+      "basis": "Heading extends from 622 to the close of the seventh century."
+    },
+    "people": [],
+    "places": []
+  },
+  "mm-of-the-first-decree-of-emperor-frederic-ii-against-the-defenseless-albigenses-and-waldenses-about-a-d-1230": {
+    "date": {
+      "start": 1230,
+      "end": 1230,
+      "label": "c. 1230 (source heading)",
+      "basis": "Heading gives “ABOUT A. D., 1230”; comma after the date abbreviation does not remove the year."
+    },
+    "people": [],
+    "places": []
+  },
+  "mm-of-the-third-decree-of-emperor-frederic-ii-against-the-aforementioned-persons-a-d-1230": {
+    "date": {
+      "start": 1230,
+      "end": 1230,
+      "label": "1230",
+      "basis": "Heading gives “A. D., 1230”; comma after the date abbreviation does not remove the year."
+    },
+    "people": [],
+    "places": []
+  },
+  "mm-jesus-christ-the-son-of-god-crucified-at-jerusalem": {
+    "people": [
+      "jesus-christ"
+    ]
+  },
+  "mm-sicke-snyder-a-d-1533": {
+    "people": [
+      "sicke-snyder"
+    ],
+    "date": {
+      "start": 1533,
+      "end": 1533,
+      "label": "c. 1533 (source account)",
+      "basis": "Heading gives 1533; opening sentence says “About the year 1533.” The supplied overview instead gives 1531."
+    }
+  },
+  "mm-hans-haslibacher-a-d-1571": {
+    "people": [
+      "hans-haslibacher"
+    ]
+  },
+  "mm-third-confession": {
+    "relatedAccounts": [
+      "mm-vii-of-holy-baptism",
+      "mm-xiv-of-revenge",
+      "mm-xv-of-the-swearing-of-oaths"
+    ]
+  },
+  "mm-vii-of-holy-baptism": {
+    "relatedAccounts": [
+      "mm-third-confession",
+      "mm-xiv-of-revenge",
+      "mm-xv-of-the-swearing-of-oaths"
+    ]
+  },
+  "mm-xiv-of-revenge": {
+    "relatedAccounts": [
+      "mm-third-confession",
+      "mm-vii-of-holy-baptism",
+      "mm-xv-of-the-swearing-of-oaths"
+    ]
+  },
+  "mm-xv-of-the-swearing-of-oaths": {
+    "relatedAccounts": [
+      "mm-third-confession",
+      "mm-vii-of-holy-baptism",
+      "mm-xiv-of-revenge"
+    ]
+  }
+}

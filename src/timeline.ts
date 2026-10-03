@@ -75,7 +75,7 @@ if(form){
   form.addEventListener('reset',()=>{clearTimeout(timer);setTimeout(()=>{control('kind').value=initialKind;limit=200;render();},0);});
   more.addEventListener('click',()=>{limit+=100;render(false);});
   document.querySelectorAll<HTMLAnchorElement>('[data-atlas-era]').forEach(link=>link.addEventListener('click',event=>{
-    if(!branches)return;event.preventDefault();control('era').value=link.dataset.atlasEra!;filter();
+    if(!branches||initialKind)return;event.preventDefault();control('era').value=link.dataset.atlasEra!;filter();
     document.querySelector('.atlas-main')?.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});
   }));
   function highlight(event:Event){
@@ -89,5 +89,5 @@ if(form){
   addEventListener('hashchange',()=>{restoreURL();limit=200;render(false);});
   new ResizeObserver(drawConnections).observe(entries);
   document.fonts.ready.then(drawConnections);
-  Promise.all([fetch(catalogURL!).then(r=>{if(!r.ok)throw Error('Timeline catalogue unavailable');return r.json();}),fetch(`${base}/assets/branches.json`).then(r=>{if(!r.ok)throw Error('Branch catalogue unavailable');return r.json();})]).then(([r,b]:[HistoryRecord[],BranchData])=>{records=r;branches=b;render(false);}).catch(()=>{status.textContent=t('The timeline is readable below. Reload to use the filters.');});
+  Promise.all([fetch(catalogURL!).then(r=>{if(!r.ok)throw Error('Timeline catalogue unavailable');return r.json();}),fetch(`${base}/assets/branches.json`).then(r=>{if(!r.ok)throw Error('Branch catalogue unavailable');return r.json();})]).then(([r,b]:[HistoryRecord[],BranchData])=>{records=r;branches=b;render(false);document.querySelector<HTMLElement>('.history-atlas')!.dataset.ready='true';}).catch(()=>{status.textContent=t('The timeline is readable below. Reload to use the filters.');});
 }

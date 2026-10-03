@@ -25,16 +25,28 @@ export function translatedRecord(record,translations,locale,defaultLocale='en'){
   }
   const result={...record,...overlay,locale,contentLanguage:overlay||locale===defaultLocale?locale:defaultLocale};
   if(overlay?.dateLabel&&record.date)result.date={...record.date,label:overlay.dateLabel};
-  if(overlay?.paragraphs)result.text=overlay.paragraphs.join('\n\n');
+  if(overlay?.paragraphs){delete result.html;result.text=overlay.paragraphs.join('\n\n');}
+  else if(overlay?.html){delete result.paragraphs;result.text=overlay.html.replace(/<\/(?:p|div|li|h[1-6])>/g,'\n\n').replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'\"').replace(/&#39;|&#x27;/g,"'").replace(/[ \t]+/g,' ').trim();}
+  if(overlay)result.aliases=[...new Set([record.title,...(record.aliases||[]),...(overlay.aliases||[])])];
   return result;
 }
 const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const decode=value=>value.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;|&#x27;/g,"'");
 /** Translate template labels, never URLs, IDs, attributes controlling behavior, or source prose. */
 export function localizeMarkup(markup,ui){
+  const protectedParts=markup.split(/(<!--history-content:start-->[\s\S]*?<!--history-content:end-->)/g);
+  return protectedParts.map(fragment=>fragment.startsWith('<!--history-content:start-->')?fragment:localizeTemplate(fragment,ui)).join('');
+}
+function localizeTemplate(markup,ui){
   return markup.split(/(<[^>]+>)/g).map(part=>{
     if(part.startsWith('<'))return part.replace(/\b(aria-label|placeholder|title)="([^"]*)"/g,(all,key,value)=>Object.hasOwn(ui,decode(value))?`${key}="${escape(ui[decode(value)])}"`:all);
     const match=part.match(/^(\s*)([\s\S]*?)(\s*)$/);if(!match)return part;
     const key=decode(match[2]);return Object.hasOwn(ui,key)?match[1]+escape(ui[key])+match[3]:part;
   }).join('');
+}
+
+/** Compute reciprocal availability from the complete repository translation set. */
+export function availableTranslations(locales,contentId,route,recordTranslations,pageTranslations,defaultLocale='en'){
+ const generated=new Set(['','timeline/','branches/','stories/','people/','places/','events/','traditions/','search/','contribute/']);
+ return locales.filter(locale=>locale.id===defaultLocale||(contentId?recordTranslations[locale.id]?.[contentId]?.reviewed===true:generated.has(route)||!!pageTranslations[locale.id]?.[route]?.body));
 }

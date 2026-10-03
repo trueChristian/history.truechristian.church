@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {validateLocales,localePath,translatedRecord,translate,localizeMarkup} from '../src/lib/localization.mjs';
+import {validateLocales,localePath,translatedRecord,translate,localizeMarkup,availableTranslations} from '../src/lib/localization.mjs';
 import {normalize,eraFor} from '../src/lib/history.mjs';
 import {timelineMarkup,selectTimeline} from '../src/lib/timeline.ts';
 const config=JSON.parse(fs.readFileSync('content/locales/config.json'));
@@ -33,4 +33,25 @@ test('dated Mennonite beginnings have the right era and timeline groups never du
  const ordered=selectTimeline(rows,branches,{q:'',era:'',kind:'',family:'',direction:'newest',sources:false});
  const markup=timelineMarkup(ordered,rows,branches,'/en');
  const ids=[...markup.matchAll(/id="(era-[^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size);
+});
+
+ test('source HTML cannot mask a paragraph translation and localized HTML drives its search text',()=>{
+ const original={slug:'source',title:'Original',summary:'Source',html:'<p>Original English account</p>',text:'Original English account',paragraphs:['Original English account']};
+ const paragraph=translatedRecord(original,{source:{title:'Vertaling',paragraphs:['Volledige Afrikaanse weergawe'],reviewed:true}},'af');
+ assert.equal(paragraph.html,undefined);assert.equal(paragraph.text,'Volledige Afrikaanse weergawe');assert.equal(paragraph.contentLanguage,'af');
+ const html=translatedRecord(original,{source:{title:'Vertaling',html:'<p>Geloof &amp; getuienis.</p>',reviewed:true}},'af');
+ assert.equal(html.paragraphs,undefined);assert.equal(html.text,'Geloof & getuienis.');assert.ok(!html.text.includes('Original English'));
+ });
+
+test('source prose remains unchanged while interface labels are localized',()=>{
+ const source='<h2>References</h2><div class="prose"><!--history-content:start--><p>Yes.</p><p>Search</p><!--history-content:end--></div>';
+ const actual=localizeMarkup(source,{'References':'Verwysings','Yes.':'Ja.','Search':'Soek'});
+ assert.ok(actual.includes('<h2>Verwysings</h2>'));assert.ok(actual.includes('<p>Yes.</p><p>Search</p>'));assert.ok(!actual.includes('<p>Ja.</p>'));
+});
+test('page and record language links are reciprocal and exclude unpublished content',()=>{
+ const locales=[{id:'en'},{id:'af'}],pages={en:{},af:{'about/':{body:'Afrikaanse geskiedenis'}}},records={en:{},af:{witness:{reviewed:true}}};
+ const ids=availableTranslations(locales,undefined,'about/',records,pages).map(l=>l.id);
+ assert.deepEqual(ids,['en','af']);assert.deepEqual(availableTranslations(locales,undefined,'sources/behalt/',records,pages).map(l=>l.id),['en']);
+ assert.deepEqual(availableTranslations(locales,'witness','people/witness/',records,pages).map(l=>l.id),['en','af']);
+ assert.deepEqual(availableTranslations(locales,'missing','people/missing/',records,pages).map(l=>l.id),['en']);
 });

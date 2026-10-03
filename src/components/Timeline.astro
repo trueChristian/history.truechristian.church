@@ -22,7 +22,7 @@ const initial=selectTimeline(records,branches,{q:'',era:'',kind:initialKind,fami
   <aside class="atlas-navigation">
     <p class="eyebrow">{t('Navigate the history')}</p>
     <nav aria-label={t("Timeline eras")}>
-      {ERAS.map(era=><a href={`#era-${era.id}`} data-atlas-era={era.id}><span>{era.short}</span><strong>{t(era.title)}</strong></a>)}
+      {ERAS.map(era=><a href={`${base}/timeline/#era-${era.id}`} data-atlas-era={era.id}><span>{era.short}</span><strong>{t(era.title)}</strong></a>)}
     </nav>
     <p class="atlas-nav-note">{t('Follow the connected lines. Open any name or event to read its history.')}</p>
     <a class="text-link" href={`${base}/search/`}>{t('Search the complete text →')}</a>

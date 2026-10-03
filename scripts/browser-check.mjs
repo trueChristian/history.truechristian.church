@@ -75,7 +75,7 @@ try{
 
   await check('Vertical timeline filters eras and opens an internal milestone',async()=>{
     await page.goto(url('timeline/'));
-    await page.waitForFunction(()=>document.querySelector('#timeline-status')?.textContent.includes('showing'));
+    await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
     assert.equal(await page.locator('.atlas-navigation [data-atlas-era]').count(),6);
     await page.locator('[data-atlas-era="radical-reformation"]').click();
     await page.waitForFunction(()=>document.querySelector('#timeline-filters [name=era]').value==='radical-reformation' && !document.querySelector('#era-living-traditions'));
@@ -136,7 +136,7 @@ try{
 
   await check('Branch streams have connected SVG paths and internal people and place links',async()=>{
     await page.goto(url('branches/?family=amish'));
-    await page.waitForFunction(()=>document.querySelector('#timeline-status')?.textContent.includes('showing'));
+    await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
     assert.ok(await page.locator('.timeline-thread').count()>0);
     assert.equal(await page.locator('[data-record="agape-fellowships"]').count(),0);
     await page.locator('[data-record="beachy-amish"] h3 a').click();
@@ -146,17 +146,17 @@ try{
     assert.match(page.url(),/places\/somerset-county/);
     assert.ok(await page.locator('.prose').innerText());
     await page.goto(url('timeline/?era=radical-reformation'));
-    await page.waitForFunction(()=>document.querySelector('#timeline-status')?.textContent.includes('showing'));
+    await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
     await page.screenshot({path:path.join(screenshots,'timeline-desktop.png')});
   });
 
   await check('Martyrs’ Mirror is integrated into the timeline and research media is excluded',async()=>{
     await page.goto(url('timeline/?era=medieval-witness&kind=story'));
-    await page.waitForFunction(()=>document.querySelector('#timeline-status')?.textContent.includes('showing'));
+    await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
     assert.equal(await page.locator('.atlas-entry').count(),200);
     await page.locator('#timeline-more').click();assert.ok(await page.locator('.atlas-entry').count()>200);
     await page.goto(url('timeline/?era=acts-and-early-church'));
-    await page.waitForFunction(()=>document.querySelector('#timeline-status')?.textContent.includes('showing'));
+    await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
     await page.locator('.atlas-source-link').first().click();
     await waitForArchive();
     assert.ok(Number(await page.locator('[name=century]').inputValue())>0);
@@ -191,8 +191,67 @@ try{
     await page.waitForFunction(()=>document.querySelector('#daily-date')?.textContent);
     await page.screenshot({path:path.join(screenshots,'home-mobile.png')});
     await page.goto(url('timeline/?era=radical-reformation'));
-    await page.waitForFunction(()=>document.querySelector('#timeline-status')?.textContent.includes('showing'));
+    await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
     await page.screenshot({path:path.join(screenshots,'timeline-mobile.png')});
+  });
+
+  await check('English routes preserve legacy era links and expose truthful same-record language availability',async()=>{
+    await page.goto(`${origin}${info.base}/timeline/#radical-reformation`);
+    await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
+    assert.match(page.url(),/\/en\/timeline\/#radical-reformation$/);
+    assert.equal(await page.locator('#timeline-filters [name=era]').inputValue(),'radical-reformation');
+    await page.goto(url('people/dirk-willems/'));
+    assert.equal(await page.locator('html').getAttribute('lang'),'en');
+    assert.match(await page.locator('link[rel=canonical]').getAttribute('href'),/\/en\/people\/dirk-willems\/$/);
+    await page.locator('.language-control summary').click();
+    assert.equal(await page.locator('.language-control nav a').count(),1);
+    assert.equal(await page.locator('.language-control nav a').innerText(),'English');
+    assert.ok((await page.locator('.prose').innerText()).length>400);
+    assert.ok(await page.locator('a[href$="/stories/mm-dirk-willems-a-d-1569/"]').count()>0);
+    const markdown=await context.request.get(url('README.md'));
+    const text=await markdown.text();assert.match(text,/Today’s six accounts/);assert.match(text,/The connected timeline/);
+  });
+
+  await check('Timeline filters survive Back and Forward, reset, empty results, and repeated changes',async()=>{
+    await page.goto(url('timeline/?era=radical-reformation'));
+    await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
+    await page.selectOption('#timeline-filters [name=kind]','person');
+    assert.match(page.url(),/kind=person/);
+    await page.goBack();await page.waitForFunction(()=>document.querySelector('#timeline-filters [name=kind]').value==='');
+    await page.goForward();await page.waitForFunction(()=>document.querySelector('#timeline-filters [name=kind]').value==='person');
+    await page.locator('#timeline-filters [name=q]').fill('zzzz-no-history');
+    await page.locator('#timeline-filters [name=q]').press('Enter');
+    assert.equal(await page.locator('.atlas-entry').count(),0);
+    await page.locator('#timeline-filters button[type=reset]').click();
+    await page.waitForFunction(()=>document.querySelectorAll('.atlas-entry').length>100);
+    const ids=await page.locator('.atlas-era').evaluateAll(nodes=>nodes.map(n=>n.id));assert.equal(new Set(ids).size,ids.length);
+    await page.selectOption('#timeline-filters [name=kind]','event');
+    await page.selectOption('#timeline-filters [name=kind]','person');
+    assert.ok(await page.locator('[data-record="stephen-of-jerusalem"]').count()>0);
+  });
+
+  await check('Visual review captures connected timeline nodes, original illustrations, and mobile content',async()=>{
+    await page.setViewportSize({width:1440,height:1000});
+    await page.goto(url('branches/?family=amish'));
+    await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
+    await page.locator('.atlas-canvas').scrollIntoViewIfNeeded();
+    await page.screenshot({path:path.join(screenshots,'timeline-connections-desktop.png')});
+    await page.selectOption('#theme-mode','dark');
+    await page.locator('[data-record="amish"] h3 a').focus();
+    await page.screenshot({path:path.join(screenshots,'timeline-connections-dark.png')});
+    await page.selectOption('#theme-mode','light');
+    await page.goto(url('people/dirk-willems/'));
+    await page.locator('.prose').scrollIntoViewIfNeeded();
+    await page.screenshot({path:path.join(screenshots,'sourced-history-desktop.png')});
+    await page.setViewportSize({width:390,height:844});
+    await page.goto(url('branches/?family=amish'));
+    await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
+    await page.locator('.atlas-entry').first().scrollIntoViewIfNeeded();
+    await page.screenshot({path:path.join(screenshots,'timeline-connections-mobile.png')});
+    await page.goto(url('people/dirk-willems/'));
+    await page.locator('.prose p').first().scrollIntoViewIfNeeded();
+    await page.screenshot({path:path.join(screenshots,'sourced-history-mobile.png')});
+    await page.setViewportSize({width:1440,height:1000});
   });
 
   await check('404 responses keep navigation and the shared page chrome',async()=>{

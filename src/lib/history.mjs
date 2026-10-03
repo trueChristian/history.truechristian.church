@@ -38,7 +38,7 @@ export function contributionURL(record={}, pageURL='', kind='correction') {
   const missing=kind==='missing' || record.status==='Research needed';
   const title=`${missing?'Add history':'Correction'}: ${record.title||'Anabaptist history'}`;
   const body=[`## Page or topic\n${record.title||'Anabaptist history'}`,
-    pageURL?`Page: ${pageURL}`:'', record.slug?`Record: ${record.slug}`:'',
+    pageURL?`Page: ${pageURL}`:'', record.slug?`Record: ${record.slug}`:'', record.sourceEvidence?`Source evidence: ${record.sourceEvidence}`:'',
     record.date?`Date currently shown: ${record.date.label}`:'',
     `## ${missing?'History you can add':'Correction or addition'}\n\n`,
     '## Sources and evidence\nPlease include book/page references, archive links, or first-hand documentation.\n\n',
@@ -62,4 +62,24 @@ export function searchRecords(records, query='', filters={}) {
     const score=terms.reduce((n,term)=>n+(title.includes(term)?20:0)+(aliases.includes(term)?15:0),0)+(record.kind==='person'?5:0);
     return [{record,score}];
   }).sort((a,b)=>b.score-a.score||a.record.title.localeCompare(b.record.title)).map(r=>r.record);
+}
+
+/** Link only explicitly related named entities; never infer an identity from a bare word. */
+export function linkedHistoryText(text,entities,url){
+  const names=new Map();
+  for(const entity of entities)for(const name of [entity.title,...(entity.aliases||[])]){
+    if(name.length>=4&&!names.has(name.toLocaleLowerCase()))names.set(name.toLocaleLowerCase(),{name,route:entity.route});
+  }
+  if(!names.size)return escapeHTML(text);
+  const escaped=value=>value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  const pattern=[...names.values()].map(x=>x.name).sort((a,b)=>b.length-a.length).map(escaped).join('|');
+  const regex=new RegExp(`(?<![\\p{L}\\p{N}])(${pattern})(?![\\p{L}\\p{N}])`,'giu');
+  let result='',cursor=0;
+  for(const match of text.matchAll(regex)){
+    result+=escapeHTML(text.slice(cursor,match.index));
+    const entity=names.get(match[0].toLocaleLowerCase());
+    result+=entity?`<a href="${escapeHTML(url(entity.route))}">${escapeHTML(match[0])}</a>`:escapeHTML(match[0]);
+    cursor=match.index+match[0].length;
+  }
+  return result+escapeHTML(text.slice(cursor));
 }

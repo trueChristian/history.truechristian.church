@@ -1,0 +1,3097 @@
+[
+  {
+    "slug": "conrad-grebel",
+    "title": "Conrad Grebel",
+    "kind": "person",
+    "date": {
+      "start": 1525,
+      "end": 1525,
+      "label": "1525",
+      "basis": "Date of the event or documented activity; see cited sources"
+    },
+    "summary": "Conrad Grebel belonged to the Zürich circle that sought a church ordered by the teaching and practice of the New Testament. On 21 January 1525, after prayer, he baptized George Blaurock upon his confession of faith. Blaurock then baptized the others who were present.",
+    "paragraphs": [
+      "Conrad Grebel belonged to the Zürich circle that sought a church ordered by the teaching and practice of the New Testament. On 21 January 1525, after prayer, he baptized George Blaurock upon his confession of faith. Blaurock then baptized the others who were present.",
+      "The gathering joined baptism to a shared commitment to follow Christ and teach the gospel. Grebel therefore connects the Zürich event with the beginnings of the Swiss Brethren, alongside Felix Manz and Blaurock. The dated entry here identifies that gathering rather than the whole span of his life."
+    ],
+    "aliases": [
+      "Konrad Grebel"
+    ],
+    "references": [
+      {
+        "label": "Mennonite World Conference: the first baptisms",
+        "url": "https://mwc-cmm.org/en/stories/teach-gospel-and-hold-faith/"
+      },
+      {
+        "label": "Supplied timeline photograph 9375",
+        "url": "sources/church-history/photos/IMG_9375.jpg"
+      }
+    ],
+    "people": [
+      "felix-manz",
+      "george-blaurock"
+    ],
+    "traditions": [
+      "swiss-brethren"
+    ],
+    "status": "Overview",
+    "category": "Person",
+    "places": [
+      "zurich"
+    ],
+    "sourceAccounts": []
+  },
+  {
+    "slug": "felix-manz",
+    "title": "Felix Manz",
+    "kind": "person",
+    "date": {
+      "start": 1527,
+      "end": 1527,
+      "label": "1527",
+      "basis": "Date of the event or documented activity; see cited sources"
+    },
+    "summary": "Felix Manz helped shape the early Zürich fellowship and shared its conviction that baptism should follow faith. Martyrs’ Mirror calls him Felix Mantz and describes his preaching, imprisonment, and death by drowning at Zürich.",
+    "paragraphs": [
+      "Felix Manz helped shape the early Zürich fellowship and shared its conviction that baptism should follow faith. Martyrs’ Mirror calls him Felix Mantz and describes his preaching, imprisonment, and death by drowning at Zürich.",
+      "His preserved admonition gives a fuller picture of his convictions than the execution alone. He insists that Christian profession must bear the fruit of love and mercy, including love toward enemies, and rejects hatred and coercion as the work of Christ’s shepherds.",
+      "The original account prints 1526. This profile retains the separately cited 1527 date used in the Zürich overview, while linking directly to the unchanged account so both date statements remain visible."
+    ],
+    "aliases": [
+      "Felix Mantz"
+    ],
+    "references": [
+      {
+        "label": "MWC: European history",
+        "url": "https://mwc-cmm.org/wp-content/uploads/2024/11/gmh-europe_testing_faith_and_tradition.pdf"
+      },
+      {
+        "label": "Felix mantz, a. d. 1526.",
+        "url": "stories/mm-felix-mantz-a-d-1526/"
+      }
+    ],
+    "people": [
+      "conrad-grebel",
+      "george-blaurock"
+    ],
+    "traditions": [
+      "swiss-brethren"
+    ],
+    "status": "Overview",
+    "category": "Person",
+    "places": [
+      "zurich"
+    ],
+    "sourceAccounts": [
+      "mm-felix-mantz-a-d-1526"
+    ]
+  },
+  {
+    "slug": "george-blaurock",
+    "title": "George Blaurock",
+    "kind": "person",
+    "date": {
+      "start": 1525,
+      "end": 1529,
+      "label": "1525–1529: baptism and ministry",
+      "basis": "Zürich gathering in the cited MWC history; 1529 execution in Martyrs’ Mirror."
+    },
+    "summary": "George Blaurock asked Conrad Grebel to baptize him at the Zürich gathering of 21 January 1525 and then baptized the others present. The act expressed their commitment to become a fellowship of believers following Christ together.",
+    "paragraphs": [
+      "George Blaurock asked Conrad Grebel to baptize him at the Zürich gathering of 21 January 1525 and then baptized the others present. The act expressed their commitment to become a fellowship of believers following Christ together.",
+      "Martyrs’ Mirror follows his preaching from Switzerland into Tyrol. Its 1529 account describes his arrest with companions and execution near Clausen, explaining that his rejection of infant baptism and the mass formed part of the charges. A separate admonition preserves the encouragement he left to those who would follow.",
+      "The same account tells how Jacob Huter served as a teacher in Tyrol and led people to Moravia amid persecution. That passage supplies a specific connection between the Swiss and Tyrolean stories and the communities later known as Hutterites."
+    ],
+    "aliases": [
+      "Georg Blaurock",
+      "Jörg Blaurock"
+    ],
+    "references": [
+      {
+        "label": "Mennonite World Conference: the first baptisms",
+        "url": "https://mwc-cmm.org/en/stories/teach-gospel-and-hold-faith/"
+      },
+      {
+        "label": "George blaurock, and hans van der reve, a. d. 1529.",
+        "url": "stories/mm-george-blaurock-and-hans-van-der-reve-a-d-1529/"
+      },
+      {
+        "label": "Here follows another consolatory admonition left by george blaurock to his descendants.",
+        "url": "stories/mm-here-follows-another-consolatory-admonition-left-by-george-blaurock-to-his-descendants/"
+      }
+    ],
+    "people": [
+      "conrad-grebel",
+      "felix-manz",
+      "jakob-hutter"
+    ],
+    "traditions": [
+      "swiss-brethren"
+    ],
+    "status": "Overview",
+    "category": "Person",
+    "places": [
+      "zurich"
+    ],
+    "sourceAccounts": [
+      "mm-george-blaurock-and-hans-van-der-reve-a-d-1529",
+      "mm-here-follows-another-consolatory-admonition-left-by-george-blaurock-to-his-descendants"
+    ]
+  },
+  {
+    "slug": "michael-sattler",
+    "title": "Michael Sattler",
+    "kind": "person",
+    "date": {
+      "start": 1527,
+      "end": 1527,
+      "label": "1527",
+      "basis": "Date of the event or documented activity; see cited sources"
+    },
+    "summary": "Michael Sattler is associated with the seven Schleitheim Articles of 1527, which address baptism, church discipline, the breaking of bread, separation, shepherds, the sword, and oaths. They set out a shared order of discipleship for the gathered brethren.",
+    "paragraphs": [
+      "Michael Sattler is associated with the seven Schleitheim Articles of 1527, which address baptism, church discipline, the breaking of bread, separation, shepherds, the sword, and oaths. They set out a shared order of discipleship for the gathered brethren.",
+      "Martyrs’ Mirror preserves his trial as a sequence: the account of his hearing, the charges and answers, and a prison letter to the church at Horb. Reading these together shows how convictions about baptism and nonresistance became matters for which a believer could be condemned.",
+      "The prison letter carries the story beyond the courtroom. It exhorts the congregation to remain faithful to Christ, to live in obedience, and to hold together under pressure. These are linked here as parts of one documented account rather than as unrelated search matches."
+    ],
+    "aliases": [
+      "Sattler"
+    ],
+    "references": [
+      {
+        "label": "Schleitheim Articles (1527), historical document",
+        "url": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi%3Adocument-4315"
+      },
+      {
+        "label": "Michael sattler, a. d. 1527.",
+        "url": "stories/mm-michael-sattler-a-d-1527/"
+      },
+      {
+        "label": "Articles or charges against michael sattler.",
+        "url": "stories/mm-articles-or-charges-against-michael-sattler/"
+      },
+      {
+        "label": "A letter written by michael sattler, in prison, to the church of god at horb.",
+        "url": "stories/mm-a-letter-written-by-michael-sattler-in-prison-to-the-church-of-god-at-horb/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "swiss-brethren"
+    ],
+    "status": "Overview",
+    "category": "Person",
+    "places": [
+      "schleitheim"
+    ],
+    "sourceAccounts": [
+      "mm-michael-sattler-a-d-1527",
+      "mm-articles-or-charges-against-michael-sattler",
+      "mm-a-letter-written-by-michael-sattler-in-prison-to-the-church-of-god-at-horb"
+    ]
+  },
+  {
+    "slug": "jakob-hutter",
+    "title": "Jakob Hutter",
+    "kind": "person",
+    "date": {
+      "start": 1536,
+      "end": 1536,
+      "label": "1536",
+      "basis": "Date of the event or documented activity; see cited sources"
+    },
+    "summary": "Jakob Hutter led Anabaptist believers from Tyrol toward refuge in Moravia and helped organize their shared life. The Hutterite history dates his election as chief elder to 1533 and his execution at Innsbruck to 25 February 1536.",
+    "paragraphs": [
+      "Jakob Hutter led Anabaptist believers from Tyrol toward refuge in Moravia and helped organize their shared life. The Hutterite history dates his election as chief elder to 1533 and his execution at Innsbruck to 25 February 1536.",
+      "Martyrs’ Mirror uses the spelling Jacob Huter in its Blaurock account. It describes him as an overseer and teacher whose people joined the Moravian church as persecution increased. Its account of George Zaunringerad also records Huter’s part in placing a minister in service and sending him to Moravia.",
+      "These passages connect Hutter’s leadership to named people and movements within the book. Community of goods and the continuing Hutterite tradition are explored on the linked tradition page."
+    ],
+    "aliases": [
+      "Jacob Hutter",
+      "Jacob Huter"
+    ],
+    "references": [
+      {
+        "label": "Hutterite history overview",
+        "url": "https://hutterites.org/history/hutterite-history-overview/"
+      },
+      {
+        "label": "George blaurock, and hans van der reve, a. d. 1529.",
+        "url": "stories/mm-george-blaurock-and-hans-van-der-reve-a-d-1529/"
+      },
+      {
+        "label": "George zaunringerad, a. d. 1531.",
+        "url": "stories/mm-george-zaunringerad-a-d-1531/"
+      }
+    ],
+    "people": [
+      "george-blaurock"
+    ],
+    "traditions": [
+      "hutterites"
+    ],
+    "status": "Overview",
+    "category": "Person",
+    "places": [
+      "moravia",
+      "innsbruck"
+    ],
+    "sourceAccounts": [
+      "mm-george-blaurock-and-hans-van-der-reve-a-d-1529",
+      "mm-george-zaunringerad-a-d-1531"
+    ]
+  },
+  {
+    "slug": "menno-simons",
+    "title": "Menno Simons",
+    "kind": "person",
+    "date": {
+      "start": 1536,
+      "end": 1561,
+      "label": "Menno Simons’s ministry, 1536–1561",
+      "basis": "Dated ministry described by the cited history."
+    },
+    "summary": "Menno Simons was a former Dutch priest who became an influential Anabaptist teacher. The Mennonite name preserves his association with the communities he helped strengthen; it does not make every later branch the work of one founder.",
+    "paragraphs": [
+      "Menno Simons was a former Dutch priest who became an influential Anabaptist teacher. The Mennonite name preserves his association with the communities he helped strengthen; it does not make every later branch the work of one founder.",
+      "A revealing passage in Martyrs’ Mirror occurs in Herman Vleckwijk’s prison disputation. Pressed about Menno and other teachers, Herman answers that his trust rests in God rather than in any man. The exchange shows both Menno’s public prominence and the believer’s insistence that Scripture and Christ stood above a teacher’s reputation."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Mennonite Church USA: history and traditions",
+        "url": "https://www.mennoniteusa.org/who-are-mennonites/faq-about-mennonites/"
+      },
+      {
+        "label": "Disputation between herman vleckwijk, imprisoned by the lords of the country van den vrye in bruges, and friar cornelis, in the presence of mr. jan van dam, on the 1oth of may, a. d. 1569.",
+        "url": "stories/mm-disputation-between-herman-vleckwijk-imprisoned-by-the-lords-of-the-country-van-den-vrye-in-bruges-and-friar-cornelis-in/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "mennonites"
+    ],
+    "status": "Overview",
+    "category": "Person",
+    "era": "radical-reformation",
+    "places": [],
+    "sourceAccounts": [
+      "mm-disputation-between-herman-vleckwijk-imprisoned-by-the-lords-of-the-country-van-den-vrye-in-bruges-and-friar-cornelis-in"
+    ]
+  },
+  {
+    "slug": "dirk-willems",
+    "title": "Dirk Willems",
+    "kind": "person",
+    "date": {
+      "start": 1569,
+      "end": 1569,
+      "label": "1569",
+      "basis": "Date of the event or documented activity; see cited sources"
+    },
+    "summary": "Dirk Willems was imprisoned at Asperen in Holland in 1569. Martyrs’ Mirror recounts that he escaped, crossed the ice, and turned back when the man pursuing him fell through it. His rescue of the pursuer cost him the opportunity to get away.",
+    "paragraphs": [
+      "Dirk Willems was imprisoned at Asperen in Holland in 1569. Martyrs’ Mirror recounts that he escaped, crossed the ice, and turned back when the man pursuing him fell through it. His rescue of the pursuer cost him the opportunity to get away.",
+      "The officer was ordered to seize him again, and Dirk was subsequently condemned and executed. The account preserves the sentence as well as the rescue, allowing the reader to follow the action from imprisonment to judgment. The book’s illustration depicts him reaching toward the man in the water."
+    ],
+    "aliases": [
+      "Dirck Willems"
+    ],
+    "references": [
+      {
+        "label": "Dirk willems, a. d. 1569.",
+        "url": "stories/mm-dirk-willems-a-d-1569/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "mennonites"
+    ],
+    "status": "Overview",
+    "category": "Person",
+    "places": [
+      "asperen"
+    ],
+    "sourceAccounts": [
+      "mm-dirk-willems-a-d-1569"
+    ],
+    "images": [
+      "sources/martyrs-mirror/images/i1437.jpg"
+    ],
+    "imageSources": {
+      "sources/martyrs-mirror/images/i1437.jpg": "mm-dirk-willems-a-d-1569"
+    }
+  },
+  {
+    "slug": "anna-jans",
+    "title": "Anna Jans",
+    "kind": "person",
+    "date": {
+      "start": 1539,
+      "end": 1539,
+      "label": "1539",
+      "basis": "Date of the event or documented activity; see cited sources"
+    },
+    "summary": "Anna Jans is the woman remembered in the supplied edition as Anna of Rotterdam. The account preserves the testament she gave to her son Isaiah on 24 January 1539, as she prepared to die for her faith.",
+    "paragraphs": [
+      "Anna Jans is the woman remembered in the supplied edition as Anna of Rotterdam. The account preserves the testament she gave to her son Isaiah on 24 January 1539, as she prepared to die for her faith.",
+      "Her letter sets her suffering alongside that of Christ, the prophets, apostles, and earlier witnesses. She urges her son to follow the way of the Lord and seek the faithful, even when their fellowship is despised. Its many biblical references make the account both a mother’s farewell and an instruction in discipleship."
+    ],
+    "aliases": [
+      "Anneken Jans",
+      "Anneke Jans",
+      "Anna Jansz",
+      "Anneken Jansz",
+      "Anna of Rotterdam"
+    ],
+    "references": [
+      {
+        "label": "Supplied Martyrs’ Mirror edition",
+        "url": "sources/martyrs-mirror/original.html"
+      },
+      {
+        "label": "Anna of rotterdam, put to death in that place, a. d. 1539.",
+        "url": "stories/mm-anna-of-rotterdam-put-to-death-in-that-place-a-d-1539/"
+      },
+      {
+        "label": "Anna Jansz of Rotterdam, Anabaptist World",
+        "url": "https://anabaptistworld.org/anna-jansz-of-rotterdam/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "mennonites"
+    ],
+    "status": "Overview",
+    "category": "Person",
+    "places": [],
+    "sourceAccounts": [
+      "mm-anna-of-rotterdam-put-to-death-in-that-place-a-d-1539"
+    ]
+  },
+  {
+    "slug": "hans-landis",
+    "title": "Hans Landis",
+    "kind": "person",
+    "date": {
+      "start": 1614,
+      "end": 1614,
+      "label": "1614",
+      "basis": "Date of the event or documented activity; see cited sources"
+    },
+    "summary": "Hans Landis was a Swiss teacher who continued ministering when the Zürich authorities ordered him to stop. Martyrs’ Mirror describes his arrest, release from an earlier imprisonment, renewed examination, and execution by beheading in September 1614.",
+    "paragraphs": [
+      "Hans Landis was a Swiss teacher who continued ministering when the Zürich authorities ordered him to stop. Martyrs’ Mirror describes his arrest, release from an earlier imprisonment, renewed examination, and execution by beheading in September 1614.",
+      "The account presents his refusal to abandon those he served as obedience to God. A following section preserves a later witness’s recollection of his appearance and death. Together they connect a named minister and congregation to the longer history of persecution and refuge among the Swiss Brethren."
+    ],
+    "aliases": [
+      "Hans Landis"
+    ],
+    "references": [
+      {
+        "label": "Hans landis, a. d. 1614.",
+        "url": "stories/mm-hans-landis-a-d-1614/"
+      },
+      {
+        "label": "Further observations touching the person and the death of hans landis.",
+        "url": "stories/mm-further-observations-touching-the-person-and-the-death-of-hans-landis/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "swiss-brethren"
+    ],
+    "status": "Overview",
+    "category": "Person",
+    "places": [
+      "zurich"
+    ],
+    "sourceAccounts": [
+      "mm-hans-landis-a-d-1614",
+      "mm-further-observations-touching-the-person-and-the-death-of-hans-landis"
+    ]
+  },
+  {
+    "slug": "thieleman-van-braght",
+    "title": "Thieleman J. van Braght",
+    "kind": "person",
+    "date": {
+      "start": 1660,
+      "end": 1660,
+      "label": "1660",
+      "basis": "Date of the event or documented activity; see cited sources"
+    },
+    "summary": "Thieleman J. van Braght gathered the accounts, letters, confessions, and exhortations that make up Martyrs’ Mirror. He organized Christian witness century by century, bringing the testimony of the early church and medieval believers together with the sufferings of the Anabaptists.",
+    "paragraphs": [
+      "Thieleman J. van Braght gathered the accounts, letters, confessions, and exhortations that make up Martyrs’ Mirror. He organized Christian witness century by century, bringing the testimony of the early church and medieval believers together with the sufferings of the Anabaptists.",
+      "His addresses to fellow believers make the collection a call to faithful discipleship. The valedictory is signed at Dort on 31 July 1659, and the address introducing the second part also bears his name and the year 1659. These authorial passages show his purpose in his own words, alongside the timeline’s 1660 publication milestone."
+    ],
+    "aliases": [
+      "Thielem J. van Braght",
+      "Thieleman van Braght",
+      "T. J. van Braght"
+    ],
+    "references": [
+      {
+        "label": "Supplied edition",
+        "url": "sources/martyrs-mirror/original.html"
+      },
+      {
+        "label": "Valedictory.",
+        "url": "stories/mm-valedictory/"
+      },
+      {
+        "label": "To my beloved friends and fellow-believers in christ jesus our savior.",
+        "url": "stories/mm-to-my-beloved-friends-and-fellow-believers-in-christ-jesus-our-savior/"
+      }
+    ],
+    "people": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "places": [
+      "dordrecht"
+    ],
+    "sourceAccounts": [
+      "mm-valedictory",
+      "mm-to-my-beloved-friends-and-fellow-believers-in-christ-jesus-our-savior"
+    ]
+  },
+  {
+    "slug": "jakob-ammann",
+    "title": "Jakob Ammann",
+    "kind": "person",
+    "date": {
+      "start": 1693,
+      "end": 1693,
+      "label": "1693",
+      "basis": "Date of the event or documented activity; see cited sources"
+    },
+    "summary": "Jakob Ammann was a Swiss Anabaptist leader concerned with spiritual renewal, separation from the world, and the practice of church discipline. Disagreement over the ban and shunning contributed to the division of 1693, and his followers came to be called Amish.",
+    "paragraphs": [
+      "Jakob Ammann was a Swiss Anabaptist leader concerned with spiritual renewal, separation from the world, and the practice of church discipline. Disagreement over the ban and shunning contributed to the division of 1693, and his followers came to be called Amish.",
+      "The Amish branch page follows the later development of those communities, including migrations and the emergence of distinct fellowships. The 1693 date marks Ammann’s place in that wider history, while the later branches retain their own dates and accounts."
+    ],
+    "aliases": [
+      "Jacob Amman",
+      "Jacob Ammann",
+      "Jakob Amman"
+    ],
+    "references": [
+      {
+        "label": "Mennonite Church USA: history and traditions",
+        "url": "https://www.mennoniteusa.org/who-are-mennonites/faq-about-mennonites/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "amish"
+    ],
+    "status": "Overview",
+    "category": "Person",
+    "places": [],
+    "sourceAccounts": []
+  },
+  {
+    "slug": "eberhard-arnold",
+    "title": "Eberhard Arnold",
+    "kind": "person",
+    "date": {
+      "start": 1920,
+      "end": 1920,
+      "label": "1920",
+      "basis": "Date of the event or documented activity; see cited sources"
+    },
+    "summary": "Eberhard Arnold, a Protestant theologian, founded the Bruderhof with Emmy Arnold and Else von Hollander in 1920. They left Berlin for Sannerz after the devastation of the First World War.",
+    "paragraphs": [
+      "Eberhard Arnold, a Protestant theologian, founded the Bruderhof with Emmy Arnold and Else von Hollander in 1920. They left Berlin for Sannerz after the devastation of the First World War.",
+      "Inspired by the first Christians in Jerusalem, they began a shared life with a small group of believers. His profile connects that beginning with the Sannerz place page and the later Bruderhof history."
+    ],
+    "aliases": [
+      "Eberhard Arnold"
+    ],
+    "references": [
+      {
+        "label": "Bruderhof: history",
+        "url": "https://www.bruderhof.com/history"
+      }
+    ],
+    "people": [
+      "emmy-arnold",
+      "else-von-hollander"
+    ],
+    "traditions": [
+      "bruderhof"
+    ],
+    "status": "Overview",
+    "category": "Person",
+    "places": [
+      "sannerz"
+    ],
+    "sourceAccounts": []
+  },
+  {
+    "slug": "emmy-arnold",
+    "title": "Emmy Arnold",
+    "kind": "person",
+    "date": {
+      "start": 1920,
+      "end": 1920,
+      "label": "1920",
+      "basis": "Date of the event or documented activity; see cited sources"
+    },
+    "summary": "Emmy Arnold co-founded the Bruderhof in 1920 with her husband Eberhard and her sister Else von Hollander. Their first community was at Sannerz in Germany.",
+    "paragraphs": [
+      "Emmy Arnold co-founded the Bruderhof in 1920 with her husband Eberhard and her sister Else von Hollander. Their first community was at Sannerz in Germany.",
+      "The community sought to put Christian fellowship into daily practice after the First World War. The linked history follows the shared undertaking she helped begin."
+    ],
+    "aliases": [
+      "Emmy von Hollander"
+    ],
+    "references": [
+      {
+        "label": "Bruderhof: history",
+        "url": "https://www.bruderhof.com/history"
+      }
+    ],
+    "people": [
+      "eberhard-arnold",
+      "else-von-hollander"
+    ],
+    "traditions": [
+      "bruderhof"
+    ],
+    "status": "Overview",
+    "category": "Person",
+    "places": [
+      "sannerz"
+    ],
+    "sourceAccounts": []
+  },
+  {
+    "slug": "else-von-hollander",
+    "title": "Else von Hollander",
+    "kind": "person",
+    "date": {
+      "start": 1920,
+      "end": 1920,
+      "label": "1920",
+      "basis": "Date of the event or documented activity; see cited sources"
+    },
+    "summary": "Else von Hollander was one of the three founders of the Bruderhof at Sannerz in 1920, alongside her sister Emmy Arnold and Eberhard Arnold.",
+    "paragraphs": [
+      "Else von Hollander was one of the three founders of the Bruderhof at Sannerz in 1920, alongside her sister Emmy Arnold and Eberhard Arnold.",
+      "Their beginning joined faith with shared community life. Her place in the founding is preserved here alongside the other founders and the history of Sannerz."
+    ],
+    "aliases": [
+      "Else Hollander"
+    ],
+    "references": [
+      {
+        "label": "Bruderhof: history",
+        "url": "https://www.bruderhof.com/history"
+      }
+    ],
+    "people": [
+      "eberhard-arnold",
+      "emmy-arnold"
+    ],
+    "traditions": [
+      "bruderhof"
+    ],
+    "status": "Overview",
+    "category": "Person",
+    "places": [
+      "sannerz"
+    ],
+    "sourceAccounts": []
+  },
+  {
+    "slug": "christian-beginnings",
+    "title": "Christian beginnings: baptism, fellowship, and witness",
+    "kind": "event",
+    "date": {
+      "start": 30,
+      "end": 99,
+      "label": "Acts and the first century",
+      "basis": "Scriptural beginnings and the first-century accounts in Martyrs’ Mirror."
+    },
+    "summary": "Acts begins this history with the preaching of Christ, repentance, baptism, fellowship, prayer, and care for one another. Martyrs’ Mirror’s first-century account brings together the baptisms at Pentecost, in Samaria, of the Ethiopian, of Saul, and in other households and communities.",
+    "paragraphs": [
+      "Acts begins this history with the preaching of Christ, repentance, baptism, fellowship, prayer, and care for one another. Martyrs’ Mirror’s first-century account brings together the baptisms at Pentecost, in Samaria, of the Ethiopian, of Saul, and in other households and communities.",
+      "Stephen’s witness at Jerusalem and the ministries of Peter and Paul give these beginnings named lives and places. The linked source passages preserve the scriptural references, while the profiles lead into the book’s accounts of suffering and steadfastness."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Scripture: Acts 2:41–47; Acts 4:32–35; Acts 6–7",
+        "url": "https://getbible.life/acts"
+      },
+      {
+        "label": "Martyrs’ Mirror: first-century witnesses",
+        "url": "stories/mm-an-account-of-the-pious-martyrs-and-witnesses-of-jesus-christ-who-suffered-during-the-first-century/"
+      },
+      {
+        "label": "How the apostles executed this command of christ to teach and baptize, after the ascension of christ.",
+        "url": "stories/mm-how-the-apostles-executed-this-command-of-christ-to-teach-and-baptize-after-the-ascension-of-christ/"
+      }
+    ],
+    "people": [
+      "stephen-of-jerusalem",
+      "simon-peter",
+      "paul-the-apostle"
+    ],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Event",
+    "era": "acts-and-early-church",
+    "places": [
+      "jerusalem"
+    ],
+    "sourceAccounts": [
+      "mm-how-the-apostles-executed-this-command-of-christ-to-teach-and-baptize-after-the-ascension-of-christ"
+    ]
+  },
+  {
+    "slug": "stephen-of-jerusalem",
+    "title": "Stephen of Jerusalem",
+    "kind": "person",
+    "paragraphs": [
+      "Stephen was one of the seven chosen to serve the church at Jerusalem. Martyrs’ Mirror follows Acts 6–7: his wisdom in dispute, the accusations against him, and his testimony before the council about God’s dealings with his people.",
+      "He was stoned outside the city, commending his spirit to the Lord and praying for those who killed him. The source heading assigns the event to 34. Its original illustration depicts the stoning and links the first-century chapter to a particular witness and place."
+    ],
+    "summary": "Stephen was one of the seven chosen to serve the church at Jerusalem. Martyrs’ Mirror follows Acts 6–7: his wisdom in dispute, the accusations against him, and his testimony before the council about God’s dealings with his people.",
+    "aliases": [],
+    "people": [],
+    "places": [
+      "jerusalem"
+    ],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-stephen-one-of-the-seven-deacons-of-the-church-at-jerusalem-stoned-without-the-gate-of-that-city-by-the-libertines-a-d-3"
+    ],
+    "date": {
+      "start": 34,
+      "end": 34,
+      "label": "34",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "Stephen, one of the seven deacons of the church at jerusalem, stoned without the gate of that city, by the libertines, a. d. 34, shortly after the death of christ.",
+        "url": "stories/mm-stephen-one-of-the-seven-deacons-of-the-church-at-jerusalem-stoned-without-the-gate-of-that-city-by-the-libertines-a-d-3/"
+      }
+    ],
+    "images": [
+      "sources/martyrs-mirror/images/i0132.jpg"
+    ],
+    "imageSources": {
+      "sources/martyrs-mirror/images/i0132.jpg": "mm-stephen-one-of-the-seven-deacons-of-the-church-at-jerusalem-stoned-without-the-gate-of-that-city-by-the-libertines-a-d-3"
+    }
+  },
+  {
+    "slug": "simon-peter",
+    "title": "Simon Peter",
+    "kind": "person",
+    "paragraphs": [
+      "Peter appears in the first-century baptism passages as a preacher at Pentecost and as a witness to the reception of the gospel in the household of Cornelius. The account joins repentance and baptism with the gift of the Holy Spirit and the gathered life of believers.",
+      "Martyrs’ Mirror’s separate account follows his suffering and gives his crucifixion under Nero the date 69. The narrative and its illustration lead from the apostolic preaching in Acts to the witness at Rome remembered by the book."
+    ],
+    "summary": "Peter appears in the first-century baptism passages as a preacher at Pentecost and as a witness to the reception of the gospel in the household of Cornelius. The account joins repentance and baptism with the gift of the Holy Spirit and the gathered life of believers.",
+    "aliases": [],
+    "people": [],
+    "places": [
+      "jerusalem",
+      "rome"
+    ],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-simon-peter-the-holy-apostle-crucified-with-his-head-downward-under-emperor-nero-a-d-69",
+      "mm-how-the-apostles-executed-this-command-of-christ-to-teach-and-baptize-after-the-ascension-of-christ"
+    ],
+    "date": {
+      "start": 69,
+      "end": 69,
+      "label": "69",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "Simon peter, the holy apostle, crucified with his head downward, under emperor nero, a. d. 69.",
+        "url": "stories/mm-simon-peter-the-holy-apostle-crucified-with-his-head-downward-under-emperor-nero-a-d-69/"
+      },
+      {
+        "label": "How the apostles executed this command of christ to teach and baptize, after the ascension of christ.",
+        "url": "stories/mm-how-the-apostles-executed-this-command-of-christ-to-teach-and-baptize-after-the-ascension-of-christ/"
+      }
+    ],
+    "images": [
+      "sources/martyrs-mirror/images/i0156.jpg"
+    ],
+    "imageSources": {
+      "sources/martyrs-mirror/images/i0156.jpg": "mm-simon-peter-the-holy-apostle-crucified-with-his-head-downward-under-emperor-nero-a-d-69"
+    }
+  },
+  {
+    "slug": "paul-the-apostle",
+    "title": "Paul the apostle",
+    "kind": "person",
+    "paragraphs": [
+      "The first-century baptism section recalls Saul’s baptism after Ananias came to him, and the wider account follows Paul’s ministry through repeated suffering. His letters and example give the book a language of endurance, service, and hope in Christ.",
+      "The account of his final witness places his beheading at Rome under Nero in 69. Its original illustration accompanies that account. This date describes the event as presented in the supplied edition rather than the beginning of his ministry."
+    ],
+    "summary": "The first-century baptism section recalls Saul’s baptism after Ananias came to him, and the wider account follows Paul’s ministry through repeated suffering. His letters and example give the book a language of endurance, service, and hope in Christ.",
+    "aliases": [],
+    "people": [],
+    "places": [
+      "rome"
+    ],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-paul-the-apostle-of-christ-sorely-persecuted-and-finally-beheaded-at-rome-under-the-emperor-nero-a-d-69",
+      "mm-how-the-apostles-executed-this-command-of-christ-to-teach-and-baptize-after-the-ascension-of-christ"
+    ],
+    "date": {
+      "start": 69,
+      "end": 69,
+      "label": "69",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "Paul, the apostle of christ, sorely persecuted, and finally beheaded, at rome, under the emperor nero, a. d. 69.",
+        "url": "stories/mm-paul-the-apostle-of-christ-sorely-persecuted-and-finally-beheaded-at-rome-under-the-emperor-nero-a-d-69/"
+      },
+      {
+        "label": "How the apostles executed this command of christ to teach and baptize, after the ascension of christ.",
+        "url": "stories/mm-how-the-apostles-executed-this-command-of-christ-to-teach-and-baptize-after-the-ascension-of-christ/"
+      }
+    ],
+    "images": [
+      "sources/martyrs-mirror/images/i0159.jpg"
+    ],
+    "imageSources": {
+      "sources/martyrs-mirror/images/i0159.jpg": "mm-paul-the-apostle-of-christ-sorely-persecuted-and-finally-beheaded-at-rome-under-the-emperor-nero-a-d-69"
+    }
+  },
+  {
+    "slug": "ignatius-of-antioch",
+    "title": "Ignatius of Antioch",
+    "kind": "person",
+    "paragraphs": [
+      "Ignatius served the church at Antioch in Syria. Martyrs’ Mirror describes him as a disciple of John and a diligent shepherd whose teaching centered on Christ. Arrested under Trajan, he was sent under guard to Rome.",
+      "The journey became an opportunity to encourage other believers through letters. The account follows his steadfastness as he faced death by wild beasts, which its heading dates to 111. The accompanying illustration belongs to this account."
+    ],
+    "summary": "Ignatius served the church at Antioch in Syria. Martyrs’ Mirror describes him as a disciple of John and a diligent shepherd whose teaching centered on Christ. Arrested under Trajan, he was sent under guard to Rome.",
+    "aliases": [],
+    "people": [],
+    "places": [
+      "rome"
+    ],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-ignatius-a-disciple-of-the-apostle-john-devoured-by-wild-beasts-in-a-circus-at-rome-for-the-testimony-of-the-son-of-god"
+    ],
+    "date": {
+      "start": 111,
+      "end": 111,
+      "label": "111",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "Ignatius, a disciple of the apostle john, devoured by wild beasts in a circus at rome, for the testimony of the son of god, a. d. 111.",
+        "url": "stories/mm-ignatius-a-disciple-of-the-apostle-john-devoured-by-wild-beasts-in-a-circus-at-rome-for-the-testimony-of-the-son-of-god/"
+      }
+    ],
+    "images": [
+      "sources/martyrs-mirror/images/i0218.jpg"
+    ],
+    "imageSources": {
+      "sources/martyrs-mirror/images/i0218.jpg": "mm-ignatius-a-disciple-of-the-apostle-john-devoured-by-wild-beasts-in-a-circus-at-rome-for-the-testimony-of-the-son-of-god"
+    }
+  },
+  {
+    "slug": "polycarp-of-smyrna",
+    "title": "Polycarp of Smyrna",
+    "kind": "person",
+    "paragraphs": [
+      "Polycarp was a teacher of the church at Smyrna whom Martyrs’ Mirror describes as a disciple of the apostle John. The account opens with Christ’s encouragement to the church in Revelation 2 and presents Polycarp as a shepherd who remained faithful in suffering.",
+      "Refusing to deny Christ, he faced death by fire and sword. The supplied heading gives 168, and that is the date used for this source-linked profile. The narrative can be read alongside the second-century baptism and martyr accounts that surround it."
+    ],
+    "summary": "Polycarp was a teacher of the church at Smyrna whom Martyrs’ Mirror describes as a disciple of the apostle John. The account opens with Christ’s encouragement to the church in Revelation 2 and presents Polycarp as a shepherd who remained faithful in suffering.",
+    "aliases": [],
+    "people": [],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-polycarp-a-disciple-of-the-apostle-john-and-bishop-of-the-church-at-smyrna-put-to-death-with-fire-and-sword-for-his-fait"
+    ],
+    "date": {
+      "start": 168,
+      "end": 168,
+      "label": "168",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "Polycarp, a disciple of the apostle john, and bishop of the church at smyrna, put to death with fire and sword, for his faith in the son of god, a. d. 168.",
+        "url": "stories/mm-polycarp-a-disciple-of-the-apostle-john-and-bishop-of-the-church-at-smyrna-put-to-death-with-fire-and-sword-for-his-fait/"
+      }
+    ]
+  },
+  {
+    "slug": "blandina",
+    "title": "Blandina",
+    "kind": "person",
+    "paragraphs": [
+      "Blandina appears with Maturus, Sanctus, and a youth from Pontus among the Christians persecuted on the Rhône. Martyrs’ Mirror describes her confession of Christ as the source of her strength through repeated torments.",
+      "The account also follows the steadfastness of her companions, including Sanctus’s insistence that his Christian identity mattered more than the other answers demanded of him. Its heading dates the group’s suffering to about 172; the profile preserves the account as a shared witness rather than separating it into invented individual timelines."
+    ],
+    "summary": "Blandina appears with Maturus, Sanctus, and a youth from Pontus among the Christians persecuted on the Rhône. Martyrs’ Mirror describes her confession of Christ as the source of her strength through repeated torments.",
+    "aliases": [],
+    "people": [],
+    "places": [
+      "lyons"
+    ],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-maturus-sanctus-blandina-and-a-youth-from-pontus-most-miserably-tormented-on-the-river-rhone-about-the-year-172"
+    ],
+    "date": {
+      "start": 172,
+      "end": 172,
+      "label": "c. 172",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "Maturus, sanctus, blandina, and a youth from pontus, most miserably tormented, on the river rhone, about the year 172.",
+        "url": "stories/mm-maturus-sanctus-blandina-and-a-youth-from-pontus-most-miserably-tormented-on-the-river-rhone-about-the-year-172/"
+      }
+    ]
+  },
+  {
+    "slug": "perpetua-and-felicitas",
+    "title": "Perpetua and Felicitas",
+    "kind": "event",
+    "paragraphs": [
+      "Perpetua and Felicitas are remembered together in the third-century accounts. Martyrs’ Mirror describes them as Christian women of Tuburbi in Mauritania, one nursing a child and the other pregnant when they were imprisoned.",
+      "Their family circumstances form part of the account’s testimony to steadfast faith. Felicitas distinguishes the suffering of childbirth from the suffering she will bear as a Christian, and both remain faithful when sentenced to death. The heading places their witness at about 201."
+    ],
+    "summary": "Perpetua and Felicitas are remembered together in the third-century accounts. Martyrs’ Mirror describes them as Christian women of Tuburbi in Mauritania, one nursing a child and the other pregnant when they were imprisoned.",
+    "aliases": [],
+    "people": [],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Event",
+    "sourceAccounts": [
+      "mm-perpetua-and-felicitas-of-tuburbi-in-mauritania-and-others-violently-put-to-death-for-the-faith-of-the-son-of-god-about"
+    ],
+    "date": {
+      "start": 201,
+      "end": 201,
+      "label": "c. 201",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "Perpetua and felicitas, of tuburbi in mauritania, and others, violently put to death, for the faith of the son of god, about the year 201.",
+        "url": "stories/mm-perpetua-and-felicitas-of-tuburbi-in-mauritania-and-others-violently-put-to-death-for-the-faith-of-the-son-of-god-about/"
+      }
+    ]
+  },
+  {
+    "slug": "eulalia-of-emerita",
+    "title": "Eulalia of Emerita",
+    "kind": "person",
+    "paragraphs": [
+      "Eulalia’s account belongs to the fourth-century persecution narratives. Martyrs’ Mirror describes her open confession of the one true God before the magistrates and her refusal to take part in idol worship at Emerita, also named Merida in the text.",
+      "She remained steadfast under punishment and was put to death. The heading supplies the date 302. The book’s illustration portrays her refusal of idol worship, giving the reader a direct path from the century guide to the account and its original image."
+    ],
+    "summary": "Eulalia’s account belongs to the fourth-century persecution narratives. Martyrs’ Mirror describes her open confession of the one true God before the magistrates and her refusal to take part in idol worship at Emerita, also named Merida in the text.",
+    "aliases": [],
+    "people": [],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-eulalia-a-christian-maiden-burned-with-lamps-and-torches-and-suffocated-thereby-for-the-faith-in-jesus-christ-at-emerita"
+    ],
+    "date": {
+      "start": 302,
+      "end": 302,
+      "label": "302",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "Eulalia, a christian maiden, burned with lamps and torches, and suffocated thereby, for the faith in jesus christ, at emerita in lusitania, a. d. 302.",
+        "url": "stories/mm-eulalia-a-christian-maiden-burned-with-lamps-and-torches-and-suffocated-thereby-for-the-faith-in-jesus-christ-at-emerita/"
+      }
+    ],
+    "images": [
+      "sources/martyrs-mirror/images/i0358.jpg"
+    ],
+    "imageSources": {
+      "sources/martyrs-mirror/images/i0358.jpg": "mm-eulalia-a-christian-maiden-burned-with-lamps-and-torches-and-suffocated-thereby-for-the-faith-in-jesus-christ-at-emerita"
+    }
+  },
+  {
+    "slug": "albanus-of-mentz",
+    "title": "Albanus of Mentz",
+    "kind": "person",
+    "paragraphs": [
+      "Albanus is a fifth-century teacher in Martyrs’ Mirror’s account of the spread of the gospel. He came to Mentz to preach Christ and was killed with others, the heading giving the year 424.",
+      "The brief account cites P. J. Twisck and places Albanus among the witnesses discussed after the book’s treatment of the edict of 413. It preserves a name, ministry, place, and date without supplying a fuller personal biography."
+    ],
+    "summary": "Albanus is a fifth-century teacher in Martyrs’ Mirror’s account of the spread of the gospel. He came to Mentz to preach Christ and was killed with others, the heading giving the year 424.",
+    "aliases": [],
+    "people": [],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-albanus-a-pious-teacher-at-mentz-with-others-martyred-for-the-faith-a-d-424"
+    ],
+    "date": {
+      "start": 424,
+      "end": 424,
+      "label": "424",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "Albanus, a pious teacher at mentz, with others, martyred for the faith, a. d. 424.",
+        "url": "stories/mm-albanus-a-pious-teacher-at-mentz-with-others-martyred-for-the-faith-a-d-424/"
+      }
+    ]
+  },
+  {
+    "slug": "arnold-near-paris",
+    "title": "Arnold, teacher near Paris",
+    "kind": "person",
+    "paragraphs": [
+      "Arnold preached the gospel in a forest near Paris. Martyrs’ Mirror records that he was killed there in 511 and that his wife buried him at the place of his death.",
+      "The account emphasizes his desire to use the gift entrusted to him in Christ’s service. Its accompanying discussion considers his preaching and married life, locating a named teacher within the sixth-century account rather than leaving the period as a chapter heading alone."
+    ],
+    "summary": "Arnold preached the gospel in a forest near Paris. Martyrs’ Mirror records that he was killed there in 511 and that his wife buried him at the place of his death.",
+    "aliases": [],
+    "people": [],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-arnold-a-teacher-of-the-gospel-and-the-christian-faith-martyred-in-a-forest-near-paris-a-d-511"
+    ],
+    "date": {
+      "start": 511,
+      "end": 511,
+      "label": "511",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "Arnold, a teacher of the gospel and the christian faith, martyred in a forest near paris, a. d. 511.",
+        "url": "stories/mm-arnold-a-teacher-of-the-gospel-and-the-christian-faith-martyred-in-a-forest-near-paris-a-d-511/"
+      }
+    ]
+  },
+  {
+    "slug": "adrian-the-teacher",
+    "title": "Adrian, teacher opposed to infant baptism",
+    "kind": "person",
+    "paragraphs": [
+      "Adrian appears in Martyrs’ Mirror’s seventh-century discussion of baptism. A letter attributed to Gregory the Great accuses him of ordering that infants should not be baptized, and the book places the proceedings about the close of 606.",
+      "The account explicitly leaves the extent of his punishment unsettled. It records his willingness to face a serious charge for his conviction, while acknowledging that the available passage does not establish whether he suffered a corporal penalty or death. His timeline date therefore marks the proceedings."
+    ],
+    "summary": "Adrian appears in Martyrs’ Mirror’s seventh-century discussion of baptism. A letter attributed to Gregory the Great accuses him of ordering that infants should not be baptized, and the book places the proceedings about the close of 606.",
+    "aliases": [],
+    "people": [],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-adrian-a-christian-bishop-or-teacher-criminally-punished-for-rejecting-infant-baptism-about-the-close-of-the-year-606"
+    ],
+    "date": {
+      "start": 606,
+      "end": 606,
+      "label": "c. 606",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "Adrian, a christian bishop or teacher, criminally punished for rejecting infant baptism, about the close of the year 606.",
+        "url": "stories/mm-adrian-a-christian-bishop-or-teacher-criminally-punished-for-rejecting-infant-baptism-about-the-close-of-the-year-606/"
+      }
+    ]
+  },
+  {
+    "slug": "clement-of-scotland",
+    "title": "Clement of Scotland",
+    "kind": "person",
+    "paragraphs": [
+      "Clement joined Albert of Gaul in opposing teachings and ceremonies they believed contrary to the gospel. Martyrs’ Mirror describes them as companions in doctrine and follows Clement’s attempt to answer the charges brought against him.",
+      "Its account tells of his exclusion from a synod and his death, which the heading assigns to 750. Several adjacent sections provide additional observations and a separate account of Clement. The original illustration is captioned with his name and belongs to this narrative."
+    ],
+    "summary": "Clement joined Albert of Gaul in opposing teachings and ceremonies they believed contrary to the gospel. Martyrs’ Mirror describes them as companions in doctrine and follows Clement’s attempt to answer the charges brought against him.",
+    "aliases": [],
+    "people": [],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-clement-of-scotland-a-companion-of-albert-excommunicated-and-then-burned-as-a-heretic-by-the-romanists-according-to-the",
+      "mm-special-account-of-clement-according-to-p-j-twisck",
+      "mm-further-observations-touching-the-case-of-albert-and-clement-according-to-the-account-of-sebastian-franck"
+    ],
+    "date": {
+      "start": 750,
+      "end": 750,
+      "label": "750",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "Clement of scotland, a companion of albert, excommunicated and then burned, as a heretic, by the romanists, according to the testimony of the ancients, a. d. 750, for the same reason, namely, for opposing and rejecting the roman superstitions.",
+        "url": "stories/mm-clement-of-scotland-a-companion-of-albert-excommunicated-and-then-burned-as-a-heretic-by-the-romanists-according-to-the/"
+      },
+      {
+        "label": "Special account of clement, according to p. j. twisck.",
+        "url": "stories/mm-special-account-of-clement-according-to-p-j-twisck/"
+      },
+      {
+        "label": "Further observations touching the case of albert and clement, according to the account of sebastian franck.",
+        "url": "stories/mm-further-observations-touching-the-case-of-albert-and-clement-according-to-the-account-of-sebastian-franck/"
+      }
+    ],
+    "images": [
+      "sources/martyrs-mirror/images/i0462.jpg"
+    ],
+    "imageSources": {
+      "sources/martyrs-mirror/images/i0462.jpg": "mm-clement-of-scotland-a-companion-of-albert-excommunicated-and-then-burned-as-a-heretic-by-the-romanists-according-to-the"
+    }
+  },
+  {
+    "slug": "john-of-cordova",
+    "title": "John of Cordova",
+    "kind": "person",
+    "paragraphs": [
+      "John was a tradesman at Cordova accused of insulting Mohammed. Martyrs’ Mirror says the witnesses were insufficient to secure a death sentence, but he was severely beaten, publicly mocked, and imprisoned because he would not forsake Christ.",
+      "The account dates these sufferings to 850 and states that the author could not discover how John finally died. The illustration captioned with his name appears in the preceding general account of the Cordova persecution, so both sections are linked here."
+    ],
+    "summary": "John was a tradesman at Cordova accused of insulting Mohammed. Martyrs’ Mirror says the witnesses were insufficient to secure a death sentence, but he was severely beaten, publicly mocked, and imprisoned because he would not forsake Christ.",
+    "aliases": [],
+    "people": [],
+    "places": [
+      "cordova"
+    ],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-john-a-tradesman-at-cordova-severely-scourged-for-the-testimony-of-jesus-christ-set-reversely-upon-an-ass-mocked-and-mis",
+      "mm-grievous-and-lamentable-persecution-of-the-christians-by-the-saracens-at-cordova-in-spain-about-a-d-850"
+    ],
+    "date": {
+      "start": 850,
+      "end": 850,
+      "label": "850",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "John, a tradesman at cordova, severely scourged for the testimony of jesus christ, set reversely upon an ass, mocked, and miserably tormented, a. d. 850.",
+        "url": "stories/mm-john-a-tradesman-at-cordova-severely-scourged-for-the-testimony-of-jesus-christ-set-reversely-upon-an-ass-mocked-and-mis/"
+      },
+      {
+        "label": "Grievous and lamentable persecution of the christians, by the saracens, at cordova in spain, about a. d. 850.",
+        "url": "stories/mm-grievous-and-lamentable-persecution-of-the-christians-by-the-saracens-at-cordova-in-spain-about-a-d-850/"
+      }
+    ],
+    "images": [
+      "sources/martyrs-mirror/images/i0487.jpg"
+    ],
+    "imageSources": {
+      "sources/martyrs-mirror/images/i0487.jpg": "mm-grievous-and-lamentable-persecution-of-the-christians-by-the-saracens-at-cordova-in-spain-about-a-d-850"
+    }
+  },
+  {
+    "slug": "johannes-erigena",
+    "title": "Johannes Erigena",
+    "kind": "person",
+    "paragraphs": [
+      "Johannes Erigena, also called Scotus in the source, is remembered for learning, translation, and teaching concerning the Lord’s Supper. Martyrs’ Mirror describes his opposition to transubstantiation and connects his writings with the later convictions of Berengarius.",
+      "The principal heading places his death at Meldum in England about 884. A following section explicitly compares the dates 869 and 884 and explains how the author relates the earlier date to his teaching and the later to his death. Keeping those sections together preserves the book’s own treatment of the chronology."
+    ],
+    "summary": "Johannes Erigena, also called Scotus in the source, is remembered for learning, translation, and teaching concerning the Lord’s Supper. Martyrs’ Mirror describes his opposition to transubstantiation and connects his writings with the later convictions of Berengarius.",
+    "aliases": [
+      "Johannes Scotus"
+    ],
+    "people": [
+      "berengarius"
+    ],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-johannes-erigena-a-scotchman-put-to-death-by-his-scholars-for-the-confession-of-the-evangelical-truth-through-the-instig",
+      "mm-concerning-the-time-of-this-history"
+    ],
+    "date": {
+      "start": 884,
+      "end": 884,
+      "label": "c. 884",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "Johannes erigena, a scotchman, put to death by his scholars for the confession of the evangelical truth, through the instigation of some monks, at meldum in england, about a. d. 884.",
+        "url": "stories/mm-johannes-erigena-a-scotchman-put-to-death-by-his-scholars-for-the-confession-of-the-evangelical-truth-through-the-instig/"
+      },
+      {
+        "label": "Concerning the time of this history.",
+        "url": "stories/mm-concerning-the-time-of-this-history/"
+      }
+    ]
+  },
+  {
+    "slug": "eugenia-of-cordova",
+    "title": "Eugenia of Cordova",
+    "kind": "person",
+    "paragraphs": [
+      "Eugenia is named in Martyrs’ Mirror among the Christians who suffered in the region of Cordova. The account describes her as a faithful Christian woman who was beheaded for the testimony of Jesus Christ.",
+      "The heading supplies 923 and places her death near the city. Read with the surrounding tenth-century persecution account, this short narrative continues the Cordova history begun in the preceding century without supplying details the book does not give."
+    ],
+    "summary": "Eugenia is named in Martyrs’ Mirror among the Christians who suffered in the region of Cordova. The account describes her as a faithful Christian woman who was beheaded for the testimony of Jesus Christ.",
+    "aliases": [],
+    "people": [],
+    "places": [
+      "cordova"
+    ],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-eugenia-an-upright-christian-woman-beheaded-for-the-testimony-of-jesus-christ-near-the-city-of-cordova-a-d-923"
+    ],
+    "date": {
+      "start": 923,
+      "end": 923,
+      "label": "923",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "Eugenia, an upright christian woman, beheaded for the testimony of jesus christ, near the city of cordova, a. d. 923.",
+        "url": "stories/mm-eugenia-an-upright-christian-woman-beheaded-for-the-testimony-of-jesus-christ-near-the-city-of-cordova-a-d-923/"
+      }
+    ]
+  },
+  {
+    "slug": "orleans-witnesses-1022",
+    "title": "The fourteen witnesses at Orleans",
+    "kind": "event",
+    "paragraphs": [
+      "Martyrs’ Mirror recounts the condemnation of fourteen people at Orleans, naming Stephen as their chief figure. The account discusses accusations concerning baptism, the Lord’s Supper, and other beliefs, and records their execution in the presence of King Robert.",
+      "The heading gives the close of 1022; the opening paragraph allows 1022 or, at the latest, 1023. The following observations compare further accounts, and that second section contains the illustration of the fourteen witnesses. Both passages belong to this event."
+    ],
+    "summary": "Martyrs’ Mirror recounts the condemnation of fourteen people at Orleans, naming Stephen as their chief figure. The account discusses accusations concerning baptism, the Lord’s Supper, and other beliefs, and records their execution in the presence of King Robert.",
+    "aliases": [],
+    "people": [],
+    "places": [
+      "orleans"
+    ],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Event",
+    "sourceAccounts": [
+      "mm-fourteen-persons-the-chiefest-of-whom-was-called-stephen-burned-as-heretics-for-the-testimony-of-the-truth-by-the-papist",
+      "mm-further-observations-touching-said-fourteen-martyrs-according-to-the-accounts-of-various-papistic-and-other-writers-note"
+    ],
+    "date": {
+      "start": 1022,
+      "end": 1023,
+      "label": "1022–1023 (source account)",
+      "basis": "Heading: near the close of 1022; opening paragraph: at the latest 1023."
+    },
+    "references": [
+      {
+        "label": "Fourteen persons, the chiefest of whom was called stephen, burned as heretics for the testimony of the truth, by the papists, at orleans, in france, near the close of a. d. 1022.",
+        "url": "stories/mm-fourteen-persons-the-chiefest-of-whom-was-called-stephen-burned-as-heretics-for-the-testimony-of-the-truth-by-the-papist/"
+      },
+      {
+        "label": "Further observations touching said fourteen martyrs, according to the accounts of various papistic and other writers, noted in a. mellinus’ second book of the persecutions, fol. 437, col. 3, 4.",
+        "url": "stories/mm-further-observations-touching-said-fourteen-martyrs-according-to-the-accounts-of-various-papistic-and-other-writers-note/"
+      }
+    ],
+    "images": [
+      "sources/martyrs-mirror/images/i0531.jpg"
+    ],
+    "imageSources": {
+      "sources/martyrs-mirror/images/i0531.jpg": "mm-further-observations-touching-said-fourteen-martyrs-according-to-the-accounts-of-various-papistic-and-other-writers-note"
+    }
+  },
+  {
+    "slug": "berengarius",
+    "title": "Berengarius",
+    "kind": "person",
+    "paragraphs": [
+      "Berengarius appears with Bruno of Angiers in Martyrs’ Mirror’s accounts of teaching about baptism and the Lord’s Supper. The book follows the condemnation of their views and Berengarius’s repeated examinations before church councils.",
+      "The account does not hide his concessions under pressure: it relates his recantations and his return to the convictions for which he had been examined. Its heading spans the first and last proceedings from 1059 to 1079. Later accounts describe the treatment of people called Berengarians."
+    ],
+    "summary": "Berengarius appears with Bruno of Angiers in Martyrs’ Mirror’s accounts of teaching about baptism and the Lord’s Supper. The book follows the condemnation of their views and Berengarius’s repeated examinations before church councils.",
+    "aliases": [],
+    "people": [
+      "johannes-erigena"
+    ],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-bruno-bishop-of-angiers-and-berengarius-his-deacon-condemned-in-several-councils-through-the-roman-pope-on-account-of-th",
+      "mm-many-of-the-followers-of-berengarius-called-berengarians-anathematized-by-order-of-the-pope-at-piacenza-in-italy-a-d-109"
+    ],
+    "date": {
+      "start": 1059,
+      "end": 1079,
+      "label": "1059–1079: examinations",
+      "basis": "The source heading names the first proceedings in 1059 and the last in 1079."
+    },
+    "references": [
+      {
+        "label": "Bruno, bishop of angiers, and berengarius, his deacon, condemned in several councils, through the roman pope, on account of their views against infant baptism, transubstantiation, the mass, etc.; the first time, a. d. 1059, the last time, a. d. 1079.",
+        "url": "stories/mm-bruno-bishop-of-angiers-and-berengarius-his-deacon-condemned-in-several-councils-through-the-roman-pope-on-account-of-th/"
+      },
+      {
+        "label": "Many of the followers of berengarius, called berengarians, anathematized by order of the pope, at piacenza, in italy, a. d. 1095, and afterwards persecuted unto death, about a. d. 1100.",
+        "url": "stories/mm-many-of-the-followers-of-berengarius-called-berengarians-anathematized-by-order-of-the-pope-at-piacenza-in-italy-a-d-109/"
+      }
+    ]
+  },
+  {
+    "slug": "peter-bruis",
+    "title": "Peter Bruis",
+    "kind": "person",
+    "paragraphs": [
+      "Peter Bruis preached in France against practices he judged contrary to the gospel. Martyrs’ Mirror describes his rejection of infant baptism and his teaching that baptism belongs to believers, alongside his objections to the mass, images, and pilgrimages.",
+      "The account says he preached for about twenty years and was burned at St. Giles in 1145. It then follows his disciple Henry of Toulouse and the persecution of those who continued their teaching. The joined narrative supplies the relationship between the two teachers."
+    ],
+    "summary": "Peter Bruis preached in France against practices he judged contrary to the gospel. Martyrs’ Mirror describes his rejection of infant baptism and his teaching that baptism belongs to believers, alongside his objections to the mass, images, and pilgrimages.",
+    "aliases": [],
+    "people": [
+      "henry-of-toulouse"
+    ],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-peter-bruis-burnt-at-st-giles-henry-of-toulouse-apprehended-and-put-out-of-the-way-by-the-popes-legate-and-many-other-pe"
+    ],
+    "date": {
+      "start": 1145,
+      "end": 1145,
+      "label": "1145 (Peter in the source account)",
+      "basis": "Date given in the cited Martyrs’ Mirror account; this is the activity presented, not a lifespan."
+    },
+    "references": [
+      {
+        "label": "Peter bruis, burnt at st. giles; henry of toulouse apprehended and put out of the way, by the pope’s legate; and many other persons put to death at paris, for the true evangelical doctrine; about the years 1145, 1147.",
+        "url": "stories/mm-peter-bruis-burnt-at-st-giles-henry-of-toulouse-apprehended-and-put-out-of-the-way-by-the-popes-legate-and-many-other-pe/"
+      }
+    ]
+  },
+  {
+    "slug": "henry-of-toulouse",
+    "title": "Henry of Toulouse",
+    "kind": "person",
+    "paragraphs": [
+      "Henry of Toulouse was a disciple and fellow teacher of Peter Bruis in Martyrs’ Mirror’s account. The source presents their preaching together, including the conviction that baptism should follow belief.",
+      "It places Henry’s apprehension by the papal legate two years after Peter’s death, in 1147, but states that his final fate was not known. This profile therefore dates the apprehension and preserves that limit rather than presenting 1147 as a documented death year."
+    ],
+    "summary": "Henry of Toulouse was a disciple and fellow teacher of Peter Bruis in Martyrs’ Mirror’s account. The source presents their preaching together, including the conviction that baptism should follow belief.",
+    "aliases": [],
+    "people": [
+      "peter-bruis"
+    ],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-peter-bruis-burnt-at-st-giles-henry-of-toulouse-apprehended-and-put-out-of-the-way-by-the-popes-legate-and-many-other-pe"
+    ],
+    "date": {
+      "start": 1147,
+      "end": 1147,
+      "label": "1147: apprehension",
+      "basis": "The account dates Henry’s apprehension to 1147 and expressly says his subsequent fate is unknown."
+    },
+    "references": [
+      {
+        "label": "Peter bruis, burnt at st. giles; henry of toulouse apprehended and put out of the way, by the pope’s legate; and many other persons put to death at paris, for the true evangelical doctrine; about the years 1145, 1147.",
+        "url": "stories/mm-peter-bruis-burnt-at-st-giles-henry-of-toulouse-apprehended-and-put-out-of-the-way-by-the-popes-legate-and-many-other-pe/"
+      }
+    ]
+  },
+  {
+    "slug": "peter-waldo",
+    "title": "Peter Waldo",
+    "kind": "person",
+    "paragraphs": [
+      "Peter Waldo was a wealthy citizen of Lyons whom Martyrs’ Mirror describes as moved to repentance after the sudden death of a companion. He gave generously to the poor and began teaching Scripture in the language understood by the people who came to hear him.",
+      "The conversion account begins about 1160. A separate discussion uses 1170 as the common reckoning for the Waldenses’ beginning while also discussing earlier witnesses. These passages are kept together rather than replacing the source’s several date statements with a single precise founding day.",
+      "The surrounding sections describe the Waldenses’ dispersion, confessions, baptism, rejection of war and oaths, and practical conduct. They give a substantive path from a named teacher into the medieval communities followed through the later centuries of the book."
+    ],
+    "summary": "Peter Waldo was a wealthy citizen of Lyons whom Martyrs’ Mirror describes as moved to repentance after the sudden death of a companion. He gave generously to the poor and began teaching Scripture in the language understood by the people who came to hear him.",
+    "aliases": [],
+    "people": [],
+    "places": [
+      "lyons"
+    ],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-of-the-conversion-of-peter-waldo-and-the-rise-of-the-waldenses-etc",
+      "mm-concerning-the-time-of-the-waldenses",
+      "mm-the-views-of-the-ancient-waldenses-against-war",
+      "mm-the-views-of-the-ancient-waldenses-against-the-swearing-of-oaths"
+    ],
+    "date": {
+      "start": 1160,
+      "end": 1170,
+      "label": "c. 1160–1170: conversion and beginnings",
+      "basis": "Conversion narrative: about 1160; accompanying chronology uses 1170 as a common reckoning for the Waldenses."
+    },
+    "references": [
+      {
+        "label": "Of the conversion of peter waldo, and the rise of the waldenses, etc.",
+        "url": "stories/mm-of-the-conversion-of-peter-waldo-and-the-rise-of-the-waldenses-etc/"
+      },
+      {
+        "label": "Concerning the time of the waldenses.",
+        "url": "stories/mm-concerning-the-time-of-the-waldenses/"
+      },
+      {
+        "label": "The views of the ancient waldenses against war.",
+        "url": "stories/mm-the-views-of-the-ancient-waldenses-against-war/"
+      },
+      {
+        "label": "The views of the ancient waldenses against the swearing of oaths.",
+        "url": "stories/mm-the-views-of-the-ancient-waldenses-against-the-swearing-of-oaths/"
+      }
+    ]
+  },
+  {
+    "slug": "gerard-sagarellus",
+    "title": "Gerard Sagarellus",
+    "kind": "person",
+    "paragraphs": [
+      "Gerard Sagarellus of Parma appears in Martyrs’ Mirror alongside Dulcinus in the discussion of those whose beliefs were associated with the Waldenses. The account emphasizes his refusal to abandon his confession under condemnation.",
+      "The heading gives 1285 for his execution at Parma. The narrative qualifies the year of his death with “it is supposed,” so the profile retains that uncertainty. It also distinguishes his death from Dulcinus’s later suffering rather than placing both men in one event."
+    ],
+    "summary": "Gerard Sagarellus of Parma appears in Martyrs’ Mirror alongside Dulcinus in the discussion of those whose beliefs were associated with the Waldenses. The account emphasizes his refusal to abandon his confession under condemnation.",
+    "aliases": [],
+    "people": [],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-gerard-sagarellus-burnt-in-the-city-of-parma-for-the-faith-of-the-waldensian-anabaptists-a-d-1285"
+    ],
+    "date": {
+      "start": 1285,
+      "end": 1285,
+      "label": "c. 1285 (source account)",
+      "basis": "Heading gives 1285; narrative says the execution occurred in that year “it is supposed.”"
+    },
+    "references": [
+      {
+        "label": "Gerard sagarellus, burnt in the city of parma, for the faith of the waldensian anabaptists, a. d. 1285.",
+        "url": "stories/mm-gerard-sagarellus-burnt-in-the-city-of-parma-for-the-faith-of-the-waldensian-anabaptists-a-d-1285/"
+      }
+    ]
+  },
+  {
+    "slug": "john-wycliffe",
+    "title": "John Wycliffe",
+    "kind": "person",
+    "paragraphs": [
+      "Martyrs’ Mirror calls this English teacher John Wickliffe and places a discussion of his teaching at 1370. It describes his service at Lutterworth and considers his writings on baptism, the Lord’s Supper, the authority of Scripture, and the swearing of oaths.",
+      "The fifteenth-century account returns to his writings when explaining the articles received by John Huss. Linking those two passages allows the reader to follow a stated transmission of teaching from one century into the next, while retaining the book’s own wording and explanation."
+    ],
+    "summary": "Martyrs’ Mirror calls this English teacher John Wickliffe and places a discussion of his teaching at 1370. It describes his service at Lutterworth and considers his writings on baptism, the Lord’s Supper, the authority of Scripture, and the swearing of oaths.",
+    "aliases": [
+      "John Wickliffe",
+      "John Wyclif"
+    ],
+    "people": [
+      "john-huss"
+    ],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-their-views-in-regard-to-the-oath",
+      "mm-touching-the-articles-of-faith-which-john-huss-had-derived-from-the-writings-of-john-wickliffe"
+    ],
+    "date": {
+      "start": 1370,
+      "end": 1370,
+      "label": "1370: teaching in the source account",
+      "basis": "Date given in the cited Martyrs’ Mirror account; this is the activity presented, not a lifespan."
+    },
+    "references": [
+      {
+        "label": "Their views in regard to the oath.",
+        "url": "stories/mm-their-views-in-regard-to-the-oath/"
+      },
+      {
+        "label": "Touching the articles of faith which john huss had derived from the writings of john wickliffe.",
+        "url": "stories/mm-touching-the-articles-of-faith-which-john-huss-had-derived-from-the-writings-of-john-wickliffe/"
+      }
+    ]
+  },
+  {
+    "slug": "john-huss",
+    "title": "John Huss",
+    "kind": "person",
+    "paragraphs": [
+      "John Huss is discussed in Martyrs’ Mirror’s fifteenth-century account of faith and baptism. It relates how Jerome of Prague brought Wickliffe’s writings from England into Bohemia and sets out the articles Huss received from them, including opposition to oaths.",
+      "The book also records the deaths of Huss and Jerome at Constance, then carefully distinguishes their witness from the wars taken up by later followers. Its discussion follows Waldenses who had joined the movement and subsequently separated when that course conflicted with their commitment to peace."
+    ],
+    "summary": "John Huss is discussed in Martyrs’ Mirror’s fifteenth-century account of faith and baptism. It relates how Jerome of Prague brought Wickliffe’s writings from England into Bohemia and sets out the articles Huss received from them, including opposition to oaths.",
+    "aliases": [
+      "Jan Hus",
+      "John Hus"
+    ],
+    "people": [
+      "john-wycliffe"
+    ],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-touching-the-articles-of-their-faith-laid-before-them-by-the-inquisition-for-recantation",
+      "mm-touching-the-articles-of-faith-which-john-huss-had-derived-from-the-writings-of-john-wickliffe",
+      "mm-notice-concerning-the-followers-of-john-huss-who-according-to-the-accounts-of-jacob-mehrning-were-very-different-from-th",
+      "mm-further-observation-concerning-the-misdeeds-of-the-followers-of-john-huss"
+    ],
+    "date": {
+      "start": 1415,
+      "end": 1415,
+      "label": "1415: teaching discussed in the source",
+      "basis": "Date given in the cited Martyrs’ Mirror account; this is the activity presented, not a lifespan."
+    },
+    "references": [
+      {
+        "label": "Touching the articles of their faith, laid before them by the inquisition, for recantation.",
+        "url": "stories/mm-touching-the-articles-of-their-faith-laid-before-them-by-the-inquisition-for-recantation/"
+      },
+      {
+        "label": "Touching the articles of faith which john huss had derived from the writings of john wickliffe.",
+        "url": "stories/mm-touching-the-articles-of-faith-which-john-huss-had-derived-from-the-writings-of-john-wickliffe/"
+      },
+      {
+        "label": "Notice concerning the followers of john huss, who, according to the accounts of jacob mehrning, were very different from their leader.",
+        "url": "stories/mm-notice-concerning-the-followers-of-john-huss-who-according-to-the-accounts-of-jacob-mehrning-were-very-different-from-th/"
+      },
+      {
+        "label": "Further observation concerning the misdeeds of the followers of john huss.",
+        "url": "stories/mm-further-observation-concerning-the-misdeeds-of-the-followers-of-john-huss/"
+      }
+    ]
+  },
+  {
+    "slug": "william-white",
+    "title": "William White",
+    "kind": "person",
+    "paragraphs": [
+      "William White appears with Abraham of Cholchester and John Waddon in Martyrs’ Mirror’s account of witnesses at Norwich in 1428. The surrounding sections preserve the royal order for their arrest, their confession, and the account of their imprisonment and death.",
+      "A special account then concentrates on White’s doctrine and suffering. It contains the book’s illustration of his execution at Norwich. These connected sections allow the reader to move from a named person to the charges, confession, narrative, and image of the same history."
+    ],
+    "summary": "William White appears with Abraham of Cholchester and John Waddon in Martyrs’ Mirror’s account of witnesses at Norwich in 1428. The surrounding sections preserve the royal order for their arrest, their confession, and the account of their imprisonment and death.",
+    "aliases": [],
+    "people": [],
+    "places": [
+      "norwich"
+    ],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-william-white-father-abraham-of-cholchester-and-john-waddon-burnt-for-the-faith-at-norwich-in-england-a-d-1428",
+      "mm-confession-of-faith-of-said-three-martyrs-touching-their-belief-against-the-roman-church",
+      "mm-special-account-of-william-white-touching-his-doctrine-suffering-and-death"
+    ],
+    "date": {
+      "start": 1428,
+      "end": 1428,
+      "label": "1428",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "William white, father abraham of cholchester, and john waddon, burnt for the faith, at norwich, in england, a. d. 1428.",
+        "url": "stories/mm-william-white-father-abraham-of-cholchester-and-john-waddon-burnt-for-the-faith-at-norwich-in-england-a-d-1428/"
+      },
+      {
+        "label": "Confession of faith of said three martyrs, touching their belief against the roman church.",
+        "url": "stories/mm-confession-of-faith-of-said-three-martyrs-touching-their-belief-against-the-roman-church/"
+      },
+      {
+        "label": "Special account of william white, touching his doctrine, suffering and death.",
+        "url": "stories/mm-special-account-of-william-white-touching-his-doctrine-suffering-and-death/"
+      }
+    ],
+    "images": [
+      "sources/martyrs-mirror/images/i0687.jpg"
+    ],
+    "imageSources": {
+      "sources/martyrs-mirror/images/i0687.jpg": "mm-special-account-of-william-white-touching-his-doctrine-suffering-and-death"
+    }
+  },
+  {
+    "slug": "stephen-of-vienna",
+    "title": "Stephen, Waldensian elder at Vienna",
+    "kind": "person",
+    "paragraphs": [
+      "Stephen was an elder of the Waldenses who had sought refuge in Austria amid persecution in and around Bohemia. Martyrs’ Mirror recounts his arrest at Vienna and his refusal to abandon either his faith or the people entrusted to his care.",
+      "The account places his death by burning about 1471. It links the suffering of a named shepherd with the movement and dispersal of Waldensian believers late in the fifteenth century, immediately before the book turns to the sixteenth-century witnesses."
+    ],
+    "summary": "Stephen was an elder of the Waldenses who had sought refuge in Austria amid persecution in and around Bohemia. Martyrs’ Mirror recounts his arrest at Vienna and his refusal to abandon either his faith or the people entrusted to his care.",
+    "aliases": [],
+    "people": [],
+    "places": [
+      "vienna"
+    ],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Person",
+    "sourceAccounts": [
+      "mm-stephen-an-elder-of-the-waldenses-burnt-for-the-faith-at-vienna-in-austria-about-a-d-1471"
+    ],
+    "date": {
+      "start": 1471,
+      "end": 1471,
+      "label": "c. 1471",
+      "basis": "Source heading; not independently verified"
+    },
+    "references": [
+      {
+        "label": "Stephen, an elder of the waldenses, burnt for the faith, at vienna, in austria, about a. d. 1471.",
+        "url": "stories/mm-stephen-an-elder-of-the-waldenses-burnt-for-the-faith-at-vienna-in-austria-about-a-d-1471/"
+      }
+    ]
+  },
+  {
+    "slug": "jerusalem",
+    "title": "Jerusalem",
+    "kind": "place",
+    "paragraphs": [
+      "Jerusalem is the setting of the Pentecost preaching and the gathered community described in Acts. The first-century source passages connect baptism with teaching, fellowship, prayer, and the care of believers for one another.",
+      "Stephen’s service and testimony place a named witness in that community. This date range identifies the first-century accounts, not the founding of the city."
+    ],
+    "summary": "Jerusalem is the setting of the Pentecost preaching and the gathered community described in Acts. The first-century source passages connect baptism with teaching, fellowship, prayer, and the care of believers for one another.",
+    "aliases": [],
+    "people": [],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Place",
+    "sourceAccounts": [
+      "mm-stephen-one-of-the-seven-deacons-of-the-church-at-jerusalem-stoned-without-the-gate-of-that-city-by-the-libertines-a-d-3",
+      "mm-how-the-apostles-executed-this-command-of-christ-to-teach-and-baptize-after-the-ascension-of-christ"
+    ],
+    "date": {
+      "start": 1,
+      "end": 100,
+      "label": "First-century Christian community",
+      "basis": "Date given in the cited Martyrs’ Mirror account; this is the activity presented, not a lifespan."
+    },
+    "references": [
+      {
+        "label": "Stephen, one of the seven deacons of the church at jerusalem, stoned without the gate of that city, by the libertines, a. d. 34, shortly after the death of christ.",
+        "url": "stories/mm-stephen-one-of-the-seven-deacons-of-the-church-at-jerusalem-stoned-without-the-gate-of-that-city-by-the-libertines-a-d-3/"
+      },
+      {
+        "label": "How the apostles executed this command of christ to teach and baptize, after the ascension of christ.",
+        "url": "stories/mm-how-the-apostles-executed-this-command-of-christ-to-teach-and-baptize-after-the-ascension-of-christ/"
+      }
+    ]
+  },
+  {
+    "slug": "rome",
+    "title": "Rome",
+    "kind": "place",
+    "paragraphs": [
+      "Rome connects the accounts of Peter and Paul under Nero with the later journey and death of Ignatius under Trajan. Martyrs’ Mirror gives 69 for the apostolic accounts and 111 for Ignatius.",
+      "Each account preserves its own narrative and illustration. The range shown here gathers those linked witnesses rather than describing the history of the city as a whole."
+    ],
+    "summary": "Rome connects the accounts of Peter and Paul under Nero with the later journey and death of Ignatius under Trajan. Martyrs’ Mirror gives 69 for the apostolic accounts and 111 for Ignatius.",
+    "aliases": [],
+    "people": [],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Place",
+    "sourceAccounts": [
+      "mm-simon-peter-the-holy-apostle-crucified-with-his-head-downward-under-emperor-nero-a-d-69",
+      "mm-paul-the-apostle-of-christ-sorely-persecuted-and-finally-beheaded-at-rome-under-the-emperor-nero-a-d-69",
+      "mm-ignatius-a-disciple-of-the-apostle-john-devoured-by-wild-beasts-in-a-circus-at-rome-for-the-testimony-of-the-son-of-god"
+    ],
+    "date": {
+      "start": 69,
+      "end": 111,
+      "label": "69–111: linked source accounts",
+      "basis": "Date given in the cited Martyrs’ Mirror account; this is the activity presented, not a lifespan."
+    },
+    "references": [
+      {
+        "label": "Simon peter, the holy apostle, crucified with his head downward, under emperor nero, a. d. 69.",
+        "url": "stories/mm-simon-peter-the-holy-apostle-crucified-with-his-head-downward-under-emperor-nero-a-d-69/"
+      },
+      {
+        "label": "Paul, the apostle of christ, sorely persecuted, and finally beheaded, at rome, under the emperor nero, a. d. 69.",
+        "url": "stories/mm-paul-the-apostle-of-christ-sorely-persecuted-and-finally-beheaded-at-rome-under-the-emperor-nero-a-d-69/"
+      },
+      {
+        "label": "Ignatius, a disciple of the apostle john, devoured by wild beasts in a circus at rome, for the testimony of the son of god, a. d. 111.",
+        "url": "stories/mm-ignatius-a-disciple-of-the-apostle-john-devoured-by-wild-beasts-in-a-circus-at-rome-for-the-testimony-of-the-son-of-god/"
+      }
+    ]
+  },
+  {
+    "slug": "lyons",
+    "title": "Lyons and the Rhône",
+    "kind": "place",
+    "paragraphs": [
+      "The Rhône accounts preserve the witness of Blandina and her companions; the medieval account returns to Lyons in the story of Peter Waldo. The place links two distinct periods of Christian witness.",
+      "Waldo’s account emphasizes almsgiving and teaching Scripture in the language of the people. The second-century suffering and the twelfth-century ministry retain their separate dates and source passages."
+    ],
+    "summary": "The Rhône accounts preserve the witness of Blandina and her companions; the medieval account returns to Lyons in the story of Peter Waldo. The place links two distinct periods of Christian witness.",
+    "aliases": [],
+    "people": [],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Place",
+    "sourceAccounts": [
+      "mm-maturus-sanctus-blandina-and-a-youth-from-pontus-most-miserably-tormented-on-the-river-rhone-about-the-year-172",
+      "mm-of-the-conversion-of-peter-waldo-and-the-rise-of-the-waldenses-etc"
+    ],
+    "date": {
+      "start": 172,
+      "end": 1170,
+      "label": "Second- and twelfth-century witnesses",
+      "basis": "Date given in the cited Martyrs’ Mirror account; this is the activity presented, not a lifespan."
+    },
+    "references": [
+      {
+        "label": "Maturus, sanctus, blandina, and a youth from pontus, most miserably tormented, on the river rhone, about the year 172.",
+        "url": "stories/mm-maturus-sanctus-blandina-and-a-youth-from-pontus-most-miserably-tormented-on-the-river-rhone-about-the-year-172/"
+      },
+      {
+        "label": "Of the conversion of peter waldo, and the rise of the waldenses, etc.",
+        "url": "stories/mm-of-the-conversion-of-peter-waldo-and-the-rise-of-the-waldenses-etc/"
+      }
+    ]
+  },
+  {
+    "slug": "cordova",
+    "title": "Cordova",
+    "kind": "place",
+    "paragraphs": [
+      "Cordova is a recurring setting in the ninth- and tenth-century accounts. John’s witness in 850 is followed by other named Christians, including Eugenia near the city in 923.",
+      "The linked histories distinguish imprisonment and a fate left unknown in John’s case from the execution recorded for Eugenia. The place page gathers those accounts without treating every reference to the city as the same event."
+    ],
+    "summary": "Cordova is a recurring setting in the ninth- and tenth-century accounts. John’s witness in 850 is followed by other named Christians, including Eugenia near the city in 923.",
+    "aliases": [],
+    "people": [],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Place",
+    "sourceAccounts": [
+      "mm-john-a-tradesman-at-cordova-severely-scourged-for-the-testimony-of-jesus-christ-set-reversely-upon-an-ass-mocked-and-mis",
+      "mm-eugenia-an-upright-christian-woman-beheaded-for-the-testimony-of-jesus-christ-near-the-city-of-cordova-a-d-923"
+    ],
+    "date": {
+      "start": 850,
+      "end": 923,
+      "label": "850–923: linked witnesses",
+      "basis": "Date given in the cited Martyrs’ Mirror account; this is the activity presented, not a lifespan."
+    },
+    "references": [
+      {
+        "label": "John, a tradesman at cordova, severely scourged for the testimony of jesus christ, set reversely upon an ass, mocked, and miserably tormented, a. d. 850.",
+        "url": "stories/mm-john-a-tradesman-at-cordova-severely-scourged-for-the-testimony-of-jesus-christ-set-reversely-upon-an-ass-mocked-and-mis/"
+      },
+      {
+        "label": "Eugenia, an upright christian woman, beheaded for the testimony of jesus christ, near the city of cordova, a. d. 923.",
+        "url": "stories/mm-eugenia-an-upright-christian-woman-beheaded-for-the-testimony-of-jesus-christ-near-the-city-of-cordova-a-d-923/"
+      }
+    ]
+  },
+  {
+    "slug": "orleans",
+    "title": "Orleans",
+    "kind": "place",
+    "paragraphs": [
+      "Orleans is the setting of the account of fourteen witnesses, with Stephen named as their chief figure. The narrative places the proceedings near the close of 1022 or at the latest in 1023.",
+      "The accompanying observations compare accounts of the same witnesses and contain the original illustration. The event and the image remain linked to their exact source sections."
+    ],
+    "summary": "Orleans is the setting of the account of fourteen witnesses, with Stephen named as their chief figure. The narrative places the proceedings near the close of 1022 or at the latest in 1023.",
+    "aliases": [],
+    "people": [],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Place",
+    "sourceAccounts": [
+      "mm-fourteen-persons-the-chiefest-of-whom-was-called-stephen-burned-as-heretics-for-the-testimony-of-the-truth-by-the-papist",
+      "mm-further-observations-touching-said-fourteen-martyrs-according-to-the-accounts-of-various-papistic-and-other-writers-note"
+    ],
+    "date": {
+      "start": 1022,
+      "end": 1023,
+      "label": "1022–1023: fourteen witnesses",
+      "basis": "Date given in the cited Martyrs’ Mirror account; this is the activity presented, not a lifespan."
+    },
+    "references": [
+      {
+        "label": "Fourteen persons, the chiefest of whom was called stephen, burned as heretics for the testimony of the truth, by the papists, at orleans, in france, near the close of a. d. 1022.",
+        "url": "stories/mm-fourteen-persons-the-chiefest-of-whom-was-called-stephen-burned-as-heretics-for-the-testimony-of-the-truth-by-the-papist/"
+      },
+      {
+        "label": "Further observations touching said fourteen martyrs, according to the accounts of various papistic and other writers, noted in a. mellinus’ second book of the persecutions, fol. 437, col. 3, 4.",
+        "url": "stories/mm-further-observations-touching-said-fourteen-martyrs-according-to-the-accounts-of-various-papistic-and-other-writers-note/"
+      }
+    ]
+  },
+  {
+    "slug": "norwich",
+    "title": "Norwich",
+    "kind": "place",
+    "paragraphs": [
+      "Norwich is the setting of the accounts of William White, Abraham of Cholchester, and John Waddon. Their 1428 witness is accompanied by sections on the order for arrest, their confession, and imprisonment.",
+      "The special account of William White contains the illustration of his execution. These sections give the place a documented connection to people, belief, and an event within the fifteenth-century chapter."
+    ],
+    "summary": "Norwich is the setting of the accounts of William White, Abraham of Cholchester, and John Waddon. Their 1428 witness is accompanied by sections on the order for arrest, their confession, and imprisonment.",
+    "aliases": [],
+    "people": [],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Place",
+    "sourceAccounts": [
+      "mm-william-white-father-abraham-of-cholchester-and-john-waddon-burnt-for-the-faith-at-norwich-in-england-a-d-1428",
+      "mm-special-account-of-william-white-touching-his-doctrine-suffering-and-death"
+    ],
+    "date": {
+      "start": 1428,
+      "end": 1428,
+      "label": "1428: the Norwich witnesses",
+      "basis": "Date given in the cited Martyrs’ Mirror account; this is the activity presented, not a lifespan."
+    },
+    "references": [
+      {
+        "label": "William white, father abraham of cholchester, and john waddon, burnt for the faith, at norwich, in england, a. d. 1428.",
+        "url": "stories/mm-william-white-father-abraham-of-cholchester-and-john-waddon-burnt-for-the-faith-at-norwich-in-england-a-d-1428/"
+      },
+      {
+        "label": "Special account of william white, touching his doctrine, suffering and death.",
+        "url": "stories/mm-special-account-of-william-white-touching-his-doctrine-suffering-and-death/"
+      }
+    ]
+  },
+  {
+    "slug": "vienna",
+    "title": "Vienna",
+    "kind": "place",
+    "paragraphs": [
+      "Vienna is the setting of the death of Stephen, an elder of the Waldenses, in Martyrs’ Mirror. His community had sought safety in Austria after persecution in and around Bohemia.",
+      "The source places his death about 1471 and describes his continued care for the believers. This page identifies that episode within the wider history of refuge and persecution."
+    ],
+    "summary": "Vienna is the setting of the death of Stephen, an elder of the Waldenses, in Martyrs’ Mirror. His community had sought safety in Austria after persecution in and around Bohemia.",
+    "aliases": [],
+    "people": [],
+    "places": [],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Place",
+    "sourceAccounts": [
+      "mm-stephen-an-elder-of-the-waldenses-burnt-for-the-faith-at-vienna-in-austria-about-a-d-1471"
+    ],
+    "date": {
+      "start": 1471,
+      "end": 1471,
+      "label": "c. 1471: Stephen’s witness",
+      "basis": "Date given in the cited Martyrs’ Mirror account; this is the activity presented, not a lifespan."
+    },
+    "references": [
+      {
+        "label": "Stephen, an elder of the waldenses, burnt for the faith, at vienna, in austria, about a. d. 1471.",
+        "url": "stories/mm-stephen-an-elder-of-the-waldenses-burnt-for-the-faith-at-vienna-in-austria-about-a-d-1471/"
+      }
+    ]
+  },
+  {
+    "slug": "jesus-christ",
+    "title": "Jesus Christ: the cross and resurrection",
+    "kind": "person",
+    "date": {
+      "start": 33,
+      "end": 33,
+      "label": "33 (supplied overview)",
+      "basis": "The supplied opening panel prints 33; the Martyrs’ Mirror heading itself has no exact year."
+    },
+    "summary": "The history begins with Jesus Christ, his crucifixion, and his resurrection. The supplied opening overview places Calvary and the empty tomb at the heart of the story, with the risen Christ presented as Lord and Savior.",
+    "paragraphs": [
+      "The history begins with Jesus Christ, his crucifixion, and his resurrection. The supplied opening overview places Calvary and the empty tomb at the heart of the story, with the risen Christ presented as Lord and Savior.",
+      "Martyrs’ Mirror begins its accounts of suffering with Christ and then follows his disciples. The accompanying first-century baptism passages connect his command to teach and baptize with the apostles’ preaching and the gathered community in Acts."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9360-A, Jesus Christ",
+        "url": "sources/church-history/photos/IMG_9360.jpg"
+      },
+      {
+        "label": "Supplied history overview: 9360-B, Calvary – Empty Tomb",
+        "url": "sources/church-history/photos/IMG_9360.jpg"
+      },
+      {
+        "label": "Jesus christ the son of god crucified at jerusalem.",
+        "url": "stories/mm-jesus-christ-the-son-of-god-crucified-at-jerusalem/"
+      },
+      {
+        "label": "How the apostles executed this command of christ to teach and baptize, after the ascension of christ.",
+        "url": "stories/mm-how-the-apostles-executed-this-command-of-christ-to-teach-and-baptize-after-the-ascension-of-christ/"
+      }
+    ],
+    "people": [],
+    "traditions": [],
+    "places": [
+      "jerusalem"
+    ],
+    "sourceAccounts": [
+      "mm-jesus-christ-the-son-of-god-crucified-at-jerusalem",
+      "mm-how-the-apostles-executed-this-command-of-christ-to-teach-and-baptize-after-the-ascension-of-christ"
+    ],
+    "status": "Overview",
+    "category": "Person"
+  },
+  {
+    "slug": "zurich-bible-study-1522",
+    "title": "Bible study and the Zürich circle",
+    "kind": "event",
+    "date": {
+      "start": 1522,
+      "end": 1525,
+      "label": "1522–1525",
+      "basis": "Dated activity on the cited supplied history overview; not a lifespan or city founding date."
+    },
+    "summary": "Lay Bible study in Zürich brought believers together around the Scriptures before the baptisms of 1525. The supplied overview dates these beginnings to 1522 and follows the participation of Conrad Grebel and Felix Manz, with George Blaurock later joining them.",
+    "paragraphs": [
+      "Lay Bible study in Zürich brought believers together around the Scriptures before the baptisms of 1525. The supplied overview dates these beginnings to 1522 and follows the participation of Conrad Grebel and Felix Manz, with George Blaurock later joining them.",
+      "Their reading of Scripture led to questions about how reform should proceed and whom the church should baptize. The later gathering of 21 January 1525 put those convictions into practice through baptism on confession of faith."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9361-D, Bible Study in Zurich",
+        "url": "sources/church-history/photos/IMG_9361.jpg"
+      },
+      {
+        "label": "Supplied history overview: 9361-E, Young Radicals",
+        "url": "sources/church-history/photos/IMG_9361.jpg"
+      },
+      {
+        "label": "Supplied history overview: 9361-G, Swiss Brethren",
+        "url": "sources/church-history/photos/IMG_9361.jpg"
+      }
+    ],
+    "people": [
+      "conrad-grebel",
+      "felix-manz",
+      "george-blaurock"
+    ],
+    "traditions": [
+      "swiss-brethren"
+    ],
+    "places": [
+      "zurich"
+    ],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "bolt-eberli",
+    "title": "Bolt Eberli",
+    "kind": "person",
+    "date": {
+      "start": 1525,
+      "end": 1525,
+      "label": "1525",
+      "basis": "Dated activity on the cited supplied history overview; not a lifespan or city founding date."
+    },
+    "summary": "The supplied overview names Bolt Eberli among the earliest Swiss Brethren to lose his life for his faith. It recounts his preaching at St. Gall, arrest, and death by burning on 29 May 1525.",
+    "paragraphs": [
+      "The supplied overview names Bolt Eberli among the earliest Swiss Brethren to lose his life for his faith. It recounts his preaching at St. Gall, arrest, and death by burning on 29 May 1525.",
+      "His place in the timeline shows how quickly the new fellowship encountered persecution after the Zürich baptisms. The source’s spelling is retained here, and the date identifies the execution described by the overview."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9361-H, Bolt Eberli",
+        "url": "sources/church-history/photos/IMG_9361.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "swiss-brethren"
+    ],
+    "places": [],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Person"
+  },
+  {
+    "slug": "nikolsburg-debate",
+    "title": "Nikolsburg: refuge, the sword, and shared goods",
+    "kind": "event",
+    "date": {
+      "start": 1527,
+      "end": 1528,
+      "label": "1527–1528",
+      "basis": "Dated activity on the cited supplied history overview; not a lifespan or city founding date."
+    },
+    "summary": "Anabaptist refugees found protection around Nikolsburg under the Lords of Liechtenstein. The supplied overview describes a large fellowship whose members disagreed about the use of the sword and payment of war taxes.",
+    "paragraphs": [
+      "Anabaptist refugees found protection around Nikolsburg under the Lords of Liechtenstein. The supplied overview describes a large fellowship whose members disagreed about the use of the sword and payment of war taxes.",
+      "The debate had consequences for daily life. Those committed to refusing violence left the settlement, and their journey leads into the 1528 account of sharing possessions on a cloak. That act of mutual provision became a defining practice in the Hutterite story."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9362-B, Anabaptists in Nikolsburg",
+        "url": "sources/church-history/photos/IMG_9362.jpg"
+      },
+      {
+        "label": "Supplied history overview: 9362-F, Stäbler Shared Goods",
+        "url": "sources/church-history/photos/IMG_9362.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "hutterites"
+    ],
+    "places": [
+      "moravia"
+    ],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "balthasar-hubmaier",
+    "title": "Balthasar Hubmaier",
+    "kind": "person",
+    "date": {
+      "start": 1527,
+      "end": 1528,
+      "label": "1527–1528",
+      "basis": "Dated activity on the cited supplied history overview; not a lifespan or city founding date."
+    },
+    "summary": "Balthasar Hubmaier appears in the supplied Nikolsburg overview as a teacher who allowed the sword to political rulers, in contrast with believers who rejected participation in violence. The disagreement forms part of the background to the separation of the Stäbler group.",
+    "paragraphs": [
+      "Balthasar Hubmaier appears in the supplied Nikolsburg overview as a teacher who allowed the sword to political rulers, in contrast with believers who rejected participation in violence. The disagreement forms part of the background to the separation of the Stäbler group.",
+      "A separate caption follows his arrest, examination, and death by burning at Vienna on 10 March 1528. These linked episodes preserve both his place in the debate and the persecution he suffered."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9362-B, Anabaptists in Nikolsburg",
+        "url": "sources/church-history/photos/IMG_9362.jpg"
+      },
+      {
+        "label": "Supplied history overview: 9362-C, Balthasar Hubmaier",
+        "url": "sources/church-history/photos/IMG_9362.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [],
+    "places": [
+      "moravia",
+      "vienna"
+    ],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Person"
+  },
+  {
+    "slug": "ausbund",
+    "title": "The Ausbund: prison songs and congregational memory",
+    "kind": "event",
+    "date": {
+      "start": 1535,
+      "end": 1564,
+      "label": "1535–1540 songs; 1564 collection",
+      "basis": "Dated activity on the cited supplied history overview; not a lifespan or city founding date."
+    },
+    "summary": "The Ausbund grew from hymns written by imprisoned believers. The supplied overview dates the core prison songs to 1535–1540 and the earliest printed collection it describes to 1564.",
+    "paragraphs": [
+      "The Ausbund grew from hymns written by imprisoned believers. The supplied overview dates the core prison songs to 1535–1540 and the earliest printed collection it describes to 1564.",
+      "The songs carried confession, suffering, and hope into congregational worship. The overview notes their oral transmission without printed musical notation and their continued use among Amish congregations. Hans Haslibacher’s witness provides another link between a remembered martyr and the song tradition."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9362-G, Ausbund",
+        "url": "sources/church-history/photos/IMG_9362.jpg"
+      },
+      {
+        "label": "Supplied history overview: 9363-G, Hans Haslibacher",
+        "url": "sources/church-history/photos/IMG_9363.jpg"
+      }
+    ],
+    "people": [
+      "hans-haslibacher"
+    ],
+    "traditions": [
+      "amish"
+    ],
+    "places": [],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "sicke-snyder",
+    "title": "Sicke Snyder",
+    "kind": "person",
+    "date": {
+      "start": 1531,
+      "end": 1533,
+      "label": "1531 in overview; c. 1533 in Martyrs’ Mirror",
+      "basis": "The supplied overview and Martyrs’ Mirror differ; the range preserves both source dates without resolving them."
+    },
+    "summary": "Sicke Snyder received baptism upon his faith and was imprisoned at Leeuwarden in Friesland. Martyrs’ Mirror describes his refusal to abandon that confession under pressure and his death by the sword.",
+    "paragraphs": [
+      "Sicke Snyder received baptism upon his faith and was imprisoned at Leeuwarden in Friesland. Martyrs’ Mirror describes his refusal to abandon that confession under pressure and his death by the sword.",
+      "The supplied overview calls him Sicke Freerks Snijder, dates the execution to 1531, and relates its influence on Menno Simons’s study of baptism. The book’s heading gives 1533 and its narrative says about that year. Both source statements remain visible here."
+    ],
+    "aliases": [
+      "Sicke Freerks Snijder"
+    ],
+    "references": [
+      {
+        "label": "Supplied history overview: 9362-I, Sicke Freerks Snijder Execution",
+        "url": "sources/church-history/photos/IMG_9362.jpg"
+      },
+      {
+        "label": "Sicke snyder, a. d. 1533.",
+        "url": "stories/mm-sicke-snyder-a-d-1533/"
+      }
+    ],
+    "people": [
+      "menno-simons"
+    ],
+    "traditions": [],
+    "places": [],
+    "sourceAccounts": [
+      "mm-sicke-snyder-a-d-1533"
+    ],
+    "status": "Overview",
+    "category": "Person"
+  },
+  {
+    "slug": "menno-commitment-1536",
+    "title": "Menno’s commitment and call to leadership",
+    "kind": "event",
+    "date": {
+      "start": 1536,
+      "end": 1536,
+      "label": "1536",
+      "basis": "Dated activity on the cited supplied history overview; not a lifespan or city founding date."
+    },
+    "summary": "The supplied overview connects Menno Simons’s study of Scripture with his decision to leave the priesthood and identify openly with the Anabaptists. It dates his public commitment to 30 January 1536.",
+    "paragraphs": [
+      "The supplied overview connects Menno Simons’s study of Scripture with his decision to leave the priesthood and identify openly with the Anabaptists. It dates his public commitment to 30 January 1536.",
+      "The account then describes believers asking him to accept responsibility as an elder and teacher. His later ministry links scattered congregations and helps explain the Mennonite name. The specific January date belongs to the public commitment; the caption does not separately date the subsequent call to leadership."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9362-K, Menno Simons Ordained",
+        "url": "sources/church-history/photos/IMG_9362.jpg"
+      }
+    ],
+    "people": [
+      "menno-simons"
+    ],
+    "traditions": [
+      "mennonites"
+    ],
+    "places": [],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "hutterite-banishment-1547",
+    "title": "Hutterite banishment and winter refuge",
+    "kind": "event",
+    "date": {
+      "start": 1547,
+      "end": 1552,
+      "label": "1547–1552",
+      "basis": "Dated activity on the cited supplied history overview; not a lifespan or city founding date."
+    },
+    "summary": "The supplied history overview describes a period of renewed pressure on the Hutterites from 1547 to 1552. An imperial edict forced believers from communal homes in the regions of Moravia, Austria, and Hungary.",
+    "paragraphs": [
+      "The supplied history overview describes a period of renewed pressure on the Hutterites from 1547 to 1552. An imperial edict forced believers from communal homes in the regions of Moravia, Austria, and Hungary.",
+      "The account follows families seeking shelter in forests and caves, including through winter. It gives a human setting to the Hutterite migration story: maintaining a shared Christian life when homes, work, and settled community were taken away."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9363-B, Hutterites Banished",
+        "url": "sources/church-history/photos/IMG_9363.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "hutterites"
+    ],
+    "places": [
+      "moravia"
+    ],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "hutterite-golden-age",
+    "title": "Hutterite schools, crafts, and shared life",
+    "kind": "event",
+    "date": {
+      "start": 1565,
+      "end": 1592,
+      "label": "1565–1592",
+      "basis": "1565–1592 in the cited Hutterite institutional history; supplied overview heading has a differing 1555–1560 range."
+    },
+    "summary": "Hutterite communities in Moravia developed schools, religious writing, agriculture, and skilled crafts. The institutional Hutterite history identifies 1565–1592 as a flourishing period, with communal work supporting the life and teaching of the congregations.",
+    "paragraphs": [
+      "Hutterite communities in Moravia developed schools, religious writing, agriculture, and skilled crafts. The institutional Hutterite history identifies 1565–1592 as a flourishing period, with communal work supporting the life and teaching of the congregations.",
+      "The supplied overview connects this flourishing with Peter Walpot’s leadership and the reign of Maximilian II. Its heading prints 1555–1560, while its own body gives later leadership dates. This page uses the institutional history’s period and preserves the differing overview date in this explanation."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9363-D, Hutterite Golden Age",
+        "url": "sources/church-history/photos/IMG_9363.jpg"
+      },
+      {
+        "label": "Hutterite history overview",
+        "url": "https://hutterites.org/history/hutterite-history-overview/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "hutterites"
+    ],
+    "places": [
+      "moravia"
+    ],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "wismar-refugee-aid",
+    "title": "Mennonite aid to refugees at Wismar",
+    "kind": "event",
+    "date": {
+      "start": 1553,
+      "end": 1554,
+      "label": "Winter 1553–1554",
+      "basis": "Dated activity on the cited supplied history overview; not a lifespan or city founding date."
+    },
+    "summary": "During the winter of 1553–1554, Mennonites at Wismar helped Reformed refugees whose ship had become ice-bound. The supplied overview remembers practical assistance across a difference of confession.",
+    "paragraphs": [
+      "During the winter of 1553–1554, Mennonites at Wismar helped Reformed refugees whose ship had become ice-bound. The supplied overview remembers practical assistance across a difference of confession.",
+      "The same caption places the episode beside Menno Simons’s later refuge near Oldesloe in Holstein. Together the accounts show hospitality and protection as lived parts of the communities’ history, alongside their preaching and written teaching."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9363-E, Aid to Calvinists and Menno’s House",
+        "url": "sources/church-history/photos/IMG_9363.jpg"
+      }
+    ],
+    "people": [
+      "menno-simons"
+    ],
+    "traditions": [
+      "mennonites"
+    ],
+    "places": [],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "leenaert-bouwens",
+    "title": "Leenaert Bouwens",
+    "kind": "person",
+    "date": {
+      "start": 1551,
+      "end": 1582,
+      "label": "1551–1582: ministry",
+      "basis": "Dated activity on the cited supplied history overview; not a lifespan or city founding date."
+    },
+    "summary": "Leenaert Bouwens was ordained as an elder by Menno Simons at Emden in 1551, according to the supplied overview. His ministry involved travel, preaching, and baptism among congregations from East Friesland to Flanders.",
+    "paragraphs": [
+      "Leenaert Bouwens was ordained as an elder by Menno Simons at Emden in 1551, according to the supplied overview. His ministry involved travel, preaching, and baptism among congregations from East Friesland to Flanders.",
+      "The overview reports that his records contain 10,252 baptisms for 1551–1582. That figure is presented as the source’s account of his recorded ministry, while the linked Mennonite history places his work within the wider growth of the congregations."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9363-F, Leenaert Bouwens",
+        "url": "sources/church-history/photos/IMG_9363.jpg"
+      }
+    ],
+    "people": [
+      "menno-simons"
+    ],
+    "traditions": [
+      "mennonites"
+    ],
+    "places": [],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Person"
+  },
+  {
+    "slug": "hans-haslibacher",
+    "title": "Hans Haslibacher",
+    "kind": "person",
+    "date": {
+      "start": 1571,
+      "end": 1571,
+      "label": "1571",
+      "basis": "Dated activity on the cited supplied history overview; not a lifespan or city founding date."
+    },
+    "summary": "Hans Haslibacher was an older Swiss believer brought before the authorities at Berne. Martyrs’ Mirror recounts his imprisonment, examination, and steadfast refusal to renounce the faith he had confessed.",
+    "paragraphs": [
+      "Hans Haslibacher was an older Swiss believer brought before the authorities at Berne. Martyrs’ Mirror recounts his imprisonment, examination, and steadfast refusal to renounce the faith he had confessed.",
+      "The narrative also preserves the visions and signs associated with his last days and directs the reader to the hymn in which they were remembered. The supplied overview links his witness to the Ausbund, showing how an account of suffering continued in the community’s singing."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9363-G, Hans Haslibacher",
+        "url": "sources/church-history/photos/IMG_9363.jpg"
+      },
+      {
+        "label": "Hans haslibacher, a. d. 1571.",
+        "url": "stories/mm-hans-haslibacher-a-d-1571/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "swiss-brethren"
+    ],
+    "places": [],
+    "sourceAccounts": [
+      "mm-hans-haslibacher-a-d-1571"
+    ],
+    "status": "Overview",
+    "category": "Person"
+  },
+  {
+    "slug": "hutterite-chronicles",
+    "title": "The Hutterite Chronicles",
+    "kind": "event",
+    "date": {
+      "start": 1560,
+      "end": 1665,
+      "label": "From 1560; continued through 1665",
+      "basis": "Dated activity on the cited supplied history overview; not a lifespan or city founding date."
+    },
+    "summary": "The supplied overview describes the beginning of an official Hutterite chronicle in 1560 at Austerlitz in Moravia. The work gathered accounts of the community’s beginnings, leaders, migrations, and suffering for preservation by later generations.",
+    "paragraphs": [
+      "The supplied overview describes the beginning of an official Hutterite chronicle in 1560 at Austerlitz in Moravia. The work gathered accounts of the community’s beginnings, leaders, migrations, and suffering for preservation by later generations.",
+      "Its history continued through successive writers and supplements. The page therefore marks a sustained work of recording community memory, rather than treating the chronicle as one event or assigning every passage the date at which the compilation began."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9363-H, Hutterite Chronicles",
+        "url": "sources/church-history/photos/IMG_9363.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "hutterites"
+    ],
+    "places": [
+      "moravia"
+    ],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "hutterite-war-dispersal",
+    "title": "War and the dispersal of Hutterite communities",
+    "kind": "event",
+    "date": {
+      "start": 1605,
+      "end": 1650,
+      "label": "1605–1650",
+      "basis": "Dated activity on the cited supplied history overview; not a lifespan or city founding date."
+    },
+    "summary": "The supplied overview follows attacks on Hutterite communities during the wars that afflicted Moravia and the surrounding lands from the beginning of the seventeenth century. It describes killing, captivity, plunder, and the loss of homes and communal resources.",
+    "paragraphs": [
+      "The supplied overview follows attacks on Hutterite communities during the wars that afflicted Moravia and the surrounding lands from the beginning of the seventeenth century. It describes killing, captivity, plunder, and the loss of homes and communal resources.",
+      "The Thirty Years War brought further upheaval, and the end of that war did not immediately restore the life that had been lost. This period connects the earlier flourishing of Moravian communities with later movements in search of places where their fellowship could survive."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9363-I, Plunder of Hutterites",
+        "url": "sources/church-history/photos/IMG_9363.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "hutterites"
+    ],
+    "places": [
+      "moravia"
+    ],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "smyth-robinson-mennonites",
+    "title": "English refugees and the Dutch Mennonites",
+    "kind": "event",
+    "date": {
+      "start": 1607,
+      "end": 1612,
+      "label": "1607–1612",
+      "basis": "Dated activity on the cited supplied history overview; not a lifespan or city founding date."
+    },
+    "summary": "John Smyth and John Robinson led English religious refugees to the Netherlands in 1607–1608. The supplied overview follows their communities to Amsterdam and, in Robinson’s case, to Leiden in 1609.",
+    "paragraphs": [
+      "John Smyth and John Robinson led English religious refugees to the Netherlands in 1607–1608. The supplied overview follows their communities to Amsterdam and, in Robinson’s case, to Leiden in 1609.",
+      "It also recounts the association of Smyth’s followers with an Amsterdam Mennonite congregation and Thomas Helwys’s return to England in 1612. This is a meeting of distinct histories, with connections to the later General Baptist story, rather than a single change of name for the Mennonite churches."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9363-K, Smyth & Robinson",
+        "url": "sources/church-history/photos/IMG_9363.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "mennonites"
+    ],
+    "places": [],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "dordrecht-confession",
+    "title": "The Dordrecht Confession",
+    "kind": "event",
+    "date": {
+      "start": 1632,
+      "end": 1632,
+      "label": "21 April 1632",
+      "basis": "Exact date in the introductory text of the Third Confession in Martyrs’ Mirror."
+    },
+    "summary": "The Third Confession printed near the beginning of Martyrs’ Mirror identifies itself as a statement drawn up at a peace convention at Dort on 21 April 1632. Its eighteen articles set out a shared confession of Christian faith and practice.",
+    "paragraphs": [
+      "The Third Confession printed near the beginning of Martyrs’ Mirror identifies itself as a statement drawn up at a peace convention at Dort on 21 April 1632. Its eighteen articles set out a shared confession of Christian faith and practice.",
+      "The articles address repentance, baptism, the church, ministry, communion, feet-washing, marriage, civil authority, nonresistance, oaths, discipline, and the resurrection. The supplied overview follows its later reception in Alsace, the Palatinate, and Pennsylvania and its continuing importance among Amish and Mennonite communities."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9363-L, Dordrecht Confession",
+        "url": "sources/church-history/photos/IMG_9363.jpg"
+      },
+      {
+        "label": "Third confession.",
+        "url": "stories/mm-third-confession/"
+      },
+      {
+        "label": "Vii. of holy baptism.",
+        "url": "stories/mm-vii-of-holy-baptism/"
+      },
+      {
+        "label": "Xiv. of revenge.",
+        "url": "stories/mm-xiv-of-revenge/"
+      },
+      {
+        "label": "Xv. of the swearing of oaths.",
+        "url": "stories/mm-xv-of-the-swearing-of-oaths/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "mennonites",
+      "amish"
+    ],
+    "places": [
+      "dordrecht"
+    ],
+    "sourceAccounts": [
+      "mm-third-confession",
+      "mm-vii-of-holy-baptism",
+      "mm-xiv-of-revenge",
+      "mm-xv-of-the-swearing-of-oaths"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "hutterite-ordnung",
+    "title": "Hutterite order and renewal under Andreas Ehrenpreis",
+    "kind": "event",
+    "date": {
+      "start": 1639,
+      "end": 1651,
+      "label": "1639–1651: leadership and order",
+      "basis": "Dated activity on the cited supplied history overview; not a lifespan or city founding date."
+    },
+    "summary": "Andreas Ehrenpreis took leadership after a period of great disruption in Hutterite community life. The supplied overview dates his election as bishop to 1639 and describes his work to restore the fellowship’s order and discipline.",
+    "paragraphs": [
+      "Andreas Ehrenpreis took leadership after a period of great disruption in Hutterite community life. The supplied overview dates his election as bishop to 1639 and describes his work to restore the fellowship’s order and discipline.",
+      "The regulations associated with 1651 addressed the conduct of shared life. Placed after the accounts of war and dispersal, this history shows the work of rebuilding a community through instruction, responsibility, and renewed commitment."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9363-N, Hutterite Ordnung",
+        "url": "sources/church-history/photos/IMG_9363.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "hutterites"
+    ],
+    "places": [],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "bern-banishment-1671",
+    "title": "Swiss Brethren banished toward the Palatinate",
+    "kind": "event",
+    "date": {
+      "start": 1659,
+      "end": 1671,
+      "label": "1659 measures; 1671 banishment",
+      "basis": "Dated activity on the cited supplied history overview; not a lifespan or city founding date."
+    },
+    "summary": "The supplied overview describes an Anabaptist commission at Bern in 1659 and increasing pressure on Swiss Brethren to conform or leave. Arrest, removal, and the loss of a settled home continued the persecution into a period beyond many of the book’s individual martyr accounts.",
+    "paragraphs": [
+      "The supplied overview describes an Anabaptist commission at Bern in 1659 and increasing pressure on Swiss Brethren to conform or leave. Arrest, removal, and the loss of a settled home continued the persecution into a period beyond many of the book’s individual martyr accounts.",
+      "Its 1671 episode records the banishment of about seven hundred men, women, and children toward the German Palatinate. The history links the Swiss fellowship with the later migrations through which Mennonite and Amish communities took shape in new places."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied history overview: 9363-O, Banishment",
+        "url": "sources/church-history/photos/IMG_9363.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "swiss-brethren",
+      "swiss-south-german-mennonites"
+    ],
+    "places": [],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "munster-1534-1535",
+    "title": "Münster and the rejection of armed religion",
+    "kind": "event",
+    "date": {
+      "start": 1534,
+      "end": 1535,
+      "label": "1534–1535",
+      "basis": "Years given on the supplied history overview; the exact month of the city’s fall is not assigned here."
+    },
+    "summary": "In 1534–1535, leaders at Münster proclaimed the city a new Jerusalem and organized an armed religious community. The supplied overview names Jan Matthijs and Jan van Leyden and follows the siege, the fall of the city, and the punishment of its leaders.",
+    "paragraphs": [
+      "In 1534–1535, leaders at Münster proclaimed the city a new Jerusalem and organized an armed religious community. The supplied overview names Jan Matthijs and Jan van Leyden and follows the siege, the fall of the city, and the punishment of its leaders.",
+      "Martyrs’ Mirror expressly rejects the claim that the defenseless Anabaptists took their beginning from the Münster movement. Its introduction says their churches rejected rebellion and would have no part in those proceedings. This explanation is essential to the book’s own account of the faith and its witnesses.",
+      "The supplied history then follows Menno Simons’s scriptural searching and public commitment. Reading these events together shows why Münster mattered to the surrounding history while preserving the convictions of the nonresistant congregations."
+    ],
+    "aliases": [
+      "Münster",
+      "Munster"
+    ],
+    "references": [
+      {
+        "label": "Supplied history overview 9362-J: Münster",
+        "url": "sources/church-history/photos/IMG_9362.jpg"
+      },
+      {
+        "label": "Martyrs’ Mirror: why the history follows baptism and its witnesses",
+        "url": "stories/mm-the-reason-why-we-have-pointed-out-the-article-of-holy-baptism-and-the-adherents-of-anabaptism-from-the-days-of-christ-t/"
+      }
+    ],
+    "people": [],
+    "traditions": [],
+    "places": [],
+    "sourceAccounts": [
+      "mm-the-reason-why-we-have-pointed-out-the-article-of-holy-baptism-and-the-adherents-of-anabaptism-from-the-days-of-christ-t"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "zurich-baptisms-1525",
+    "title": "The Zürich baptisms",
+    "kind": "event",
+    "date": {
+      "start": 1525,
+      "end": 1525,
+      "label": "21 January 1525",
+      "basis": "Date in the cited MWC history and supplied overview 9361-G."
+    },
+    "summary": "On 21 January 1525, Conrad Grebel baptized George Blaurock at a gathering associated with Felix Manz in Zürich. This is a central starting point for Swiss Anabaptist history.",
+    "paragraphs": [
+      "Bible study in Zürich led Conrad Grebel, Felix Manz, George Blaurock, and their companions to seek a fellowship shaped by the New Testament. Their conviction that baptism should follow personal faith brought them into conflict with the city’s requirement that infants be baptized. The supplied overview describes the council’s order to conform or leave.",
+      "On 21 January 1525 the believers gathered in the home associated with Manz’s mother. After prayer, Blaurock asked Grebel to baptize him upon his confession of faith. Blaurock then baptized others in the gathering. The act joined the outward sign to a deliberate commitment to follow Christ together.",
+      "The gathering became a defining beginning of the Swiss Brethren. Its consequences can be followed through the lives of the three men: Manz’s imprisonment and death at Zürich, Blaurock’s continued preaching into Tyrol, and Grebel’s place in the first fellowship. The linked first-century source passages show the biblical pattern of teaching, faith, and baptism to which they appealed."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Mennonite World Conference: the first baptisms",
+        "url": "https://mwc-cmm.org/en/stories/teach-gospel-and-hold-faith/"
+      },
+      {
+        "label": "Supplied timeline photograph 9375",
+        "url": "sources/church-history/photos/IMG_9375.jpg"
+      },
+      {
+        "label": "How the apostles executed this command of christ to teach and baptize, after the ascension of christ.",
+        "url": "stories/mm-how-the-apostles-executed-this-command-of-christ-to-teach-and-baptize-after-the-ascension-of-christ/"
+      },
+      {
+        "label": "Supplied history overview 9361-G: Swiss Brethren",
+        "url": "sources/church-history/photos/IMG_9361.jpg"
+      }
+    ],
+    "people": [
+      "conrad-grebel",
+      "felix-manz",
+      "george-blaurock"
+    ],
+    "traditions": [
+      "swiss-brethren"
+    ],
+    "status": "Overview",
+    "category": "Event",
+    "places": [
+      "zurich"
+    ],
+    "sourceAccounts": [
+      "mm-how-the-apostles-executed-this-command-of-christ-to-teach-and-baptize-after-the-ascension-of-christ"
+    ]
+  },
+  {
+    "slug": "felix-manz-execution",
+    "title": "Felix Manz and the cost of conviction",
+    "kind": "event",
+    "date": {
+      "start": 1527,
+      "end": 1527,
+      "label": "5 January 1527",
+      "basis": "Date in the cited later history and supplied overview; Martyrs’ Mirror itself gives 1526."
+    },
+    "summary": "Felix Manz was drowned in Zürich on 5 January 1527. His story is central to the memory of persecution among the Swiss Brethren.",
+    "paragraphs": [
+      "Felix Manz helped form the Zürich fellowship and continued teaching the baptism of believers under increasing pressure from the city authorities. His execution by drowning in the Limmat on 5 January 1527 became an early and enduring witness in the history of the Swiss Brethren.",
+      "Martyrs’ Mirror preserves more than the circumstances of his death. Its account, under the spelling Felix Mantz, includes an admonition calling believers to repentance, faith, love, and mercy. Manz contrasts that life with the hatred and coercion of teachers who appeal to the authorities to put their opponents to death.",
+      "The supplied book’s heading and narrative give 1526. The later history and the supplied overview give 5 January 1527, which is the date used for this event. The original account remains unchanged and directly accessible, so the difference is preserved with the testimony rather than silently removed."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "MWC: Testing Faith and Tradition (European history)",
+        "url": "https://mwc-cmm.org/wp-content/uploads/2024/11/gmh-europe_testing_faith_and_tradition.pdf"
+      },
+      {
+        "label": "Felix mantz, a. d. 1526.",
+        "url": "stories/mm-felix-mantz-a-d-1526/"
+      }
+    ],
+    "people": [
+      "felix-manz"
+    ],
+    "traditions": [
+      "swiss-brethren"
+    ],
+    "status": "Overview",
+    "category": "Event",
+    "places": [
+      "zurich"
+    ],
+    "sourceAccounts": [
+      "mm-felix-mantz-a-d-1526"
+    ]
+  },
+  {
+    "slug": "schleitheim-articles",
+    "title": "The Schleitheim Articles",
+    "kind": "event",
+    "date": {
+      "start": 1527,
+      "end": 1527,
+      "label": "24 February 1527",
+      "basis": "The supplied overview 9361-K gives the gathering date; the cited historical document preserves the seven articles."
+    },
+    "summary": "The Schleitheim Articles set out seven points of agreement for a gathered Anabaptist community, including baptism, communion, church discipline, and refusal of the sword.",
+    "paragraphs": [
+      "The brethren who met at Schleitheim in 1527 sought agreement about the life of the gathered church. The document associated with Michael Sattler was a brotherly union, written to strengthen believers and give practical expression to their common commitment to Christ.",
+      "Its seven articles connect baptism upon repentance and faith with discipline, communion, separation from evil, and the care of the congregation by its shepherds. They also reject the use of the sword by Christ’s followers and the swearing of oaths. The articles repeatedly appeal to Scripture and treat belief and conduct as inseparable.",
+      "Martyrs’ Mirror’s account of Sattler shows how these convictions came under examination. The charges against him included his teaching on baptism, the Lord’s Supper, oaths, and resistance by force. His prison letter to the church at Horb carries the same concern for a faithful, orderly, loving fellowship through a time of danger."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Schleitheim Articles (1527), historical document",
+        "url": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi%3Adocument-4315"
+      },
+      {
+        "label": "Supplied timeline photograph 9391",
+        "url": "sources/church-history/photos/IMG_9391.jpg"
+      },
+      {
+        "label": "Michael sattler, a. d. 1527.",
+        "url": "stories/mm-michael-sattler-a-d-1527/"
+      },
+      {
+        "label": "Articles or charges against michael sattler.",
+        "url": "stories/mm-articles-or-charges-against-michael-sattler/"
+      },
+      {
+        "label": "A letter written by michael sattler, in prison, to the church of god at horb.",
+        "url": "stories/mm-a-letter-written-by-michael-sattler-in-prison-to-the-church-of-god-at-horb/"
+      },
+      {
+        "label": "Supplied history overview 9361-K: Brotherly Union",
+        "url": "sources/church-history/photos/IMG_9361.jpg"
+      }
+    ],
+    "people": [
+      "michael-sattler"
+    ],
+    "traditions": [
+      "swiss-brethren"
+    ],
+    "status": "Overview",
+    "category": "Event",
+    "places": [
+      "schleitheim"
+    ],
+    "sourceAccounts": [
+      "mm-michael-sattler-a-d-1527",
+      "mm-articles-or-charges-against-michael-sattler",
+      "mm-a-letter-written-by-michael-sattler-in-prison-to-the-church-of-god-at-horb"
+    ]
+  },
+  {
+    "slug": "community-of-goods",
+    "title": "Community of goods in Moravia",
+    "kind": "event",
+    "date": {
+      "start": 1528,
+      "end": 1528,
+      "label": "1528",
+      "basis": "Shared-goods episode in the supplied overview 9362-F and Hutterite institutional history."
+    },
+    "summary": "A community of Anabaptist refugees in Moravia began sharing their possessions. This practice became a defining feature of Hutterite life.",
+    "paragraphs": [
+      "Anabaptists who had found refuge near Nikolsburg faced a division over participation in war and the payment of war taxes. Those who held that Christ’s followers should refuse violence left rather than defend the settlement by force. Their departure made the provision of food, shelter, and other necessities an immediate concern.",
+      "In 1528 the group gathered what they had brought with them and placed it on a cloak for common use. The supplied overview and the Hutterite history present this act of mutual provision as a beginning of community of goods, following the shared life described in Acts.",
+      "The believers settled at Austerlitz and were joined by further refugees. Jakob Hutter later helped organize and lead the communities. The event therefore connects the debate at Nikolsburg, the practical care of displaced people, and a form of shared Christian life that became central to the Hutterite tradition."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Hutterite history overview",
+        "url": "https://hutterites.org/history/hutterite-history-overview/"
+      },
+      {
+        "label": "Supplied timeline photograph 9375",
+        "url": "sources/church-history/photos/IMG_9375.jpg"
+      },
+      {
+        "label": "Supplied history overview 9362-B and F: Nikolsburg and shared goods",
+        "url": "sources/church-history/photos/IMG_9362.jpg"
+      }
+    ],
+    "people": [
+      "jakob-hutter"
+    ],
+    "traditions": [
+      "hutterites"
+    ],
+    "status": "Overview",
+    "category": "Event",
+    "places": [
+      "moravia"
+    ],
+    "sourceAccounts": []
+  },
+  {
+    "slug": "jakob-hutter-execution",
+    "title": "Jakob Hutter’s witness",
+    "kind": "event",
+    "date": {
+      "start": 1536,
+      "end": 1536,
+      "label": "25 February 1536",
+      "basis": "Execution date and Innsbruck location in the cited Hutterite institutional history."
+    },
+    "summary": "Jakob Hutter was executed in Innsbruck in 1536. His leadership and organization helped give the Hutterite tradition its lasting name.",
+    "paragraphs": [
+      "Jakob Hutter’s leadership linked the persecuted believers of Tyrol with communities of refuge in Moravia. Martyrs’ Mirror describes Jacob Huter as a teacher and overseer whose people joined the Moravian church, and records his role in sending ministers to serve there.",
+      "The Hutterite history relates that he was captured on a missionary journey to Austria and burned at Innsbruck on 25 February 1536. The supplied overview places his death after years of organizing refugees, addressing differences, and strengthening the shared life of the brethren.",
+      "His death did not end the communities he had served. Their later history retained his name and continued through periods of growth, displacement, and renewal. The linked source account provides the earlier Tyrolean and Moravian setting, while the institutional history supplies the execution date and place."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Hutterite history overview",
+        "url": "https://hutterites.org/history/hutterite-history-overview/"
+      },
+      {
+        "label": "George blaurock, and hans van der reve, a. d. 1529.",
+        "url": "stories/mm-george-blaurock-and-hans-van-der-reve-a-d-1529/"
+      },
+      {
+        "label": "George zaunringerad, a. d. 1531.",
+        "url": "stories/mm-george-zaunringerad-a-d-1531/"
+      },
+      {
+        "label": "Supplied history overview 9362-H: Hutterites in Moravia",
+        "url": "sources/church-history/photos/IMG_9362.jpg"
+      }
+    ],
+    "people": [
+      "jakob-hutter"
+    ],
+    "traditions": [
+      "hutterites"
+    ],
+    "status": "Overview",
+    "category": "Event",
+    "places": [
+      "innsbruck",
+      "moravia"
+    ],
+    "sourceAccounts": [
+      "mm-george-blaurock-and-hans-van-der-reve-a-d-1529",
+      "mm-george-zaunringerad-a-d-1531"
+    ]
+  },
+  {
+    "slug": "dirk-willems-rescue",
+    "title": "Dirk Willems saves his pursuer",
+    "kind": "event",
+    "date": {
+      "start": 1569,
+      "end": 1569,
+      "label": "1569; sentence dated 16 May",
+      "basis": "Rescue year and sentence date in the preserved Martyrs’ Mirror account; the day of the rescue is not assigned."
+    },
+    "summary": "Martyrs’ Mirror recounts how Dirk Willems turned back to rescue a pursuer who had fallen through the ice. He was recaptured and later executed.",
+    "paragraphs": [
+      "Dirk Willems fled across the ice at Asperen in 1569 while an officer pursued him. When the officer broke through, Dirk turned back and helped him out of the water. Martyrs’ Mirror makes the rescue the decisive moment of the account: he chose to save the life of the man who was trying to capture him.",
+      "The rescued officer wished to let him go, but the burgomaster ordered him to remember his oath. Dirk was seized again, imprisoned, and condemned to death. The book preserves a copy of the town’s sentence, dated 16 May 1569, alongside the narrative of his suffering.",
+      "The illustration depicts Dirk reaching toward his pursuer in the water. Read together with the account and sentence, it presents mercy toward an enemy as a costly act of discipleship. The rescue itself is dated to the year; the surviving sentence supplies the precise May date."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Dirk willems, a. d. 1569.",
+        "url": "stories/mm-dirk-willems-a-d-1569/"
+      }
+    ],
+    "people": [
+      "dirk-willems"
+    ],
+    "traditions": [
+      "mennonites"
+    ],
+    "status": "Overview",
+    "category": "Event",
+    "sourceAccounts": [
+      "mm-dirk-willems-a-d-1569"
+    ],
+    "places": [
+      "asperen"
+    ],
+    "images": [
+      "sources/martyrs-mirror/images/i1437.jpg"
+    ],
+    "imageSources": {
+      "sources/martyrs-mirror/images/i1437.jpg": "mm-dirk-willems-a-d-1569"
+    }
+  },
+  {
+    "slug": "hans-landis-1614",
+    "title": "Hans Landis and the Swiss persecution",
+    "kind": "event",
+    "date": {
+      "start": 1614,
+      "end": 1614,
+      "label": "September 1614",
+      "basis": "Month and year stated in the principal Martyrs’ Mirror account."
+    },
+    "summary": "The account of Hans Landis in Martyrs’ Mirror shows that persecution of Swiss Anabaptists continued into the seventeenth century.",
+    "paragraphs": [
+      "Hans Landis continued to teach and care for believers when the Zürich authorities ordered him to stop. Martyrs’ Mirror presents his ministry as the feeding of people hungry for the word of God and explains his refusal to abandon them through the duty to obey God.",
+      "The account follows his arrest, removal to Solothurn, release through the assistance of friends, and a later arrest at Zürich. When he would not give up his convictions, he was sentenced to death and beheaded in September 1614. The authorities represented the punishment as a response to disobedience; the book records it as suffering for his faith.",
+      "A following section preserves a later letter from an observer who remembered his death. Bringing the narrative and recollection together gives a fuller account of a named minister and shows that persecution of the Swiss Brethren continued well into the seventeenth century."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Hans landis, a. d. 1614.",
+        "url": "stories/mm-hans-landis-a-d-1614/"
+      },
+      {
+        "label": "Further observations touching the person and the death of hans landis.",
+        "url": "stories/mm-further-observations-touching-the-person-and-the-death-of-hans-landis/"
+      }
+    ],
+    "people": [
+      "hans-landis"
+    ],
+    "traditions": [
+      "swiss-brethren"
+    ],
+    "status": "Overview",
+    "category": "Event",
+    "sourceAccounts": [
+      "mm-hans-landis-a-d-1614",
+      "mm-further-observations-touching-the-person-and-the-death-of-hans-landis"
+    ],
+    "places": [
+      "zurich"
+    ]
+  },
+  {
+    "slug": "martyrs-mirror-1660",
+    "title": "Preserving the memory: Martyrs’ Mirror",
+    "kind": "event",
+    "date": {
+      "start": 1660,
+      "end": 1660,
+      "label": "1660: publication",
+      "basis": "Publication year on the supplied overview; linked authorial addresses are dated 1659."
+    },
+    "summary": "Thieleman J. van Braght’s collection preserved accounts of Christian witnesses and Anabaptist martyrs, along with letters, confessions, and reflections.",
+    "paragraphs": [
+      "Thieleman J. van Braght’s Martyrs’ Mirror brought together accounts of Christian witness from the time of Christ through the sufferings of the Anabaptists. The work alternates teaching about baptism and faith with narratives of persecution, joining the beliefs of the church to the lives of those who held them.",
+      "Its letters, confessions, court records, and personal testimonies give the witnesses a voice beyond the account of their deaths. Van Braght’s addresses to fellow believers explain the purpose: to encourage a living faith expressed in love, obedience, and steadfastness. His valedictory is signed at Dort in 1659, before the 1660 publication milestone.",
+      "The supplied overview follows the book’s later illustrated and translated editions. This archive preserves the supplied English edition in full, including its original headings, page markers, and images, while linking its sections to named people, places, and events. The first-century and medieval accounts therefore remain part of the same navigable history as the later Anabaptist witnesses."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied edition and prefaces",
+        "url": "sources/martyrs-mirror/original.html"
+      },
+      {
+        "label": "Valedictory.",
+        "url": "stories/mm-valedictory/"
+      },
+      {
+        "label": "To my beloved friends and fellow-believers in christ jesus our savior.",
+        "url": "stories/mm-to-my-beloved-friends-and-fellow-believers-in-christ-jesus-our-savior/"
+      },
+      {
+        "label": "Preface to second part.",
+        "url": "stories/mm-preface-to-second-part/"
+      },
+      {
+        "label": "Supplied history overview 9363-M: Martyrs Mirror",
+        "url": "sources/church-history/photos/IMG_9363.jpg"
+      }
+    ],
+    "people": [
+      "thieleman-van-braght"
+    ],
+    "traditions": [],
+    "status": "Overview",
+    "category": "Event",
+    "sourceAccounts": [
+      "mm-valedictory",
+      "mm-to-my-beloved-friends-and-fellow-believers-in-christ-jesus-our-savior",
+      "mm-preface-to-second-part"
+    ],
+    "places": [
+      "dordrecht"
+    ]
+  },
+  {
+    "slug": "innsbruck",
+    "title": "Innsbruck",
+    "kind": "place",
+    "date": {
+      "start": 1536,
+      "end": 1536,
+      "label": "1536: Jakob Hutter’s execution",
+      "basis": "Activity in the linked source accounts and institutional history; not a city founding date."
+    },
+    "summary": "Innsbruck is the place where Jakob Hutter was executed on 25 February 1536, according to the Hutterite institutional history. The event belongs to the period when he led and organized believers moving between Tyrol and Moravia.",
+    "paragraphs": [
+      "Innsbruck is the place where Jakob Hutter was executed on 25 February 1536, according to the Hutterite institutional history. The event belongs to the period when he led and organized believers moving between Tyrol and Moravia.",
+      "The linked event connects his death here with the communities he had served. The date describes that episode in Anabaptist history and does not assign a beginning to the city."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Hutterite history overview",
+        "url": "https://hutterites.org/history/hutterite-history-overview/"
+      }
+    ],
+    "people": [
+      "jakob-hutter"
+    ],
+    "traditions": [
+      "hutterites"
+    ],
+    "places": [],
+    "sourceAccounts": [],
+    "status": "Overview",
+    "category": "Place"
+  },
+  {
+    "slug": "asperen",
+    "title": "Asperen",
+    "kind": "place",
+    "date": {
+      "start": 1569,
+      "end": 1569,
+      "label": "1569: Dirk Willems’s witness",
+      "basis": "Activity in the linked source accounts and institutional history; not a city founding date."
+    },
+    "summary": "Asperen in Holland is the setting of Dirk Willems’s imprisonment, flight across the ice, rescue of his pursuer, and recapture. Martyrs’ Mirror gives the local setting as part of the account of his faith and suffering.",
+    "paragraphs": [
+      "Asperen in Holland is the setting of Dirk Willems’s imprisonment, flight across the ice, rescue of his pursuer, and recapture. Martyrs’ Mirror gives the local setting as part of the account of his faith and suffering.",
+      "The same source preserves a copy of the town’s sentence dated 16 May 1569 and identifies its later extraction from the records of Asperen. The place therefore links the remembered rescue with a specific court record."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Dirk willems, a. d. 1569.",
+        "url": "stories/mm-dirk-willems-a-d-1569/"
+      }
+    ],
+    "people": [
+      "dirk-willems"
+    ],
+    "traditions": [
+      "mennonites"
+    ],
+    "places": [],
+    "sourceAccounts": [
+      "mm-dirk-willems-a-d-1569"
+    ],
+    "status": "Overview",
+    "category": "Place"
+  },
+  {
+    "slug": "dordrecht",
+    "title": "Dordrecht (Dort)",
+    "kind": "place",
+    "date": {
+      "start": 1632,
+      "end": 1660,
+      "label": "1632–1660: confession and publication",
+      "basis": "Activity in the linked source accounts and institutional history; not a city founding date."
+    },
+    "summary": "Dordrecht, called Dort in the supplied edition, connects the confession of faith drawn up on 21 April 1632 with the later work of Thieleman J. van Braght. The introductory line of the Third Confession identifies the gathering and its date.",
+    "paragraphs": [
+      "Dordrecht, called Dort in the supplied edition, connects the confession of faith drawn up on 21 April 1632 with the later work of Thieleman J. van Braght. The introductory line of the Third Confession identifies the gathering and its date.",
+      "Van Braght also signed his addresses at Dort in 1659 before the 1660 publication of Martyrs’ Mirror. These source passages connect a place of conference and writing with the preservation of the churches’ testimony."
+    ],
+    "aliases": [
+      "Dort"
+    ],
+    "references": [
+      {
+        "label": "Third confession.",
+        "url": "stories/mm-third-confession/"
+      },
+      {
+        "label": "Valedictory.",
+        "url": "stories/mm-valedictory/"
+      }
+    ],
+    "people": [
+      "thieleman-van-braght"
+    ],
+    "traditions": [
+      "mennonites"
+    ],
+    "places": [],
+    "sourceAccounts": [
+      "mm-third-confession",
+      "mm-valedictory"
+    ],
+    "status": "Overview",
+    "category": "Place"
+  }
+]
