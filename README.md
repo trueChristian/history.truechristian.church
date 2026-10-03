@@ -17,8 +17,8 @@ Open http://127.0.0.1:8080. `npm run build` prepares the source data and generat
 ## Included
 
 - A vertical timeline with SVG branch connections, era/stream/type filters, chronology controls, title/name search, and source-account pagination.
-- Original historical overviews for 47 traditions and shared institutions, 128 events, 74 people, and 20 places.
-- All 1,272 supplied Martyrs’ Mirror sections and 45 original book image files, the intact edition, source anchors, and readable Markdown equivalents.
+- Original historical overviews for 45 traditions and shared institutions, 127 events, 74 people, and 20 places.
+- The complete Martyrs’ Mirror in 2,123 manageable reading pages, with book contents, previous/next navigation, internal notes, original-source website links, and readable Markdown equivalents. All 1,272 legacy section URLs and 45 archived image files remain intact.
 - Century guides integrated into the timeline, with direct links to the corresponding accounts.
 - Six daily source accounts and full-text search with aliases, types, eras, and date ranges.
 - Internal links connecting people, places, events, branch histories, and source accounts.
@@ -47,9 +47,15 @@ SITE_BASE_PATH=/history.truechristian.church npm run check
 SITE_BASE_PATH=/history.truechristian.church npm run serve
 ```
 
+See [the structured reader model](docs/reader-model.md) for source preservation, segmentation, and reading-page translations.
+
 ## Languages
 
 English is published at `/en/`. Old URLs redirect to the same page. Stable record identities, repository-local UI dictionaries and reviewed translation overlays support future languages without an external source pipeline. Only available translations appear in the language menu. See [docs/localization.md](docs/localization.md).
+
+## Publication scope
+
+`content/publication-policy.json` keeps future-extension records out of all generated pages, relationships, search data, and branch assets until their official sources are approved. Source files and revision history remain intact. The build validates the complete published output against this policy; ordinary biblical vocabulary is preserved.
 
 ## Edit the history
 

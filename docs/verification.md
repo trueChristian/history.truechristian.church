@@ -18,7 +18,7 @@ The browser suite verifies daily selection, appearance persistence, era and stre
 
 All 1,272 imported sections and 45 original book image files remain available with the intact source edition. The supplied exhibit photographs and painting/video material remain research inputs and must not be copied to `_site/` or embedded in generated pages. The site validator checks this explicitly.
 
-The branch data contains 47 histories and 52 documented connections. Its graph is checked for unknown records, inconsistent dates, and cycles. Internal detail pages contain the historical text; external citations are collected in numbered references.
+The published branch data contains 45 histories and 50 documented connections. Its graph is checked for unknown records, inconsistent dates, and cycles. Internal detail pages contain the historical text; external citations are collected in numbered references.
 
 Pull request checks produce a static preview artifact and a screenshot artifact. Publication on `main` requires both core validation and browser validation to pass.
 
@@ -33,10 +33,14 @@ The local Chromium executable cannot start in this cloud container because its s
 
 ## Final review scope (3 October 2026)
 
-The authored collection contains 269 histories: 74 people, 128 events, 47 traditions and shared institutions, and 20 places. All 1,272 book sections and 45 physical image files remain intact. Every in-scope overview-panel subject and every prominent branch/leader label is mapped to a sourced internal history or its documented context. The seven smaller named chart figures and distinct Old Order/Swiss regional histories also have researched accounts.
+The source collection contains 269 authored histories. The publication scope currently includes 266: 74 people, 127 events, 45 traditions and shared institutions, and 20 places; three future-extension records are held without altering the archive. All 1,272 book sections and 45 physical image files remain intact. Every in-scope overview-panel subject and every prominent branch/leader label is mapped to a sourced internal history or its documented context. The seven smaller named chart figures and distinct Old Order/Swiss regional histories also have researched accounts.
 
 This does not claim an exhaustive independent article for each of the 201 small chart annotations: the inventory explicitly distinguishes 110 mapped narratives, 84 related overviews, three bounded evidence requests, and four context/credit entries. The three requests concern an unidentified junior college, an unnamed relief agency (1934), and an unexplained 1970s disciplinary label. They cannot responsibly be resolved from a name guess or an unsupported allegation. The new education, publication, settlement, conference and service histories address the remaining identifiable details. Seven source regions need clearer evidence; the panels leave some local mission participants unnamed. These boundaries are visible in the public coverage guide with contextual issue drafts.
 
 Final visual checks must include the page-body dark-heading contrast regression (4.5:1 minimum), connection-line contrast (3:1 minimum), six visible daily title links near the top, expanded detail views, mobile layout, and no-JavaScript visibility. Header/footer brand assets remain unchanged.
 
 The approved shared-theme font stylesheet loads Montserrat 400/500 and Raleway 400 with `display=swap`. Browser behavioral tests deliberately stub that external stylesheet, so their artifacts use documented fallback fonts; the production head retains the real font request. The build validator checks that the font loading contract remains present.
+
+## Native reader acceptance
+
+The complete source body is preserved across 2,123 reading pages. `npm run check` independently compares the generated English reader text with the structured source manifest, in addition to all local links and fragment anchors. The eight reader-model tests cover deterministic regeneration, every original word/block hash, all 365 note-return pairs, 2,024 anchors, all old account routes, stable locale-prefixed continuations and original-source website provenance. Browser scenarios additionally cover the 44-page Confession of Faith, cross-section next/previous, notes/backlinks, older fragments, profile-to-full-account navigation, persisted text size, mobile poetry/tables and visible source footers.

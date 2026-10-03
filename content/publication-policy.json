@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "description": "Publication holds keep future-extension material in the source archive until official statements and the base timeline are ready for review. This file affects generated public output only; it does not delete source records or history.",
+  "excludedRecordSlugs": [
+    "charity-ministries",
+    "agape-fellowships",
+    "charity-1982"
+  ],
+  "organizationReferences": [
+    "Charity Ministries",
+    "Charity Ministry",
+    "Charity Christian Fellowship",
+    "Charity Gospel Tape Ministry",
+    "Charity-related",
+    "charitychristianfellowship.org",
+    "Agape Ministries",
+    "Agape Ministry",
+    "Agape fellowships",
+    "Agape fellowship",
+    "Agape stream",
+    "local Agape account",
+    "Agape page"
+  ],
+  "recordTextReplacements": {
+    "pennsylvania": [
+      {
+        "from": "The region also appears in the River Brethren history near Marietta and the later Charity Christian Fellowship history in Lancaster County.",
+        "to": "The region also appears in the River Brethren history near Marietta."
+      }
+    ]
+  }
+}

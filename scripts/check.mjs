@@ -3,12 +3,21 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {gunzipSync} from 'node:zlib';
+import {containsWithheldReference} from '../src/lib/publication.mjs';
 import {createHash} from 'node:crypto';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),OUT=path.join(ROOT,'_site');
+const publicationPolicy=JSON.parse(await fs.readFile(path.join(ROOT,'content/publication-policy.json'),'utf8'));
 const info=JSON.parse(await fs.readFile(path.join(OUT,'build-info.json'),'utf8'));
 async function walk(dir){const files=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){const p=path.join(dir,e.name);files.push(...(e.isDirectory()?await walk(p):[p]));}return files;}
 const files=await walk(OUT),existing=new Set(files.map(f=>path.relative(OUT,f).split(path.sep).join('/'))),errors=[];
 const allHtmlFiles=files.filter(f=>f.endsWith('.html')&&!f.endsWith('/sources/martyrs-mirror/original.html'));
+for(const filename of files.filter(f=>/\.(?:html|md|json|xml)$/.test(f)&&!f.endsWith('/sources/martyrs-mirror/original.html'))){
+ const text=await fs.readFile(filename,'utf8');
+ assert.ok(!containsWithheldReference(text,publicationPolicy),`Withheld organization reference in ${path.relative(OUT,filename)}`);
+}
+for(const slug of publicationPolicy.excludedRecordSlugs)assert.ok(!files.some(f=>f.split(path.sep).includes(slug)),`Withheld route ${slug}`);
 const htmlFiles=[];for(const f of allHtmlFiles)if(!(await fs.readFile(f,'utf8')).includes('data-legacy-redirect'))htmlFiles.push(f);
 const anchors=new Map();
 async function hasAnchor(relative,hash){
@@ -67,6 +76,16 @@ for(const locale of info.locales){
  const markdown=await fs.readFile(path.join(OUT,locale,'README.md'),'utf8');
  assert.ok(markdown.includes('Today’s six accounts')&&markdown.includes('The connected timeline'),'Home Markdown must contain its main readable content');
 }
+
+const readerManifest=JSON.parse(gunzipSync(await fs.readFile(path.join(ROOT,'content/martyrs-reader.json.gz'))));
+assert.equal(info.readerPages,readerManifest.pageCount);
+for(const p of readerManifest.pages){
+ const html=await fs.readFile(path.join(OUT,info.defaultLocale,p.route,'index.html'),'utf8');
+ for(const token of ['data-reader-page','reader-prose','reader-navigation','www.gutenberg.org/cache/epub/65855/pg65855-images.html'])assert.ok(html.includes(token),`${p.route}: missing ${token}`);
+ const body=html.match(/class="prose reader-prose"[^>]*><!--history-content:start-->([\s\S]*?)<!--history-content:end-->/)?.[1];
+ assert.ok(body!==undefined&&!/href="[^"]*original\.html/.test(body),`${p.route}: source note leaves native reader`);
+}
+execFileSync('python3',['scripts/check_reader_output.py'],{cwd:ROOT,stdio:'inherit'});
 
 if(errors.length){console.error(errors.slice(0,30).join('\n'));throw new Error(`${errors.length} site validation errors`);}
 console.log(`Validated ${info.pages} Astro pages, local links, Markdown equivalents, theme assets, vertical timeline, and exclusion of exhibit media.`);

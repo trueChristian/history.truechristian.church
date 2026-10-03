@@ -5,9 +5,12 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawn} from 'node:child_process';
 import {chromium} from 'playwright';
+import {gunzipSync} from 'node:zlib';
+import {buildReader} from '../src/lib/reader.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const info=JSON.parse(await fs.readFile(path.join(root,'_site/build-info.json'),'utf8'));
+const reader=buildReader(JSON.parse(gunzipSync(await fs.readFile(path.join(root,'content/martyrs-reader.json.gz')))));
 const screenshots=path.join(root,'test-results');
 await fs.mkdir(screenshots,{recursive:true});
 const server=spawn(process.execPath,['scripts/serve.mjs'],{
@@ -120,23 +123,24 @@ try{
   await check('Articles preserve source illustrations, original anchors, and readable Markdown',async()=>{
     await page.goto(url('stories/mm-dirk-willems-a-d-1569/'));
     await page.waitForFunction(()=>[...document.querySelectorAll('.prose img')].some(image=>image.complete && image.naturalWidth>0));
+    const source=new URL(await page.locator('.reader-original a[href*="gutenberg.org/cache"]').getAttribute('href'));
+    assert.equal(source.hostname,'www.gutenberg.org');assert.ok(source.hash);
+    assert.equal(await page.locator('.reader-prose a[href*="original.html"]').count(),0);
     await page.locator('.source-details summary').click();
-    const source=new URL(await page.locator('.source-details a').getAttribute('href'),origin);
-    assert.match(source.pathname,/sources\/martyrs-mirror\/original\.html$/);assert.ok(source.hash);
+    assert.ok(await page.getByRole('link',{name:'Preserved original file',exact:true}).isVisible());
     const markdown=await context.request.get(url('stories/mm-dirk-willems-a-d-1569/README.md'));
     assert.equal(markdown.status(),200);assert.match(await markdown.text(),/Asperen/);
     await page.goto(url('sources/church-history/'));
     assert.equal(await page.locator('main img, main video').count(),0);
   });
 
-  await check('Community-account contribution links carry the topic and canonical page URL',async()=>{
-    await page.goto(url('traditions/agape-fellowships/'));
-    assert.ok(await page.getByText('Attributed community account',{exact:true}).isVisible());
+  await check('Contribution links carry the topic and canonical page URL',async()=>{
+    await page.goto(url('traditions/conservative-mennonites/'));
     const link=new URL(await page.locator('.page-tools a[href*="/issues/new?"]').first().getAttribute('href'));
     assert.equal(link.pathname,'/trueChristian/history.truechristian.church/issues/new');
-    assert.equal(link.searchParams.get('title'),'Correction: Agape fellowships');
-    assert.match(link.searchParams.get('body'),/Record: agape-fellowships/);
-    assert.match(link.searchParams.get('body'),/traditions\/agape-fellowships\//);
+    assert.equal(link.searchParams.get('title'),'Correction: Conservative Mennonite fellowships');
+    assert.match(link.searchParams.get('body'),/Record: conservative-mennonites/);
+    assert.match(link.searchParams.get('body'),/traditions\/conservative-mennonites\//);
   });
 
   await check('Branch streams have connected SVG paths and internal people and place links',async()=>{
@@ -169,6 +173,97 @@ try{
       await page.goto(url(route));assert.equal(await page.locator('main img, main video, main source').count(),0);
     }
     const media=await context.request.get(url('sources/behalt/IMG_9359.mp4'));assert.equal(media.status(),404);
+  });
+
+  await check('The complete book has native contents and bounded sequential reading pages',async()=>{
+    await page.goto(url('sources/martyrs-mirror/'));
+    assert.equal(await page.locator('[data-book-section]').count(),reader.sections.length);
+    await page.getByRole('link',{name:'Begin reading the book →',exact:true}).click();
+    assert.equal(await page.locator('[data-reader-page]').getAttribute('data-reader-page'),reader.firstPage.id);
+    assert.equal(await page.locator('[data-reader-navigation="top"] a[rel=prev]').count(),0);
+    await page.locator('[data-reader-navigation="top"] a[rel=next]').click();
+    assert.equal(await page.locator('[data-reader-page]').getAttribute('data-reader-page'),reader.firstPage.nextId);
+    const confession=reader.byRecord.get('mm-confession-of-faith-according-to-the-holy-word-of-god');
+    await page.goto(url(confession[0].route));
+    assert.equal(await page.locator('.reader-section-pages li').count(),confession.length);
+    assert.ok((await page.locator('.reader-prose').innerText()).split(/\s+/).length<=1100);
+    await page.locator('[data-reader-navigation="top"] a[rel=next]').click();
+    assert.ok(page.url().endsWith('/part-2/'));
+    await page.goBack();assert.ok(page.url().endsWith(confession[0].route));
+    const last=confession.at(-1);await page.goto(url(last.route));
+    await page.locator('[data-reader-navigation="bottom"] a[rel=next]').click();
+    assert.ok(page.url().endsWith(reader.byPageId.get(last.nextId).route));
+    await page.goto(url('sources/martyrs-mirror/'));
+    await page.locator('#book-contents-query').fill('Jacques');
+    const visible=await page.locator('[data-book-section]:visible').allTextContents();
+    assert.ok(visible.length>0&&visible.every(text=>/Jacques/i.test(text)));
+  });
+
+  await check('Reader footnotes, backlinks and legacy fragments stay on exact native pages',async()=>{
+    const from=reader.anchorToPage.get('FNanchor_216'),note=reader.anchorToPage.get('Footnote_216');
+    await page.goto(url(from.route));
+    await page.locator('a[href$="#Footnote_216"]').first().click();
+    assert.ok(page.url().endsWith(note.route+'#Footnote_216'));
+    assert.ok(await page.locator('#Footnote_216').isVisible());
+    await page.locator('.reader-prose a[href$="#FNanchor_216"]').click();
+    assert.ok(page.url().endsWith(from.route+'#FNanchor_216'));
+    const first=reader.byRecord.get(from.recordSlug)[0];
+    await page.goto(url(first.route)+'#Footnote_216');
+    await page.waitForURL('**/'+note.route+'#Footnote_216');
+    assert.ok(await page.locator('#Footnote_216').isVisible());
+    const markdown=await context.request.get(url(note.route+'README.md'));
+    assert.equal(markdown.status(),200);assert.match(await markdown.text(),/Project Gutenberg/);
+  });
+
+  await check('Reader controls, source footers and full-account entry work on desktop and mobile',async()=>{
+    await page.goto(url('people/dirk-willems/'));
+    await page.locator('.source-reading-entry a').first().click();
+    assert.ok(await page.locator('[data-reader-page]').isVisible());
+    await page.waitForFunction(()=>document.querySelector('[data-reader-page]')?.dataset.readerReady==='true');
+    await page.selectOption('#reader-text-size','larger');await page.reload();
+    await page.waitForFunction(()=>document.querySelector('[data-reader-page]')?.dataset.readerReady==='true');
+    assert.equal(await page.locator('[data-reader-page]').getAttribute('data-text-size'),'larger');
+    await page.selectOption('#reader-text-size','standard');
+    for(const width of [320,390,768,1440]){
+      await page.setViewportSize({width,height:900});
+      await page.goto(url('stories/mm-confession-of-faith-according-to-the-holy-word-of-god/part-2/'));
+      assert.ok(await page.locator('.reader-prose').isVisible());
+      const size=await page.evaluate(()=>({content:document.documentElement.scrollWidth,viewport:innerWidth}));
+      assert.ok(size.content<=size.viewport+1,`Reader overflow at ${width}px`);
+      assert.equal(await page.locator('.reader-original a[href*="gutenberg.org/cache"]').count(),1);
+    }
+    await page.setViewportSize({width:1440,height:1000});
+    await page.locator('.reader-heading').scrollIntoViewIfNeeded();
+    await page.screenshot({path:path.join(screenshots,'reader-desktop.png')});
+    await page.locator('.reader-original').scrollIntoViewIfNeeded();
+    await page.screenshot({path:path.join(screenshots,'reader-source-footer.png')});
+    await page.setViewportSize({width:390,height:844});
+    const settledReaderMenu=()=>page.waitForFunction(()=>{
+      const header=document.querySelector('[data-tcc-global-header]');
+      const navigation=document.querySelector('.tcc-header__navigation');
+      return header?.dataset.menuOpen==='false'&&navigation?.getAttribute('aria-hidden')==='true'&&getComputedStyle(navigation).visibility==='hidden'&&header.getAnimations({subtree:true}).every(animation=>animation.playState!=='running');
+    });
+    await settledReaderMenu();
+    await page.selectOption('#theme-mode','dark');
+    await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+    await settledReaderMenu();
+    await page.waitForFunction(()=>window.scrollY===0&&document.querySelector('[data-tcc-global-header]').getBoundingClientRect().top>=-1);
+    assert.equal(await page.locator('.reader-section-pages').evaluate(element=>element.open),false,'Optional page outline should start closed');
+    const headingTop=await page.locator('.reader-heading').evaluate(element=>element.getBoundingClientRect().top);
+    assert.ok(headingTop<744,'Mobile entry view must expose the account heading');
+    await page.screenshot({path:path.join(screenshots,'reader-mobile-top.png')});
+    await page.locator('.reader-heading').scrollIntoViewIfNeeded();
+    await settledReaderMenu();
+    await page.screenshot({path:path.join(screenshots,'reader-mobile-dark.png')});
+    await page.selectOption('#theme-mode','light');
+    for(const route of ['stories/mm-front-matter/','stories/mm-to-my-beloved-friends-and-companions-in-christ-jesus-our-savior/']){
+      await page.goto(url(route));
+      const dimensions=await page.evaluate(()=>({content:document.documentElement.scrollWidth,viewport:innerWidth}));
+      assert.ok(dimensions.content<=dimensions.viewport+1,'Poetry/table mobile overflow');
+    }
+    assert.ok(await page.locator('.source-poetry').count()>0);
+    await page.locator('.source-poetry').first().scrollIntoViewIfNeeded();
+    await page.screenshot({path:path.join(screenshots,'reader-poetry-mobile.png')});
   });
 
   await check('Mobile menus support Escape and restore focus without page overflow',async()=>{
