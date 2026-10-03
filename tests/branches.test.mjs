@@ -1,0 +1,20 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import {validateBranches} from '../src/lib/branches.mjs';
+const data=JSON.parse(await fs.readFile(new URL('../content/branches.json',import.meta.url)));
+const records=JSON.parse(await fs.readFile(new URL('../content/curated.json',import.meta.url))).map(r=>({...r,route:`traditions/${r.slug}/`}));
+
+test('every tradition has a usable sourced history and the branch connections form an acyclic graph',()=>{
+  assert.equal(validateBranches(data,records),true);
+  const traditions=records.filter(r=>r.kind==='tradition');
+  assert.equal(data.nodes.length,traditions.length);
+  for(const r of traditions){
+    assert.ok(data.nodes.some(n=>n.slug===r.slug),r.slug);
+    assert.ok(r.paragraphs.join(' ').length>300,r.slug);
+    assert.ok(r.references.length,r.slug);
+    assert.notEqual(r.status,'Research needed',r.slug);
+  }
+  assert.throws(()=>validateBranches({...data,edges:[...data.edges,{from:'agape-fellowships',to:'radical-reformation-roots',label:'Cycle',source:'https://example.test'}]},records),/Circular/);
+});
+

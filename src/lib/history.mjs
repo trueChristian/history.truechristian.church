@@ -53,6 +53,7 @@ export function searchRecords(records, query='', filters={}) {
     if (filters.kind && record.kind!==filters.kind) return [];
     if (filters.era && record.era!==filters.era) return [];
     if (filters.category && record.category!==filters.category) return [];
+    if (filters.century && record.century!==Number(filters.century)) return [];
     if (filters.from && (!record.date || record.date.end < Number(filters.from))) return [];
     if (filters.to && (!record.date || record.date.start > Number(filters.to))) return [];
     const title=normalize(record.title), aliases=normalize((record.aliases||[]).join(' '));

@@ -11,7 +11,8 @@ const files=await walk(OUT),existing=new Set(files.map(f=>path.relative(OUT,f).s
 const htmlFiles=files.filter(f=>f.endsWith('.html') && !f.endsWith('/sources/martyrs-mirror/original.html'));
 for(const filename of htmlFiles){
   const html=await fs.readFile(filename,'utf8'),relative=path.relative(OUT,filename).split(path.sep).join('/');
-  if(html.match(/data-base="([^"]*)"/)?.[1]!==info.base)errors.push(`${relative}: inconsistent deployment base path`);
+  const renderedBase=html.match(/data-base(?:="([^"]*)")?/);
+  if(!renderedBase || (renderedBase[1]||'')!==info.base)errors.push(`${relative}: inconsistent deployment base path`);
   for(const marker of ['data-tcc-global-header','data-tcc-directory-footer','data-tcc-copyright-footer','Read this page as Markdown'])if(!html.includes(marker))errors.push(`${relative}: missing ${marker}`);
   if(relative!=='404.html' && !existing.has(relative.replace(/index\.html$/,'README.md')))errors.push(`${relative}: missing README equivalent`);
   if(html.includes('__BASE__'))errors.push(`${relative}: unresolved base token`);
@@ -33,12 +34,17 @@ for(const asset of ['brand/logo.jpg','favicons/favicon.ico','footer/city-skyline
   const digest=b=>createHash('sha256').update(b).digest('hex');
   assert.equal(digest(await fs.readFile(path.join(OUT,'assets',asset))),digest(await fs.readFile(path.join(ROOT,'vendor/theme/assets',asset))),`Theme asset changed: ${asset}`);
 }
-const gallery=await fs.readFile(path.join(OUT,'sources/church-history/index.html'),'utf8');
-assert.equal((gallery.match(/class="photo-card"/g)||[]).length,40);
-assert.equal((gallery.match(/Behalt artwork:/g)||[]).length,8);
-assert.ok(gallery.includes('Heinz Gaugel'));
+assert.equal(info.publishedExhibitMedia,0);
+assert.ok(!files.some(f=>/\/sources\/(church-history|behalt)\/.*\.(jpg|mp4|heic)$/i.test(f)),'Exhibit research media must not be published');
+for(const filename of htmlFiles){
+  const html=await fs.readFile(filename,'utf8');
+  assert.ok(!/<(?:img|video|source)\b[^>]*(?:church-history|behalt)/i.test(html),`Exhibit media embedded in ${filename}`);
+}
+const timeline=await fs.readFile(path.join(OUT,'timeline/index.html'),'utf8');
+assert.ok(timeline.includes('timeline-threads')&&timeline.includes('timeline-entries'));
+assert.ok(!timeline.includes('era-scroll'),'Superseded dotted era strip remains');
 const catalog=JSON.parse(await fs.readFile(path.join(OUT,'assets/catalog.json'),'utf8'));
 assert.equal(catalog.filter(r=>r.kind==='story').length,1272);
 assert.equal(info.pages,htmlFiles.length-1);
 if(errors.length){console.error(errors.slice(0,30).join('\n'));throw new Error(`${errors.length} site validation errors`);}
-console.log(`Validated ${info.pages} pages, local links, Markdown equivalents, theme assets, and image credits.`);
+console.log(`Validated ${info.pages} Astro pages, local links, Markdown equivalents, theme assets, vertical timeline, and exclusion of exhibit media.`);

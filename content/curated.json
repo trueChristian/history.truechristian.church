@@ -3,21 +3,27 @@
     "slug": "christian-beginnings",
     "title": "Christian beginnings: Acts and the early witnesses",
     "kind": "event",
-    "date": null,
+    "date": {
+      "start": 30,
+      "end": 99,
+      "label": "Acts and the first century",
+      "basis": "Scriptural beginnings and the first-century accounts in Martyrs’ Mirror."
+    },
     "summary": "The account in Acts provides the Christian beginnings to which later Anabaptist communities looked for their understanding of discipleship, baptism, and shared life.",
     "paragraphs": [
-      "The New Testament account of the first Christian communities stands at the beginning of this timeline. Its descriptions of baptism, fellowship, care for neighbours, and witness helped shape later Anabaptist readings of the church.",
-      "Martyrs’ Mirror reaches back to the early church to tell a story of faithful witness. These early Christians were not members of the sixteenth-century Anabaptist movement. The book’s claims about continuity belong to its historical and theological interpretation and should be read as such."
+      "Scripture records the first Christian communities receiving the word, being baptized, continuing in the apostles’ teaching and fellowship, breaking bread, and praying together (Acts 2:41–42). Their care for one another and shared life are described in Acts 2:44–47 and Acts 4:32–35.",
+      "These accounts provide the foundation for the discipleship, believers’ baptism, brotherly love, and common life remembered in Anabaptist history. The timeline begins here and follows the witness preserved in Martyrs’ Mirror through the centuries to the Radical Reformation and its later streams.",
+      "The accounts of martyrdom record the cost of faithfulness. Stephen’s witness in Acts 6–7, his refusal to retaliate, and his prayer for those killing him belong to the Scriptural foundation of this history. Readers can follow the early-century accounts into the complete source collection."
     ],
     "aliases": [],
     "references": [
       {
-        "label": "Acts: Christian beginnings",
+        "label": "Scripture: Acts 2:41–47; Acts 4:32–35; Acts 6–7",
         "url": "https://getbible.life/acts"
       },
       {
-        "label": "Martyrs’ Mirror: the supplied edition",
-        "url": "sources/martyrs-mirror/original.html#AN_ACCOUNT_OF_THE_PIOUS_MARTYRS_1C"
+        "label": "Martyrs’ Mirror: first-century witnesses",
+        "url": "stories/mm-an-account-of-the-pious-martyrs-and-witnesses-of-jesus-christ-who-suffered-during-the-first-century/"
       }
     ],
     "people": [],
@@ -61,7 +67,10 @@
       "swiss-brethren"
     ],
     "status": "Overview",
-    "category": "Event"
+    "category": "Event",
+    "places": [
+      "zurich"
+    ]
   },
   {
     "slug": "felix-manz-execution",
@@ -96,7 +105,10 @@
       "swiss-brethren"
     ],
     "status": "Overview",
-    "category": "Event"
+    "category": "Event",
+    "places": [
+      "zurich"
+    ]
   },
   {
     "slug": "schleitheim-articles",
@@ -131,7 +143,10 @@
       "swiss-brethren"
     ],
     "status": "Overview",
-    "category": "Event"
+    "category": "Event",
+    "places": [
+      "schleitheim"
+    ]
   },
   {
     "slug": "community-of-goods",
@@ -163,7 +178,10 @@
       "hutterites"
     ],
     "status": "Overview",
-    "category": "Event"
+    "category": "Event",
+    "places": [
+      "moravia"
+    ]
   },
   {
     "slug": "jakob-hutter-execution",
@@ -193,7 +211,10 @@
       "hutterites"
     ],
     "status": "Overview",
-    "category": "Event"
+    "category": "Event",
+    "places": [
+      "moravia"
+    ]
   },
   {
     "slug": "dirk-willems-rescue",
@@ -383,7 +404,10 @@
       "mennonites"
     ],
     "status": "Overview",
-    "category": "Event"
+    "category": "Event",
+    "places": [
+      "molotschna"
+    ]
   },
   {
     "slug": "hutterite-migration-1874",
@@ -451,7 +475,10 @@
       "bruderhof"
     ],
     "status": "Overview",
-    "category": "Event"
+    "category": "Event",
+    "places": [
+      "sannerz"
+    ]
   },
   {
     "slug": "mwc-1925",
@@ -489,7 +516,12 @@
     "slug": "anabaptism-today",
     "title": "Anabaptist history is still being written",
     "kind": "event",
-    "date": null,
+    "date": {
+      "start": 2025,
+      "end": 2026,
+      "label": "The living Anabaptist family",
+      "basis": "Present-day context of this archive."
+    },
     "summary": "The present-day story includes communities across continents and many different traditions. Local histories, migrations, mission, and relationships between churches are part of the record still being gathered.",
     "paragraphs": [
       "This site is an open historical archive for the wider Anabaptist family. It does not assume that one branch represents every community or that all relationships can be drawn as a simple line.",
@@ -540,7 +572,10 @@
       "swiss-brethren"
     ],
     "status": "Overview",
-    "category": "Person"
+    "category": "Person",
+    "places": [
+      "zurich"
+    ]
   },
   {
     "slug": "felix-manz",
@@ -570,7 +605,10 @@
       "swiss-brethren"
     ],
     "status": "Overview",
-    "category": "Person"
+    "category": "Person",
+    "places": [
+      "zurich"
+    ]
   },
   {
     "slug": "george-blaurock",
@@ -601,7 +639,10 @@
       "swiss-brethren"
     ],
     "status": "Overview",
-    "category": "Person"
+    "category": "Person",
+    "places": [
+      "zurich"
+    ]
   },
   {
     "slug": "michael-sattler",
@@ -635,7 +676,10 @@
       "swiss-brethren"
     ],
     "status": "Overview",
-    "category": "Person"
+    "category": "Person",
+    "places": [
+      "schleitheim"
+    ]
   },
   {
     "slug": "jakob-hutter",
@@ -666,13 +710,21 @@
       "hutterites"
     ],
     "status": "Overview",
-    "category": "Person"
+    "category": "Person",
+    "places": [
+      "moravia"
+    ]
   },
   {
     "slug": "menno-simons",
     "title": "Menno Simons",
     "kind": "person",
-    "date": null,
+    "date": {
+      "start": 1536,
+      "end": 1561,
+      "label": "Menno Simons’s ministry, 1536–1561",
+      "basis": "Dated ministry described by the cited history."
+    },
     "summary": "The Mennonite name is associated with Menno Simons, a former Dutch priest who became an influential Anabaptist leader.",
     "paragraphs": [
       "The Mennonite name is associated with Menno Simons, a former Dutch priest who became an influential Anabaptist leader."
@@ -875,7 +927,10 @@
       "bruderhof"
     ],
     "status": "Overview",
-    "category": "Person"
+    "category": "Person",
+    "places": [
+      "sannerz"
+    ]
   },
   {
     "slug": "emmy-arnold",
@@ -905,7 +960,10 @@
       "bruderhof"
     ],
     "status": "Overview",
-    "category": "Person"
+    "category": "Person",
+    "places": [
+      "sannerz"
+    ]
   },
   {
     "slug": "else-von-hollander",
@@ -935,7 +993,10 @@
       "bruderhof"
     ],
     "status": "Overview",
-    "category": "Person"
+    "category": "Person",
+    "places": [
+      "sannerz"
+    ]
   },
   {
     "slug": "swiss-brethren",
@@ -969,7 +1030,11 @@
     "people": [],
     "traditions": [],
     "status": "Overview",
-    "category": "Tradition"
+    "category": "Tradition",
+    "places": [
+      "zurich",
+      "schleitheim"
+    ]
   },
   {
     "slug": "mennonites",
@@ -1032,7 +1097,10 @@
     "people": [],
     "traditions": [],
     "status": "Overview",
-    "category": "Tradition"
+    "category": "Tradition",
+    "places": [
+      "moravia"
+    ]
   },
   {
     "slug": "amish",
@@ -1125,7 +1193,10 @@
     "people": [],
     "traditions": [],
     "status": "Overview",
-    "category": "Tradition"
+    "category": "Tradition",
+    "places": [
+      "molotschna"
+    ]
   },
   {
     "slug": "bruderhof",
@@ -1156,7 +1227,10 @@
     "people": [],
     "traditions": [],
     "status": "Overview",
-    "category": "Tradition"
+    "category": "Tradition",
+    "places": [
+      "sannerz"
+    ]
   },
   {
     "slug": "waterlanders",
@@ -1225,7 +1299,10 @@
       "prussian-mennonites"
     ],
     "status": "Overview",
-    "category": "Tradition"
+    "category": "Tradition",
+    "places": [
+      "danzig-vistula"
+    ]
   },
   {
     "slug": "frisian-mennonites",
@@ -1260,7 +1337,10 @@
       "prussian-mennonites"
     ],
     "status": "Overview",
-    "category": "Tradition"
+    "category": "Tradition",
+    "places": [
+      "danzig-vistula"
+    ]
   },
   {
     "slug": "russian-mennonites",
@@ -1300,7 +1380,11 @@
       "kleine-gemeinde"
     ],
     "status": "Overview",
-    "category": "Tradition"
+    "category": "Tradition",
+    "places": [
+      "chortitza",
+      "molotschna"
+    ]
   },
   {
     "slug": "old-colony",
@@ -1340,7 +1424,10 @@
       "sommerfeld-mennonites"
     ],
     "status": "Overview",
-    "category": "Tradition"
+    "category": "Tradition",
+    "places": [
+      "chortitza"
+    ]
   },
   {
     "slug": "old-order-mennonites",
@@ -1426,7 +1513,7 @@
     "summary": "John Holdeman and others began worshiping separately in Ohio in 1859, forming a distinct Mennonite church history.",
     "paragraphs": [
       "John Holdeman of Wayne County, Ohio, urged spiritual renewal in the Mennonite church. In 1859 he and others began worshiping separately; the community developed as the Church of God in Christ, Mennonite. Holdeman traveled as an evangelist and wrote Mirror of Truth.",
-      "The church’s own account emphasizes believers’ baptism, nonresistance, conversion, modest life, and congregational discipline. Later congregations and missions extended beyond North America. Its account of continuity with earlier Christians expresses the church’s theological understanding; the explorer dates the documented organizational beginning to 1859."
+      "The church’s own account emphasizes believers’ baptism, nonresistance, conversion, modest life, and congregational discipline. Later congregations and missions extended beyond North America. Its history of faithful Christian witness stands alongside the wider Mennonite accounts preserved in this archive."
     ],
     "aliases": [],
     "references": [
@@ -1511,7 +1598,10 @@
       "amish"
     ],
     "status": "Overview",
-    "category": "Tradition"
+    "category": "Tradition",
+    "places": [
+      "somerset-county"
+    ]
   },
   {
     "slug": "old-order-amish",
@@ -1549,7 +1639,10 @@
       "beachy-amish"
     ],
     "status": "Overview",
-    "category": "Tradition"
+    "category": "Tradition",
+    "places": [
+      "somerset-county"
+    ]
   },
   {
     "slug": "conservative-mennonites",
@@ -1760,7 +1853,10 @@
       "agape-fellowships"
     ],
     "status": "Overview",
-    "category": "Tradition"
+    "category": "Tradition",
+    "places": [
+      "pennsylvania"
+    ]
   },
   {
     "slug": "agape-fellowships",
@@ -1775,7 +1871,7 @@
     "summary": "The supporting fellowship’s own account places the Agape stream within its Charity-related background around 2010.",
     "paragraphs": [
       "The site owner describes a division around 2010 in the Charity-related fellowships, with the Agape stream forming part of the background to this site. This is an attributed community account. The approximate date identifies the period described rather than an independently verified incorporation or founding date.",
-      "Charity Christian Fellowship’s published history separately documents a sermon-ministry reorganization proposed in 2010 and implemented in November 2011 with Ephrata Christian Fellowship. That published event provides contemporary context, but it should not be substituted for the owner’s account of the Agape relationship.",
+      "The owner’s account places these developments alongside the wider Charity-related history. Charity Christian Fellowship’s published history records changes in the sermon ministry during 2010–2011. The Agape page presents the local fellowship history supplied for this archive, with room for further congregational records, names, and events.",
       "The explorer includes this local account alongside the wider Anabaptist family. Additional congregational records and firsthand accounts can extend it through the page’s contribution link."
     ],
     "aliases": [],
@@ -1833,7 +1929,10 @@
       "frisian-mennonites",
       "russian-mennonites"
     ],
-    "status": "Overview"
+    "status": "Overview",
+    "places": [
+      "danzig-vistula"
+    ]
   },
   {
     "slug": "bergthal-mennonites",
@@ -1868,7 +1967,10 @@
       "chortitzer-mennonites",
       "sommerfeld-mennonites"
     ],
-    "status": "Overview"
+    "status": "Overview",
+    "places": [
+      "manitoba"
+    ]
   },
   {
     "slug": "chortitzer-mennonites",
@@ -1902,7 +2004,10 @@
       "bergthal-mennonites",
       "sommerfeld-mennonites"
     ],
-    "status": "Overview"
+    "status": "Overview",
+    "places": [
+      "manitoba"
+    ]
   },
   {
     "slug": "sommerfeld-mennonites",
@@ -1940,7 +2045,10 @@
       "bergthal-mennonites",
       "rudnerweider-mennonites"
     ],
-    "status": "Overview"
+    "status": "Overview",
+    "places": [
+      "manitoba"
+    ]
   },
   {
     "slug": "kleine-gemeinde",
@@ -1978,7 +2086,11 @@
       "russian-mennonites",
       "evangelical-mennonite-conference"
     ],
-    "status": "Overview"
+    "status": "Overview",
+    "places": [
+      "molotschna",
+      "manitoba"
+    ]
   },
   {
     "slug": "evangelical-mennonite-mission-conference",
@@ -2049,7 +2161,10 @@
       "swiss-south-german-mennonites",
       "mennonite-church-usa"
     ],
-    "status": "Overview"
+    "status": "Overview",
+    "places": [
+      "pennsylvania"
+    ]
   },
   {
     "slug": "mennonite-church-usa",
@@ -2154,7 +2269,10 @@
       "swiss-brethren",
       "mennonite-church"
     ],
-    "status": "Overview"
+    "status": "Overview",
+    "places": [
+      "pennsylvania"
+    ]
   },
   {
     "slug": "brethren-in-christ",
@@ -2187,7 +2305,10 @@
     "traditions": [
       "swiss-south-german-mennonites"
     ],
-    "status": "Overview"
+    "status": "Overview",
+    "places": [
+      "pennsylvania"
+    ]
   },
   {
     "slug": "evangelical-mennonite-church",
@@ -2395,7 +2516,10 @@
       "swiss-south-german-mennonites"
     ],
     "status": "Overview",
-    "category": "Event"
+    "category": "Event",
+    "places": [
+      "pennsylvania"
+    ]
   },
   {
     "slug": "chortitza-1789",
@@ -2431,7 +2555,10 @@
       "russian-mennonites"
     ],
     "status": "Overview",
-    "category": "Event"
+    "category": "Event",
+    "places": [
+      "chortitza"
+    ]
   },
   {
     "slug": "kleine-gemeinde-1812",
@@ -2467,7 +2594,10 @@
       "kleine-gemeinde"
     ],
     "status": "Overview",
-    "category": "Event"
+    "category": "Event",
+    "places": [
+      "molotschna"
+    ]
   },
   {
     "slug": "holdeman-1859",
@@ -2595,7 +2725,10 @@
       "beachy-amish"
     ],
     "status": "Overview",
-    "category": "Event"
+    "category": "Event",
+    "places": [
+      "somerset-county"
+    ]
   },
   {
     "slug": "rudnerweider-1937",
@@ -2759,7 +2892,10 @@
       "charity-ministries"
     ],
     "status": "Overview",
-    "category": "Event"
+    "category": "Event",
+    "places": [
+      "pennsylvania"
+    ]
   },
   {
     "slug": "mcusa-2002",
@@ -2806,7 +2942,7 @@
     "summary": "Anabaptism developed in several regions during the Radical Reformation, including Switzerland, South Germany and Austria, and the Netherlands.",
     "paragraphs": [
       "The photographed timeline begins with several lines in the 1520s. The Zürich baptisms are a defining event for the Swiss Brethren; other Anabaptist communities formed in different political and religious settings. The common Anabaptist name should therefore be read as a family of regional beginnings.",
-      "The explorer uses this entry to group early regional streams. Its connecting lines indicate emergence within the Radical Reformation, rather than descent of every stream from one Zürich congregation. The earlier Christian and medieval accounts in Martyrs’ Mirror remain linked through the era timeline, where their historical setting and the book’s interpretation are visible."
+      "The explorer follows the early regional streams into the later communities shown on the supplied chart. The earlier witnesses preserved in Martyrs’ Mirror are integrated through the century accounts, keeping the book’s history and testimony at the center of the archive."
     ],
     "aliases": [
       "Radical Reformation",
@@ -2832,5 +2968,465 @@
     ],
     "status": "Overview",
     "category": "Tradition"
+  },
+  {
+    "slug": "zurich",
+    "title": "Zürich",
+    "kind": "place",
+    "date": {
+      "start": 1525,
+      "end": 1525,
+      "label": "1525 · Anabaptist history",
+      "basis": "Date of the linked Anabaptist event or historical period; not a place founding date."
+    },
+    "summary": "Zürich was the setting of the 1525 believers’ baptisms and Felix Manz’s execution in 1527.",
+    "paragraphs": [
+      "The gathered circle in Zürich included Conrad Grebel, Felix Manz, and George Blaurock. Their reading of Scripture and disagreement over infant baptism led to the baptisms of 21 January 1525. This is one of the central places in the Swiss Brethren history.",
+      "The Limmat appears in the account of Manz’s execution. These events connect the city to the later accounts of persecution and faithful witness. The linked pages preserve the historical source account and the names of those involved."
+    ],
+    "aliases": [
+      "Zurich",
+      "Zürich",
+      "Limmat"
+    ],
+    "references": [
+      {
+        "label": "Mennonite World Conference: the first baptisms",
+        "url": "https://mwc-cmm.org/en/stories/teach-gospel-and-hold-faith/"
+      },
+      {
+        "label": "Supplied timeline photograph 9375",
+        "url": "sources/church-history/photos/IMG_9375.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "swiss-brethren"
+    ],
+    "places": [],
+    "status": "Overview",
+    "category": "Place"
+  },
+  {
+    "slug": "schleitheim",
+    "title": "Schleitheim",
+    "kind": "place",
+    "date": {
+      "start": 1527,
+      "end": 1527,
+      "label": "1527 · Anabaptist history",
+      "basis": "Date of the linked Anabaptist event or historical period; not a place founding date."
+    },
+    "summary": "The 1527 gathering at Schleitheim produced seven articles of agreement for Anabaptist church life.",
+    "paragraphs": [
+      "The Schleitheim Articles connect this place with Michael Sattler and the Swiss Brethren. The articles address baptism, the ban, breaking of bread, separation, shepherds, the sword, and oaths.",
+      "The place page connects the agreement with its people and related source accounts. Its date identifies the Anabaptist gathering rather than the age of the town."
+    ],
+    "aliases": [
+      "Schleitheim"
+    ],
+    "references": [
+      {
+        "label": "Mennonite World Conference: the first baptisms",
+        "url": "https://mwc-cmm.org/en/stories/teach-gospel-and-hold-faith/"
+      },
+      {
+        "label": "Supplied timeline photograph 9375",
+        "url": "sources/church-history/photos/IMG_9375.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "swiss-brethren"
+    ],
+    "places": [],
+    "status": "Overview",
+    "category": "Place"
+  },
+  {
+    "slug": "moravia",
+    "title": "Moravia",
+    "kind": "place",
+    "date": {
+      "start": 1528,
+      "end": 1528,
+      "label": "1528 · Anabaptist history",
+      "basis": "Date of the linked Anabaptist event or historical period; not a place founding date."
+    },
+    "summary": "Moravia provided a setting for Anabaptist refugee communities and the development of Hutterite common life.",
+    "paragraphs": [
+      "The shared community of goods begun by Anabaptist refugees in 1528 became a central part of Hutterite life. The community drew on the Scriptural accounts of believers sharing possessions and caring for each other.",
+      "The Hutterite history follows refuge, persecution, and migration beyond Moravia. This place connects the beginning of communal practice with Jakob Hutter’s story and the later colony history."
+    ],
+    "aliases": [
+      "Moravia",
+      "Moravian"
+    ],
+    "references": [
+      {
+        "label": "Hutterite history overview",
+        "url": "https://hutterites.org/history/hutterite-history-overview/"
+      },
+      {
+        "label": "Supplied timeline photograph 9375",
+        "url": "sources/church-history/photos/IMG_9375.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "hutterites"
+    ],
+    "places": [],
+    "status": "Overview",
+    "category": "Place"
+  },
+  {
+    "slug": "danzig-vistula",
+    "title": "Danzig and the Vistula region",
+    "kind": "place",
+    "date": {
+      "start": 1540,
+      "end": 1540,
+      "label": "1540 · Anabaptist history",
+      "basis": "Date of the linked Anabaptist event or historical period; not a place founding date."
+    },
+    "summary": "Mennonite settlements in the Vistula region linked Dutch congregations with later migration to the Russian Empire.",
+    "paragraphs": [
+      "Danzig and the surrounding region appear on the supplied chart as a home of Mennonite congregations with Dutch backgrounds. The separate Flemish and Frisian lines continued in this setting.",
+      "Letters preserved in the Mennonite Heritage Archives connect these congregations with the early Chortitza settlement. The linked church histories follow the migration while preserving the community names used on the chart."
+    ],
+    "aliases": [
+      "Danzig",
+      "Vistula",
+      "Prussia",
+      "Prussian"
+    ],
+    "references": [
+      {
+        "label": "Mennonite Heritage Archives: early Chortitza correspondence",
+        "url": "https://www.mharchives.ca/documents-regarding-the-early-chortitza-mennonite-settlement/"
+      },
+      {
+        "label": "Supplied timeline photograph 9377",
+        "url": "sources/church-history/photos/IMG_9377.jpg"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "prussian-mennonites",
+      "flemish-mennonites",
+      "frisian-mennonites"
+    ],
+    "places": [],
+    "status": "Overview",
+    "category": "Place"
+  },
+  {
+    "slug": "chortitza",
+    "title": "Chortitza",
+    "kind": "place",
+    "date": {
+      "start": 1789,
+      "end": 1789,
+      "label": "1789 · Anabaptist history",
+      "basis": "Date of the linked Anabaptist event or historical period; not a place founding date."
+    },
+    "summary": "The Chortitza settlement became the Old Colony within the Mennonite history of the Russian Empire.",
+    "paragraphs": [
+      "Prussian Mennonite families established the settlement near the end of the eighteenth century. Letters dated 1789 and later correspondence preserved in the archives connect settlers with the churches they had left.",
+      "The Old Colony name distinguishes Chortitza from later settlements. The chart follows colony-based church histories and migrations from this background into Canada and Latin America."
+    ],
+    "aliases": [
+      "Chortitza",
+      "Chortiza"
+    ],
+    "references": [
+      {
+        "label": "Mennonite Heritage Archives: early Chortitza correspondence",
+        "url": "https://www.mharchives.ca/documents-regarding-the-early-chortitza-mennonite-settlement/"
+      },
+      {
+        "label": "Supplied timeline photograph 9378",
+        "url": "sources/church-history/photos/IMG_9378.jpg"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "russian-mennonites",
+      "old-colony"
+    ],
+    "places": [],
+    "status": "Overview",
+    "category": "Place"
+  },
+  {
+    "slug": "molotschna",
+    "title": "Molotschna",
+    "kind": "place",
+    "date": {
+      "start": 1812,
+      "end": 1812,
+      "label": "1812 · Anabaptist history",
+      "basis": "Date of the linked Anabaptist event or historical period; not a place founding date."
+    },
+    "summary": "The Molotschna settlement was the setting of Kleine Gemeinde and Mennonite Brethren beginnings.",
+    "paragraphs": [
+      "Klaas Reimer and fellow Mennonites organized Kleine Gemeinde in 1812, seeking reform in church discipline and life. Later renewal and home gatherings formed the setting of the Mennonite Brethren movement of 1860.",
+      "These developments belong to different branches of the settlement’s church history. Their pages explain the people, convictions, and later migrations, rather than treating all congregations from Molotschna as one body."
+    ],
+    "aliases": [
+      "Molotschna",
+      "Molotschna settlement"
+    ],
+    "references": [
+      {
+        "label": "Mennonite Heritage Archives: early Chortitza correspondence",
+        "url": "https://www.mharchives.ca/documents-regarding-the-early-chortitza-mennonite-settlement/"
+      },
+      {
+        "label": "Supplied timeline photograph 9378",
+        "url": "sources/church-history/photos/IMG_9378.jpg"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "russian-mennonites",
+      "kleine-gemeinde",
+      "mennonite-brethren"
+    ],
+    "places": [],
+    "status": "Overview",
+    "category": "Place"
+  },
+  {
+    "slug": "pennsylvania",
+    "title": "Pennsylvania",
+    "kind": "place",
+    "date": {
+      "start": 1683,
+      "end": 1683,
+      "label": "1683 · Anabaptist history",
+      "basis": "Date of the linked Anabaptist event or historical period; not a place founding date."
+    },
+    "summary": "Pennsylvania connects early Mennonite migration with later congregational and fellowship histories.",
+    "paragraphs": [
+      "The chart marks the Germantown settlement in 1683. Later Swiss and German Mennonite migrations brought congregations to Pennsylvania, followed by further settlement across North America.",
+      "The region also appears in the River Brethren history near Marietta and the later Charity Christian Fellowship history in Lancaster County. The linked pages follow each development within the Anabaptist account."
+    ],
+    "aliases": [
+      "Pennsylvania",
+      "Germantown",
+      "Lancaster",
+      "Marietta"
+    ],
+    "references": [
+      {
+        "label": "Supplied timeline photograph 9376",
+        "url": "sources/church-history/photos/IMG_9376.jpg"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      },
+      {
+        "label": "Mennonite Church USA: historical overview",
+        "url": "https://www.mennoniteusa.org/who-are-mennonites/history/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "swiss-south-german-mennonites",
+      "mennonite-church",
+      "brethren-in-christ",
+      "charity-ministries"
+    ],
+    "places": [],
+    "status": "Overview",
+    "category": "Place"
+  },
+  {
+    "slug": "manitoba",
+    "title": "Manitoba",
+    "kind": "place",
+    "date": {
+      "start": 1874,
+      "end": 1874,
+      "label": "1874 · Anabaptist history",
+      "basis": "Date of the linked Anabaptist event or historical period; not a place founding date."
+    },
+    "summary": "Migration to Manitoba in the 1870s shaped several distinct Mennonite church histories.",
+    "paragraphs": [
+      "Bergthal families arrived in Manitoba during 1874–1876. Their East Reserve church became known as Chortitzer. West Reserve settlement and church developments are connected with the Sommerfeld history.",
+      "Kleine Gemeinde also migrated to Manitoba during 1874–1875. The chart distinguishes these lines and follows later movements and conference names. This place page brings the related histories together while retaining their individual accounts."
+    ],
+    "aliases": [
+      "Manitoba",
+      "East Reserve",
+      "West Reserve"
+    ],
+    "references": [
+      {
+        "label": "Mennonite Heritage Archives: Chortitzer fonds",
+        "url": "https://www.mharchives.ca/holdings/organizations/ChortitzerMC_fonds.htm"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      },
+      {
+        "label": "Chortitzer Mennonite Conference fonds",
+        "url": "https://archives.mhsc.ca/chortitzer-mennonite-conference-fonds"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "bergthal-mennonites",
+      "chortitzer-mennonites",
+      "sommerfeld-mennonites",
+      "kleine-gemeinde"
+    ],
+    "places": [],
+    "status": "Overview",
+    "category": "Place"
+  },
+  {
+    "slug": "sannerz",
+    "title": "Sannerz",
+    "kind": "place",
+    "date": {
+      "start": 1920,
+      "end": 1920,
+      "label": "1920 · Anabaptist history",
+      "basis": "Date of the linked Anabaptist event or historical period; not a place founding date."
+    },
+    "summary": "Sannerz was the German village where the Bruderhof began in 1920.",
+    "paragraphs": [
+      "Eberhard Arnold, Emmy Arnold, and Else von Hollander began the community in 1920. Their shared life became the starting point of the Bruderhof history.",
+      "The later account follows relocation, persecution, and fellowship with Hutterite communities. Sannerz connects the founders’ profiles with the community history and the wider story of common life."
+    ],
+    "aliases": [
+      "Sannerz"
+    ],
+    "references": [
+      {
+        "label": "Bruderhof: history",
+        "url": "https://www.bruderhof.com/history"
+      },
+      {
+        "label": "Supplied timeline photograph 9399",
+        "url": "sources/church-history/photos/IMG_9399.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "bruderhof"
+    ],
+    "places": [],
+    "status": "Overview",
+    "category": "Place"
+  },
+  {
+    "slug": "somerset-county",
+    "title": "Somerset County, Pennsylvania",
+    "kind": "place",
+    "date": {
+      "start": 1927,
+      "end": 1927,
+      "label": "1927 · Anabaptist history",
+      "basis": "Date of the linked Anabaptist event or historical period; not a place founding date."
+    },
+    "summary": "The Amish congregation associated with Moses Beachy divided in 1927 in Somerset County.",
+    "paragraphs": [
+      "The local disagreement concerned church discipline, including the treatment of members who moved to other Anabaptist congregations. The Beachy name later became associated with a wider Amish Mennonite fellowship.",
+      "This place connects the particular local beginning with the later branch history. The historical account and the supplied chart are listed as references on the linked Beachy page."
+    ],
+    "aliases": [
+      "Somerset",
+      "Somerset County"
+    ],
+    "references": [
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      },
+      {
+        "label": "Rosedale Network: the Amish Mennonite conference background",
+        "url": "https://rosedalenetwork.org/about/faq/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "old-order-amish",
+      "beachy-amish"
+    ],
+    "places": [],
+    "status": "Overview",
+    "category": "Place"
+  },
+  {
+    "slug": "anabaptist-convictions",
+    "title": "Scripture and Anabaptist convictions",
+    "kind": "event",
+    "date": {
+      "start": 1525,
+      "end": 1527,
+      "label": "The Radical Reformation",
+      "basis": "Convictions expressed in the supplied accounts and Schleitheim Articles."
+    },
+    "summary": "Believers’ baptism, discipleship, brotherly love, a gathered church, and nonresistance stand at the center of this history.",
+    "paragraphs": [
+      "The Radical Reformation sought to order church life around Christ’s teaching and the witness of the apostles. Believers’ baptism followed the reception of the word and confession of faith. The church was understood as a gathered community committed to discipleship rather than a membership imposed by birth or civil authority.",
+      "The Sermon on the Mount supplies the language of love for enemies, peace, truthful speech, and refusal to retaliate. Acts describes fellowship, care for neighbors, and shared possessions. The accounts in Martyrs’ Mirror remember witnesses who held these convictions under persecution.",
+      "The Schleitheim Articles of 1527 express seven points of agreement concerning baptism, the ban, breaking of bread, separation, shepherds, the sword, and oaths. Their place in the timeline connects conviction with the people and communities who sought to live it.",
+      "Later branches on the supplied chart record differing congregational arrangements and migration histories. The archive follows those lines within the Anabaptist tradition, retaining the source accounts and linking each history to its people, places, and events."
+    ],
+    "aliases": [
+      "Believers baptism",
+      "Nonresistance",
+      "Discipleship"
+    ],
+    "references": [
+      {
+        "label": "Scripture: Matthew 5–7; Acts 2 and 4",
+        "url": "https://getbible.life/"
+      },
+      {
+        "label": "Schleitheim Articles (1527), historical document",
+        "url": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi%3Adocument-4315"
+      },
+      {
+        "label": "Supplied timeline photograph 9391",
+        "url": "sources/church-history/photos/IMG_9391.jpg"
+      }
+    ],
+    "people": [
+      "michael-sattler"
+    ],
+    "traditions": [
+      "swiss-brethren",
+      "hutterites",
+      "mennonites"
+    ],
+    "places": [
+      "schleitheim"
+    ],
+    "status": "Overview",
+    "category": "Event"
   }
 ]

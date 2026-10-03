@@ -1,0 +1,50 @@
+---
+import fs from 'node:fs';
+import {ERAS} from '../lib/history.mjs';
+import {selectTimeline,timelineMarkup} from '../lib/timeline';
+import type {HistoryRecord,BranchData} from '../lib/model';
+interface Props {initialKind?:string}
+const {initialKind=''}=Astro.props;
+const records=JSON.parse(fs.readFileSync('.history-public/assets/catalog.json','utf8')) as HistoryRecord[];
+const branches=JSON.parse(fs.readFileSync('content/branches.json','utf8')) as BranchData;
+const base=import.meta.env.BASE_URL.replace(/\/$/,'');
+const initial=selectTimeline(records,branches,{q:'',era:'',kind:initialKind,family:'',direction:'newest',sources:false});
+---
+<section class="atlas-intro">
+  <p class="eyebrow">A True Christian Church · Our Anabaptist history</p>
+  <h1>Follow the witness.<br /><em>Trace the living streams.</em></h1>
+  <p class="lead">A connected history of faith, discipleship, and community. Follow the Radical Reformation and its branches, and read the witnesses preserved in Martyrs’ Mirror.</p>
+  <div class="atlas-statistics"><span><strong>1,272</strong> source accounts &amp; sections</span><span><strong>42</strong> traditions &amp; shared histories</span><span><strong>45</strong> branch connections</span></div>
+</section>
+<section class="history-atlas" data-initial-kind={initialKind} aria-label="Interactive Anabaptist history timeline">
+  <aside class="atlas-navigation">
+    <p class="eyebrow">Navigate the history</p>
+    <nav aria-label="Timeline eras">
+      {ERAS.map(era=><a href={`#era-${era.id}`} data-atlas-era={era.id}><span>{era.short}</span><strong>{era.title}</strong></a>)}
+    </nav>
+    <p class="atlas-nav-note">Follow the connected lines. Open any name or event to read its history.</p>
+    <a class="text-link" href={`${base}/search/`}>Search the complete text →</a>
+  </aside>
+  <div class="atlas-main">
+    <form id="timeline-filters" class="atlas-filters">
+      <label class="atlas-query">Find in the timeline<input name="q" type="search" placeholder="Name, place, or event" /></label>
+      <label>Era<select name="era"><option value="">All eras</option>{ERAS.map(era=><option value={era.id}>{era.title}</option>)}</select></label>
+      <label>Family<select name="family"><option value="">Every stream</option>{branches.families.map(f=><option value={f.id}>{f.title}</option>)}</select></label>
+      <label>Include<select name="kind"><option value="">People, events &amp; streams</option><option value="tradition" selected={initialKind==='tradition'}>Branches &amp; institutions</option><option value="event">Events</option><option value="person">People</option><option value="place">Places</option><option value="story">Martyrs’ Mirror accounts</option></select></label>
+      <label>Read through time<select name="direction"><option value="newest">Present → beginnings</option><option value="oldest">Beginnings → present</option></select></label>
+      <label class="atlas-checkbox"><input name="sources" type="checkbox" /> Include every source account</label>
+      <button class="button" type="reset">Reset view</button>
+    </form>
+    <p id="timeline-status" class="atlas-status" role="status">{initial.length} histories · present to beginnings</p>
+    <div class="atlas-legend"><span class="legend-thread"></span> Branch development <span class="legend-thread is-dashed"></span> Influence or shared fellowship <a href={`${base}/about/`}>About this archive</a></div>
+    <div class="atlas-canvas">
+      <svg id="timeline-threads" aria-label="Connections between the visible branch histories" role="img"></svg>
+      <div id="timeline-entries" set:html={timelineMarkup(initial,records,branches,base)} />
+    </div>
+    <button id="timeline-more" class="button more-button" type="button" hidden>Show more accounts</button>
+    <noscript><p>The timeline remains readable without JavaScript. All accounts are also available in the story collection.</p></noscript>
+  </div>
+</section>
+<script>
+  import '../timeline';
+</script>

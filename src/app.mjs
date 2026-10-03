@@ -18,18 +18,6 @@ themeControl?.addEventListener('change',()=>{
 });
 prefersDark.addEventListener('change',applyTheme);applyTheme();
 
-function activateEra(){
-  if(!document.querySelector('[data-era-panel]'))return;
-  const active=ERAS.some(e=>'#'+e.id===location.hash)?location.hash.slice(1):ERAS[0].id;
-  document.querySelectorAll('[data-era-panel]').forEach(el=>el.hidden=el.dataset.eraPanel!==active);
-  document.querySelectorAll('[data-era-link]').forEach(el=>{
-    const selected=el.dataset.eraLink===active;
-    el.classList.toggle('is-current',selected);
-    if(selected)el.setAttribute('aria-current','true');else el.removeAttribute('aria-current');
-  });
-}
-addEventListener('hashchange',activateEra);activateEra();
-
 let catalogPromise;
 function loadCatalog(){
   return catalogPromise||=fetch(new URL('./catalog.json',import.meta.url)).then(response=>{
@@ -38,7 +26,7 @@ function loadCatalog(){
   }).catch(error=>{catalogPromise=undefined;throw error;});
 }
 function card(record){
-  return `<article class="story-card"><div class="card-meta"><span>${esc(record.date?.label||'Date to document')}</span><span>${esc(record.kind==='story'?record.category:record.kind)}</span></div><h3><a href="${route(record.route)}">${esc(record.title)}</a></h3><p>${esc(record.summary||'Read this section in the source collection.')}</p><span class="card-action">${record.status==='Research needed'?'Help document this history':'Read the story'} <span aria-hidden="true">→</span></span></article>`;
+  return `<article class="story-card"><div class="card-meta"><span>${esc(record.date?.label||'Source context')}</span><span>${esc(record.kind==='story'?record.category:record.kind)}</span></div><h3><a href="${route(record.route)}">${esc(record.title)}</a></h3><p>${esc(record.summary||'Read this section in the source collection.')}</p><span class="card-action">${record.status==='Research needed'?'Help document this history':'Read the story'} <span aria-hidden="true">→</span></span></article>`;
 }
 const cards=items=>`<div class="card-grid">${items.map(card).join('')}</div>`;
 let dailyDay='';
@@ -69,7 +57,7 @@ if(archiveForm){
     const id=++sequence,values=Object.fromEntries(new FormData(archiveForm));
     try{
       const catalog=await loadCatalog();if(id!==sequence)return;
-      matches=searchRecords(catalog.filter(r=>r.kind==='story'),values.q,{era:values.era,category:values.category});limit=36;render();
+      matches=searchRecords(catalog.filter(r=>r.kind==='story'),values.q,{era:values.era,category:values.category,century:values.century});limit=36;render();
       if(updateURL){const params=new URLSearchParams(Object.entries(values).filter(([,v])=>v));history.replaceState(null,'',location.pathname+(params.size?'?'+params:''));}
     }catch(error){count.textContent=error.message;}
   }

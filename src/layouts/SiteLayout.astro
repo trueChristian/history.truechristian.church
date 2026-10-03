@@ -1,0 +1,38 @@
+---
+import type {PreparedPage} from '../lib/model';
+import '../atlas.css';
+interface Props {page:PreparedPage}
+const {page}=Astro.props;
+const base=import.meta.env.BASE_URL.replace(/\/$/,'');
+const asset=(path:string)=>`${base}/${path}`;
+---
+<!doctype html>
+<html lang="en" data-base={base}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>{page.title} · Anabaptist Church History</title>
+    <meta name="description" content={page.description} />
+    <link rel="canonical" href={new URL(asset(page.route),Astro.site).href} />
+    <link rel="icon" href={asset('assets/favicons/favicon.ico')} />
+    <script is:inline>try{var mode=localStorage.getItem('history-theme')||'system';document.documentElement.dataset.theme=(mode==='light'||mode==='dark')?mode:(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch(e){document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
+    <link rel="stylesheet" href={asset('assets/theme/truechristian-theme.css')} />
+    <link rel="stylesheet" href={asset('assets/site.css')} />
+    <script is:inline defer src={asset('assets/theme/truechristian-theme.js')}></script>
+    <script is:inline type="module" src={asset('assets/app.mjs')}></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Fragment set:html={page.header} />
+    <div class="utility-bar tcc-container">
+      <a class="archive-name" href={asset('')}>Anabaptist Church History</a>
+      <label class="theme-control">Appearance <select id="theme-mode" aria-label="Appearance"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
+    </div>
+    <main id="main" class="tcc-container" tabindex="-1">
+      <slot />
+      <Fragment set:html={page.tools} />
+    </main>
+    <Fragment set:html={page.footer} />
+  </body>
+</html>
