@@ -77,9 +77,13 @@ assert.ok(existing.has('index.html'),'Default-language redirect must exist');
 for(const candidate of ['af','de'])if(!info.locales.includes(candidate))assert.ok(!existing.has(candidate+'/index.html'),'Unpublished languages must not be advertised');
 const eraIds=[...timeline.matchAll(/id="(era-[^"]+)"/g)].map(m=>m[1]);
 assert.equal(new Set(eraIds).size,eraIds.length,'Timeline era anchors must be unique');
+assert.equal(eraIds[0],'era-acts-and-early-church');
+assert.equal(eraIds.at(-1),'era-living-traditions');
+assert.equal(timeline.match(/data-record="([^"]+)"/)[1],'christian-beginnings');
 for(const locale of info.locales){
  const home=await fs.readFile(path.join(OUT,locale,'index.html'),'utf8');
  assert.ok(home.includes(`lang="${locale}"`));
+ assert.equal(home.match(/data-record="([^"]+)"/)[1],'christian-beginnings');
  assert.ok(home.includes(`/${locale}/timeline/`),'Localized navigation');
  assert.ok(home.includes('hreflang="en"'),'English is always available');
  const markdown=await fs.readFile(path.join(OUT,locale,'README.md'),'utf8');

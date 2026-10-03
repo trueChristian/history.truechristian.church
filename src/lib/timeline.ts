@@ -2,9 +2,22 @@ import {normalize,escapeHTML as esc,ERAS} from './history.mjs';
 import {translate} from './localization.mjs';
 import type {HistoryRecord,BranchData} from './model';
 
+export type TimelineDirection='oldest'|'newest';
+export const TIMELINE_DIRECTION_KEY='history-timeline-direction';
+export const timelineDirection=(value:unknown):TimelineDirection|undefined=>value==='oldest'||value==='newest'?value:undefined;
+export function timelineEras(direction:unknown='oldest'){
+  const sign=timelineDirection(direction)==='newest'?-1:1;
+  return [...ERAS].sort((a,b)=>sign*(a.start-b.start));
+}
+export function readTimelineDirection():TimelineDirection{
+  try{return timelineDirection(localStorage.getItem(TIMELINE_DIRECTION_KEY))||'oldest';}catch{return 'oldest';}
+}
+export function saveTimelineDirection(direction:TimelineDirection){
+  try{localStorage.setItem(TIMELINE_DIRECTION_KEY,direction);}catch{/* Reading remains available when storage is blocked. */}
+}
 export interface TimelineFilters {q:string;era:string;kind:string;family:string;direction:string;sources:boolean}
 export function primaryTimeline(records:HistoryRecord[]):HistoryRecord[]{
-  return records.filter(r=>r.kind!=='story'||(r.headingLevel===3&&!!r.century));
+  return records.filter(r=>r.kind!=='story'||(r.headingLevel===3&&!!r.century)||(r.century===1&&r.category==='Source account'));
 }
 export function selectTimeline(records:HistoryRecord[],branches:BranchData,filters:TimelineFilters):HistoryRecord[]{
   let pool=filters.sources||filters.kind==='story'?records:primaryTimeline(records);
@@ -16,9 +29,22 @@ export function selectTimeline(records:HistoryRecord[],branches:BranchData,filte
   }
   const terms=normalize(filters.q).split(' ').filter(Boolean);
   if(terms.length)pool=pool.filter(r=>terms.every(term=>normalize([r.title,r.summary,...r.aliases].join(' ')).includes(term)));
-  const sign=filters.direction==='oldest'?1:-1;
-  const year=(r:HistoryRecord)=>r.date?.start??(r.slug==='christian-beginnings'?30:2026);
-  return [...pool].sort((a,b)=>sign*(year(a)-year(b))||a.title.localeCompare(b.title));
+  const sign=timelineDirection(filters.direction)==='newest'?-1:1;
+  const eraOrder=new Map(timelineEras().map((era,index)=>[era.id,index]));
+  return [...pool].sort((a,b)=>{
+    const aEra=eraOrder.get(a.era),bEra=eraOrder.get(b.era);
+    // Undated source context stays after the historical eras in either direction.
+    if(aEra===undefined&&bEra!==undefined)return 1;
+    if(bEra===undefined&&aEra!==undefined)return -1;
+    const eraDifference=sign*((aEra??ERAS.length)-(bEra??ERAS.length));
+    if(eraDifference)return eraDifference;
+    // The Acts overview opens the first era; this is presentation order, not a date claim.
+    const overview=sign*(Number(b.slug==='christian-beginnings')-Number(a.slug==='christian-beginnings'));
+    if(overview)return overview;
+    if(!a.date&&b.date)return 1;
+    if(!b.date&&a.date)return -1;
+    return sign*((a.date?.start??0)-(b.date?.start??0))||a.slug.localeCompare(b.slug);
+  });
 }
 export function timelineMarkup(records:HistoryRecord[],all:HistoryRecord[],branches:BranchData,base:string,ui:Record<string,string>={}):string{
   const t=(key:string,vars:Record<string,string|number>={})=>translate(ui,key,vars);
@@ -33,7 +59,7 @@ export function timelineMarkup(records:HistoryRecord[],all:HistoryRecord[],branc
     seenEras.add(r.era);
     const century=r.kind==='story'&&r.headingLevel===3&&r.century;
     const ordinal=(n:number)=>String(n)+(n%100>=11&&n%100<=13?'th':({1:'st',2:'nd',3:'rd'} as Record<number,string>)[n%10]||'th');
-    const year=r.date?.label||(r.slug==='christian-beginnings'?'Acts and Christian beginnings':'Living history');
-    return `${eraTitle}<article id="record-${r.slug}" class="atlas-entry${century?' is-source':''}" data-record="${r.slug}" data-family="${family}"><span class="atlas-port" aria-hidden="true"></span><div class="atlas-entry-top"><span class="atlas-date">${esc(year)}</span><span class="atlas-kind">${esc(t(century?'Martyrs’ Mirror · century guide':r.kind==='story'?r.category:r.kind))}</span></div><h3><a href="${base}/${r.route}">${esc(r.title)}</a></h3><p>${esc(r.summary)}</p>${related.length?`<div class="atlas-relations">${related.slice(0,5).map(x=>`<a href="${base}/${x.route}">${esc(x.title)}</a>`).join('')}${related.length>5?`<a href="${base}/${r.route}">${esc(t('All {count} connections →',{count:related.length}))}</a>`:''}</div>`:''}${century?`<a class="atlas-source-link" href="${base}/stories/?era=${r.era}&century=${r.century}">${esc(t('Read the {century}-century accounts →',{century:ordinal(r.century!)}))}</a>`:''}<div class="atlas-entry-foot"><a href="${base}/${r.route}">${esc(t(century?'Read the source guide →':'Read the history →'))}</a>${r.kind!=='story'?`<a href="${base}/search/?q=${encodeURIComponent((r.aliases[0]||r.title).replace(/[:–].*$/,''))}&kind=story">${esc(t('Find related source accounts'))}</a>`:''}</div></article>`;
+    const year=r.date?.label||(r.slug==='christian-beginnings'?'Acts and Christian beginnings':t(r.era==='living-traditions'?'Living history':'Date not assigned'));
+    return `${eraTitle}<article id="record-${r.slug}" class="atlas-entry${century?' is-source':''}" data-record="${r.slug}" data-family="${family}"><span class="atlas-port" aria-hidden="true"></span><div class="atlas-entry-top"><span class="atlas-date">${esc(year)}</span><span class="atlas-kind">${esc(t(century?'Martyrs’ Mirror · century guide':r.kind==='story'?'Martyrs’ Mirror · source account':r.kind))}</span></div><h3><a href="${base}/${r.route}">${esc(r.title)}</a></h3><p>${esc(r.summary)}</p>${related.length?`<div class="atlas-relations">${related.slice(0,5).map(x=>`<a href="${base}/${x.route}">${esc(x.title)}</a>`).join('')}${related.length>5?`<a href="${base}/${r.route}">${esc(t('All {count} connections →',{count:related.length}))}</a>`:''}</div>`:''}${century?`<a class="atlas-source-link" href="${base}/stories/?era=${r.era}&century=${r.century}">${esc(t('Read the {century}-century accounts →',{century:ordinal(r.century!)}))}</a>`:''}<div class="atlas-entry-foot"><a href="${base}/${r.route}">${esc(t(century?'Read the source guide →':'Read the history →'))}</a>${r.kind!=='story'?`<a href="${base}/search/?q=${encodeURIComponent((r.aliases[0]||r.title).replace(/[:–].*$/,''))}&kind=story">${esc(t('Find related source accounts'))}</a>`:''}</div></article>`;
   }).join('');
 }

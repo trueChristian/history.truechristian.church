@@ -90,6 +90,79 @@ try{
     await page.selectOption('#theme-mode','light');
   });
 
+  await check('Oldest-first timeline exposes Acts and apostolic accounts, then remembers either order across pages',async()=>{
+    const ready=()=>page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
+    const order=()=>page.getByRole('combobox',{name:'Timeline order'});
+    const first=()=>page.locator('.atlas-entry').first().getAttribute('data-record');
+    await page.goto(url(''));await ready();
+    assert.equal(await order().inputValue(),'oldest');assert.equal(await first(),'christian-beginnings');
+    for(const prefix of ['mm-james-the-son-of-zebedee','mm-the-holy-apostle-philip','mm-andrew-the-holy-apostle','mm-bartholomew-the-holy-apostle','mm-thomas-the-holy-apostle','mm-matthew-the-holy-evangelist','mm-simon-zelotes','mm-matthias-the-holy-apostle','mm-john-the-holy-evangelist'])assert.equal(await page.locator(`.atlas-entry[data-record^="${prefix}"]`).count(),1);
+    assert.ok(await page.locator('.atlas-entry[data-record="peter-waldo"]').count()>0);
+    const rail=()=>page.locator('[data-atlas-era]').evaluateAll(nodes=>nodes.map(n=>n.dataset.atlasEra));
+    const oldestRail=await rail();assert.equal(oldestRail[0],'acts-and-early-church');
+    await page.locator('.atlas-entry').first().scrollIntoViewIfNeeded();
+    await page.screenshot({path:path.join(screenshots,'timeline-oldest-desktop.png')});
+    await order().selectOption('newest');assert.equal(await order().inputValue(),'newest');
+    assert.equal(await page.evaluate(()=>localStorage.getItem('history-timeline-direction')),'newest');
+    assert.deepEqual(await rail(),[...oldestRail].reverse());
+    assert.deepEqual(await page.locator('[name=era] option:not([value=""])').evaluateAll(nodes=>nodes.map(n=>n.value)),[...oldestRail].reverse());
+    assert.equal(await page.locator('.atlas-era').first().getAttribute('id'),'era-living-traditions');
+    await page.goBack();assert.equal(await order().inputValue(),'oldest');assert.equal(await first(),'christian-beginnings');
+    await page.goForward();assert.equal(await order().inputValue(),'newest');
+    await page.goto(url('timeline/'));await ready();assert.equal(await order().inputValue(),'newest');
+    await page.reload();await ready();assert.equal(await order().inputValue(),'newest');
+    await page.goto(url('timeline/?direction=oldest'));await ready();assert.equal(await first(),'christian-beginnings');
+    assert.equal(await page.evaluate(()=>localStorage.getItem('history-timeline-direction')),'newest','Shared URL must not overwrite the preference');
+    await order().selectOption('oldest');
+    await page.goto(url(''));await ready();assert.equal(await first(),'christian-beginnings');
+    await page.setViewportSize({width:390,height:844});
+    await page.locator('.atlas-entry').first().scrollIntoViewIfNeeded();
+    await page.screenshot({path:path.join(screenshots,'timeline-oldest-mobile.png')});
+    await page.setViewportSize({width:1440,height:1000});
+  });
+
+  await check('Reversal preserves filters, pagination, connections and legacy era links',async()=>{
+    await page.goto(url('timeline/?era=radical-reformation&kind=event&direction=oldest'));
+    await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
+    const slugs=()=>page.locator('.atlas-entry').evaluateAll(nodes=>nodes.map(n=>n.dataset.record));
+    const before=await slugs();assert.ok(before.length>1);
+    await page.selectOption('[name=direction]','newest');
+    const after=await slugs();assert.deepEqual([...after].sort(),[...before].sort());assert.notEqual(after[0],before[0]);
+    assert.equal(await page.locator('[name=era]').inputValue(),'radical-reformation');assert.equal(await page.locator('[name=kind]').inputValue(),'event');
+    await page.goto(url('timeline/#acts-and-early-church'));
+    await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
+    assert.equal(await page.locator('[name=direction]').inputValue(),'newest');assert.equal(await page.locator('[name=era]').inputValue(),'acts-and-early-church');
+    await page.locator('button[type=reset]').click();
+    await page.waitForFunction(()=>document.querySelector('[name=era]').value==='');
+    assert.equal(await page.locator('[name=direction]').inputValue(),'newest');
+    while(await page.locator('#timeline-more').isVisible())await page.locator('#timeline-more').click();
+    assert.equal(await page.locator('.atlas-entry').last().getAttribute('data-record'),'christian-beginnings');
+    assert.equal(await page.locator('.atlas-era').last().getAttribute('id'),'era-acts-and-early-church');
+    assert.ok(await page.locator('.timeline-thread').count()>0);
+    await page.selectOption('[name=direction]','oldest');
+    await page.locator('[name=q]').fill('no-such-history-zz');await page.locator('[name=q]').press('Enter');
+    assert.equal(await page.locator('.atlas-entry').count(),0);
+    await page.locator('button[type=reset]').click();await page.waitForFunction(()=>document.querySelector('.atlas-entry')?.dataset.record==='christian-beginnings');
+  });
+
+  await check('Corrupt or unavailable browser storage keeps ordering usable',async()=>{
+    for(const blocked of [false,true]){
+      const isolated=await browser.newContext();
+      await isolated.addInitScript(blocked=>{
+        if(blocked)Object.defineProperty(window,'localStorage',{get(){throw new DOMException('Blocked','SecurityError');}});
+        else localStorage.setItem('history-timeline-direction','invalid-value');
+      },blocked);
+      const tab=await isolated.newPage();
+      await tab.goto(url('timeline/?direction=invalid'));
+      await tab.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
+      assert.equal(await tab.locator('[name=direction]').inputValue(),'oldest');
+      assert.equal(await tab.locator('.atlas-entry').first().getAttribute('data-record'),'christian-beginnings');
+      await tab.selectOption('[name=direction]','newest');
+      assert.equal(await tab.locator('.atlas-era').first().getAttribute('id'),'era-living-traditions');
+      await isolated.close();
+    }
+  });
+
   await check('Vertical timeline filters eras and opens an internal milestone',async()=>{
     await page.goto(url('timeline/'));
     await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
@@ -392,6 +465,10 @@ try{
     const staticPage=await noScript.newPage();await staticPage.goto(url(''));
     assert.equal(await staticPage.locator('#daily-title-links a:visible').count(),6);
     assert.ok(await staticPage.locator('.atlas-entry').count()>100);
+    assert.equal(await staticPage.locator('.atlas-entry').first().getAttribute('data-record'),'christian-beginnings');
+    assert.equal(await staticPage.locator('.atlas-era').first().getAttribute('id'),'era-acts-and-early-church');
+    assert.equal(await staticPage.locator('[name=direction]').inputValue(),'oldest');
+    assert.equal(await staticPage.locator('.atlas-entry[data-record^="mm-andrew-the-holy-apostle"]').count(),1);
     await staticPage.locator('#daily-discovery summary').click();
     assert.ok(await staticPage.locator('#daily-stories .story-card').first().isVisible());
     await noScript.close();
