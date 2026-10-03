@@ -238,8 +238,18 @@ try{
     await page.locator('.reader-original').scrollIntoViewIfNeeded();
     await page.screenshot({path:path.join(screenshots,'reader-source-footer.png')});
     await page.setViewportSize({width:390,height:844});
+    const settledReaderMenu=()=>page.waitForFunction(()=>{
+      const header=document.querySelector('[data-tcc-global-header]');
+      const navigation=document.querySelector('.tcc-header__navigation');
+      return header?.dataset.menuOpen==='false'&&navigation?.getAttribute('aria-hidden')==='true'&&getComputedStyle(navigation).visibility==='hidden'&&header.getAnimations({subtree:true}).every(animation=>animation.playState!=='running');
+    });
+    await settledReaderMenu();
     await page.selectOption('#theme-mode','dark');
+    await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+    await settledReaderMenu();
+    await page.screenshot({path:path.join(screenshots,'reader-mobile-top.png')});
     await page.locator('.reader-heading').scrollIntoViewIfNeeded();
+    await settledReaderMenu();
     await page.screenshot({path:path.join(screenshots,'reader-mobile-dark.png')});
     await page.selectOption('#theme-mode','light');
     for(const route of ['stories/mm-front-matter/','stories/mm-to-my-beloved-friends-and-companions-in-christ-jesus-our-savior/']){
