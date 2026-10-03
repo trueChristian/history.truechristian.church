@@ -91,6 +91,13 @@ assert.equal(info.readerPages,readerManifest.pageCount);
 for(const p of readerManifest.pages){
  const html=await fs.readFile(path.join(OUT,info.defaultLocale,p.route,'index.html'),'utf8');
  for(const token of ['data-reader-page','reader-prose','reader-navigation','www.gutenberg.org/cache/epub/65855/pg65855-images.html'])assert.ok(html.includes(token),`${p.route}: missing ${token}`);
+ const timelineLink=html.match(/href="([^"]+)">Open this record on the timeline<\/a>/)?.[1];
+ const account=catalog.find(record=>record.slug===p.recordSlug);
+ if(account?.title?.trim()){
+   assert.ok(timelineLink,`${p.route}: missing account-level timeline return`);
+   const target=new URL(timelineLink.replaceAll('&amp;','&'),'https://check.test');
+   assert.equal(target.searchParams.get('q'),account.title,`${p.route}: continuation title must not replace account identity`);
+ }else assert.equal(timelineLink,undefined,`${p.route}: edition-only material must not link to a nonexistent timeline record`);
  const body=html.match(/class="prose reader-prose"[^>]*><!--history-content:start-->([\s\S]*?)<!--history-content:end-->/)?.[1];
  assert.ok(body!==undefined&&!/href="[^"]*original\.html/.test(body),`${p.route}: source note leaves native reader`);
 }

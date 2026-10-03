@@ -62,5 +62,15 @@ try{
  assert.ok(followingHTML.includes('This article is available in English'));
  assert.ok(!followingHTML.includes('hreflang="af"'),'Untranslated continuation remains explicitly English');
  assert.ok(index.find(r=>r.slug===continuation.id).normalized.includes('afrikaanse vervolgblad'));
+ const timelineTarget=markup=>new URL(markup.match(/href="([^"]+)">Open this record on the timeline<\/a>/)[1].replaceAll('&amp;','&'),'https://history.example.test');
+ const afCatalog=await read(path.join(fixture,'.history-public/assets/af/catalog.json'));
+ const continuationTarget=timelineTarget(continuationHTML);
+ assert.equal(continuationTarget.pathname,'/history-fixture/af/timeline/');
+ assert.equal(continuationTarget.searchParams.get('q'),afCatalog.find(record=>record.slug===continuation.recordSlug).title);
+ assert.notEqual(continuationTarget.searchParams.get('q'),'Belydenis: tweede leesblad');
+ const dirkTarget=timelineTarget(translated);
+ assert.equal(dirkTarget.pathname,'/history-fixture/af/timeline/');
+ assert.equal(dirkTarget.searchParams.get('q'),'Dirk Willems bron');
+
  console.log('PASS real two-language Astro fixture: prefixed routes, reciprocal availability, source fallback, translated HTML/paragraphs, and localized search');
 }finally{await fs.rm(fixture,{recursive:true,force:true});}
