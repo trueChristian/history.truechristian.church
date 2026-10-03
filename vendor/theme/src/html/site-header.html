@@ -1,0 +1,51 @@
+<!-- Mandatory True Christian Church global header. See AGENTS.md and docs/header.md. -->
+<header class="tcc-site-header tm-header" data-tcc-global-header>
+  <div class="tcc-header__container tcc-container">
+    <a class="tcc-header__brand uk-logo" href="https://truechristian.church/" aria-label="Back to home">
+      <img src="/assets/brand/logo.jpg" width="288" height="77" alt="A True Christian Church">
+    </a>
+
+    <button class="tcc-header__toggle" type="button" aria-controls="tcc-primary-navigation" aria-expanded="false">
+      <span class="tcc-visually-hidden">Open menu</span>
+      <span aria-hidden="true">☰</span>
+    </button>
+
+    <nav id="tcc-primary-navigation" class="tcc-header__navigation" aria-label="Primary navigation">
+      <button class="tcc-header__close" type="button" aria-label="Close menu">
+        <span aria-hidden="true">×</span>
+      </button>
+      <ul class="tcc-header__menu uk-navbar-nav">
+        <li><a href="/">Home</a></li>
+        <!-- Render links belonging to the site being built directly after Home. -->
+        <!-- The following entries are the canonical main-site example. -->
+        <li class="has-submenu">
+          <button type="button" aria-expanded="false" aria-haspopup="true">The Holy Scriptures</button>
+          <ul><li><a href="/scriptures/kjv/">Text</a></li></ul>
+        </li>
+        <li class="has-submenu">
+          <button type="button" aria-expanded="false" aria-haspopup="true">Sermons</button>
+          <ul>
+            <li><a href="/videos">Videos</a></li>
+            <li><a href="/godlyhome">The Godly Home</a></li>
+          </ul>
+        </li>
+        <!-- Main-site renderers expand Articles from src/data/main-site-navigation.json. -->
+        <li><a href="/remnant-articles">Articles</a></li>
+        <li class="has-submenu">
+          <button type="button" aria-expanded="false" aria-haspopup="true">Daily</button>
+          <ul><li><a href="/daily-light">Daily Light</a></li></ul>
+        </li>
+        <li class="tcc-header__services">
+          <a href="/services">
+            <svg class="tcc-header__services-icon tcc-icon tcc-icon--stroke" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M1 10.5h18M2.35 15.5h15.3M2.35 5.5h15.173M10 19.46C7.32 17.33 5.61 14.14 5.61 10.58S7.33 3.83 10 1.7c2.67 2.13 4.4 5.32 4.4 8.88s-1.73 6.75-4.4 8.88Z"/>
+              <circle cx="10" cy="10.5" r="9"/>
+            </svg>
+            <span>Services<small>Join us</small></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <button class="tcc-header__scrim" type="button" tabindex="-1" aria-label="Close menu"></button>
+  </div>
+</header>

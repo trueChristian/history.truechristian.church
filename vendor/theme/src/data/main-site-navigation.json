@@ -1,0 +1,120 @@
+{
+  "scope": "Canonical navigation content extracted from the supplied main-site desktop header HTML",
+  "source": "docs/source/header-desktop-source.html",
+  "notes": [
+    "This file records main-site content; satellite sites replace these entries with links belonging to the site being built.",
+    "The Articles and Daily dropdowns also contained date-sensitive cards and featured content. Those dynamic records are not fixed theme content and are intentionally described rather than frozen."
+  ],
+  "items": [
+    { "label": "Home", "href": "/" },
+    {
+      "label": "The Holy Scriptures",
+      "children": [
+        { "label": "Text", "href": "/scriptures/kjv/" }
+      ]
+    },
+    {
+      "label": "Sermons",
+      "children": [
+        { "label": "Videos", "href": "/videos" },
+        { "label": "The Godly Home", "href": "/godlyhome" }
+      ]
+    },
+    {
+      "label": "Articles",
+      "href": "/remnant-articles",
+      "presentation": "three-column-mega-menu",
+      "groups": [
+        {
+          "label": "Remnant Topics",
+          "links": [
+            { "label": "Blessing corner", "href": "/blessing-corner" },
+            { "label": "Book reviews", "href": "/book-reviews" },
+            { "label": "Christian Living", "href": "/christian-living" },
+            { "label": "Church Matters", "href": "/church-matters" },
+            { "label": "Deception", "href": "/deception" },
+            { "label": "Divorce and Remarriage", "href": "/divorce-and-remarriage" },
+            { "label": "Head covering", "href": "/head-covering" },
+            { "label": "Home histories", "href": "/home-histories" },
+            { "label": "Judgment", "href": "/judgment" },
+            { "label": "Martyrdom", "href": "/martyrdom" },
+            { "label": "Missions", "href": "/missions" },
+            { "label": "Modesty Articles", "href": "/modesty-articles" },
+            { "label": "Non-resistance", "href": "/non-resistance" },
+            { "label": "Parenting", "href": "/parenting" },
+            { "label": "Poetry", "href": "/poetry" },
+            { "label": "Revival", "href": "/revival-article" },
+            { "label": "Sharpened words", "href": "/sharpened-words" },
+            { "label": "Spiritual exercise", "href": "/spiritual-exercise" },
+            { "label": "Woman", "href": "/woman" }
+          ],
+          "dynamicContent": "Featured article cards and slider controls are content-managed, not fixed theme links."
+        },
+        {
+          "label": "Trousseau Chest",
+          "href": "/trousseauchest",
+          "sourceSubtitle": "Spritual preparation should exceed the physical preparation that women make for life and marriage",
+          "sections": [
+            {
+              "label": "The Adornment",
+              "href": "/trousseauchest/the-adornments",
+              "links": [
+                { "label": "Jewels", "href": "/trousseauchest/the-adornments/jewels" },
+                { "label": "Apparel", "href": "/trousseauchest/the-adornments/apparel" },
+                { "label": "Chastity", "href": "/trousseauchest/the-adornments/chastity" },
+                { "label": "Submission", "href": "/trousseauchest/the-adornments/submission" }
+              ]
+            },
+            {
+              "label": "The Dowry",
+              "href": "/trousseauchest/the-dowry",
+              "links": [
+                { "label": "To be a Helpmeet", "href": "/trousseauchest/the-dowry/to-be-a-helpmeet" },
+                { "label": "To be a Mother", "href": "/trousseauchest/the-dowry/to-be-a-mother" },
+                { "label": "Vibrant Christianity", "href": "/trousseauchest/the-dowry/vibrant-christianity" },
+                { "label": "Fidelity", "href": "/trousseauchest/the-dowry/fidelity" }
+              ]
+            },
+            {
+              "label": "Homemaking",
+              "href": "/trousseauchest/practical-homemaking",
+              "links": [
+                { "label": "Homeschool", "href": "/trousseauchest/practical-homemaking/homeschool" },
+                { "label": "Hospitality", "href": "/trousseauchest/practical-homemaking/hospitality" },
+                { "label": "House Keeping", "href": "/trousseauchest/practical-homemaking/house-keeping" }
+              ]
+            },
+            {
+              "label": "The Legacy",
+              "href": "/trousseauchest/the-legacy",
+              "links": [
+                { "label": "Devout Women", "href": "/trousseauchest/the-legacy/devout-women" },
+                { "label": "Testimonies", "href": "/trousseauchest/the-legacy/testimonies" },
+                { "label": "Raising Missionaries", "href": "/trousseauchest/the-legacy/raising-missionaries" },
+                { "label": "Prayer", "href": "/trousseauchest/the-legacy/prayer" }
+              ]
+            },
+            { "label": "Recipe Repertoire", "href": "/trousseauchest/recipe-repertoire" }
+          ]
+        },
+        {
+          "label": "Reading and downloads",
+          "links": [
+            { "label": "Transcribed Sermons", "href": "/transcribed-sermons" },
+            { "label": "Download Remnant PDFs", "href": "/remnant-articles/remnant-pdf" },
+            { "label": "See All Remnant PDFs", "href": "/remnant-articles/remnant-pdf" }
+          ],
+          "dynamicContent": "PDF issue cards are content-managed and change independently of the theme."
+        }
+      ]
+    },
+    {
+      "label": "Daily",
+      "children": [
+        { "label": "Daily Light", "href": "/daily-light" }
+      ],
+      "dynamicContent": "The source mega-menu also renders the current date, image, description, and today's devotion call-to-action."
+    },
+    { "label": "Services", "subtitle": "Join us", "href": "/services", "icon": "world" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "truechristian-history",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A source-linked Anabaptist history explorer for GitHub Pages",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm test && npm run build && node scripts/check.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "engines": {"node": ">=22"}
+}
