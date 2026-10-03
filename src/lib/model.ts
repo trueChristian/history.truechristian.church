@@ -1,6 +1,6 @@
 export interface HistoryDate {start:number;end:number;label:string;basis?:string}
 export interface HistoryRecord {
-  slug:string; title:string; kind:'story'|'event'|'person'|'tradition'|'place';
+  contentId?:string;locale?:string;contentLanguage?:string;sourceAccounts?:string[];slug:string; title:string; kind:'story'|'event'|'person'|'tradition'|'place';
   route:string; era:string; summary:string; date:HistoryDate|null;
   status:string; category:string; aliases:string[]; people:string[];
   traditions:string[]; places:string[]; century:number|null;
@@ -9,4 +9,5 @@ export interface HistoryRecord {
 export interface BranchNode {slug:string;family:string;year:number}
 export interface BranchEdge {from:string;to:string;type:string;label:string;source:string}
 export interface BranchData {families:{id:string;title:string}[];nodes:BranchNode[];edges:BranchEdge[]}
-export interface PreparedPage {route:string;title:string;body:string;description:string;current:string;era:string;header:string;footer:string;tools:string}
+export interface Locale {id:string;name:string;nativeName:string;dir:string;published:boolean}
+export interface PreparedPage {locale:string;dir:string;contentLanguage:string;contentId:string;logicalRoute:string;ui:Record<string,string>;locales:Locale[];availableLocales:Locale[];route:string;title:string;body:string;description:string;current:string;era:string;header:string;footer:string;tools:string}

@@ -1,0 +1,6 @@
+{
+  "defaultLocale": "en",
+  "locales": [{"id": "en", "name": "English", "nativeName": "English", "dir": "ltr", "published": true}],
+  "contentIdentity": "slug",
+  "fallback": "explicit-source-language"
+}

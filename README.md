@@ -46,6 +46,10 @@ SITE_BASE_PATH=/history.truechristian.church npm run check
 SITE_BASE_PATH=/history.truechristian.church npm run serve
 ```
 
+## Languages
+
+English is published at `/en/`. Old URLs redirect to the same page. Stable record identities, repository-local UI dictionaries and reviewed translation overlays support future languages without an external source pipeline. Only available translations appear in the language menu. See [docs/localization.md](docs/localization.md).
+
 ## Edit the history
 
 Edit `content/curated.json` for dated people, events, traditions, places, summaries, full paragraphs, relationships, and references. Edit `content/branches.json` for the branch families and documented connections. Every page’s contribution link opens an issue draft carrying its title, canonical URL, record, and current date label.

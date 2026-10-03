@@ -8,7 +8,8 @@ const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),OUT=p
 const info=JSON.parse(await fs.readFile(path.join(OUT,'build-info.json'),'utf8'));
 async function walk(dir){const files=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){const p=path.join(dir,e.name);files.push(...(e.isDirectory()?await walk(p):[p]));}return files;}
 const files=await walk(OUT),existing=new Set(files.map(f=>path.relative(OUT,f).split(path.sep).join('/'))),errors=[];
-const htmlFiles=files.filter(f=>f.endsWith('.html') && !f.endsWith('/sources/martyrs-mirror/original.html'));
+const allHtmlFiles=files.filter(f=>f.endsWith('.html')&&!f.endsWith('/sources/martyrs-mirror/original.html'));
+const htmlFiles=[];for(const f of allHtmlFiles)if(!(await fs.readFile(f,'utf8')).includes('data-legacy-redirect'))htmlFiles.push(f);
 for(const filename of htmlFiles){
   const html=await fs.readFile(filename,'utf8'),relative=path.relative(OUT,filename).split(path.sep).join('/');
   const renderedBase=html.match(/data-base(?:="([^"]*)")?/);
@@ -40,11 +41,24 @@ for(const filename of htmlFiles){
   const html=await fs.readFile(filename,'utf8');
   assert.ok(!/<(?:img|video|source)\b[^>]*(?:church-history|behalt)/i.test(html),`Exhibit media embedded in ${filename}`);
 }
-const timeline=await fs.readFile(path.join(OUT,'timeline/index.html'),'utf8');
+const timeline=await fs.readFile(path.join(OUT,info.defaultLocale,'timeline/index.html'),'utf8');
 assert.ok(timeline.includes('timeline-threads')&&timeline.includes('timeline-entries'));
 assert.ok(!timeline.includes('era-scroll'),'Superseded dotted era strip remains');
-const catalog=JSON.parse(await fs.readFile(path.join(OUT,'assets/catalog.json'),'utf8'));
+const catalog=JSON.parse(await fs.readFile(path.join(OUT,'assets',info.defaultLocale,'catalog.json'),'utf8'));
 assert.equal(catalog.filter(r=>r.kind==='story').length,1272);
 assert.equal(info.pages,htmlFiles.length-1);
+assert.ok(existing.has('index.html'),'Default-language redirect must exist');
+assert.ok(!existing.has('af/index.html')&&!existing.has('de/index.html'),'Unpublished languages must not be advertised');
+const eraIds=[...timeline.matchAll(/id="(era-[^"]+)"/g)].map(m=>m[1]);
+assert.equal(new Set(eraIds).size,eraIds.length,'Timeline era anchors must be unique');
+for(const locale of info.locales){
+ const home=await fs.readFile(path.join(OUT,locale,'index.html'),'utf8');
+ assert.ok(home.includes(`lang="${locale}"`));
+ assert.ok(home.includes(`/${locale}/timeline/`),'Localized navigation');
+ assert.ok(home.includes('hreflang="en"'),'English is always available');
+ const markdown=await fs.readFile(path.join(OUT,locale,'README.md'),'utf8');
+ assert.ok(markdown.includes('Today’s six accounts')&&markdown.includes('The connected timeline'),'Home Markdown must contain its main readable content');
+}
+
 if(errors.length){console.error(errors.slice(0,30).join('\n'));throw new Error(`${errors.length} site validation errors`);}
 console.log(`Validated ${info.pages} Astro pages, local links, Markdown equivalents, theme assets, vertical timeline, and exclusion of exhibit media.`);

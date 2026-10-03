@@ -11,7 +11,7 @@ export const ERAS = [
 
 export function normalize(value='') {
   return String(value).normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase()
-    .replace(/[’‘]/g,"'").replace(/[^a-z0-9]+/g,' ').trim();
+    .replace(/[’‘]/g,"'").replace(/[^\p{L}\p{N}]+/gu,' ').trim();
 }
 export function eraFor(record) {
   return record.era || ERAS.find(e=>record.date && record.date.start >= e.start && record.date.start <= e.end)?.id || 'source-context';
