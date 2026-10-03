@@ -949,9 +949,13 @@
     },
     "summary": "The Swiss Brethren emerged in the context of the Zürich baptisms and early Swiss Anabaptism. Later Swiss Mennonite and Amish histories share this background.",
     "paragraphs": [
-      "The Swiss Brethren emerged in the context of the Zürich baptisms and early Swiss Anabaptism. Later Swiss Mennonite and Amish histories share this background."
+      "The Swiss Brethren emerged in the context of the Zürich baptisms and early Swiss Anabaptism. Later Swiss Mennonite and Amish histories share this background.",
+      "The later history includes refuge outside Switzerland and migration to other parts of Europe and North America. The branch explorer follows Swiss and South German ancestry into Mennonite and Amish histories, while the source accounts retain the names and experiences of individual witnesses."
     ],
-    "aliases": [],
+    "aliases": [
+      "Swiss Mennonites",
+      "Schweizer Brüder"
+    ],
     "references": [
       {
         "label": "Mennonite World Conference: the first baptisms",
@@ -971,10 +975,16 @@
     "slug": "mennonites",
     "title": "Mennonite traditions",
     "kind": "tradition",
-    "date": null,
+    "date": {
+      "start": 1530,
+      "end": 1539,
+      "label": "1530s; a wider family name",
+      "basis": "Period of Menno Simons’s leadership; the family name is not a single founding event."
+    },
     "summary": "Mennonite history includes Dutch, Swiss, German, and later worldwide communities. Shared roots coexist with differences in worship, practice, organization, and relationships.",
     "paragraphs": [
-      "Mennonite history includes Dutch, Swiss, German, and later worldwide communities. Shared roots coexist with differences in worship, practice, organization, and relationships."
+      "Mennonite history includes Dutch, Swiss, German, and later worldwide communities. Shared roots coexist with differences in worship, practice, organization, and relationships.",
+      "The name later came to describe a wider family that included Swiss and South German congregations as well as Dutch histories. The photographed chart distinguishes these migration lines and their subsequent conferences. No present-day denomination represents the entire Mennonite family."
     ],
     "aliases": [],
     "references": [
@@ -1005,7 +1015,8 @@
     },
     "summary": "Hutterite history centres on gathered Christian communities and community of goods. Its migration story links Moravia, eastern Europe, and North America.",
     "paragraphs": [
-      "Hutterite history centres on gathered Christian communities and community of goods. Its migration story links Moravia, eastern Europe, and North America."
+      "Hutterite history centres on gathered Christian communities and community of goods. Its migration story links Moravia, eastern Europe, and North America.",
+      "The exhibit follows Hutterite migrations across central and eastern Europe and into North America in 1874. Community of goods remains central to colony life. The later Bruderhof has a documented connection with Hutterite communal practice, but its own beginning was in Germany in 1920."
     ],
     "aliases": [],
     "references": [
@@ -1035,7 +1046,8 @@
     },
     "summary": "Amish history grows from the Swiss Anabaptist tradition and the disagreements associated with Jakob Ammann. The later story includes migrations and distinct fellowships.",
     "paragraphs": [
-      "Amish history grows from the Swiss Anabaptist tradition and the disagreements associated with Jakob Ammann. The later story includes migrations and distinct fellowships."
+      "Amish history grows from the Swiss Anabaptist tradition and the disagreements associated with Jakob Ammann. The later story includes migrations and distinct fellowships.",
+      "The source chart follows later distinctions among Old Order Amish, Egly Amish, Beachy fellowships, and Amish Mennonite conferences. These names reflect disagreements and developments at different times; the 1693 division is the beginning of the wider Amish history, not the founding date of every later affiliation."
     ],
     "aliases": [],
     "references": [
@@ -1044,8 +1056,8 @@
         "url": "https://www.mennoniteusa.org/who-are-mennonites/faq-about-mennonites/"
       },
       {
-        "label": "Supplied timeline photograph 9395",
-        "url": "sources/church-history/photos/IMG_9395.jpg"
+        "label": "Supplied branch timeline 9377",
+        "url": "sources/church-history/photos/IMG_9377.jpg"
       }
     ],
     "people": [],
@@ -1065,7 +1077,8 @@
     },
     "summary": "The Schwarzenau Brethren represent a related movement shaped by Anabaptism and Pietism, beginning with the baptisms at the Eder River in 1708.",
     "paragraphs": [
-      "The Schwarzenau Brethren represent a related movement shaped by Anabaptism and Pietism, beginning with the baptisms at the Eder River in 1708."
+      "The Schwarzenau Brethren represent a related movement shaped by Anabaptism and Pietism, beginning with the baptisms at the Eder River in 1708.",
+      "Alexander Mack was influenced by both Pietism and Anabaptism. Eight believers gathered for baptism in August 1708. Migration to Pennsylvania began in 1719, and a congregation formed at Germantown in 1723. Later divisions produced several Brethren bodies; the Church of the Brethren adopted that name in 1908."
     ],
     "aliases": [],
     "references": [
@@ -1095,7 +1108,8 @@
     },
     "summary": "The Mennonite Brethren arose through renewal among Mennonites in the Russian Empire. The tradition later developed across national boundaries.",
     "paragraphs": [
-      "The Mennonite Brethren arose through renewal among Mennonites in the Russian Empire. The tradition later developed across national boundaries."
+      "The Mennonite Brethren arose through renewal among Mennonites in the Russian Empire. The tradition later developed across national boundaries.",
+      "The institutional history describes renewal and home Bible-study groups in the Molotschna settlement. In 1860 a distinct church organization emerged. Later migrations and mission activity carried the tradition beyond the Russian Empire. The exhibit’s other Brethren names belong to separate histories and are linked separately in the explorer."
     ],
     "aliases": [],
     "references": [
@@ -1104,8 +1118,8 @@
         "url": "https://usmb.org/history/"
       },
       {
-        "label": "Supplied timeline photograph 9383",
-        "url": "sources/church-history/photos/IMG_9383.jpg"
+        "label": "Supplied branch timeline 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
       }
     ],
     "people": [],
@@ -1125,7 +1139,8 @@
     },
     "summary": "The Bruderhof began in Germany in 1920. Its communal history later connected with the Hutterite tradition and developed its own community story.",
     "paragraphs": [
-      "The Bruderhof began in Germany in 1920. Its communal history later connected with the Hutterite tradition and developed its own community story."
+      "The Bruderhof began in Germany in 1920. Its communal history later connected with the Hutterite tradition and developed its own community story.",
+      "Eberhard and Emmy Arnold and Else von Hollander began the community at Sannerz. Its subsequent story includes persecution in Germany and relocation across national boundaries. Its institutional history records both periods of fellowship with Hutterites and its later independent community life. The connection appears as a historical association rather than a direct sixteenth-century founding."
     ],
     "aliases": [],
     "references": [
@@ -1147,392 +1162,605 @@
     "slug": "waterlanders",
     "title": "Waterlander Mennonites",
     "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
+    "date": {
+      "start": 1550,
+      "end": 1577,
+      "label": "Mid-sixteenth century; confession 1577",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "A Dutch Mennonite stream associated with Waterland, with a confession of faith in 1577 and a distinctive approach to church discipline.",
     "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
+      "The Waterlanders developed within the Dutch Anabaptist movement in the middle of the sixteenth century. Their name refers to Waterland, north of Amsterdam. Differences over the severity of the ban and shunning distinguished them from other Dutch Mennonite groups.",
+      "Their 1577 confession sought agreement within the community and understanding with other Mennonites. It addresses faith and practical Christian living. The photographed timeline places Waterlanders beside Flemish and Frisian streams; these names describe changing historical fellowships, whose later relationships included attempts at reunion."
     ],
     "aliases": [],
     "references": [
       {
-        "label": "Supplied timeline photograph 9388",
-        "url": "sources/church-history/photos/IMG_9388.jpg"
+        "label": "Waterlander Confession of Faith (1577), text and introduction",
+        "url": "https://anabaptistwiki.org/mediawiki/index.php?title=Waterlander_Confession_of_Faith_(1577)"
+      },
+      {
+        "label": "Supplied timeline photograph 9375",
+        "url": "sources/church-history/photos/IMG_9375.jpg"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "radical-reformation"
+    "traditions": [
+      "mennonites",
+      "dutch-mennonite-conference"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "flemish-mennonites",
     "title": "Flemish Mennonites",
     "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
+    "date": {
+      "start": 1566,
+      "end": 1566,
+      "label": "1566",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "Flemish Mennonite communities formed one of the Dutch branches during sixteenth-century disagreements over discipline and congregational life.",
     "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
+      "Flemish and Frisian Mennonites divided at Franeker in 1566. The name Flemish reflected the background of believers who had moved from the southern Netherlands. Disagreements were about community practice as well as regional identity.",
+      "The Flemish stream itself developed different fellowships. Reunion efforts brought Old and Mild Flemish together in 1632, followed by union with the Frisian–High German group in 1639. The source chart also follows Dutch communities east into the Vistula region. A branch name on the chart therefore represents a history of both division and renewed fellowship."
     ],
     "aliases": [],
     "references": [
       {
-        "label": "Supplied timeline photograph 9388",
-        "url": "sources/church-history/photos/IMG_9388.jpg"
+        "label": "GAMEO: Flemish Mennonites",
+        "url": "https://gameo.org/index.php?title=Flemish_Mennonites"
+      },
+      {
+        "label": "Supplied timeline photograph 9375",
+        "url": "sources/church-history/photos/IMG_9375.jpg"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "radical-reformation"
+    "traditions": [
+      "mennonites",
+      "frisian-mennonites",
+      "prussian-mennonites"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "frisian-mennonites",
     "title": "Frisian Mennonites",
     "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
+    "date": {
+      "start": 1566,
+      "end": 1566,
+      "label": "1566",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "A Dutch Mennonite branch that developed in Friesland and also took root in West Prussia.",
     "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
+      "The Frisian–Flemish division began at Franeker in 1566, following disagreements between local Mennonites and believers who had arrived from the southern Netherlands. The Frisian name became a fellowship designation as well as a geographical description.",
+      "Frisian communities were themselves diverse. Some maintained especially strict church discipline, while others participated in wider union efforts. Their history continued in the Netherlands and West Prussia. The photographed chart traces these lines alongside the Flemish and Waterlander branches rather than presenting Dutch Anabaptism as a single uniform body."
     ],
     "aliases": [],
     "references": [
       {
-        "label": "Supplied timeline photograph 9388",
-        "url": "sources/church-history/photos/IMG_9388.jpg"
+        "label": "GAMEO: Frisian Mennonites",
+        "url": "https://gameo.org/index.php?title=Frisian_Mennonites"
+      },
+      {
+        "label": "Supplied timeline photograph 9375",
+        "url": "sources/church-history/photos/IMG_9375.jpg"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "radical-reformation"
+    "traditions": [
+      "mennonites",
+      "flemish-mennonites",
+      "prussian-mennonites"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "russian-mennonites",
     "title": "Russian Mennonite communities",
     "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
+    "date": {
+      "start": 1789,
+      "end": 1789,
+      "label": "1789",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "Communities established in the Russian Empire developed several church traditions and later migrated to the Americas and elsewhere.",
     "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
+      "Prussian Mennonite settlers established Chortitza near the end of the eighteenth century. The archives preserve letters between the early settlers and the communities they had left, including correspondence dated 1789. Later settlements included Molotschna. Much of this history took place in what is now Ukraine; Russian Mennonite is a historical cultural description, not a claim that every community was ethnically Russian.",
+      "The exhibit follows several different lines from these settlements: congregational Mennonites, Mennonite Brethren, Kleine Gemeinde, and Old Colony communities. Migration, war, and political repression carried their histories beyond the Russian Empire. These branches retained different practices and developed new fellowships in their later homes."
     ],
     "aliases": [],
     "references": [
       {
+        "label": "Mennonite Heritage Archives: early Chortitza correspondence",
+        "url": "https://www.mharchives.ca/documents-regarding-the-early-chortitza-mennonite-settlement/"
+      },
+      {
         "label": "Supplied timeline photograph 9378",
         "url": "sources/church-history/photos/IMG_9378.jpg"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "confession-and-migration"
+    "traditions": [
+      "prussian-mennonites",
+      "old-colony",
+      "mennonite-brethren",
+      "kleine-gemeinde"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "old-colony",
     "title": "Old Colony Mennonites",
     "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
+    "date": {
+      "start": 1789,
+      "end": 1789,
+      "label": "1789",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "Old Colony history connects the Chortitza settlement with later migrations and a wider family of colony-based Mennonite churches.",
     "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
+      "Old Colony refers historically to Chortitza, the older Mennonite settlement in the Russian Empire. The photographed exhibit also uses Old Colony Groups as a broad heading for several related conservative communities. That heading should not erase the differences between Old Colony, Bergthal, Chortitzer, Sommerfeld, and other churches.",
+      "The chart follows migration to Canada in the 1870s and later moves to Latin America. Families sought places where their faith, schools, language, and communal arrangements could continue. The branch explorer provides separate entries for the named Bergthal, Chortitzer, and Sommerfeld lines, allowing readers to follow these relationships without treating them as interchangeable."
     ],
     "aliases": [],
     "references": [
       {
+        "label": "Mennonite Heritage Archives: Chortitza settlement documents",
+        "url": "https://www.mharchives.ca/documents-regarding-the-early-chortitza-mennonite-settlement/"
+      },
+      {
         "label": "Supplied timeline photograph 9379",
         "url": "sources/church-history/photos/IMG_9379.jpg"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "across-the-world"
+    "traditions": [
+      "russian-mennonites",
+      "bergthal-mennonites",
+      "chortitzer-mennonites",
+      "sommerfeld-mennonites"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "old-order-mennonites",
     "title": "Old Order Mennonites",
     "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
+    "date": {
+      "start": 1872,
+      "end": 1901,
+      "label": "Regional divisions 1872–1901",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "Old Order Mennonite fellowships developed through several regional divisions beginning in the later nineteenth century.",
     "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
+      "In 1872, Jacob Wisler and supporters organized separate conferences in Indiana and Ohio after conflict over innovations in Mennonite church life. Related divisions followed in Ontario in 1889, Pennsylvania in 1893, and Virginia in 1901.",
+      "Old Order is a family description, not one worldwide conference. Congregations emphasize ordered community life and retain differing rules concerning dress, transportation, and technology. The source chart names several later groups on this line. The Ontario archive’s records provide an entry into the regional story without assuming that every Old Order fellowship follows identical practices."
     ],
     "aliases": [],
     "references": [
       {
-        "label": "Supplied timeline photograph 9398",
-        "url": "sources/church-history/photos/IMG_9398.jpg"
-      }
-    ],
-    "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "across-the-world"
-  },
-  {
-    "slug": "general-conference",
-    "title": "General Conference Mennonites",
-    "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
-    "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
-    ],
-    "aliases": [],
-    "references": [
+        "label": "Mennonite Archives of Ontario: Old Order administrative history",
+        "url": "https://uwaterloo.ca/mennonite-archives-ontario/catalogs/archives/old-order-mennonites"
+      },
       {
         "label": "Supplied timeline photograph 9379",
         "url": "sources/church-history/photos/IMG_9379.jpg"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "across-the-world"
+    "traditions": [
+      "mennonite-church"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
+  },
+  {
+    "slug": "general-conference",
+    "title": "General Conference Mennonite Church",
+    "kind": "tradition",
+    "date": {
+      "start": 1860,
+      "end": 1860,
+      "label": "1860",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "A Mennonite conference shown on the exhibit’s North American timeline; its U.S. congregations joined in forming Mennonite Church USA in 2002.",
+    "paragraphs": [
+      "The General Conference Mennonite Church developed a cooperative conference history alongside the older Mennonite Church. The exhibit dates its organization to 1860 and follows its educational, mission, and congregational life.",
+      "The two bodies retained distinct histories before their U.S. congregations formed Mennonite Church USA in 2002. The archive preserves the historical General Conference name so readers can understand the source chart. Institutional records provide further detail on the congregations and agencies involved."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      },
+      {
+        "label": "Mennonite Church USA: historical overview",
+        "url": "https://www.mennoniteusa.org/who-are-mennonites/history/"
+      },
+      {
+        "label": "Mennonite Church USA: historical archives",
+        "url": "https://www.mennoniteusa.org/historical-archives/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "mennonites",
+      "mennonite-church-usa"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "church-of-god-in-christ-mennonite",
     "title": "Church of God in Christ, Mennonite",
     "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
+    "date": {
+      "start": 1859,
+      "end": 1859,
+      "label": "1859",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "John Holdeman and others began worshiping separately in Ohio in 1859, forming a distinct Mennonite church history.",
     "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
+      "John Holdeman of Wayne County, Ohio, urged spiritual renewal in the Mennonite church. In 1859 he and others began worshiping separately; the community developed as the Church of God in Christ, Mennonite. Holdeman traveled as an evangelist and wrote Mirror of Truth.",
+      "The church’s own account emphasizes believers’ baptism, nonresistance, conversion, modest life, and congregational discipline. Later congregations and missions extended beyond North America. Its account of continuity with earlier Christians expresses the church’s theological understanding; the explorer dates the documented organizational beginning to 1859."
     ],
     "aliases": [],
     "references": [
+      {
+        "label": "Church of God in Christ, Mennonite: its own history",
+        "url": "https://churchofgodinchristmennonite.net/who-we-are/"
+      },
       {
         "label": "Supplied timeline photograph 9379",
         "url": "sources/church-history/photos/IMG_9379.jpg"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "across-the-world"
+    "traditions": [
+      "mennonite-church"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "conservative-amish-mennonites",
-    "title": "Conservative Amish Mennonites",
+    "title": "Conservative Amish Mennonites: Rosedale Network",
     "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
+    "date": {
+      "start": 1910,
+      "end": 1910,
+      "label": "1910",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "Ministers meeting at Pigeon, Michigan, formed the Conservative Amish Mennonite Conference in 1910; its history continues as Rosedale Network.",
     "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
+      "Ministers from Pigeon, Michigan, Belleville, Pennsylvania, and Hartville, Ohio, gathered in 1910 to support unity among Amish Mennonite congregations. They valued local congregational authority while seeking ways to work together.",
+      "The conference developed education, mission, and service work. Its historical name appears on the exhibit, while its present institutional history is published as Rosedale Network of Churches. This conference is one Amish Mennonite development; it does not encompass every fellowship described as conservative Mennonite."
     ],
     "aliases": [],
     "references": [
       {
-        "label": "Supplied timeline photograph 9399",
-        "url": "sources/church-history/photos/IMG_9399.jpg"
+        "label": "Rosedale Network: its history",
+        "url": "https://rosedalenetwork.org/history-of-rosedalenetwork/"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "across-the-world"
+    "traditions": [
+      "amish"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "beachy-amish",
     "title": "Beachy Amish fellowships",
     "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
+    "date": {
+      "start": 1927,
+      "end": 1927,
+      "label": "1927",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "The Beachy Amish history began with a 1927 division in an Amish congregation in Somerset County, Pennsylvania.",
     "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
+      "Moses M. Beachy’s congregation in Somerset County, Pennsylvania, became the setting of a division in 1927. The disagreement concerned church discipline, including the treatment of members who moved to other Anabaptist congregations.",
+      "The Beachy name later described a wider fellowship of Amish Mennonite congregations. Their later practices and mission activity should not be read back into every detail of the original dispute. The exhibit places Beachy on the Amish line; the historical account by Alvin J. Beachy offers a closer view of the local beginnings."
     ],
     "aliases": [],
     "references": [
       {
-        "label": "Supplied timeline photograph 9380",
-        "url": "sources/church-history/photos/IMG_9380.jpg"
+        "label": "Alvin J. Beachy: The Rise and Development of the Beachy Amish Mennonite Churches (1955)",
+        "url": "https://www.beachyam.org/librarybooks/Beachy%281955%29_Rise.htm"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "living-traditions"
+    "traditions": [
+      "old-order-amish",
+      "amish"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "old-order-amish",
     "title": "Old Order Amish",
     "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
+    "date": {
+      "start": 1860,
+      "end": 1899,
+      "label": "Later nineteenth century",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "Old Order Amish identity developed during nineteenth-century disagreements over conference organization and changes in church life.",
     "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
+      "The Amish tradition began with the late-seventeenth-century division associated with Jakob Ammann. Old Order Amish is a later designation that became prominent during nineteenth-century differences over proposed changes and ministerial conference cooperation.",
+      "The exhibit places Old Order Amish alongside Egly Amish, Amish Mennonite conferences, and later Beachy fellowships. These separate lines help explain why Amish is a family of histories rather than one organizational body. Local congregations establish their own rules, and particular practices differ among affiliations."
     ],
     "aliases": [],
     "references": [
       {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      },
+      {
         "label": "Supplied timeline photograph 9380",
         "url": "sources/church-history/photos/IMG_9380.jpg"
+      },
+      {
+        "label": "Rosedale Network: the Amish Mennonite conference background",
+        "url": "https://rosedalenetwork.org/about/faq/"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "living-traditions"
+    "traditions": [
+      "amish",
+      "beachy-amish"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "conservative-mennonites",
     "title": "Conservative Mennonite fellowships",
     "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
+    "date": {
+      "start": 1950,
+      "end": 1999,
+      "label": "Twentieth-century family; multiple beginnings",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "A broad family of Mennonite fellowships maintaining distinctive church practices, with several different conference histories.",
     "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
+      "Conservative Mennonite describes several fellowships rather than one denomination with a single founding date. The photographed chart shows older Mennonite and Amish Mennonite lines from which different conservative histories developed.",
+      "These communities place importance on believers’ baptism, nonresistance, church discipline, and daily Christian practice. Dress, worship, organization, and relationships with other congregations vary. The Rosedale conference has its own dated history and should not be used as the name or origin of every conservative Mennonite group. This overview therefore uses a broad twentieth-century period, with particular fellowships identified separately in the explorer."
     ],
     "aliases": [],
     "references": [
       {
         "label": "Supplied timeline photograph 9380",
         "url": "sources/church-history/photos/IMG_9380.jpg"
+      },
+      {
+        "label": "Mennonite Church USA: FAQ on different Mennonite traditions",
+        "url": "https://www.mennoniteusa.org/who-are-mennonites/faq-about-mennonites/"
+      },
+      {
+        "label": "Rosedale Network: conference history",
+        "url": "https://rosedalenetwork.org/history-of-rosedalenetwork/"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "living-traditions"
+    "traditions": [
+      "mennonite-church",
+      "conservative-amish-mennonites"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "dutch-mennonite-conference",
-    "title": "Dutch Mennonite Conference",
+    "title": "Dutch Mennonite Conference: ADS",
     "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
+    "date": {
+      "start": 1811,
+      "end": 1811,
+      "label": "1811",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "The Algemene Doopsgezinde Sociëteit brought Dutch Mennonite congregations into a shared association in 1811.",
     "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
+      "The Algemene Doopsgezinde Sociëteit (ADS) was founded in 1811 to support the training of ministers and provide financial help to congregations in need. The exhibit calls this continuing Dutch association the Dutch Mennonite Conference.",
+      "Its history belongs to the later cooperation of Dutch Mennonite congregations whose earlier names included Waterlander, Flemish, and Frisian. The association’s own account explains its shared structures and purposes. The explorer treats this as cooperation across older streams, with the individual congregations and historical distinctions still visible."
     ],
     "aliases": [],
     "references": [
+      {
+        "label": "ADS: purpose and structure",
+        "url": "https://doopsgezinden.nl/organisatie/doelstelling-en-structuur/"
+      },
       {
         "label": "Supplied timeline photograph 9380",
         "url": "sources/church-history/photos/IMG_9380.jpg"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "living-traditions"
+    "traditions": [
+      "waterlanders",
+      "flemish-mennonites",
+      "frisian-mennonites"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "evangelical-mennonite-brethren",
     "title": "Evangelical Mennonite Brethren",
     "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
+    "date": {
+      "start": 1889,
+      "end": 1889,
+      "label": "1889",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "A fellowship organized in North America in 1889, later named the Fellowship of Evangelical Bible Churches.",
     "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
+      "Aaron Wall of Mountain Lake, Minnesota, and Isaac Peters of Henderson, Nebraska, provided leadership to congregations shaped by renewal among Mennonites from the Russian Empire. Their first convention met on 14 October 1889. Three congregations joined in the new fellowship.",
+      "The fellowship emphasized conversion, biblical authority, church discipline, and evangelism. Its name became Fellowship of Evangelical Bible Churches in 1987. The institutional history and historical sketches record its development. The explorer keeps this line separate from both the Mennonite Brethren movement founded in 1860 and the Canadian conferences with similar evangelical names."
     ],
     "aliases": [],
     "references": [
       {
-        "label": "Supplied timeline photograph 9379",
-        "url": "sources/church-history/photos/IMG_9379.jpg"
+        "label": "FEBC: the fellowship’s history",
+        "url": "https://www.fellowshipforward.org/history.html"
+      },
+      {
+        "label": "Evangelical Mennonite Brethren: archival authority record",
+        "url": "https://archives.mhsc.ca/index.php/evangelical-mennonite-brethren-church"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "living-traditions"
+    "traditions": [
+      "russian-mennonites"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "evangelical-mennonite-conference",
     "title": "Evangelical Mennonite Conference",
     "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
+    "date": {
+      "start": 1960,
+      "end": 1960,
+      "label": "1960",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "The Canadian Kleine Gemeinde adopted the name Evangelical Mennonite Conference in 1960.",
     "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
+      "The Canadian conference traces its roots to the Kleine Gemeinde movement of 1812 and the migration to Manitoba in 1874–1875. It adopted the name Evangelical Mennonite Church in 1952 and Evangelical Mennonite Conference in 1960.",
+      "Its archival collection documents conferences, missions, publications, and congregational life. These names belong to this Canadian history; the similarly named Evangelical Mennonite Mission Conference and Evangelical Mennonite Brethren have different beginnings and appear separately in the explorer."
     ],
     "aliases": [],
     "references": [
       {
-        "label": "Supplied timeline photograph 9379",
-        "url": "sources/church-history/photos/IMG_9379.jpg"
+        "label": "Mennonite Heritage Archives: EMC introduction",
+        "url": "https://collections.mharchives.ca/evangelical-mennonite-conference-intro"
+      },
+      {
+        "label": "EMC: Circling the Globe, conference history",
+        "url": "https://www.emconference.ca/store/p/circling-the-globe"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "living-traditions"
+    "traditions": [
+      "kleine-gemeinde"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "rudnerweider-mennonites",
     "title": "Rudnerweider Mennonites",
     "kind": "tradition",
-    "date": null,
-    "summary": "This stream is named on the supplied timeline. Its detailed history, dates, people, and relationships are being gathered.",
+    "date": {
+      "start": 1937,
+      "end": 1937,
+      "label": "1937",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "A renewal movement among Sommerfeld Mennonites organized as the Rudnerweider church in 1937.",
     "paragraphs": [
-      "The photographed timeline includes this name in the wider Anabaptist and Mennonite story. A source-based account is needed before dates and relationships can be presented in detail.",
-      "Can you contribute a history, a reliable reference, or an explanation of how this community relates to others? The contribution link opens a GitHub issue with this topic and page already included."
+      "The Rudnerweider church emerged from a division in the Sommerfeld church over the desire for renewal. Its official archival description dates organization to 1937. The photographed chart marks the preceding movement in 1936, distinguishing the beginning of renewal from formal organization.",
+      "The church became the Evangelical Mennonite Mission Conference in 1959. Its records preserve conference activity, congregational life, missions, and research for the history Search for Renewal. The explorer shows the new conference name as a continuation of this particular fellowship."
     ],
     "aliases": [],
     "references": [
+      {
+        "label": "Mennonite Heritage Archives: EMMC fonds",
+        "url": "https://www.mharchives.ca/holdings/organizations/EMMC_fonds.htm"
+      },
       {
         "label": "Supplied timeline photograph 9379",
         "url": "sources/church-history/photos/IMG_9379.jpg"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "living-traditions"
+    "traditions": [
+      "sommerfeld-mennonites",
+      "evangelical-mennonite-mission-conference"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "charity-ministries",
     "title": "Charity Ministries and related fellowships",
     "kind": "tradition",
-    "date": null,
-    "summary": "The site owner identifies Charity Ministries as part of the background to the fellowships supporting this archive. A documented history is invited.",
+    "date": {
+      "start": 1982,
+      "end": 1982,
+      "label": "1982",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "Charity Christian Fellowship began in Lancaster County in 1982 and developed a sermon ministry reaching wider fellowships.",
     "paragraphs": [
-      "The site owner describes the current fellowship’s background as connected with Charity Ministries. This is a contribution supplied by the owner, rather than a completed institutional history.",
-      "Dated records, descriptions of relationships, and contributions from different communities are needed to document this part of the wider Anabaptist story."
+      "Charity Christian Fellowship’s own account dates its beginning to 1982, when Mose Stoltzfus and Denny Kenaston established the congregation. It describes a desire for revived New Testament church life, followed by sermon distribution and mission work.",
+      "The sermon ministry developed from cassette distribution, took the name Charity Gospel Tape Ministry in 1990, and later became Charity Ministries. It became a joint ministry with Ephrata Christian Fellowship in 2001. Reorganization was proposed at the end of 2010, and the two churches began operating their own sermon ministries in November 2011.",
+      "The site owner identifies this wider fellowship history as part of the background to the community supporting this archive. The local Agape account is recorded separately; the published sermon-ministry reorganization does not by itself establish the details of that local division."
     ],
     "aliases": [],
     "references": [
       {
-        "label": "Project and contribution discussion",
-        "url": "https://github.com/trueChristian/history.truechristian.church/issues"
+        "label": "Charity Christian Fellowship: its own history",
+        "url": "https://charitychristianfellowship.org/church/about-us/"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
-    "category": "Tradition",
-    "era": "living-traditions"
+    "traditions": [
+      "agape-fellowships"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   },
   {
     "slug": "agape-fellowships",
@@ -1542,24 +1770,1067 @@
       "start": 2010,
       "end": 2010,
       "label": "c. 2010 (owner’s account)",
-      "basis": "Approximate date supplied by the site owner; documentation requested"
+      "basis": "Approximate date and relationship supplied by the site owner; additional institutional details are not inferred."
     },
-    "summary": "The site owner describes an Agape stream emerging from a division around 2010. The local churches and events still need a documented account.",
+    "summary": "The supporting fellowship’s own account places the Agape stream within its Charity-related background around 2010.",
     "paragraphs": [
-      "According to the site owner, a division around 2010 resulted in two streams, including the Agape fellowships connected with this site. The approximate date and relationship are recorded as an owner-supplied account awaiting documentation.",
-      "The purpose of the archive is to include the wider Anabaptist family. Contributions should identify the people, places, events, sources, and perspectives needed to tell this modern history carefully."
+      "The site owner describes a division around 2010 in the Charity-related fellowships, with the Agape stream forming part of the background to this site. This is an attributed community account. The approximate date identifies the period described rather than an independently verified incorporation or founding date.",
+      "Charity Christian Fellowship’s published history separately documents a sermon-ministry reorganization proposed in 2010 and implemented in November 2011 with Ephrata Christian Fellowship. That published event provides contemporary context, but it should not be substituted for the owner’s account of the Agape relationship.",
+      "The explorer includes this local account alongside the wider Anabaptist family. Additional congregational records and firsthand accounts can extend it through the page’s contribution link."
     ],
     "aliases": [],
     "references": [
       {
-        "label": "Project and contribution discussion",
-        "url": "https://github.com/trueChristian/history.truechristian.church/issues"
+        "label": "Site owner’s account: project context",
+        "url": "https://github.com/trueChristian/history.truechristian.church"
+      },
+      {
+        "label": "Charity Christian Fellowship: contemporary ministry context",
+        "url": "https://charitychristianfellowship.org/church/about-us/"
       }
     ],
     "people": [],
-    "traditions": [],
-    "status": "Research needed",
+    "traditions": [
+      "charity-ministries"
+    ],
+    "status": "Community account",
+    "category": "Tradition"
+  },
+  {
+    "slug": "prussian-mennonites",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
     "category": "Tradition",
-    "era": "living-traditions"
+    "title": "Danzig and Prussian Mennonites",
+    "date": {
+      "start": 1540,
+      "end": 1599,
+      "label": "Sixteenth-century settlement",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "Mennonite communities in the Vistula region linked Dutch Anabaptist histories with later migrations into the Russian Empire.",
+    "paragraphs": [
+      "The photographed timeline follows Dutch Mennonite lines into Danzig and Prussia. Congregations in the Vistula region included differing Flemish and Frisian traditions, so this geographical label does not identify a single denomination.",
+      "Letters preserved by Mennonite Heritage Archives connect Prussian congregations with the early Chortitza settlement. They include correspondence from 1789 and a 1791 letter from the Danzig Flemish church. These documents let readers follow migration through the voices of the communities involved. The chart also records the disruption of Danzig and Prussian congregations during the Second World War and continuing congregations in northwestern Germany."
+    ],
+    "references": [
+      {
+        "label": "Mennonite Heritage Archives: early Chortitza correspondence",
+        "url": "https://www.mharchives.ca/documents-regarding-the-early-chortitza-mennonite-settlement/"
+      },
+      {
+        "label": "Supplied timeline photograph 9377",
+        "url": "sources/church-history/photos/IMG_9377.jpg"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      }
+    ],
+    "traditions": [
+      "flemish-mennonites",
+      "frisian-mennonites",
+      "russian-mennonites"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "bergthal-mennonites",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
+    "category": "Tradition",
+    "title": "Bergthal Mennonites",
+    "date": {
+      "start": 1836,
+      "end": 1843,
+      "label": "Colony established 1836; registers from 1843",
+      "basis": "Colony beginning shown on the photographed timeline; surviving registers dated by the cited archive."
+    },
+    "summary": "The Bergthal colony’s migration to Manitoba became the background of the Chortitzer and Sommerfeld church histories.",
+    "paragraphs": [
+      "The exhibit places Bergthal within the colony-based Mennonite family of the Russian Empire. Surviving Bergthal church registers begin in 1843, providing a record of families and community membership.",
+      "Almost the entire colony moved to Manitoba in 1874–1876. Its East Reserve church became known as Chortitzer. Migration across the Red River to the West Reserve and later disagreements produced further church relationships. Bergthal therefore describes a historical community whose members contributed to several later fellowships, rather than one unchanging organizational line."
+    ],
+    "references": [
+      {
+        "label": "Mennonite Heritage Archives: Chortitzer fonds",
+        "url": "https://www.mharchives.ca/holdings/organizations/ChortitzerMC_fonds.htm"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "traditions": [
+      "russian-mennonites",
+      "chortitzer-mennonites",
+      "sommerfeld-mennonites"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "chortitzer-mennonites",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
+    "category": "Tradition",
+    "title": "Chortitzer Mennonites",
+    "date": {
+      "start": 1874,
+      "end": 1876,
+      "label": "Manitoba settlement 1874–1876",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "The Bergthal migration to Manitoba’s East Reserve in 1874–1876 established the Chortitzer church history.",
+    "paragraphs": [
+      "Chortitzer congregational history in Manitoba grew from the arrival of Bergthal Mennonites in 1874–1876. The Mennonite Heritage Archives holds church registers, correspondence, financial records, and materials concerning the Waisenamt, the community’s estate and guardianship administration.",
+      "Further migrations and changing relationships with West Reserve congregations form part of this history. In 1926–1927, members of the Chortitzer and Sommerfeld churches helped establish the Menno colony in Paraguay. The source chart shows these movements within the wider colony-based family. The name also belongs to a continuing church history later known as Christian Mennonite Conference."
+    ],
+    "references": [
+      {
+        "label": "Chortitzer Mennonite Conference fonds",
+        "url": "https://archives.mhsc.ca/chortitzer-mennonite-conference-fonds"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "traditions": [
+      "bergthal-mennonites",
+      "sommerfeld-mennonites"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "sommerfeld-mennonites",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
+    "category": "Tradition",
+    "title": "Sommerfeld Mennonites",
+    "date": {
+      "start": 1890,
+      "end": 1899,
+      "label": "1890s",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "A West Reserve Mennonite church associated with Bergthal migration and later colony and renewal movements.",
+    "paragraphs": [
+      "Bergthal families settling on Manitoba’s West Reserve were connected with the East Reserve church. Disagreement in the West Reserve led to distinct church organizations, including the Sommerfeld church, shown on the photographed timeline in the 1890s.",
+      "Its story includes migration to Latin America and the renewal movement that became the Rudnerweider church. The archives distinguish Sommerfeld from Chortitzer, Bergthal, and Old Colony organizations. These names identify related but separate community histories; the explorer follows those particular connections."
+    ],
+    "references": [
+      {
+        "label": "Sommerfeld Mennonite Church of Manitoba: archival history",
+        "url": "https://archives.mhsc.ca/index.php/sommerfeld-mennonite-church-manitoba"
+      },
+      {
+        "label": "EMMC fonds: Rudnerweider beginnings",
+        "url": "https://www.mharchives.ca/holdings/organizations/EMMC_fonds.htm"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "traditions": [
+      "bergthal-mennonites",
+      "rudnerweider-mennonites"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "kleine-gemeinde",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
+    "category": "Tradition",
+    "title": "Kleine Gemeinde",
+    "date": {
+      "start": 1812,
+      "end": 1812,
+      "label": "1812",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "A reform movement in the Molotschna settlement that began in 1812 under Klaas Reimer and later developed different national histories.",
+    "paragraphs": [
+      "Klaas Reimer and other Mennonites in Molotschna organized the Kleine Gemeinde, or Little Church, in 1812. They sought reform in church discipline and Christian life. Families migrated to Canada in 1874–1875.",
+      "The Canadian history later led to the Evangelical Mennonite Conference. Other communities retained the Kleine Gemeinde name, including congregations in Mexico. The shared beginning should therefore be read alongside the different later developments, rather than identifying all Kleine Gemeinde congregations with one present-day conference."
+    ],
+    "references": [
+      {
+        "label": "Evangelical Mennonite Conference fonds: administrative history",
+        "url": "https://archives.mhsc.ca/index.php/evangelical-mennonite-conference-kleine-gemeinde-fonds"
+      },
+      {
+        "label": "Kleine Gemeinde: archival authority record",
+        "url": "https://archives.mhsc.ca/index.php/kleine-gemeinde-2"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "traditions": [
+      "russian-mennonites",
+      "evangelical-mennonite-conference"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "evangelical-mennonite-mission-conference",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
+    "category": "Tradition",
+    "title": "Evangelical Mennonite Mission Conference",
+    "date": {
+      "start": 1959,
+      "end": 1959,
+      "label": "1959",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "The Rudnerweider church adopted the Evangelical Mennonite Mission Conference identity on 1 July 1959.",
+    "paragraphs": [
+      "The conference continues the Rudnerweider movement organized in 1937. Its archival description dates the Evangelical Mennonite Mission Conference to 1 July 1959.",
+      "The official repository preserves materials from the Rudnerweider period and the later conference, including mission work and congregational records. The chart places this line among the colony-based Mennonite histories. Its similar name should be distinguished from the Evangelical Mennonite Conference, which grew from Kleine Gemeinde."
+    ],
+    "references": [
+      {
+        "label": "EMMC: official archival fonds description",
+        "url": "https://www.mharchives.ca/holdings/organizations/EMMC_fonds.htm"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      }
+    ],
+    "traditions": [
+      "rudnerweider-mennonites"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "mennonite-church",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
+    "category": "Tradition",
+    "title": "Mennonite Church: MC",
+    "date": {
+      "start": 1700,
+      "end": 1799,
+      "label": "North American development, eighteenth century",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "The older Mennonite Church in North America developed from Swiss and German congregational histories.",
+    "paragraphs": [
+      "The exhibit distinguishes Mennonite Church (MC) from General Conference Mennonite Church (GC). The older MC history belongs especially to Swiss and German congregations in North America, with migrations and settlement during the eighteenth and nineteenth centuries.",
+      "The label describes a historical church body, rather than every church called Mennonite. In 2002, its U.S. congregations and those of the General Conference formed Mennonite Church USA. Other fellowships and national histories continued along their own paths."
+    ],
+    "references": [
+      {
+        "label": "Mennonite Church USA: historical overview",
+        "url": "https://www.mennoniteusa.org/who-are-mennonites/history/"
+      },
+      {
+        "label": "Mennonite Church USA: historical archives",
+        "url": "https://www.mennoniteusa.org/historical-archives/"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      }
+    ],
+    "traditions": [
+      "swiss-south-german-mennonites",
+      "mennonite-church-usa"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "mennonite-church-usa",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
+    "category": "Tradition",
+    "title": "Mennonite Church USA",
+    "date": {
+      "start": 2002,
+      "end": 2002,
+      "label": "2002",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "Mennonite Church USA formed in 2002 through the union of U.S. congregations of MC and GC.",
+    "paragraphs": [
+      "Mennonite Church USA was formed in 2002 when U.S. congregations from the Mennonite Church and General Conference Mennonite Church joined in a new denomination.",
+      "Its historical archives preserve both predecessor histories. This union supplies one present-day destination for the two older lines on the exhibit. The broader Anabaptist family includes many other conferences and independent fellowships, so this node represents one union rather than a universal endpoint."
+    ],
+    "references": [
+      {
+        "label": "Mennonite Church USA: historical overview",
+        "url": "https://www.mennoniteusa.org/who-are-mennonites/history/"
+      },
+      {
+        "label": "Mennonite Church USA: historical archives",
+        "url": "https://www.mennoniteusa.org/historical-archives/"
+      }
+    ],
+    "traditions": [
+      "mennonite-church",
+      "general-conference"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "reformed-mennonites",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
+    "category": "Tradition",
+    "title": "Reformed Mennonites",
+    "date": {
+      "start": 1812,
+      "end": 1812,
+      "label": "1812",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "A distinct North American Mennonite fellowship led by John Herr from 1812.",
+    "paragraphs": [
+      "The photographed chart marks the Reformed Mennonite Church as a separate line beginning in 1812. John Herr’s followers sought stricter fidelity to their understanding of the church and Christian discipline.",
+      "Reformed Mennonite is a particular historical name. It should be distinguished from the later Old Order conferences and from Reformed Protestant churches. The chart follows this community beside the older Mennonite Church, providing a starting point for exploring its distinctive history."
+    ],
+    "references": [
+      {
+        "label": "Supplied timeline photograph 9378",
+        "url": "sources/church-history/photos/IMG_9378.jpg"
+      },
+      {
+        "label": "Historical reference: Mennonites, New International Encyclopaedia",
+        "url": "https://en.wikisource.org/wiki/The_New_International_Encyclop%C3%A6dia/Mennonites"
+      }
+    ],
+    "traditions": [
+      "mennonite-church"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "swiss-south-german-mennonites",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
+    "category": "Tradition",
+    "title": "Mennonites of Swiss–South German ancestry",
+    "date": {
+      "start": 1600,
+      "end": 1799,
+      "label": "Migration history, seventeenth–eighteenth centuries",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "Migrations connected Swiss and South German Anabaptist communities with European refuges and later congregations in North America.",
+    "paragraphs": [
+      "The photographed timeline follows Swiss and South German Anabaptist communities through persecution, refuge, and migration. The shared ancestry label describes several congregational histories, including later Mennonite and Amish developments.",
+      "Swiss and German Mennonites migrated to Pennsylvania during the eighteenth and nineteenth centuries and later settled farther west. Language, family networks, and congregational traditions traveled with them. This geographical history is kept distinct from the Dutch–Prussian–Russian migration line, while later cooperation between their churches remains visible."
+    ],
+    "references": [
+      {
+        "label": "Supplied timeline photograph 9376",
+        "url": "sources/church-history/photos/IMG_9376.jpg"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      },
+      {
+        "label": "Mennonite Church USA: historical overview",
+        "url": "https://www.mennoniteusa.org/who-are-mennonites/history/"
+      }
+    ],
+    "traditions": [
+      "swiss-brethren",
+      "mennonite-church"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "brethren-in-christ",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
+    "category": "Tradition",
+    "title": "Brethren in Christ: River Brethren",
+    "date": {
+      "start": 1775,
+      "end": 1788,
+      "label": "Beginnings 1775–1788",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "A Pennsylvania movement with Anabaptist and Pietist roots that emerged between 1775 and 1788.",
+    "paragraphs": [
+      "The Brethren in Christ began near Marietta in Lancaster County, Pennsylvania, between 1775 and 1788. Their Anabaptist background interacted with Pietist emphases on personal faith and transformed life. Neighbors called them River Brethren because many lived along the Susquehanna River.",
+      "Later history included migration, mission, and engagement with Wesleyan Holiness and evangelical movements. The chart places this related stream alongside Mennonite histories. It is distinct from the Schwarzenau Brethren, whose beginning was in Germany in 1708, and from the Mennonite Brethren of the Russian Empire."
+    ],
+    "references": [
+      {
+        "label": "Brethren in Christ Historical Society: history",
+        "url": "https://bic-history.org/history/"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      }
+    ],
+    "traditions": [
+      "swiss-south-german-mennonites"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "evangelical-mennonite-church",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
+    "category": "Tradition",
+    "title": "Egly Amish and Evangelical Mennonite Church",
+    "date": {
+      "start": 1866,
+      "end": 1866,
+      "label": "1866",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "Henry Egly’s Amish reform movement developed into the Defenseless Mennonites and later the Evangelical Mennonite Church.",
+    "paragraphs": [
+      "Henry Egly led a group from an Amish congregation in Indiana in 1866, emphasizing new birth and salvation by faith. The movement became known as Egly Amish and adopted the Defenseless Mennonite name in 1908.",
+      "Its later name was Evangelical Mennonite Church, followed by Fellowship of Evangelical Churches in 2003. The institutional history describes education, service, and mission developments. The explorer preserves the older exhibit name and its Amish background, distinguishing it from the Canadian Evangelical Mennonite Conference."
+    ],
+    "references": [
+      {
+        "label": "Fellowship of Evangelical Churches: institutional history",
+        "url": "https://fecministries.org/about/history/"
+      },
+      {
+        "label": "FEC: historical directory",
+        "url": "https://fecministries.org/img/Embark/notebook.pdf"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "traditions": [
+      "amish"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "united-missionary-church",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
+    "category": "Tradition",
+    "title": "United Missionary Church and Missionary Church",
+    "date": {
+      "start": 1883,
+      "end": 1883,
+      "label": "1883",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "The exhibit’s Mennonite Brethren in Christ line developed into United Missionary Church and joined a union in 1969.",
+    "paragraphs": [
+      "The photographed chart follows nineteenth-century evangelical and holiness renewal through the Mennonite Brethren in Christ name. The Missionary Church’s own chronology records earlier unions of Mennonite-related groups and later adoption of the United Missionary Church name.",
+      "In 1969 the United Missionary Church united with the Missionary Church Association to form the Missionary Church. The explorer marks this as a union of particular organizations and a related history influenced by several traditions. It should be distinguished from Brethren in Christ and Mennonite Brethren, despite the resemblance of the older names."
+    ],
+    "references": [
+      {
+        "label": "Missionary Church: institutional chronology",
+        "url": "https://mcusa.org/history"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      }
+    ],
+    "traditions": [
+      "mennonite-church"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "soviet-mennonites",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
+    "category": "Tradition",
+    "title": "Soviet Mennonites: Kirchliche and Brethren",
+    "date": {
+      "start": 1917,
+      "end": 1991,
+      "label": "Soviet period 1917–1991",
+      "basis": "Historical period represented by the exhibit; not a church founding date."
+    },
+    "summary": "The chart follows Mennonite and Mennonite Brethren communities through revolution, war, repression, and migration in the Soviet period.",
+    "paragraphs": [
+      "The exhibit uses USSR “Kirchliche” and Mennonite Brethren for communities continuing in the Soviet Union. Kirchliche distinguished congregational Mennonites from the Brethren movement; the label is not a new denomination founded in 1917.",
+      "The timeline records the Russian Revolution, migrations during the 1920s, wartime displacement, and continuing believers under Soviet rule. This page covers the historical period 1917–1991. Family and church records need to be read within those changing political conditions, with the different congregational traditions kept visible."
+    ],
+    "references": [
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      }
+    ],
+    "traditions": [
+      "russian-mennonites",
+      "mennonite-brethren"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "mennonite-central-committee",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
+    "category": "Tradition",
+    "title": "Mennonite Central Committee",
+    "date": {
+      "start": 1920,
+      "end": 1920,
+      "label": "1920",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "Mennonite Central Committee began in 1920 as a cooperative response to hunger among communities in Ukraine.",
+    "paragraphs": [
+      "North American church leaders met in July 1920 to coordinate help for hungry people in Ukraine. The committee’s first official meeting followed on 27 September 1920.",
+      "The source chart includes MCC beside Mennonite World Conference because cooperation and service also belong to the family’s history. MCC is a relief and service organization, rather than a denomination or a branch produced by church division. Its archival record follows the development of this shared work."
+    ],
+    "references": [
+      {
+        "label": "Centre for Mennonite Brethren Studies: MCC records",
+        "url": "https://cmbs.mennonitebrethren.ca/inst_records/mennonite-central-committee/"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "traditions": [
+      "mennonites"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "mennonite-world-conference",
+    "kind": "tradition",
+    "aliases": [],
+    "people": [],
+    "category": "Tradition",
+    "title": "Mennonite World Conference",
+    "date": {
+      "start": 1925,
+      "end": 1925,
+      "label": "1925",
+      "basis": "Dated beginning or period described by the cited source; a period is not an exact founding date."
+    },
+    "summary": "A global fellowship established in 1925 to connect Anabaptist churches across national and tradition boundaries.",
+    "paragraphs": [
+      "The exhibit marks Mennonite World Conference beginning in 1925 and follows later assemblies. This line represents shared fellowship among churches, rather than a denomination replacing the older traditions.",
+      "Its work connects churches within the wider Anabaptist family. The explorer includes it as a cooperative institution alongside the different streams, and the timeline’s global map points beyond European and North American migrations to churches on other continents."
+    ],
+    "references": [
+      {
+        "label": "Mennonite World Conference",
+        "url": "https://mwc-cmm.org/"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "traditions": [
+      "mennonites",
+      "mennonite-brethren",
+      "brethren-in-christ"
+    ],
+    "status": "Overview"
+  },
+  {
+    "slug": "germantown-1683",
+    "title": "Mennonite migration to Germantown",
+    "kind": "event",
+    "date": {
+      "start": 1683,
+      "end": 1683,
+      "label": "1683",
+      "basis": "Milestone described by the cited institutional history or supplied timeline."
+    },
+    "summary": "The 1683 Germantown settlement opened an important North American chapter in Mennonite migration.",
+    "paragraphs": [
+      "The photographed timeline marks Mennonite settlement at Germantown, Pennsylvania, in 1683. Later migrations from Swiss and German communities brought further congregations to Pennsylvania and beyond. Different migration waves are shown separately from the Dutch–Prussian–Russian history."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Supplied timeline photograph 9377",
+        "url": "sources/church-history/photos/IMG_9377.jpg"
+      },
+      {
+        "label": "FEC: North American immigration history",
+        "url": "https://fecministries.org/about/history/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "swiss-south-german-mennonites"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "chortitza-1789",
+    "title": "Settlement at Chortitza",
+    "kind": "event",
+    "date": {
+      "start": 1789,
+      "end": 1789,
+      "label": "1789",
+      "basis": "Milestone described by the cited institutional history or supplied timeline."
+    },
+    "summary": "Communities established in the Russian Empire developed several church traditions and later migrated to the Americas and elsewhere.",
+    "paragraphs": [
+      "Prussian Mennonite settlers established Chortitza near the end of the eighteenth century. The archives preserve letters between the early settlers and the communities they had left, including correspondence dated 1789. Later settlements included Molotschna. Much of this history took place in what is now Ukraine; Russian Mennonite is a historical cultural description, not a claim that every community was ethnically Russian."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Mennonite Heritage Archives: early Chortitza correspondence",
+        "url": "https://www.mharchives.ca/documents-regarding-the-early-chortitza-mennonite-settlement/"
+      },
+      {
+        "label": "Supplied timeline photograph 9378",
+        "url": "sources/church-history/photos/IMG_9378.jpg"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "russian-mennonites"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "kleine-gemeinde-1812",
+    "title": "Kleine Gemeinde begins",
+    "kind": "event",
+    "date": {
+      "start": 1812,
+      "end": 1812,
+      "label": "1812",
+      "basis": "Milestone described by the cited institutional history or supplied timeline."
+    },
+    "summary": "A reform movement in the Molotschna settlement that began in 1812 under Klaas Reimer and later developed different national histories.",
+    "paragraphs": [
+      "Klaas Reimer and other Mennonites in Molotschna organized the Kleine Gemeinde, or Little Church, in 1812. They sought reform in church discipline and Christian life. Families migrated to Canada in 1874–1875."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Evangelical Mennonite Conference fonds: administrative history",
+        "url": "https://archives.mhsc.ca/index.php/evangelical-mennonite-conference-kleine-gemeinde-fonds"
+      },
+      {
+        "label": "Kleine Gemeinde: archival authority record",
+        "url": "https://archives.mhsc.ca/index.php/kleine-gemeinde-2"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "kleine-gemeinde"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "holdeman-1859",
+    "title": "John Holdeman’s separate fellowship",
+    "kind": "event",
+    "date": {
+      "start": 1859,
+      "end": 1859,
+      "label": "1859",
+      "basis": "Milestone described by the cited institutional history or supplied timeline."
+    },
+    "summary": "John Holdeman and others began worshiping separately in Ohio in 1859, forming a distinct Mennonite church history.",
+    "paragraphs": [
+      "John Holdeman of Wayne County, Ohio, urged spiritual renewal in the Mennonite church. In 1859 he and others began worshiping separately; the community developed as the Church of God in Christ, Mennonite. Holdeman traveled as an evangelist and wrote Mirror of Truth."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Church of God in Christ, Mennonite: its own history",
+        "url": "https://churchofgodinchristmennonite.net/who-we-are/"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "church-of-god-in-christ-mennonite"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "old-order-divisions",
+    "title": "Old Order Mennonite regional divisions",
+    "kind": "event",
+    "date": {
+      "start": 1872,
+      "end": 1872,
+      "label": "1872",
+      "basis": "Milestone described by the cited institutional history or supplied timeline."
+    },
+    "summary": "Old Order Mennonite fellowships developed through several regional divisions beginning in the later nineteenth century.",
+    "paragraphs": [
+      "In 1872, Jacob Wisler and supporters organized separate conferences in Indiana and Ohio after conflict over innovations in Mennonite church life. Related divisions followed in Ontario in 1889, Pennsylvania in 1893, and Virginia in 1901."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Mennonite Archives of Ontario: Old Order administrative history",
+        "url": "https://uwaterloo.ca/mennonite-archives-ontario/catalogs/archives/old-order-mennonites"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "old-order-mennonites"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "mcc-1920",
+    "title": "Mennonite relief cooperation: MCC",
+    "kind": "event",
+    "date": {
+      "start": 1920,
+      "end": 1920,
+      "label": "1920",
+      "basis": "Milestone described by the cited institutional history or supplied timeline."
+    },
+    "summary": "Mennonite Central Committee began in 1920 as a cooperative response to hunger among communities in Ukraine.",
+    "paragraphs": [
+      "North American church leaders met in July 1920 to coordinate help for hungry people in Ukraine. The committee’s first official meeting followed on 27 September 1920."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Centre for Mennonite Brethren Studies: MCC records",
+        "url": "https://cmbs.mennonitebrethren.ca/inst_records/mennonite-central-committee/"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "mennonite-central-committee"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "beachy-1927",
+    "title": "The Beachy Amish division",
+    "kind": "event",
+    "date": {
+      "start": 1927,
+      "end": 1927,
+      "label": "1927",
+      "basis": "Milestone described by the cited institutional history or supplied timeline."
+    },
+    "summary": "The Beachy Amish history began with a 1927 division in an Amish congregation in Somerset County, Pennsylvania.",
+    "paragraphs": [
+      "Moses M. Beachy’s congregation in Somerset County, Pennsylvania, became the setting of a division in 1927. The disagreement concerned church discipline, including the treatment of members who moved to other Anabaptist congregations."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Alvin J. Beachy: The Rise and Development of the Beachy Amish Mennonite Churches (1955)",
+        "url": "https://www.beachyam.org/librarybooks/Beachy%281955%29_Rise.htm"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "beachy-amish"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "rudnerweider-1937",
+    "title": "Rudnerweider church organization",
+    "kind": "event",
+    "date": {
+      "start": 1937,
+      "end": 1937,
+      "label": "1937",
+      "basis": "Milestone described by the cited institutional history or supplied timeline."
+    },
+    "summary": "A renewal movement among Sommerfeld Mennonites organized as the Rudnerweider church in 1937.",
+    "paragraphs": [
+      "The Rudnerweider church emerged from a division in the Sommerfeld church over the desire for renewal. Its official archival description dates organization to 1937. The photographed chart marks the preceding movement in 1936, distinguishing the beginning of renewal from formal organization."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Mennonite Heritage Archives: EMMC fonds",
+        "url": "https://www.mharchives.ca/holdings/organizations/EMMC_fonds.htm"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "rudnerweider-mennonites"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "emmc-1959",
+    "title": "Evangelical Mennonite Mission Conference",
+    "kind": "event",
+    "date": {
+      "start": 1959,
+      "end": 1959,
+      "label": "1959",
+      "basis": "Milestone described by the cited institutional history or supplied timeline."
+    },
+    "summary": "The Rudnerweider church adopted the Evangelical Mennonite Mission Conference identity on 1 July 1959.",
+    "paragraphs": [
+      "The conference continues the Rudnerweider movement organized in 1937. Its archival description dates the Evangelical Mennonite Mission Conference to 1 July 1959."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "EMMC: official archival fonds description",
+        "url": "https://www.mharchives.ca/holdings/organizations/EMMC_fonds.htm"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "evangelical-mennonite-mission-conference"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "emc-1960",
+    "title": "Evangelical Mennonite Conference name",
+    "kind": "event",
+    "date": {
+      "start": 1960,
+      "end": 1960,
+      "label": "1960",
+      "basis": "Milestone described by the cited institutional history or supplied timeline."
+    },
+    "summary": "The Canadian Kleine Gemeinde adopted the name Evangelical Mennonite Conference in 1960.",
+    "paragraphs": [
+      "The Canadian conference traces its roots to the Kleine Gemeinde movement of 1812 and the migration to Manitoba in 1874–1875. It adopted the name Evangelical Mennonite Church in 1952 and Evangelical Mennonite Conference in 1960."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Mennonite Heritage Archives: EMC introduction",
+        "url": "https://collections.mharchives.ca/evangelical-mennonite-conference-intro"
+      },
+      {
+        "label": "EMC: Circling the Globe, conference history",
+        "url": "https://www.emconference.ca/store/p/circling-the-globe"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "evangelical-mennonite-conference"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "missionary-union-1969",
+    "title": "The Missionary Church union",
+    "kind": "event",
+    "date": {
+      "start": 1969,
+      "end": 1969,
+      "label": "1969",
+      "basis": "Milestone described by the cited institutional history or supplied timeline."
+    },
+    "summary": "The exhibit’s Mennonite Brethren in Christ line developed into United Missionary Church and joined a union in 1969.",
+    "paragraphs": [
+      "The photographed chart follows nineteenth-century evangelical and holiness renewal through the Mennonite Brethren in Christ name. The Missionary Church’s own chronology records earlier unions of Mennonite-related groups and later adoption of the United Missionary Church name."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Missionary Church: institutional chronology",
+        "url": "https://mcusa.org/history"
+      },
+      {
+        "label": "Supplied timeline photograph 9379",
+        "url": "sources/church-history/photos/IMG_9379.jpg"
+      },
+      {
+        "label": "Supplied timeline photograph 9380",
+        "url": "sources/church-history/photos/IMG_9380.jpg"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "united-missionary-church"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "charity-1982",
+    "title": "Charity Christian Fellowship begins",
+    "kind": "event",
+    "date": {
+      "start": 1982,
+      "end": 1982,
+      "label": "1982",
+      "basis": "Milestone described by the cited institutional history or supplied timeline."
+    },
+    "summary": "Charity Christian Fellowship began in Lancaster County in 1982 and developed a sermon ministry reaching wider fellowships.",
+    "paragraphs": [
+      "Charity Christian Fellowship’s own account dates its beginning to 1982, when Mose Stoltzfus and Denny Kenaston established the congregation. It describes a desire for revived New Testament church life, followed by sermon distribution and mission work."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Charity Christian Fellowship: its own history",
+        "url": "https://charitychristianfellowship.org/church/about-us/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "charity-ministries"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "mcusa-2002",
+    "title": "Mennonite Church USA forms",
+    "kind": "event",
+    "date": {
+      "start": 2002,
+      "end": 2002,
+      "label": "2002",
+      "basis": "Milestone described by the cited institutional history or supplied timeline."
+    },
+    "summary": "Mennonite Church USA formed in 2002 through the union of U.S. congregations of MC and GC.",
+    "paragraphs": [
+      "Mennonite Church USA was formed in 2002 when U.S. congregations from the Mennonite Church and General Conference Mennonite Church joined in a new denomination."
+    ],
+    "aliases": [],
+    "references": [
+      {
+        "label": "Mennonite Church USA: historical overview",
+        "url": "https://www.mennoniteusa.org/who-are-mennonites/history/"
+      },
+      {
+        "label": "Mennonite Church USA: historical archives",
+        "url": "https://www.mennoniteusa.org/historical-archives/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "mennonite-church-usa"
+    ],
+    "status": "Overview",
+    "category": "Event"
+  },
+  {
+    "slug": "radical-reformation-roots",
+    "title": "The regional roots of Anabaptism",
+    "kind": "tradition",
+    "date": {
+      "start": 1525,
+      "end": 1530,
+      "label": "1520s: several regional beginnings",
+      "basis": "Regional beginnings summarized by the supplied timeline; no single institutional founder is implied."
+    },
+    "summary": "Anabaptism developed in several regions during the Radical Reformation, including Switzerland, South Germany and Austria, and the Netherlands.",
+    "paragraphs": [
+      "The photographed timeline begins with several lines in the 1520s. The Zürich baptisms are a defining event for the Swiss Brethren; other Anabaptist communities formed in different political and religious settings. The common Anabaptist name should therefore be read as a family of regional beginnings.",
+      "The explorer uses this entry to group early regional streams. Its connecting lines indicate emergence within the Radical Reformation, rather than descent of every stream from one Zürich congregation. The earlier Christian and medieval accounts in Martyrs’ Mirror remain linked through the era timeline, where their historical setting and the book’s interpretation are visible."
+    ],
+    "aliases": [
+      "Radical Reformation",
+      "Anabaptist origins",
+      "South German Anabaptists",
+      "Austrian Anabaptists"
+    ],
+    "references": [
+      {
+        "label": "Supplied timeline: early regional streams",
+        "url": "sources/church-history/photos/IMG_9375.jpg"
+      },
+      {
+        "label": "Mennonite World Conference: Anabaptist beginnings",
+        "url": "https://mwc-cmm.org/en/stories/teach-gospel-and-hold-faith/"
+      }
+    ],
+    "people": [],
+    "traditions": [
+      "swiss-brethren",
+      "hutterites",
+      "mennonites"
+    ],
+    "status": "Overview",
+    "category": "Tradition"
   }
 ]

@@ -1,0 +1,569 @@
+{
+  "families": [
+    {
+      "id": "origins",
+      "title": "Regional beginnings"
+    },
+    {
+      "id": "dutch",
+      "title": "Dutch and Prussian streams"
+    },
+    {
+      "id": "colonies",
+      "title": "Russian Empire and colony histories"
+    },
+    {
+      "id": "swiss",
+      "title": "Swiss and South German Mennonites"
+    },
+    {
+      "id": "amish",
+      "title": "Amish and Amish Mennonites"
+    },
+    {
+      "id": "communal",
+      "title": "Hutterites and Bruderhof"
+    },
+    {
+      "id": "related",
+      "title": "Brethren and evangelical histories"
+    },
+    {
+      "id": "modern",
+      "title": "Recent fellowships"
+    },
+    {
+      "id": "cooperation",
+      "title": "Unions and shared institutions"
+    }
+  ],
+  "nodes": [
+    {
+      "slug": "radical-reformation-roots",
+      "family": "origins",
+      "year": 1525
+    },
+    {
+      "slug": "swiss-brethren",
+      "family": "origins",
+      "year": 1525
+    },
+    {
+      "slug": "mennonites",
+      "family": "origins",
+      "year": 1530
+    },
+    {
+      "slug": "waterlanders",
+      "family": "dutch",
+      "year": 1550
+    },
+    {
+      "slug": "flemish-mennonites",
+      "family": "dutch",
+      "year": 1566
+    },
+    {
+      "slug": "frisian-mennonites",
+      "family": "dutch",
+      "year": 1566
+    },
+    {
+      "slug": "prussian-mennonites",
+      "family": "dutch",
+      "year": 1540
+    },
+    {
+      "slug": "dutch-mennonite-conference",
+      "family": "dutch",
+      "year": 1811
+    },
+    {
+      "slug": "russian-mennonites",
+      "family": "colonies",
+      "year": 1789
+    },
+    {
+      "slug": "old-colony",
+      "family": "colonies",
+      "year": 1789
+    },
+    {
+      "slug": "bergthal-mennonites",
+      "family": "colonies",
+      "year": 1836
+    },
+    {
+      "slug": "chortitzer-mennonites",
+      "family": "colonies",
+      "year": 1874
+    },
+    {
+      "slug": "sommerfeld-mennonites",
+      "family": "colonies",
+      "year": 1890
+    },
+    {
+      "slug": "kleine-gemeinde",
+      "family": "colonies",
+      "year": 1812
+    },
+    {
+      "slug": "mennonite-brethren",
+      "family": "colonies",
+      "year": 1860
+    },
+    {
+      "slug": "evangelical-mennonite-brethren",
+      "family": "colonies",
+      "year": 1889
+    },
+    {
+      "slug": "rudnerweider-mennonites",
+      "family": "colonies",
+      "year": 1937
+    },
+    {
+      "slug": "evangelical-mennonite-mission-conference",
+      "family": "colonies",
+      "year": 1959
+    },
+    {
+      "slug": "evangelical-mennonite-conference",
+      "family": "colonies",
+      "year": 1960
+    },
+    {
+      "slug": "soviet-mennonites",
+      "family": "colonies",
+      "year": 1917
+    },
+    {
+      "slug": "swiss-south-german-mennonites",
+      "family": "swiss",
+      "year": 1600
+    },
+    {
+      "slug": "mennonite-church",
+      "family": "swiss",
+      "year": 1700
+    },
+    {
+      "slug": "reformed-mennonites",
+      "family": "swiss",
+      "year": 1812
+    },
+    {
+      "slug": "old-order-mennonites",
+      "family": "swiss",
+      "year": 1872
+    },
+    {
+      "slug": "church-of-god-in-christ-mennonite",
+      "family": "swiss",
+      "year": 1859
+    },
+    {
+      "slug": "conservative-mennonites",
+      "family": "swiss",
+      "year": 1950
+    },
+    {
+      "slug": "amish",
+      "family": "amish",
+      "year": 1693
+    },
+    {
+      "slug": "old-order-amish",
+      "family": "amish",
+      "year": 1860
+    },
+    {
+      "slug": "evangelical-mennonite-church",
+      "family": "amish",
+      "year": 1866
+    },
+    {
+      "slug": "beachy-amish",
+      "family": "amish",
+      "year": 1927
+    },
+    {
+      "slug": "conservative-amish-mennonites",
+      "family": "amish",
+      "year": 1910
+    },
+    {
+      "slug": "hutterites",
+      "family": "communal",
+      "year": 1528
+    },
+    {
+      "slug": "bruderhof",
+      "family": "communal",
+      "year": 1920
+    },
+    {
+      "slug": "schwarzenau-brethren",
+      "family": "related",
+      "year": 1708
+    },
+    {
+      "slug": "brethren-in-christ",
+      "family": "related",
+      "year": 1775
+    },
+    {
+      "slug": "united-missionary-church",
+      "family": "related",
+      "year": 1883
+    },
+    {
+      "slug": "charity-ministries",
+      "family": "modern",
+      "year": 1982
+    },
+    {
+      "slug": "agape-fellowships",
+      "family": "modern",
+      "year": 2010
+    },
+    {
+      "slug": "general-conference",
+      "family": "cooperation",
+      "year": 1860
+    },
+    {
+      "slug": "mennonite-church-usa",
+      "family": "cooperation",
+      "year": 2002
+    },
+    {
+      "slug": "mennonite-world-conference",
+      "family": "cooperation",
+      "year": 1925
+    },
+    {
+      "slug": "mennonite-central-committee",
+      "family": "cooperation",
+      "year": 1920
+    }
+  ],
+  "edges": [
+    {
+      "from": "radical-reformation-roots",
+      "to": "swiss-brethren",
+      "type": "emergence",
+      "label": "Regional emergence within the Radical Reformation",
+      "source": "sources/church-history/photos/IMG_9375.jpg"
+    },
+    {
+      "from": "radical-reformation-roots",
+      "to": "mennonites",
+      "type": "emergence",
+      "label": "Regional emergence within the Radical Reformation",
+      "source": "sources/church-history/photos/IMG_9375.jpg"
+    },
+    {
+      "from": "radical-reformation-roots",
+      "to": "hutterites",
+      "type": "emergence",
+      "label": "Regional emergence within the Radical Reformation",
+      "source": "sources/church-history/photos/IMG_9375.jpg"
+    },
+    {
+      "from": "mennonites",
+      "to": "waterlanders",
+      "type": "development",
+      "label": "A distinct Dutch Mennonite stream",
+      "source": "https://anabaptistwiki.org/mediawiki/index.php?title=Waterlander_Confession_of_Faith_(1577)"
+    },
+    {
+      "from": "mennonites",
+      "to": "flemish-mennonites",
+      "type": "development",
+      "label": "A distinct Dutch Mennonite stream",
+      "source": "https://gameo.org/index.php?title=Flemish_Mennonites"
+    },
+    {
+      "from": "mennonites",
+      "to": "frisian-mennonites",
+      "type": "development",
+      "label": "A distinct Dutch Mennonite stream",
+      "source": "https://gameo.org/index.php?title=Frisian_Mennonites"
+    },
+    {
+      "from": "flemish-mennonites",
+      "to": "prussian-mennonites",
+      "type": "migration",
+      "label": "Dutch communities settle in the Vistula region",
+      "source": "sources/church-history/photos/IMG_9377.jpg"
+    },
+    {
+      "from": "frisian-mennonites",
+      "to": "prussian-mennonites",
+      "type": "migration",
+      "label": "Dutch communities settle in the Vistula region",
+      "source": "sources/church-history/photos/IMG_9377.jpg"
+    },
+    {
+      "from": "waterlanders",
+      "to": "dutch-mennonite-conference",
+      "type": "cooperation",
+      "label": "Later cooperation among Dutch congregations",
+      "source": "https://doopsgezinden.nl/organisatie/doelstelling-en-structuur/"
+    },
+    {
+      "from": "flemish-mennonites",
+      "to": "dutch-mennonite-conference",
+      "type": "cooperation",
+      "label": "Later cooperation among Dutch congregations",
+      "source": "https://doopsgezinden.nl/organisatie/doelstelling-en-structuur/"
+    },
+    {
+      "from": "frisian-mennonites",
+      "to": "dutch-mennonite-conference",
+      "type": "cooperation",
+      "label": "Later cooperation among Dutch congregations",
+      "source": "https://doopsgezinden.nl/organisatie/doelstelling-en-structuur/"
+    },
+    {
+      "from": "prussian-mennonites",
+      "to": "russian-mennonites",
+      "type": "migration",
+      "label": "Migration and settlement at Chortitza",
+      "source": "https://www.mharchives.ca/documents-regarding-the-early-chortitza-mennonite-settlement/"
+    },
+    {
+      "from": "russian-mennonites",
+      "to": "old-colony",
+      "type": "development",
+      "label": "A particular colony or congregational history",
+      "source": "https://www.mharchives.ca/documents-regarding-the-early-chortitza-mennonite-settlement/"
+    },
+    {
+      "from": "russian-mennonites",
+      "to": "bergthal-mennonites",
+      "type": "development",
+      "label": "A particular colony or congregational history",
+      "source": "https://www.mharchives.ca/holdings/organizations/ChortitzerMC_fonds.htm"
+    },
+    {
+      "from": "russian-mennonites",
+      "to": "kleine-gemeinde",
+      "type": "development",
+      "label": "A particular colony or congregational history",
+      "source": "https://archives.mhsc.ca/index.php/evangelical-mennonite-conference-kleine-gemeinde-fonds"
+    },
+    {
+      "from": "russian-mennonites",
+      "to": "mennonite-brethren",
+      "type": "development",
+      "label": "A particular colony or congregational history",
+      "source": "https://usmb.org/history/"
+    },
+    {
+      "from": "russian-mennonites",
+      "to": "evangelical-mennonite-brethren",
+      "type": "development",
+      "label": "A particular colony or congregational history",
+      "source": "https://www.fellowshipforward.org/history.html"
+    },
+    {
+      "from": "russian-mennonites",
+      "to": "soviet-mennonites",
+      "type": "development",
+      "label": "A particular colony or congregational history",
+      "source": "sources/church-history/photos/IMG_9379.jpg"
+    },
+    {
+      "from": "bergthal-mennonites",
+      "to": "chortitzer-mennonites",
+      "type": "migration",
+      "label": "Bergthal migration to Manitoba’s East Reserve",
+      "source": "https://archives.mhsc.ca/chortitzer-mennonite-conference-fonds"
+    },
+    {
+      "from": "bergthal-mennonites",
+      "to": "sommerfeld-mennonites",
+      "type": "development",
+      "label": "West Reserve church development",
+      "source": "https://archives.mhsc.ca/index.php/sommerfeld-mennonite-church-manitoba"
+    },
+    {
+      "from": "sommerfeld-mennonites",
+      "to": "rudnerweider-mennonites",
+      "type": "division",
+      "label": "Renewal and separate church organization",
+      "source": "https://www.mharchives.ca/holdings/organizations/EMMC_fonds.htm"
+    },
+    {
+      "from": "rudnerweider-mennonites",
+      "to": "evangelical-mennonite-mission-conference",
+      "type": "continuation",
+      "label": "New conference name in 1959",
+      "source": "https://www.mharchives.ca/holdings/organizations/EMMC_fonds.htm"
+    },
+    {
+      "from": "kleine-gemeinde",
+      "to": "evangelical-mennonite-conference",
+      "type": "continuation",
+      "label": "Canadian conference name adopted in 1960",
+      "source": "https://collections.mharchives.ca/evangelical-mennonite-conference-intro"
+    },
+    {
+      "from": "swiss-brethren",
+      "to": "swiss-south-german-mennonites",
+      "type": "migration",
+      "label": "Refuge and migration across Europe and to North America",
+      "source": "sources/church-history/photos/IMG_9376.jpg"
+    },
+    {
+      "from": "swiss-south-german-mennonites",
+      "to": "mennonite-church",
+      "type": "development",
+      "label": "North American congregational and conference history",
+      "source": "https://www.mennoniteusa.org/who-are-mennonites/history/"
+    },
+    {
+      "from": "mennonite-church",
+      "to": "reformed-mennonites",
+      "type": "division",
+      "label": "Separate fellowship develops",
+      "source": "https://en.wikisource.org/wiki/The_New_International_Encyclop%C3%A6dia/Mennonites"
+    },
+    {
+      "from": "mennonite-church",
+      "to": "old-order-mennonites",
+      "type": "division",
+      "label": "Separate fellowship develops",
+      "source": "https://uwaterloo.ca/mennonite-archives-ontario/catalogs/archives/old-order-mennonites"
+    },
+    {
+      "from": "mennonite-church",
+      "to": "church-of-god-in-christ-mennonite",
+      "type": "division",
+      "label": "Separate fellowship develops",
+      "source": "https://churchofgodinchristmennonite.net/who-we-are/"
+    },
+    {
+      "from": "mennonite-church",
+      "to": "conservative-mennonites",
+      "type": "development",
+      "label": "Several later conservative fellowships; multiple beginnings",
+      "source": "sources/church-history/photos/IMG_9380.jpg"
+    },
+    {
+      "from": "swiss-brethren",
+      "to": "amish",
+      "type": "division",
+      "label": "The division associated with Jakob Ammann in 1693",
+      "source": "sources/church-history/photos/IMG_9377.jpg"
+    },
+    {
+      "from": "amish",
+      "to": "old-order-amish",
+      "type": "development",
+      "label": "Later Amish and Amish Mennonite development",
+      "source": "https://rosedalenetwork.org/about/faq/"
+    },
+    {
+      "from": "amish",
+      "to": "evangelical-mennonite-church",
+      "type": "development",
+      "label": "Later Amish and Amish Mennonite development",
+      "source": "https://fecministries.org/about/history/"
+    },
+    {
+      "from": "amish",
+      "to": "conservative-amish-mennonites",
+      "type": "development",
+      "label": "Later Amish and Amish Mennonite development",
+      "source": "https://rosedalenetwork.org/history-of-rosedalenetwork/"
+    },
+    {
+      "from": "old-order-amish",
+      "to": "beachy-amish",
+      "type": "division",
+      "label": "The Somerset County division of 1927",
+      "source": "https://www.beachyam.org/librarybooks/Beachy%281955%29_Rise.htm"
+    },
+    {
+      "from": "hutterites",
+      "to": "bruderhof",
+      "type": "association",
+      "label": "Historical fellowship and communal influence; independent beginning in 1920",
+      "source": "https://www.bruderhof.com/history"
+    },
+    {
+      "from": "radical-reformation-roots",
+      "to": "schwarzenau-brethren",
+      "type": "influence",
+      "label": "Anabaptist and Pietist influences on a later movement",
+      "source": "https://www.brethren.org/about/history/"
+    },
+    {
+      "from": "swiss-south-german-mennonites",
+      "to": "brethren-in-christ",
+      "type": "influence",
+      "label": "Anabaptist background interacts with Pietism",
+      "source": "https://bic-history.org/history/"
+    },
+    {
+      "from": "mennonite-church",
+      "to": "united-missionary-church",
+      "type": "development",
+      "label": "Evangelical renewal, several unions, and later Missionary Church history",
+      "source": "sources/church-history/photos/IMG_9379.jpg"
+    },
+    {
+      "from": "radical-reformation-roots",
+      "to": "charity-ministries",
+      "type": "influence",
+      "label": "Anabaptist background alongside other evangelical influences",
+      "source": "https://charitychristianfellowship.org/church/about-us/"
+    },
+    {
+      "from": "charity-ministries",
+      "to": "agape-fellowships",
+      "type": "community-account",
+      "label": "Relationship and approximate date supplied by the site owner",
+      "source": "https://github.com/trueChristian/history.truechristian.church"
+    },
+    {
+      "from": "mennonites",
+      "to": "general-conference",
+      "type": "cooperation",
+      "label": "Cooperative conference established in North America",
+      "source": "sources/church-history/photos/IMG_9379.jpg"
+    },
+    {
+      "from": "general-conference",
+      "to": "mennonite-church-usa",
+      "type": "union",
+      "label": "U.S. congregations unite in 2002",
+      "source": "https://www.mennoniteusa.org/who-are-mennonites/history/"
+    },
+    {
+      "from": "mennonite-church",
+      "to": "mennonite-church-usa",
+      "type": "union",
+      "label": "U.S. congregations unite in 2002",
+      "source": "https://www.mennoniteusa.org/who-are-mennonites/history/"
+    },
+    {
+      "from": "mennonites",
+      "to": "mennonite-world-conference",
+      "type": "cooperation",
+      "label": "Shared institution; not a denominational split",
+      "source": "sources/church-history/photos/IMG_9379.jpg"
+    },
+    {
+      "from": "mennonites",
+      "to": "mennonite-central-committee",
+      "type": "cooperation",
+      "label": "Shared institution; not a denominational split",
+      "source": "sources/church-history/photos/IMG_9379.jpg"
+    }
+  ]
+}
