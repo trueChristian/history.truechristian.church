@@ -1,0 +1,115 @@
+{
+  "brand": {
+    "name": "A True Christian Church",
+    "canonicalOrigin": "https://truechristian.church",
+    "home": "https://truechristian.church/",
+    "logo": "assets/brand/logo.jpg",
+    "logoWidth": 288,
+    "logoHeight": 77,
+    "logoAlt": "A True Christian Church"
+  },
+  "header": {
+    "home": { "label": "Home", "href": "/" },
+    "items": [
+      {
+        "label": "The Holy Scriptures",
+        "children": [
+          { "label": "Text", "href": "/scriptures/kjv/" }
+        ]
+      },
+      {
+        "label": "Sermons",
+        "children": [
+          { "label": "Videos", "href": "/videos" },
+          { "label": "The Godly Home", "href": "/godlyhome" }
+        ]
+      },
+      {
+        "label": "Articles",
+        "href": "/remnant-articles",
+        "presentation": "mega-menu",
+        "sourceReference": "docs/source/header-desktop-source.html",
+        "navigationData": "src/data/main-site-navigation.json"
+      },
+      {
+        "label": "Daily",
+        "children": [
+          { "label": "Daily Light", "href": "/daily-light" }
+        ]
+      },
+      { "label": "Services", "subtitle": "Join us", "href": "/services", "icon": "world" }
+    ],
+    "siteSpecificLinks": {
+      "position": "after-home",
+      "rule": "Render every navigation link required by the site being built using the canonical visual and accessibility pattern."
+    }
+  },
+  "footer": {
+    "linkPolicy": {
+      "sourceForm": "Root-relative paths are preserved in this data exactly as supplied.",
+      "portableForm": "Resolve root-relative footer paths against brand.canonicalOrigin when the consuming site uses another origin."
+    },
+    "directoryGroups": [
+      {
+        "label": "Church Info",
+        "links": [
+          { "label": "History", "href": "/history" },
+          { "label": "Brotherhood", "href": "/brotherhood" },
+          { "label": "Blog", "href": "/blog/" },
+          { "label": "Testimonies", "href": "/testimonies/" },
+          { "label": "Confession of Faith", "href": "/confession-of-faith" },
+          { "label": "Storehouse", "href": "/storehouse" },
+          { "label": "Privacy Policy", "href": "/privacy-policy" },
+          { "label": "Copyright", "href": "/copyright" }
+        ]
+      },
+      {
+        "label": "Projects",
+        "links": [
+          { "label": "GETBIBLE", "href": "https://getBible.life/", "external": true, "newTab": true },
+          { "label": "Loudvoice", "href": "https://www.loudvoice.org/", "external": true, "newTab": true },
+          { "label": "SHE Cares", "href": "https://shecares.life/", "external": true, "newTab": false },
+          { "label": "Trousseau Chest", "href": "/trousseauchest" },
+          { "label": "Why Bible", "href": "/whybible/" },
+          { "label": "we fear God", "href": "/wefeargod/" },
+          { "label": "Amana", "href": "/amana" },
+          { "label": "Mission (Namibia)", "href": "/mission" }
+        ]
+      },
+      {
+        "label": "Welcome",
+        "links": [
+          { "label": "Follow Jesus", "href": "/comeandfollowjesus" },
+          { "label": "Live Services", "href": "/services" },
+          { "label": "Locations", "href": "/fellowships" },
+          { "label": "Events", "href": "/events" },
+          { "label": "Revival", "href": "/revival" },
+          { "label": "Telegram", "href": "/telegram" },
+          { "label": "Contact Us", "href": "/contact-us" }
+        ]
+      }
+    ],
+    "social": {
+      "label": "Social Outreach",
+      "links": [
+        { "label": "GitHub", "href": "https://github.com/trueChristian", "icon": "github", "external": true, "newTab": true },
+        { "label": "Telegram", "href": "/telegram", "icon": "telegram", "external": false, "newTab": true }
+      ],
+      "desktopImage": "/images/city-skyline-skyscrapers-top.jpg",
+      "repositoryReferenceImage": "assets/footer/city-skyline-skyscrapers-top.jpg"
+    },
+    "copyright": {
+      "prefix": "Copyright © trueChristian.Church",
+      "links": [
+        { "label": "free distribution only", "href": "/copyright" },
+        { "label": "Privacy Policy", "href": "/privacy-policy" },
+        { "label": "Mission", "href": "/mission/" },
+        { "label": "Revival", "href": "/revival/" },
+        { "label": "We Fear God", "href": "/wefeargod/" },
+        { "label": "Why we believe the Bible", "href": "/whybible/" },
+        { "label": "Trousseau Chest", "href": "/trousseauchest/" }
+      ],
+      "separator": " | "
+    }
+  }
+}
