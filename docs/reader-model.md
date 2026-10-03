@@ -39,3 +39,9 @@ Old fragments on an account URL are redirected to their exact native owner when 
 ## Presentation and scope
 
 Reader styling belongs to this site: bounded reading measure, responsive controls, light/dark appearance, persisted text size, poetry/stanza spacing and horizontally usable tables. No source words are rewritten. The book’s editorial, religious and historical wording remains attributed to the source. The user’s separate homepage/timeline design discussion is outside this reader change.
+
+## Deployment cache compatibility
+
+The application, transitive UI modules, search worker and site CSS are bundled by Astro with content-derived filenames. Runtime catalog, full-text search, branch and original-anchor data also use content-hashed JSON URLs. The shared theme is pinned by its revision in its stylesheet/script URLs. Unversioned data aliases remain for diagnostics and older links, but newly generated pages never request them.
+
+This prevents returning readers from combining new page markup with an older cached reader application or data set. Browser tests serve stale payloads at all former unversioned runtime URLs and require the new reader to avoid them. Production upgrade verification retains the existing browser cache; it does not depend on a manual cache clear. The reader routes older fragments both on initial load and on later same-document hash changes, ignoring superseded lookups.
