@@ -10,6 +10,11 @@ async function walk(dir){const files=[];for(const e of await fs.readdir(dir,{wit
 const files=await walk(OUT),existing=new Set(files.map(f=>path.relative(OUT,f).split(path.sep).join('/'))),errors=[];
 const allHtmlFiles=files.filter(f=>f.endsWith('.html')&&!f.endsWith('/sources/martyrs-mirror/original.html'));
 const htmlFiles=[];for(const f of allHtmlFiles)if(!(await fs.readFile(f,'utf8')).includes('data-legacy-redirect'))htmlFiles.push(f);
+const anchors=new Map();
+async function hasAnchor(relative,hash){
+ if(!anchors.has(relative)){const text=await fs.readFile(path.join(OUT,relative),'utf8');anchors.set(relative,new Set([...text.matchAll(/\b(?:id|name)="([^"]+)"/g)].map(m=>m[1])));}
+ return anchors.get(relative).has(decodeURIComponent(hash.slice(1)));
+}
 for(const filename of htmlFiles){
   const html=await fs.readFile(filename,'utf8'),relative=path.relative(OUT,filename).split(path.sep).join('/');
   const renderedBase=html.match(/data-base(?:="([^"]*)")?/);
@@ -29,6 +34,7 @@ for(const filename of htmlFiles){
     const local=pathname.replace(/^\//,'');
     const indexFile=local?local.replace(/\/$/,'')+'/index.html':'index.html';
     if(!existing.has(local) && !existing.has(indexFile))errors.push(`${relative}: broken link ${link}`);
+    else if(resolved.hash){const target=existing.has(local)?local:indexFile;if(target.endsWith('.html')&&!await hasAnchor(target,resolved.hash))errors.push(`${relative}: missing anchor ${link}`);}
   }
 }
 for(const asset of ['brand/logo.jpg','favicons/favicon.ico','footer/city-skyline-skyscrapers-top.jpg']){
@@ -36,7 +42,7 @@ for(const asset of ['brand/logo.jpg','favicons/favicon.ico','footer/city-skyline
   assert.equal(digest(await fs.readFile(path.join(OUT,'assets',asset))),digest(await fs.readFile(path.join(ROOT,'vendor/theme/assets',asset))),`Theme asset changed: ${asset}`);
 }
 assert.equal(info.publishedExhibitMedia,0);
-assert.ok(!files.some(f=>/\/sources\/(church-history|behalt)\/.*\.(jpg|mp4|heic)$/i.test(f)),'Exhibit research media must not be published');
+assert.ok(!files.some(f=>/\/sources\/(church-history|behalt)\/.*\.(?:jpe?g|png|webp|gif|mp4|mov|heic)$/i.test(f)),'Exhibit research media must not be published');
 for(const filename of htmlFiles){
   const html=await fs.readFile(filename,'utf8');
   assert.ok(!/<(?:img|video|source)\b[^>]*(?:church-history|behalt)/i.test(html),`Exhibit media embedded in ${filename}`);
@@ -48,7 +54,7 @@ const catalog=JSON.parse(await fs.readFile(path.join(OUT,'assets',info.defaultLo
 assert.equal(catalog.filter(r=>r.kind==='story').length,1272);
 assert.equal(info.pages,htmlFiles.length-1);
 assert.ok(existing.has('index.html'),'Default-language redirect must exist');
-assert.ok(!existing.has('af/index.html')&&!existing.has('de/index.html'),'Unpublished languages must not be advertised');
+for(const candidate of ['af','de'])if(!info.locales.includes(candidate))assert.ok(!existing.has(candidate+'/index.html'),'Unpublished languages must not be advertised');
 const eraIds=[...timeline.matchAll(/id="(era-[^"]+)"/g)].map(m=>m[1]);
 assert.equal(new Set(eraIds).size,eraIds.length,'Timeline era anchors must be unique');
 for(const locale of info.locales){

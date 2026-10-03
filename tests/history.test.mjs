@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {gunzipSync} from 'node:zlib';
-import {dailySelection,contributionURL,searchRecords,normalize,eraFor} from '../src/lib/history.mjs';
+import {dailySelection,contributionURL,searchRecords,normalize,eraFor,linkedHistoryText} from '../src/lib/history.mjs';
 
 test('daily stories stay stable for a date and change without repeats on the next day',()=>{
   const records=Array.from({length:60},(_,i)=>({slug:`story-${i}`,kind:'story',status:'Historical source',category:'Source account',textLength:500}));
@@ -54,4 +54,11 @@ test('import retains the supplied section count, images, source date discrepancy
   const twelfth=imported.records.find(r=>r.chapter==='AN ACCOUNT OF THE HOLY BAPTISM IN THE TWELFTH CENTURY.');
   assert.equal(twelfth.century,12);
   assert.equal(eraFor({date:{start:1525,end:1525}}),'radical-reformation');
+});
+
+test('editorial prose links only explicitly related full names and escapes content',()=>{
+ const entities=[{title:'Felix Manz',aliases:['Felix Mantz'],route:'people/felix-manz/'},{title:'Zürich',route:'places/zurich/'}];
+ const output=linkedHistoryText('Felix Mantz lived in Zürich. John is not an inferred identity. <script>',entities,p=>'/en/'+p);
+ assert.match(output,/<a href="\/en\/people\/felix-manz\/">Felix Mantz<\/a>/);assert.match(output,/<a href="\/en\/places\/zurich\/">Zürich<\/a>/);
+ assert.ok(output.includes('John is not an inferred identity'));assert.ok(!output.includes('<script>'));
 });

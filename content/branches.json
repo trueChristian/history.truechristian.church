@@ -247,6 +247,31 @@
       "slug": "mennonite-central-committee",
       "family": "cooperation",
       "year": 1920
+    },
+    {
+      "slug": "high-german-mennonites",
+      "family": "dutch",
+      "year": 1550
+    },
+    {
+      "slug": "lamb-and-sun-mennonites",
+      "family": "dutch",
+      "year": 1664
+    },
+    {
+      "slug": "old-flemish-mennonites",
+      "family": "dutch",
+      "year": 1630
+    },
+    {
+      "slug": "stuckey-amish",
+      "family": "amish",
+      "year": 1872
+    },
+    {
+      "slug": "reinlander-mennonites",
+      "family": "colonies",
+      "year": 1875
     }
   ],
   "edges": [
@@ -564,6 +589,55 @@
       "type": "cooperation",
       "label": "Shared institution; not a denominational split",
       "source": "sources/church-history/photos/IMG_9379.jpg"
+    },
+    {
+      "from": "radical-reformation-roots",
+      "to": "high-german-mennonites",
+      "type": "emergence",
+      "label": "South German and Rhineland believers develop the High German fellowship; some migrate to Dutch cities",
+      "source": "https://gameo.org/index.php?title=High_German_Mennonites"
+    },
+    {
+      "from": "high-german-mennonites",
+      "to": "lamb-and-sun-mennonites",
+      "type": "development",
+      "label": "Amsterdam High German–Frisian union joins the Flemish congregation in 1639; the congregation later divides in 1664",
+      "source": "https://gameo.org/index.php?title=High_German_Mennonites"
+    },
+    {
+      "from": "flemish-mennonites",
+      "to": "lamb-and-sun-mennonites",
+      "type": "development",
+      "label": "The Amsterdam congregation’s 1664 division yields the Lamb and Sun groups; they reunite in 1801",
+      "source": "https://gameo.org/index.php?title=Emblems"
+    },
+    {
+      "from": "lamb-and-sun-mennonites",
+      "to": "dutch-mennonite-conference",
+      "type": "cooperation",
+      "label": "The chart follows the reunited Dutch congregations toward the 1811 association",
+      "source": "sources/church-history/photos/IMG_9378.jpg"
+    },
+    {
+      "from": "flemish-mennonites",
+      "to": "old-flemish-mennonites",
+      "type": "division",
+      "label": "Groningen and Danzig Old Flemish congregations retain separate fellowship during seventeenth-century unions",
+      "source": "https://gameo.org/index.php?title=Flemish_Mennonites"
+    },
+    {
+      "from": "amish",
+      "to": "stuckey-amish",
+      "type": "division",
+      "label": "The 1872 withdrawal of fellowship from Joseph Stuckey and supporting Illinois congregations",
+      "source": "https://gameo.org/index.php?title=Stuckey%2C_Joseph_%281825-1902%29"
+    },
+    {
+      "from": "old-colony",
+      "to": "reinlander-mennonites",
+      "type": "development",
+      "label": "Immigrants from Chortitza and Fürstenland organize the Reinländer church in Manitoba in 1875",
+      "source": "https://gameo.org/index.php?title=Reinlander_Mennoniten_Gemeinde_%28Manitoba%29"
     }
   ]
 }

@@ -32,6 +32,8 @@ jobs:
         env:
           SITE_BASE_PATH: /history.truechristian.church
           SITE_ORIGIN: https://truechristian.github.io
+      - name: Validate a future-language fixture without publishing it
+        run: npm run test:locales
       - name: Upload the reviewable site
         uses: actions/upload-artifact@v4
         with:

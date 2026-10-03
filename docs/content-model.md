@@ -54,3 +54,15 @@ Contribution links encode the title, canonical page URL, record slug, current da
 `content/branches.json` contains the named families, dated nodes, and connections. Each connection has a type, explanation, and reference. `place` records generate `/places/` pages; their dates identify events or activity, not the founding date of a city.
 
 The preparation step copies only Martyrs’ Mirror source assets into publication. Exhibit photographs and Behalt media remain research records in the repository. External links in historical overviews are presented in numbered references.
+
+## Integrated source histories and coverage
+
+The build merges curated records and the two authored enrichment collections by permanent slug. `sourceAccounts` contains reviewed exact Martyrs’ Mirror section links, displayed bidirectionally. Automatic full-name mentions are a secondary discovery aid; they do not establish identity or relationships by themselves. Explicit people/place/tradition relationships also link the named entities in editorial prose. Source wording itself is preserved.
+
+`imageSources` maps each editorial illustration to its owning source account, so artwork can be followed back to its context. The 45 physical source images include title/ornament material; this is not a claim of 45 distinct historical scenes.
+
+`docs/source-coverage.json` inventories the supplied exhibit captions, branch labels, leader lines, and small annotations. Its public equivalent is `/en/sources/coverage/`. It distinguishes mapped narratives, surrounding context, partial subjects, and source readings needing clarification. It is not an assertion that every chart microannotation has a complete independent history.
+
+`content/source-metadata-corrections.json` applies reviewed date or relationship metadata without changing imported headings, source text, anchors, or the intact edition. A dated activity is not silently reclassified as a lifespan.
+
+Read [localization.md](localization.md) before adding languages. All sources, text overlays and interface translations remain within this repository.

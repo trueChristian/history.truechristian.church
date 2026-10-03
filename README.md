@@ -17,11 +17,12 @@ Open http://127.0.0.1:8080. `npm run build` prepares the source data and generat
 ## Included
 
 - A vertical timeline with SVG branch connections, era/stream/type filters, chronology controls, title/name search, and source-account pagination.
-- Original historical overviews for 42 traditions and shared institutions, 30 events, 14 people, and 10 places.
-- All 1,272 supplied Martyrs’ Mirror sections and 45 book illustrations, the intact edition, source anchors, and readable Markdown equivalents.
+- Original historical overviews for 47 traditions and shared institutions, 79 events, 67 people, and 20 places.
+- All 1,272 supplied Martyrs’ Mirror sections and 45 original book image files, the intact edition, source anchors, and readable Markdown equivalents.
 - Century guides integrated into the timeline, with direct links to the corresponding accounts.
 - Six daily source accounts and full-text search with aliases, types, eras, and date ranges.
 - Internal links connecting people, places, events, branch histories, and source accounts.
+- A public source-coverage guide mapping 109 exhibit captions, a dated statistics block, 60 branch labels, 12 leader lines, and 201 smaller chart annotations, with bounded evidence requests where a source cannot be read or a detailed account remains open.
 - Numbered references; the historical explanation is written and presented on this site.
 - Contextual GitHub issue drafts for corrections and additions.
 - System-linked appearance with a saved override, accessible mobile menus, and unchanged shared-theme assets.
@@ -52,9 +53,9 @@ English is published at `/en/`. Old URLs redirect to the same page. Stable recor
 
 ## Edit the history
 
-Edit `content/curated.json` for dated people, events, traditions, places, summaries, full paragraphs, relationships, and references. Edit `content/branches.json` for the branch families and documented connections. Every page’s contribution link opens an issue draft carrying its title, canonical URL, record, and current date label.
+Edit `content/curated.json`, `content/source-enrichments.json`, or `content/panel-histories.json` for dated people, events, traditions, places, summaries, full paragraphs, relationships, and references. Edit `content/branches.json` for the branch families and documented connections. Every page’s contribution link opens an issue draft carrying its title, canonical URL, record, and current date label.
 
-Use `content/overrides.json` for reviewed metadata changes to imported accounts. The book’s wording and original heading remain preserved. Reimport with:
+Use `content/overrides.json` and `content/source-metadata-corrections.json` for reviewed metadata changes to imported accounts. The book’s wording and original heading remain preserved. Reimport with:
 
 ```bash
 python3 scripts/import_martyrs_mirror.py '/path/to/Martyrs Mirror.zip'

@@ -12,7 +12,8 @@
     "serve": "node scripts/serve.mjs",
     "prepare:content": "node scripts/prepare.mjs",
     "typecheck": "astro check",
-    "dev": "npm run prepare:content && astro dev"
+    "dev": "npm run prepare:content && astro dev",
+    "test:locales": "node tests/locale-build.fixture.mjs"
   },
   "engines": {
     "node": ">=22.14"
