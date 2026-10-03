@@ -138,9 +138,10 @@ function card(r){
 }
 const cards=list=>`<div class="card-grid">${list.map(card).join('')}</div>`;
 function pageLinks(title,route,record={}){
+  const timelineRecord=record.readerRecordSlug?bySlug.get(record.readerRecordSlug):record;
   const sourcePath=locale.id!==localeConfig.defaultLocale?`content/locales/${locale.id}/records.json`:record.sourcePath||(record.source==='martyrs-mirror'?'content/overrides.json':['','timeline/','branches/'].includes(route)?'src/components/Timeline.astro':'scripts/prepare.mjs');
   const edit=`${REPOSITORY}/edit/${sourceRef}/${sourcePath}`;
-  return `<aside class="page-tools" aria-label="Page sources and contributions">${record.slug?`<a href="${url('timeline/')}?kind=${record.kind}&q=${encodeURIComponent(record.title)}">Open this record on the timeline</a>`:''}<a href="${url(route+'README.md')}">Read this page as Markdown</a><a href="${esc(contributionURL({...record,title:record.title||title},canonical(route)))}" rel="noopener">${record.status==='Research needed'?'Add the missing history':'Suggest a correction or addition'}</a><a href="${esc(edit)}" rel="noopener">Edit this page’s source on GitHub</a></aside>`;
+  return `<aside class="page-tools" aria-label="Page sources and contributions">${timelineRecord?.slug?`<a href="${url('timeline/')}?kind=${timelineRecord.kind}&q=${encodeURIComponent(timelineRecord.title)}">Open this record on the timeline</a>`:''}<a href="${url(route+'README.md')}">Read this page as Markdown</a><a href="${esc(contributionURL({...record,title:record.title||title},canonical(route)))}" rel="noopener">${record.status==='Research needed'?'Add the missing history':'Suggest a correction or addition'}</a><a href="${esc(edit)}" rel="noopener">Edit this page’s source on GitHub</a></aside>`;
 }
 function lead(kicker,title,description){return `<div class="page-lead"><p class="eyebrow">${esc(kicker)}</p><h1>${esc(title)}</h1><p class="lead">${esc(description)}</p></div>`;}
 const referenceURL=value=>value.startsWith('sources/church-history/photos/')?`${REPOSITORY}/blob/main/${value}`:/^https?:/.test(value)?value:url(value);

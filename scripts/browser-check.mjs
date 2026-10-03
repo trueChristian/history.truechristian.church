@@ -397,6 +397,33 @@ try{
     await noScript.close();
   });
 
+  await check('Reader continuations return to their parent account on the timeline',async()=>{
+    const account=reader.byRecord.get('mm-confession-of-faith-according-to-the-holy-word-of-god');
+    await page.goto(url(account[1].route));
+    await page.getByRole('link',{name:'Open this record on the timeline',exact:true}).click();
+    await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
+    assert.ok(await page.locator(`[data-record="${account[0].recordSlug}"]`).isVisible());
+    assert.ok(!new URL(page.url()).searchParams.get('q').includes('Page 2 of'));
+    await page.locator(`[data-record="${account[0].recordSlug}"] h3 a`).click();
+    assert.ok(page.url().endsWith(account[0].route));
+    await page.locator('[data-reader-navigation="top"] a[rel=next]').click();
+    assert.ok(page.url().endsWith(account[1].route));
+    await page.getByRole('link',{name:'Open this record on the timeline',exact:true}).click();
+    await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
+    assert.ok(await page.locator(`[data-record="${account[0].recordSlug}"]`).isVisible());
+    const sourceRoute='stories/mm-dirk-willems-a-d-1569/';
+    for(const historyRoute of ['people/dirk-willems/','events/dirk-willems-rescue/','places/asperen/']){
+      await page.goto(url(sourceRoute));
+      await page.locator(`.reader-related a[href$="/${historyRoute}"]`).click();
+      assert.ok(page.url().endsWith(historyRoute));
+      await page.locator(`.source-reading-entry a[href$="/${sourceRoute}"]`).click();
+      assert.ok(page.url().endsWith(sourceRoute));
+      assert.equal(await page.locator('[data-reader-page]').getAttribute('data-reader-record'),'mm-dirk-willems-a-d-1569');
+    }
+    await page.goto(url(reader.firstPage.route));
+    assert.equal(await page.getByRole('link',{name:'Open this record on the timeline',exact:true}).count(),0);
+  });
+
   await check('Deployment upgrades bypass stale unversioned code, styles and archive data',async()=>{
     await page.goto(url('sources/martyrs-mirror/'));
     await page.locator('#book-contents-query').fill('Confession of faith');
