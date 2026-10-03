@@ -58,7 +58,7 @@ try{
     await page.evaluate(()=>document.dispatchEvent(new Event('visibilitychange')));
     await page.waitForFunction(()=>document.querySelector('#daily-date')?.textContent.startsWith('2026-10-04'));
     assert.equal((await dailyLinks()).filter(link=>first.includes(link)).length,0);
-    await page.screenshot({path:path.join(screenshots,'home-desktop.png'),fullPage:true});
+    await page.screenshot({path:path.join(screenshots,'home-desktop.png')});
   });
 
   await check('System appearance tracks the browser and saved overrides survive reload',async()=>{
@@ -73,21 +73,15 @@ try{
     await page.selectOption('#theme-mode','light');
   });
 
-  await check('Every era opens a single timeline panel and a linked event',async()=>{
+  await check('Vertical timeline filters eras and opens an internal milestone',async()=>{
     await page.goto(url('timeline/'));
-    const ids=await page.locator('[data-era-link]').evaluateAll(links=>links.map(link=>link.dataset.eraLink));
-    assert.equal(ids.length,6);
-    for(const id of ids){
-      await page.locator(`[data-era-link="${id}"]`).click();
-      await page.waitForFunction(era=>{
-        const panels=[...document.querySelectorAll('[data-era-panel]')].filter(panel=>!panel.hidden);
-        return panels.length===1 && panels[0].dataset.eraPanel===era;
-      },id);
-    }
-    await page.goto(url('timeline/#radical-reformation'));
-    await page.locator('[data-era-panel="radical-reformation"] .timeline-event a').first().click();
-    assert.match(page.url(),/\/events\//);
-    assert.ok(await page.locator('.prose').innerText());
+    await page.waitForFunction(()=>document.querySelector('#timeline-status')?.textContent.includes('showing'));
+    assert.equal(await page.locator('.atlas-navigation [data-atlas-era]').count(),6);
+    await page.locator('[data-atlas-era="radical-reformation"]').click();
+    await page.waitForFunction(()=>document.querySelector('#timeline-filters [name=era]').value==='radical-reformation' && !document.querySelector('#era-living-traditions'));
+    await page.selectOption('#timeline-filters [name=kind]','event');
+    await page.locator('#timeline-entries h3 a').first().click();
+    assert.match(page.url(),/\/events\//);assert.ok(await page.locator('.prose').innerText());
   });
 
   await check('Story filters, query links, and pagination load the complete archive',async()=>{
@@ -127,23 +121,55 @@ try{
     const markdown=await context.request.get(url('stories/mm-dirk-willems-a-d-1569/README.md'));
     assert.equal(markdown.status(),200);assert.match(await markdown.text(),/Asperen/);
     await page.goto(url('sources/church-history/'));
-    assert.equal(await page.locator('.photo-card').count(),40);
-    assert.equal(await page.getByText('Behalt artwork:',{exact:false}).count(),8);
+    assert.equal(await page.locator('main img, main video').count(),0);
   });
 
-  await check('Missing-history contribution links carry the topic and canonical page URL',async()=>{
+  await check('Community-account contribution links carry the topic and canonical page URL',async()=>{
     await page.goto(url('traditions/agape-fellowships/'));
-    const link=new URL(await page.locator('.research-notice a').getAttribute('href'));
+    assert.ok(await page.getByText('Attributed community account',{exact:true}).isVisible());
+    const link=new URL(await page.locator('.page-tools a').last().getAttribute('href'));
     assert.equal(link.pathname,'/trueChristian/history.truechristian.church/issues/new');
-    assert.equal(link.searchParams.get('title'),'Add history: Agape fellowships');
+    assert.equal(link.searchParams.get('title'),'Correction: Agape fellowships');
     assert.match(link.searchParams.get('body'),/Record: agape-fellowships/);
     assert.match(link.searchParams.get('body'),/traditions\/agape-fellowships\//);
+  });
+
+  await check('Branch streams have connected SVG paths and internal people and place links',async()=>{
+    await page.goto(url('branches/?family=amish'));
+    await page.waitForFunction(()=>document.querySelector('#timeline-status')?.textContent.includes('showing'));
+    assert.ok(await page.locator('.timeline-thread').count()>0);
+    assert.equal(await page.locator('[data-record="agape-fellowships"]').count(),0);
+    await page.locator('[data-record="beachy-amish"] h3 a').click();
+    assert.match(page.url(),/traditions\/beachy-amish/);
+    assert.ok(await page.locator('.reference-list ol').innerText());
+    await page.locator('.related-topics a[href$="/places/somerset-county/"]').click();
+    assert.match(page.url(),/places\/somerset-county/);
+    assert.ok(await page.locator('.prose').innerText());
+    await page.goto(url('timeline/?era=radical-reformation'));
+    await page.waitForFunction(()=>document.querySelector('#timeline-status')?.textContent.includes('showing'));
+    await page.screenshot({path:path.join(screenshots,'timeline-desktop.png')});
+  });
+
+  await check('Martyrs’ Mirror is integrated into the timeline and research media is excluded',async()=>{
+    await page.goto(url('timeline/?era=medieval-witness&kind=story'));
+    await page.waitForFunction(()=>document.querySelector('#timeline-status')?.textContent.includes('showing'));
+    assert.equal(await page.locator('.atlas-entry').count(),200);
+    await page.locator('#timeline-more').click();assert.equal(await page.locator('.atlas-entry').count(),227);
+    await page.goto(url('timeline/?era=acts-and-early-church'));
+    await page.waitForFunction(()=>document.querySelector('#timeline-status')?.textContent.includes('showing'));
+    await page.locator('.atlas-source-link').first().click();
+    await waitForArchive();
+    assert.ok(Number(await page.locator('[name=century]').inputValue())>0);
+    for(const route of ['sources/church-history/','sources/behalt/']){
+      await page.goto(url(route));assert.equal(await page.locator('main img, main video, main source').count(),0);
+    }
+    const media=await context.request.get(url('sources/behalt/IMG_9359.mp4'));assert.equal(media.status(),404);
   });
 
   await check('Mobile menus support Escape and restore focus without page overflow',async()=>{
     for(const width of [320,390,768,1024,1440]){
       await page.setViewportSize({width,height:900});
-      for(const route of ['', 'timeline/#radical-reformation','stories/','search/','stories/mm-dirk-willems-a-d-1569/']){
+      for(const route of ['', 'timeline/?era=radical-reformation','branches/','sources/behalt/','stories/','search/','stories/mm-dirk-willems-a-d-1569/']){
         await page.goto(url(route));
         await page.waitForFunction(()=>document.documentElement.dataset.theme);
         const dimensions=await page.evaluate(()=>({content:document.documentElement.scrollWidth,viewport:innerWidth}));
@@ -163,7 +189,10 @@ try{
     await page.setViewportSize({width:390,height:844});
     await page.goto(url(''));
     await page.waitForFunction(()=>document.querySelector('#daily-date')?.textContent);
-    await page.screenshot({path:path.join(screenshots,'home-mobile.png'),fullPage:true});
+    await page.screenshot({path:path.join(screenshots,'home-mobile.png')});
+    await page.goto(url('timeline/?era=radical-reformation'));
+    await page.waitForFunction(()=>document.querySelector('#timeline-status')?.textContent.includes('showing'));
+    await page.screenshot({path:path.join(screenshots,'timeline-mobile.png')});
   });
 
   await check('404 responses keep navigation and the shared page chrome',async()=>{

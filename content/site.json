@@ -4,8 +4,27 @@
   "repository": "https://github.com/trueChristian/history.truechristian.church",
   "themeCommit": "3bd0c28956610506f83e3ecd3af6ea775ac7cb45",
   "sources": [
-    {"id":"martyrs-mirror","title":"Martyrs’ Mirror","author":"Thieleman J. van Braght","url":"https://www.gutenberg.org/ebooks/65855","description":"The supplied English edition, translated by Joseph F. Sohm. Its text and 45 images are preserved with the original document and source anchors. Historical wording and dates are attributed to the book, including where they differ from later scholarship."},
-    {"id":"church-history","title":"Church History timeline photographs","author":"Photographs supplied by the site owner","url":"sources/church-history/","description":"Forty photographs from the Amish & Mennonite Heritage Center: exhibit panels, timeline overviews and close-ups, and related displays. The timeline guides the scope of the site. Historical summaries cite the individual photographs; names and dates requiring further research are identified openly."},
-    {"id":"behalt","title":"Behalt cyclorama","author":"Heinz Gaugel","url":"https://behalt.com/behalt-cyclorama/","description":"Behalt is the history mural at the Amish & Mennonite Heritage Center in Holmes County, Ohio. Mural imagery and the eight exhibit-panel photographs are acknowledged to the center and painter Heinz Gaugel. Attribution does not reclassify the painting as public domain.","artistURL":"https://behalt.com/meet-heinz-gaugel/"}
+    {
+      "id": "martyrs-mirror",
+      "title": "Martyrs\u2019 Mirror",
+      "author": "Thieleman J. van Braght",
+      "url": "https://www.gutenberg.org/ebooks/65855",
+      "description": "The supplied English edition, translated by Joseph F. Sohm. Its text and 45 images are preserved with the original document and source anchors. Historical wording and dates are attributed to the book, including where they differ from later scholarship."
+    },
+    {
+      "id": "church-history",
+      "title": "Church History timeline photographs",
+      "author": "Photographs supplied by the site owner",
+      "url": "sources/church-history/",
+      "description": "Forty supplied research photographs of the Anabaptist and Mennonite history chart and related exhibits. Their information is presented through the redesigned vertical timeline and historical articles; the photographs are retained in the repository."
+    },
+    {
+      "id": "behalt",
+      "title": "Behalt cyclorama",
+      "author": "Heinz Gaugel",
+      "url": "https://behalt.com/behalt-cyclorama/",
+      "description": "The supplied IMG_9359 recording and mural-containing exhibit panels helped explain the history chart. Behalt by Heinz Gaugel and the Amish & Mennonite Heritage Center are acknowledged as research sources; the media is excluded from publication.",
+      "artistURL": "https://behalt.com/meet-heinz-gaugel/"
+    }
   ]
 }

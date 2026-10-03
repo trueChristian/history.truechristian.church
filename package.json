@@ -5,11 +5,23 @@
   "type": "module",
   "description": "A source-linked Anabaptist history explorer for GitHub Pages",
   "scripts": {
-    "build": "node scripts/build.mjs",
+    "build": "npm run prepare:content && astro build --silent && node scripts/finish.mjs",
     "test": "node --test tests/*.test.mjs",
     "test:browser": "node scripts/browser-check.mjs",
-    "check": "npm test && npm run build && node scripts/check.mjs",
-    "serve": "node scripts/serve.mjs"
+    "check": "npm test && npm run build && npm run typecheck && node scripts/check.mjs",
+    "serve": "node scripts/serve.mjs",
+    "prepare:content": "node scripts/prepare.mjs",
+    "typecheck": "astro check",
+    "dev": "npm run prepare:content && astro dev"
   },
-  "engines": {"node": ">=22"}
+  "engines": {
+    "node": ">=22.14"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@types/node": "24.19.1",
+    "astro": "7.3.5",
+    "playwright": "1.62.1",
+    "typescript": "6.0.3"
+  }
 }
