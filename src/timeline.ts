@@ -1,7 +1,7 @@
 import {selectTimeline,timelineMarkup} from './lib/timeline';
 import type {TimelineFilters} from './lib/timeline';
 import type {HistoryRecord,BranchData} from './lib/model';
-import {t,messages,contentBase,catalogURL} from './ui.mjs';
+import {t,messages,contentBase,catalogURL,branchesURL} from './ui.mjs';
 import {ERAS} from './lib/history.mjs';
 
 const form=document.querySelector<HTMLFormElement>('#timeline-filters');
@@ -10,7 +10,6 @@ if(form){
   const threads=document.querySelector<SVGSVGElement>('#timeline-threads')!;
   const status=document.querySelector<HTMLParagraphElement>('#timeline-status')!;
   const more=document.querySelector<HTMLButtonElement>('#timeline-more')!;
-  const base=document.documentElement.dataset.base||'';
   let records:HistoryRecord[]=[],branches:BranchData|undefined,matches:HistoryRecord[]=[],limit=200;
   const control=(name:string)=>form.elements.namedItem(name) as HTMLInputElement|HTMLSelectElement;
   const initialKind=document.querySelector<HTMLElement>('.history-atlas')?.dataset.initialKind||'';
@@ -89,5 +88,5 @@ if(form){
   addEventListener('hashchange',()=>{restoreURL();limit=200;render(false);});
   new ResizeObserver(drawConnections).observe(entries);
   document.fonts.ready.then(drawConnections);
-  Promise.all([fetch(catalogURL!).then(r=>{if(!r.ok)throw Error('Timeline catalogue unavailable');return r.json();}),fetch(`${base}/assets/branches.json`).then(r=>{if(!r.ok)throw Error('Branch catalogue unavailable');return r.json();})]).then(([r,b]:[HistoryRecord[],BranchData])=>{records=r;branches=b;render(false);document.querySelector<HTMLElement>('.history-atlas')!.dataset.ready='true';}).catch(()=>{status.textContent=t('The timeline is readable below. Reload to use the filters.');});
+  Promise.all([fetch(catalogURL!).then(r=>{if(!r.ok)throw Error('Timeline catalogue unavailable');return r.json();}),fetch(branchesURL!).then(r=>{if(!r.ok)throw Error('Branch catalogue unavailable');return r.json();})]).then(([r,b]:[HistoryRecord[],BranchData])=>{records=r;branches=b;render(false);document.querySelector<HTMLElement>('.history-atlas')!.dataset.ready='true';}).catch(()=>{status.textContent=t('The timeline is readable below. Reload to use the filters.');});
 }

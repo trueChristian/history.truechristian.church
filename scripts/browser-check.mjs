@@ -36,6 +36,15 @@ try{
   const context=await browser.newContext({viewport:{width:1440,height:1000},colorScheme:'light'});
   // Keep the behavioural checks independent of the external font service.
   await context.route('https://fonts.googleapis.com/**',route=>route.fulfill({contentType:'text/css',body:''}));
+  const staleAssetRequests=[];
+  await context.route('**/assets/**',route=>{
+    const pathname=new URL(route.request().url()).pathname;
+    if(/(?:\/assets\/(?:app|ui|search-worker)\.mjs|\/assets\/site\.css|\/assets\/lib\/[^/]+\.mjs|\/assets\/branches\.json|\/assets\/[a-z-]+\/(?:catalog|search-index|reader-anchors)\.json)$/.test(pathname)){
+      staleAssetRequests.push(pathname);
+      return route.fulfill({status:200,contentType:pathname.endsWith('.json')?'application/json':pathname.endsWith('.css')?'text/css':'text/javascript',headers:{'Cache-Control':'max-age=86400'},body:pathname.endsWith('.json')?'[]':'/* stale previous-deployment asset */'});
+    }
+    return route.continue();
+  });
   const page=await context.newPage(),errors=[],badResponses=[];
   page.on('pageerror',error=>errors.push(error.message));
   page.on('response',response=>{
@@ -208,6 +217,12 @@ try{
     await page.locator('.reader-prose a[href$="#FNanchor_216"]').click();
     assert.ok(page.url().endsWith(from.route+'#FNanchor_216'));
     const first=reader.byRecord.get(from.recordSlug)[0];
+    await page.goto(url(first.route));
+    await page.waitForFunction(()=>document.querySelector('[data-reader-page]')?.dataset.readerReady==='true');
+    const laterOwner=reader.anchorToPage.get('Page_381');
+    await page.goto(url(first.route)+'#Page_381');
+    await page.waitForURL('**/'+laterOwner.route+'#Page_381');
+    assert.ok(await page.locator('#Page_381').isVisible(),'Same-document hashchange resolves after reader initialization');
     await page.goto(url(first.route)+'#Footnote_216');
     await page.waitForURL('**/'+note.route+'#Footnote_216');
     assert.ok(await page.locator('#Footnote_216').isVisible());
@@ -380,6 +395,16 @@ try{
     await staticPage.locator('#daily-discovery summary').click();
     assert.ok(await staticPage.locator('#daily-stories .story-card').first().isVisible());
     await noScript.close();
+  });
+
+  await check('Deployment upgrades bypass stale unversioned code, styles and archive data',async()=>{
+    await page.goto(url('sources/martyrs-mirror/'));
+    await page.locator('#book-contents-query').fill('Confession of faith');
+    const visible=await page.locator('[data-book-section]:visible').allTextContents();
+    assert.ok(visible.length>0&&visible.every(text=>/confession of faith/i.test(text)));
+    const data=await page.locator('html').evaluate(element=>({catalog:element.dataset.catalogUrl,index:element.dataset.indexUrl,branches:element.dataset.branchesUrl}));
+    for(const value of Object.values(data))assert.match(value,/\.[a-f0-9]{16}\.json$/);
+    assert.deepEqual(staleAssetRequests,[],'New HTML must never request cacheable old asset URLs');
   });
 
   await check('404 responses keep navigation and the shared page chrome',async()=>{

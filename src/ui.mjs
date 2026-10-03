@@ -6,5 +6,6 @@ export const contentBase=document.documentElement.dataset.contentBase||document.
 export const locale=document.documentElement.lang||'en';
 export const catalogURL=document.documentElement.dataset.catalogUrl;
 export const indexURL=document.documentElement.dataset.indexUrl;
+export const branchesURL=document.documentElement.dataset.branchesUrl;
 
 export const messages=ui;

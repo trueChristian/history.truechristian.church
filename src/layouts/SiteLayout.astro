@@ -1,5 +1,6 @@
 ---
 import type {PreparedPage} from '../lib/model';
+import '../site.css';
 import '../atlas.css';
 import {translate} from '../lib/localization.mjs';
 interface Props {page:PreparedPage}
@@ -10,7 +11,7 @@ const t=(key:string,vars:Record<string,string|number>={})=>translate(page.ui,key
 const contentBase=`${base}/${page.locale}`;
 ---
 <!doctype html>
-<html lang={page.locale} dir={page.dir} data-base={base} data-content-base={contentBase} data-catalog-url={asset(`assets/${page.locale}/catalog.json`)} data-index-url={asset(`assets/${page.locale}/search-index.json`)}>
+<html lang={page.locale} dir={page.dir} data-base={base} data-content-base={contentBase} data-catalog-url={asset(page.dataAssets.catalog)} data-index-url={asset(page.dataAssets.index)} data-branches-url={asset(page.dataAssets.branches)}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -26,10 +27,9 @@ const contentBase=`${base}/${page.locale}`;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&amp;family=Raleway:wght@400&amp;display=swap" />
-    <link rel="stylesheet" href={asset('assets/theme/truechristian-theme.css')} />
-    <link rel="stylesheet" href={asset('assets/site.css')} />
-    <script is:inline defer src={asset('assets/theme/truechristian-theme.js')}></script>
-    <script is:inline type="module" src={asset('assets/app.mjs')}></script>
+    <link rel="stylesheet" href={asset('assets/theme/truechristian-theme.css')+'?v='+page.themeCommit} />
+    <script is:inline defer src={asset('assets/theme/truechristian-theme.js')+'?v='+page.themeCommit}></script>
+    <script>import '../app.mjs';</script>
   </head>
   <body>
     <a class="skip-link" href="#main">{t("Skip to content")}</a>

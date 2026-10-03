@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {gunzipSync} from 'node:zlib';
+import {createHash} from 'node:crypto';
 import {ERAS,REPOSITORY,eraFor,escapeHTML as esc,normalize,dailySelection,contributionURL,linkedHistoryText} from '../src/lib/history.mjs';
 import {buildReader,remapReaderLinks} from '../src/lib/reader.mjs';
 import {readerNavigation,readerOutline,readerMarkdownNavigation} from '../src/lib/reader-ui.mjs';
@@ -57,7 +58,15 @@ await fs.cp(path.join(ROOT,'vendor/theme/assets'),path.join(OUT,'assets'),{recur
 await fs.cp(path.join(ROOT,'vendor/theme/dist'),path.join(OUT,'assets/theme'),{recursive:true});
 await fs.cp(path.join(ROOT,'src/lib'),path.join(OUT,'assets/lib'),{recursive:true});
 for(const filename of ['site.css','app.mjs','search-worker.mjs','ui.mjs'])await fs.copyFile(path.join(ROOT,'src',filename),path.join(OUT,'assets',filename));
-await fs.writeFile(path.join(OUT,'assets/branches.json'),JSON.stringify(branches));
+async function versionedData(relative,value){
+ const serialized=JSON.stringify(value),digest=createHash('sha256').update(serialized).digest('hex').slice(0,16);
+ const versioned=relative.replace(/\.json$/,'.'+digest+'.json');
+ await fs.mkdir(path.dirname(path.join(OUT,relative)),{recursive:true});
+ await fs.writeFile(path.join(OUT,relative),serialized);
+ await fs.writeFile(path.join(OUT,versioned),serialized);
+ return versioned;
+}
+const branchAsset=await versionedData('assets/branches.json',branches);
 const routes=[];
 for(const locale of locales){
 const ui={...englishUI,...await readJSON(`content/locales/${locale.id}/ui.json`)};
@@ -108,10 +117,11 @@ const readerRecordById=new Map(readerRecords.map(r=>[r.slug,r]));
 const footer=(await fs.readFile(path.join(ROOT,'vendor/theme/src/html/site-footer.html'),'utf8')).replaceAll('src="/assets/',`src="${base}/assets/`);
 
 await fs.mkdir(path.join(OUT,`assets/${locale.id}`),{recursive:true});
-await fs.writeFile(path.join(OUT,`assets/${locale.id}/catalog.json`),JSON.stringify(catalog));
-await fs.writeFile(path.join(OUT,`assets/${locale.id}/search-index.json`),JSON.stringify([...records.filter(r=>r.source!=='martyrs-mirror'),...readerRecords].map(r=>({...summary(r),normalized:normalize([r.title,r.originalTitle,r.summary,r.text,...(r.aliases||[])].join(' '))}))));
+const catalogAsset=await versionedData(`assets/${locale.id}/catalog.json`,catalog);
+const indexAsset=await versionedData(`assets/${locale.id}/search-index.json`,[...records.filter(r=>r.source!=='martyrs-mirror'),...readerRecords].map(r=>({...summary(r),normalized:normalize([r.title,r.originalTitle,r.summary,r.text,...(r.aliases||[])].join(' '))})));
 await fs.writeFile(path.join(CACHE,`records-${locale.id}.json`),JSON.stringify(records));
-await fs.writeFile(path.join(OUT,`assets/${locale.id}/reader-anchors.json`),JSON.stringify(Object.fromEntries([...reader.anchorToPage].map(([id,p])=>[id,p.route]))));
+const anchorAsset=await versionedData(`assets/${locale.id}/reader-anchors.json`,Object.fromEntries([...reader.anchorToPage].map(([id,p])=>[id,p.route])));
+const dataAssets={catalog:catalogAsset,index:indexAsset,branches:branchAsset,readerAnchors:anchorAsset};
 
 function header(current){
   const item=(label,route,key)=>`<li${current===key?' class="is-active"':''}><a href="${url(route)}"${current===key?' aria-current="page"':''}>${label}</a></li>`;
@@ -143,7 +153,7 @@ async function page(route,title,body,markdown,current='',record={}){
   const contentLanguage=record.contentLanguage||(locale.id===localeConfig.defaultLocale||localized.body?locale.id:localeConfig.defaultLocale);
   const availableLocales=availableTranslations(locales,record.slug,route,translations,allPageTranslations,localeConfig.defaultLocale);
   const fallback=contentLanguage!==locale.id?`<aside class="translation-notice" role="note" lang="${locale.id}">${esc(t('This article is available in {language}. Its original text is shown below.',{language:locales.find(l=>l.id===contentLanguage)?.nativeName||contentLanguage}))}</aside>`:'';
-  pages.push({route:fullRoute,logicalRoute:route,locale:locale.id,dir:locale.dir,contentLanguage,contentId:record.slug||route,ui,locales,availableLocales,title,body:fallback+localizeMarkup(body,ui),description:localized.description||record.summary||site.description,current,era:record.era||'',header:localizeMarkup(header(current),ui),footer,tools:localizeMarkup(pageLinks(title,route,record),ui)});
+  pages.push({dataAssets,themeCommit:site.themeCommit,route:fullRoute,logicalRoute:route,locale:locale.id,dir:locale.dir,contentLanguage,contentId:record.slug||route,ui,locales,availableLocales,title,body:fallback+localizeMarkup(body,ui),description:localized.description||record.summary||site.description,current,era:record.era||'',header:localizeMarkup(header(current),ui),footer,tools:localizeMarkup(pageLinks(title,route,record),ui)});
   const dir=path.join(OUT,fullRoute);await fs.mkdir(dir,{recursive:true});
   await fs.writeFile(path.join(dir,'README.md'),`# ${title}\n\n${markdown}\n\n---\n\nPage: ${canonical(route)}\n\n[Contribute a correction or addition](${contributionURL({...record,title:record.title||title},canonical(route))})\n`);
 }
@@ -194,7 +204,7 @@ for(const r of readerRecords){
  const sourceDetails=`<footer class="reader-original source-details"><h2>${esc(t('Original source'))}</h2><p>${esc(t('Thieleman J. van Braght, Martyrs’ Mirror; English translation by Joseph F. Sohm.'))}</p><p><a href="${esc(upstream)}" rel="noopener noreferrer">${esc(t('Read this passage on Project Gutenberg'))} ↗</a> · <a href="${esc(readerManifest.editionURL||'https://www.gutenberg.org/ebooks/65855')}" rel="noopener noreferrer">${esc(t('Edition details'))}</a></p><details><summary>${esc(t('Source location and archival copy'))}</summary><p>${esc(section.part)} · ${esc(section.chapter)}</p>${p.sourcePages.length?`<p>${esc(t('Original page markers'))}: ${esc(p.sourcePages.join(', '))}</p>`:''}<a href="${asset('sources/martyrs-mirror/original.html')}${sourceAnchor?'#'+encodeURIComponent(sourceAnchor):''}" rel="noopener">${esc(t('Preserved original file'))}</a><p>${esc(t('The original wording is preserved. Page divisions and navigation are editorial aids.'))}</p></details></footer>`;
  const relatedMarkup=related.length?`<section class="reader-related"><h2>${esc(t('Connected histories, people and places'))}</h2><div class="topic-chips">${related.map(x=>`<a href="${url(x.route)}">${esc(x.title)}</a>`).join('')}</div></section>`:'';
  const empty=!readableMarkdown(p.html).trim()?`<div class="reader-empty-section"><p>${esc(t('This heading introduces the following sections. Continue in book order to read them.'))}</p>${p.nextId?`<a class="button" href="${url(reader.byPageId.get(p.nextId).route)}">${esc(t('Continue reading'))} →</a>`:''}</div>`:'';
- const body=`<article class="reader-page" data-reader-page="${esc(p.id)}" data-reader-record="${esc(p.recordSlug)}" data-reader-anchor-map="${asset('assets/'+locale.id+'/reader-anchors.json')}"><nav class="breadcrumbs reader-breadcrumbs" aria-label="${esc(t('Breadcrumb'))}"><a href="${url()}">${esc(t('Home'))}</a><span aria-hidden="true">/</span><a href="${url('sources/martyrs-mirror/')}">${esc(t('Martyrs’ Mirror'))}</a></nav>${readerNavigation(reader,p,{url,t})}<div class="reader-layout"><div class="reader-main"><header class="reader-heading"><p class="eyebrow">${esc(t('The original account'))}${p.partCount>1?' · '+esc(t('Page {number} of {total}',{number:p.part,total:p.partCount})):''}</p>${firstNativeHeading}<p class="reader-section-label">${esc(section.part)} · ${esc(section.chapter)}</p></header><div class="reader-provenance">${esc(t('Original wording, with book contents, page navigation, and linked notes.'))}${parent?.date?.basis?` <span>${esc(parent.date.basis)}</span>`:''}</div><div id="reader-text" class="prose reader-prose" lang="${r.contentLanguage}"><!--history-content:start-->${r.html}<!--history-content:end--></div>${empty}${sourceDetails}${relatedMarkup}</div>${readerOutline(reader,p,{url,t})}</div>${readerNavigation(reader,p,{url,t,key:'bottom'})}</article>`;
+ const body=`<article class="reader-page" data-reader-page="${esc(p.id)}" data-reader-record="${esc(p.recordSlug)}" data-reader-anchor-map="${asset(dataAssets.readerAnchors)}"><nav class="breadcrumbs reader-breadcrumbs" aria-label="${esc(t('Breadcrumb'))}"><a href="${url()}">${esc(t('Home'))}</a><span aria-hidden="true">/</span><a href="${url('sources/martyrs-mirror/')}">${esc(t('Martyrs’ Mirror'))}</a></nav>${readerNavigation(reader,p,{url,t})}<div class="reader-layout"><div class="reader-main"><header class="reader-heading"><p class="eyebrow">${esc(t('The original account'))}${p.partCount>1?' · '+esc(t('Page {number} of {total}',{number:p.part,total:p.partCount})):''}</p>${firstNativeHeading}<p class="reader-section-label">${esc(section.part)} · ${esc(section.chapter)}</p></header><div class="reader-provenance">${esc(t('Original wording, with book contents, page navigation, and linked notes.'))}${parent?.date?.basis?` <span>${esc(parent.date.basis)}</span>`:''}</div><div id="reader-text" class="prose reader-prose" lang="${r.contentLanguage}"><!--history-content:start-->${r.html}<!--history-content:end--></div>${empty}${sourceDetails}${relatedMarkup}</div>${readerOutline(reader,p,{url,t})}</div>${readerNavigation(reader,p,{url,t,key:'bottom'})}</article>`;
  const linkedMarkdown=readableMarkdown(r.html.replace(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g,(_,href,label)=>`[${readableMarkdown(label)}](${href.replaceAll('&amp;','&')})`));
  const md=`${readerMarkdownNavigation(reader,p,{url,t})}\n\n${linkedMarkdown}\n\n${p.images.map(image=>`![Illustration from Martyrs’ Mirror](${asset(image)})`).join('\n\n')}\n\n## ${t('Original source')}\n\n[${t('Read this passage on Project Gutenberg')}](${upstream})\n\n[${t('Edition details')}](${readerManifest.editionURL||'https://www.gutenberg.org/ebooks/65855'})\n\n${readerMarkdownNavigation(reader,p,{url,t})}`;
  await page(r.route,r.title,body,md,'stories',r);

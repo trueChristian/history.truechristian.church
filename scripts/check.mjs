@@ -19,7 +19,8 @@ for(const filename of files.filter(f=>/\.(?:html|md|json|xml)$/.test(f)&&!f.ends
 }
 for(const slug of publicationPolicy.excludedRecordSlugs)assert.ok(!files.some(f=>f.split(path.sep).includes(slug)),`Withheld route ${slug}`);
 const htmlFiles=[];for(const f of allHtmlFiles)if(!(await fs.readFile(f,'utf8')).includes('data-legacy-redirect'))htmlFiles.push(f);
-const anchors=new Map();
+const anchors=new Map(),assetHashes=new Map();
+async function assetHash(relative){if(!assetHashes.has(relative))assetHashes.set(relative,createHash('sha256').update(await fs.readFile(path.join(OUT,relative))).digest('hex').slice(0,16));return assetHashes.get(relative);}
 async function hasAnchor(relative,hash){
  if(!anchors.has(relative)){const text=await fs.readFile(path.join(OUT,relative),'utf8');anchors.set(relative,new Set([...text.matchAll(/\b(?:id|name)="([^"]+)"/g)].map(m=>m[1])));}
  return anchors.get(relative).has(decodeURIComponent(hash.slice(1)));
@@ -32,6 +33,12 @@ for(const filename of htmlFiles){
   if(relative!=='404.html' && !existing.has(relative.replace(/index\.html$/,'README.md')))errors.push(`${relative}: missing README equivalent`);
   if(!html.includes('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500')||!html.includes('family=Raleway:wght@400'))errors.push(`${relative}: missing shared-theme font stylesheet`);
   if(!html.includes(`https://github.com/trueChristian/history.truechristian.church/edit/${info.sourceRef}/`))errors.push(`${relative}: edit link is not on the source branch`);
+  if(/(?:src|href)="[^"]*\/assets\/(?:app\.mjs|site\.css)"/.test(html))errors.push(`${relative}: unversioned application asset`);
+  for(const [,dataURL] of html.matchAll(/data-(?:catalog-url|index-url|branches-url|reader-anchor-map)="([^"]+)"/g)){
+    const match=dataURL.match(/\.([a-f0-9]{16})\.json$/);if(!match){errors.push(`${relative}: unversioned data URL ${dataURL}`);continue;}
+    const local=dataURL.slice(info.base.length).replace(/^\//,'');
+    if(await assetHash(local)!==match[1])errors.push(`${relative}: data content/hash mismatch ${dataURL}`);
+  }
   if(html.includes('__BASE__'))errors.push(`${relative}: unresolved base token`);
   for(const [,href] of html.matchAll(/\b(?:href|src)="([^"]+)"/g)){
     const link=href.replaceAll('&amp;','&');
@@ -59,6 +66,8 @@ for(const filename of htmlFiles){
   assert.ok(!/<(?:img|video|source)\b[^>]*(?:church-history|behalt)/i.test(html),`Exhibit media embedded in ${filename}`);
 }
 const timeline=await fs.readFile(path.join(OUT,info.defaultLocale,'timeline/index.html'),'utf8');
+assert.ok(new RegExp(`<strong>${info.connections}</strong>\\s*branch connections`).test(timeline),'Server-rendered branch count must use public graph');
+assert.ok(files.some(file=>/_astro[\\/]search-worker-[^/]+\.js$/.test(file)),'Search worker must be content-hashed');
 assert.ok(timeline.includes('timeline-threads')&&timeline.includes('timeline-entries'));
 assert.ok(!timeline.includes('era-scroll'),'Superseded dotted era strip remains');
 const catalog=JSON.parse(await fs.readFile(path.join(OUT,'assets',info.defaultLocale,'catalog.json'),'utf8'));

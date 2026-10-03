@@ -129,13 +129,20 @@ bookFilter?.addEventListener('input',()=>{
  }
 });
 
-// An old source fragment may now live on a later native page of the account.
-if(readerPage&&location.hash){
- let anchor='';try{anchor=decodeURIComponent(location.hash.slice(1));}catch{}
- if(anchor&&!document.getElementById(anchor)){
-  fetch(readerPage.dataset.readerAnchorMap).then(response=>response.ok?response.json():{}).then(anchors=>{
-   const target=anchors[anchor];
-   if(typeof target==='string'&&/^stories\/[a-z0-9-]+\/(?:part-\d+\/)?$/.test(target))location.replace(`${contentBase}/${target}#${encodeURIComponent(anchor)}`);
-  }).catch(()=>{/* Keep the current native page available when offline. */});
- }
+// Older account fragments can be entered either on load or later in the same document.
+let readerAnchorPromise,readerFragmentRequest=0;
+function routeReaderFragment(){
+ const request=++readerFragmentRequest;if(!readerPage||!location.hash)return;
+ let anchor='';try{anchor=decodeURIComponent(location.hash.slice(1));}catch{return;}
+ if(!anchor||document.getElementById(anchor))return;
+ readerAnchorPromise||=fetch(readerPage.dataset.readerAnchorMap).then(response=>response.ok?response.json():{}).catch(()=>{readerAnchorPromise=undefined;return {};});
+ readerAnchorPromise.then(anchors=>{
+  if(request!==readerFragmentRequest)return;
+  const target=anchors[anchor];
+  if(typeof target==='string'&&/^stories\/[a-z0-9-]+\/(?:part-\d+\/)?$/.test(target)){
+   const destination=`${contentBase}/${target}`;
+   if(destination!==location.pathname)location.replace(`${destination}#${encodeURIComponent(anchor)}`);
+  }
+ });
 }
+if(readerPage){routeReaderFragment();addEventListener('hashchange',routeReaderFragment);}

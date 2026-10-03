@@ -8,7 +8,7 @@ interface Props {initialKind?:string;locale:string;ui:Record<string,string>}
 const {initialKind='',locale,ui}=Astro.props;
 const t=(key:string,vars:Record<string,string|number>={})=>translate(ui,key,vars);
 const records=JSON.parse(fs.readFileSync(`.history-public/assets/${locale}/catalog.json`,'utf8')) as HistoryRecord[];
-const branches=JSON.parse(fs.readFileSync('content/branches.json','utf8')) as BranchData;
+const branches=JSON.parse(fs.readFileSync('.history-public/assets/branches.json','utf8')) as BranchData;
 const base=`${import.meta.env.BASE_URL.replace(/\/$/,'')}/${locale}`;
 const initial=selectTimeline(records,branches,{q:'',era:'',kind:initialKind,family:'',direction:'newest',sources:false});
 ---

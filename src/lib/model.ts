@@ -10,4 +10,4 @@ export interface BranchNode {slug:string;family:string;year:number}
 export interface BranchEdge {from:string;to:string;type:string;label:string;source:string}
 export interface BranchData {families:{id:string;title:string}[];nodes:BranchNode[];edges:BranchEdge[]}
 export interface Locale {id:string;name:string;nativeName:string;dir:string;published:boolean}
-export interface PreparedPage {locale:string;dir:string;contentLanguage:string;contentId:string;logicalRoute:string;ui:Record<string,string>;locales:Locale[];availableLocales:Locale[];route:string;title:string;body:string;description:string;current:string;era:string;header:string;footer:string;tools:string}
+export interface PreparedPage {dataAssets:{catalog:string;index:string;branches:string;readerAnchors:string};themeCommit:string;locale:string;dir:string;contentLanguage:string;contentId:string;logicalRoute:string;ui:Record<string,string>;locales:Locale[];availableLocales:Locale[];route:string;title:string;body:string;description:string;current:string;era:string;header:string;footer:string;tools:string}
