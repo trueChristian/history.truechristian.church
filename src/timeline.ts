@@ -81,7 +81,13 @@ if(form){
   });
   let timer:ReturnType<typeof setTimeout>;
   control('q').addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(filter,180);});
-  form.addEventListener('reset',()=>{const direction=control('direction').value;clearTimeout(timer);setTimeout(()=>{control('direction').value=direction;control('kind').value=initialKind;limit=200;render();},0);});
+  form.addEventListener('reset',event=>{
+    event.preventDefault();clearTimeout(timer);
+    for(const name of ['q','era','family'])control(name).value='';
+    control('kind').value=initialKind;
+    (control('sources') as HTMLInputElement).checked=false;
+    filter();
+  });
   more.addEventListener('click',()=>{limit+=100;render(false);});
   document.querySelectorAll<HTMLAnchorElement>('[data-atlas-era]').forEach(link=>link.addEventListener('click',event=>{
     if(!branches||initialKind)return;event.preventDefault();control('era').value=link.dataset.atlasEra!;filter();
