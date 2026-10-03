@@ -212,6 +212,8 @@ try{
     assert.equal(await page.locator('.language-control nav a').count(),1);
     assert.equal(await page.locator('.language-control nav a').innerText(),'English');
     assert.ok((await page.locator('.prose').innerText()).length>400);
+    const edit=new URL(await page.locator('.page-tools a[href*="/edit/"]').getAttribute('href'));
+    assert.equal(edit.pathname,`/trueChristian/history.truechristian.church/edit/${info.sourceRef}/content/source-enrichments.json`);
     assert.ok(await page.locator('a[href$="/stories/mm-dirk-willems-a-d-1569/"]').count()>0);
     const markdown=await context.request.get(url('README.md'));
     const text=await markdown.text();assert.match(text,/Today’s six accounts/);assert.match(text,/The connected timeline/);

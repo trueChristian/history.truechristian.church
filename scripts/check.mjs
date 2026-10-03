@@ -22,6 +22,7 @@ for(const filename of htmlFiles){
   for(const marker of ['data-tcc-global-header','data-tcc-directory-footer','data-tcc-copyright-footer','Read this page as Markdown'])if(!html.includes(marker))errors.push(`${relative}: missing ${marker}`);
   if(relative!=='404.html' && !existing.has(relative.replace(/index\.html$/,'README.md')))errors.push(`${relative}: missing README equivalent`);
   if(!html.includes('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500')||!html.includes('family=Raleway:wght@400'))errors.push(`${relative}: missing shared-theme font stylesheet`);
+  if(!html.includes(`https://github.com/trueChristian/history.truechristian.church/edit/${info.sourceRef}/`))errors.push(`${relative}: edit link is not on the source branch`);
   if(html.includes('__BASE__'))errors.push(`${relative}: unresolved base token`);
   for(const [,href] of html.matchAll(/\b(?:href|src)="([^"]+)"/g)){
     const link=href.replaceAll('&amp;','&');
