@@ -16,7 +16,7 @@ const site=await readJSON('content/site.json');
 const sourceRef=process.env.HISTORY_SOURCE_REF||process.env.GITHUB_HEAD_REF||'main';
 if(!/^[a-zA-Z0-9._/-]+$/.test(sourceRef))throw new Error('Invalid source edit ref');
 const authored=new Map((await readJSON('content/curated.json')).map(r=>[r.slug,{...r,sourcePath:'content/curated.json'}]));
-for(const file of ['source-enrichments.json','panel-histories.json']){
+for(const file of ['source-enrichments.json','panel-histories.json','education-histories.json','publication-histories.json','chart-milestone-histories.json']){
   const extra=await readJSON('content/'+file).catch(e=>{if(e.code==='ENOENT')return [];throw e;});
   for(const record of extra)authored.set(record.slug,{...record,sourcePath:'content/'+file});
 }

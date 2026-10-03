@@ -30,7 +30,7 @@
     "branchLabels": 60,
     "chartLeaderLines": 12,
     "currentAuthoredRecords": {
-      "event": 83,
+      "event": 128,
       "person": 74,
       "tradition": 47,
       "place": 20
@@ -43,13 +43,13 @@
       "one-sentence-stub": 15
     },
     "chartMicroannotations": 201,
-    "chartUncertainEntries": 71,
+    "chartUncertainEntries": 73,
     "chartUnresolvedRegions": 8,
     "chartAnnotationCoverage": {
-      "mapped-narrative": 64,
+      "mapped-narrative": 110,
       "partial-overview": 84,
-      "scoped-gap": 50,
-      "source-context": 2,
+      "source-context": 3,
+      "scoped-gap": 3,
       "source-credit": 1
     },
     "genuineLegibilityRegions": 7,
@@ -5547,11 +5547,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9375.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "altona-religious-liberty"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "Date or period documented in the cited institutional, archival, or historical source; source-chart wording remains separately inventoried."
     },
     {
       "id": "chart-9375-009",
@@ -6149,20 +6152,24 @@
       "source_photo": "sources/church-history/photos/IMG_9376.jpg",
       "also_visible_in": [],
       "location": "Caption below execution engraving at center-left",
-      "legible_text": "Martyrs Mirror: ... burned at the stake at Deventer, 1549",
+      "legible_text": "Martyrs Mirror: Ursula van Beckum burned at the stake at Deventer, 1544",
       "legible_dates": [
-        "1549"
+        "1544"
       ],
       "uncertainty_flags": [
-        "person_name_unreadable; do not supply from memory"
+        "caption_place_and_account_location_distinguished; preserved account describes imprisonment at Deventer and sentence at Delden"
       ],
       "type": "illustration_caption",
       "photo": "sources/church-history/photos/IMG_9376.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "maria-ursula-van-beckum-1544"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "research_note": "The preserved Martyrs’ Mirror account is headed 1544. Direct enlargement of IMG_9376 also reads 1544, correcting the earlier inventory transcription of 1549. Its Deventer caption is distinguished from the book’s Delden sentencing narrative.",
+      "transcription_history": "Initial small-image reading left the name unresolved and read 1549. Enlarged-source review identifies Ursula van Beckum and 1544; the preserved Martyrs’ Mirror account independently identifies Maria and Ursula in 1544."
     },
     {
       "id": "chart-9376-036",
@@ -6311,11 +6318,14 @@
       "uncertainty_flags": [],
       "type": "illustration_caption",
       "photo": "sources/church-history/photos/IMG_9377.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "amsterdam-boat-worship-1569"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The exhibit dates the boat-worship scene approximately to 1569. Martyrs’ Mirror identifies the boatman and preserves his sentence of 26 February 1569; the meetings themselves have no exact date in the account."
     },
     {
       "id": "chart-9377-042",
@@ -6660,11 +6670,14 @@
       ],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9377.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "christian-funk-separation"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "research_note": "Date or period documented in the cited institutional, archival, or historical source; source-chart wording remains separately inventoried."
     },
     {
       "id": "chart-9377-057",
@@ -7324,11 +7337,14 @@
       ],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9378.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "mennonitische-blaetter-1854"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "research_note": "Christian Neff’s Mennonite Encyclopedia account gives 1 January 1854; the Mennonite Library and Archives serials catalogue independently identifies the Danzig publication as beginning in 1854."
     },
     {
       "id": "chart-9378-083",
@@ -7388,11 +7404,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "allianz-molotschna-1905"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "Date or period documented in the cited institutional, archival, or historical source; source-chart wording remains separately inventoried."
     },
     {
       "id": "chart-9379-086",
@@ -7402,17 +7421,24 @@
       ],
       "location": "Upper-right white field, Russian/Soviet migration and faith-community annotations",
       "legible_text": "P. M. Friesen’s history of Russian Mennonites",
-      "legible_dates": [
-        "1915"
+      "legible_dates": [],
+      "uncertainty_flags": [
+        "small_printed_year_uncertain; use independently verified publication date 1911, not initial transcription 1915"
       ],
-      "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
-      "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "recordSlugs": [
+        "friesen-russian-mennonite-history-1911"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
+      "legibility": "uncertain-detail",
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The Centre for Mennonite Brethren Studies identifies the Raduga edition, Halbstadt, as 1911. The earlier chart transcription reads 1915; the photograph’s small final digit is not used to establish a separate edition.",
+      "transcription_history": "Initial inventory read 1915. Enlarged overlapping chart review suggests 1911 but the small printed date is not fully secure; independent bibliographic evidence establishes the original book in 1911.",
+      "tentative_visual_date_readings": [
+        "1911"
+      ]
     },
     {
       "id": "chart-9379-087",
@@ -7727,11 +7753,14 @@
       ],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "religioeser-botschafter-1852"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "research_note": "Mennonite Heritage Center holdings and the Mennonite Library and Archives’ John H. Oberholtzer biography identify the publication and its 1852 beginning."
     },
     {
       "id": "chart-9379-101",
@@ -7787,11 +7816,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "wadsworth-mennonite-school"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The chart prints 1869. The historical account and Christian Schowalter’s archival obituary instead date opening to January 2, 1868. The two ending dates distinguish the Mennonite theological school from its normal-school continuation."
     },
     {
       "id": "chart-9379-103",
@@ -7807,11 +7839,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "mennonite-board-of-guardians"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "Date or period documented in the cited institutional, archival, or historical source; source-chart wording remains separately inventoried."
     },
     {
       "id": "chart-9379-104",
@@ -7849,11 +7884,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "halstead-mennonite-seminary"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The 1883 chart date marks the move to Halstead. Institutional histories identify the preceding Emmatal school in 1882 and Bethel College’s opening in 1893; Bethel’s earlier charter date is a separate milestone."
     },
     {
       "id": "chart-9379-106",
@@ -7891,11 +7929,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "mennonite-collegiate-institute-gretna"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The supplied chart prints 1887. The school’s own history gives 1889, while its archival fonds distinguishes the organizing society in 1888 from the opening in 1889. The ending date marks rebuilding, not closure."
     },
     {
       "id": "chart-9379-108",
@@ -7933,11 +7974,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "freeman-junior-college"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The chart’s 1903 date refers to the first instruction. Official and archival histories distinguish the 1900 charter, college-level work from 1923, the 1939 Junior College name, and closure of the college division in 1986."
     },
     {
       "id": "chart-9379-110",
@@ -7955,7 +7999,7 @@
       "photo": "sources/church-history/photos/IMG_9379.jpg",
       "recordSlugs": [],
       "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "scope_note": "The institution name and year cannot be identified securely in the overlapping source photos. Several similarly named colleges exist; the distinct readable Hesston label has its own sourced history. A clearer crop or a named institutional source is needed before assigning this note.",
       "legibility": "uncertain-detail",
       "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
     },
@@ -7973,11 +8017,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "witmarsum-theological-seminary"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The 1922 Bluffton yearbook documents the 1921 separation. Former dean P. E. Whitmer dates the predecessor department to 1914, while S. F. Pannabecker’s adjacent 1959 account says 1915. The chart’s 1921 date concerns independent organization."
     },
     {
       "id": "chart-9379-112",
@@ -7993,11 +8040,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "canadian-mennonite-board-colonization"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "Date or period documented in the cited institutional, archival, or historical source; source-chart wording remains separately inventoried."
     },
     {
       "id": "chart-9379-113",
@@ -8013,11 +8063,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "elim-bible-school-altona"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "Mennonite Heritage Archives dates the first classes at Gretna to 1929, the Altona move to 1940, and final closure to May 1, 1988. The chart combines the founding year with the later location."
     },
     {
       "id": "chart-9379-114",
@@ -8033,11 +8086,14 @@
       ],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "swift-current-bible-institute"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "research_note": "The photographic chart’s year remains unreadable. The Mennonite Historical Society of Alberta’s institutional fonds independently dates the founding to 1936 and closure to 1996; this does not resolve the original printed digits."
     },
     {
       "id": "chart-9379-115",
@@ -8053,11 +8109,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "canadian-mennonite-bible-college"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The chart gives 1941. The college’s archival fonds identifies the 1941 exploratory committee, while both the archive and Canadian Mennonite University date the college’s opening to 1947."
     },
     {
       "id": "chart-9379-116",
@@ -8073,11 +8132,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "grace-bible-institute-omaha"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "Grace’s catalogues and the Nebraska Blue Book identify the 1943 Omaha institution; federal records date its closure to June 30, 2018. The chart’s “Grace Bible College” is an imprecise name, not identification of the Michigan college."
     },
     {
       "id": "chart-9379-117",
@@ -8093,11 +8155,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "mennonite-biblical-seminary-chicago"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The seminary’s institutional history dates its Chicago opening to 1945 and its relocation to Elkhart to 1958; these are stages of its work, not the dates of its entire institutional life."
     },
     {
       "id": "chart-9379-118",
@@ -8113,11 +8178,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "associated-mennonite-biblical-seminaries"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "AMBS’s own history distinguishes the 1958 association from shared residence in 1969, incorporation as one seminary in 1994, and the 2012 name change. These are institutional milestones, not a denominational founding."
     },
     {
       "id": "chart-9379-119",
@@ -8155,11 +8223,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "tabor-college-hillsboro"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "Tabor’s official history dates its opening to 1908 and transfer to conference trustees to 1934. The range marks early institutional development, not closure."
     },
     {
       "id": "chart-9379-121",
@@ -8175,11 +8246,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "steinbach-bible-institute"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The institution’s history distinguishes initial classes in 1931–1932, sustained daily instruction from 1936, and later Academy, Institute, and College names. The ending date is a renaming, not closure. The chart’s separate 1971 EMMC recognition date is qualified in the narrative against institutional history dating EMMC support to 1964."
     },
     {
       "id": "chart-9379-122",
@@ -8195,11 +8269,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "mennonite-brethren-bible-college-winnipeg"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "CMU’s institutional history and the college’s archival records distinguish the 1944 Bible college, the 1992 Concord reorganization, and the 2000 CMU federation. This is not the separate Mennonite Brethren Collegiate Institute."
     },
     {
       "id": "chart-9379-123",
@@ -8217,11 +8294,14 @@
       ],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "pacific-bible-institute-fresno"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "research_note": "The institution opened in 1944, became Pacific College in 1960, and adopted Fresno Pacific College in 1976. The chart’s “now” refers to its own publication period, not to the present name."
     },
     {
       "id": "chart-9379-124",
@@ -8237,11 +8317,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "mennonite-brethren-biblical-seminary"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The university dates the seminary’s opening to September 1955 and its formal transfer to July 1, 2010; the range describes the institution before its incorporation into Fresno Pacific."
     },
     {
       "id": "chart-9379-125",
@@ -8282,11 +8365,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "columbia-bible-institute-merger"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The institutional archive distinguishes the 1936 Mennonite Brethren beginnings from the 1970 Columbia merger, full joint management in 1982, and college status in 1987. The chart correctly dates the merger, not all predecessor instruction, to 1970."
     },
     {
       "id": "chart-9379-127",
@@ -8325,12 +8411,14 @@
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
       "recordSlugs": [
+        "steinbach-bible-institute",
         "evangelical-mennonite-mission-conference"
       ],
-      "coverage": "partial-overview",
-      "scope_note": "Linked history provides the broader setting; this individual microannotation is not yet a separate verified narrative.",
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The institution’s history distinguishes initial classes in 1931–1932, sustained daily instruction from 1936, and later Academy, Institute, and College names. The ending date is a renaming, not closure. The chart’s separate 1971 EMMC recognition date is qualified in the narrative against institutional history dating EMMC support to 1964."
     },
     {
       "id": "chart-9379-129",
@@ -8348,11 +8436,14 @@
       ],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "gemeentedagbeweging-1917"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "research_note": "Date or period documented in the cited institutional, archival, or historical source; source-chart wording remains separately inventoried."
     },
     {
       "id": "chart-9379-130",
@@ -8371,11 +8462,14 @@
         "1934"
       ],
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "international-mennonite-peace-committee"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "research_note": "Date or period documented in the cited institutional, archival, or historical source; source-chart wording remains separately inventoried."
     },
     {
       "id": "chart-9379-131",
@@ -8444,11 +8538,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "ontario-sunday-schools-1840"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "Date or period documented in the cited institutional, archival, or historical source; source-chart wording remains separately inventoried."
     },
     {
       "id": "chart-9379-134",
@@ -8465,11 +8562,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "eastern-district-1847"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "Date or period documented in the cited institutional, archival, or historical source; source-chart wording remains separately inventoried."
     },
     {
       "id": "chart-9379-135",
@@ -8514,11 +8614,14 @@
       ],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "herald-of-truth-1864-1908"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "research_note": "Mennonite Church USA Archives preserves the January 1864 first issue’s obituary page; Anabaptist World’s publication history identifies the 1908 sale and merger into Gospel Herald."
     },
     {
       "id": "chart-9379-137",
@@ -8576,11 +8679,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "mennonite-board-of-guardians"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "Date or period documented in the cited institutional, archival, or historical source; source-chart wording remains separately inventoried."
     },
     {
       "id": "chart-9379-139",
@@ -8599,11 +8705,14 @@
       ],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "masontown-revival-1872"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "research_note": "Date or period documented in the cited institutional, archival, or historical source; source-chart wording remains separately inventoried."
     },
     {
       "id": "chart-9379-140",
@@ -8617,14 +8726,19 @@
       "legible_dates": [
         "1882"
       ],
-      "uncertainty_flags": [],
+      "uncertainty_flags": [
+        "abbreviated_chart_identity_not_proven; do not equate conference meeting with institutional founding"
+      ],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "evangelical-united-conference-1882"
+      ],
+      "coverage": "partial-overview",
+      "scope_note": "The internal article documents the Evangelical United Mennonites’ 1882 conference, while their body formed in 1879. This provides historically grounded context for the chart’s abbreviated marker; the exact intended identity and the word “organized” are not independently established.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "Primary 1882 minutes establish a meeting, not an 1882 founding; the institutional catalogue dates formation to 1879."
     },
     {
       "id": "chart-9379-141",
@@ -8713,11 +8827,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "hesston-college-bible-school"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "September 1909 is the opening date; college courses began in 1915. The ending date refers to the end of a documented curriculum-sharing arrangement with Goshen, not to closure."
     },
     {
       "id": "chart-9379-145",
@@ -8757,11 +8874,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "mennonite-quarterly-review-1927"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "Goshen College identifies three predecessor supplements in 1926 and the journal’s first volume in 1927; the January 1927 editorial is reproduced in the January 2026 centennial issue."
     },
     {
       "id": "chart-9379-147",
@@ -8778,11 +8898,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "goshen-biblical-seminary"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The dates mark curriculum development, the 1946 seminary name and B.D. degree, and the 1969 campus move. They do not imply that all Bible instruction at Goshen began in 1933."
     },
     {
       "id": "chart-9379-148",
@@ -8799,11 +8922,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "associated-mennonite-biblical-seminaries"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "AMBS’s own history distinguishes the 1958 association from shared residence in 1969, incorporation as one seminary in 1994, and the 2012 name change. These are institutional milestones, not a denominational founding."
     },
     {
       "id": "chart-9379-149",
@@ -8916,11 +9042,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "evangelical-visitor-1887"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The Brethren in Christ Archives report in the 2014 General Conference minutes identifies the first issue as 1 August 1887; denominational and historical-society accounts confirm the 1887 beginning."
     },
     {
       "id": "chart-9379-154",
@@ -8936,11 +9065,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "messiah-college-grantham"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "Messiah’s history distinguishes the 1909 charter from 1910 classes. Its history page and timeline differ on the Grantham move (1911/1912), so the narrative does not assign that move a precise year."
     },
     {
       "id": "chart-9379-155",
@@ -8956,11 +9088,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "beulah-upland-college"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "The opening in 1920 and 1949 renaming are documented in institutional histories. Firsthand alumni testimony, the later historical-society account, and Messiah’s history place the closing and merger in 1965 despite conflicting dates in some summaries."
     },
     {
       "id": "chart-9379-156",
@@ -8976,11 +9111,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "roxbury-holiness-camp"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "Date or period documented in the cited institutional, archival, or historical source; source-chart wording remains separately inventoried."
     },
     {
       "id": "chart-9379-157",
@@ -9063,11 +9201,14 @@
       "uncertainty_flags": [],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "bethel-college-mishawaka"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "legible",
-      "ingestion": "Source statement only; verify before adding new historical claims."
+      "ingestion": "Source statement only; verify before adding new historical claims.",
+      "research_note": "Bethel’s official history dates opening to 1947; its institutional announcement dates the Bethel University name to May 6, 2019. Earlier proposals and the 1946 property purchase were preparatory stages."
     },
     {
       "id": "chart-9379-161",
@@ -9109,7 +9250,7 @@
       "photo": "sources/church-history/photos/IMG_9379.jpg",
       "recordSlugs": [],
       "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "scope_note": "The agency name remains unreadable, although the note appears to give 1934. The surrounding Brethren in Christ and mission lines do not uniquely identify an organization. A clearer source or the organization’s name is needed; no agency history is invented from the date alone.",
       "legibility": "uncertain-detail",
       "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
     },
@@ -9203,11 +9344,14 @@
         "1862"
       ],
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "der-zionspilger-1882"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "research_note": "The Centre for Mennonite Brethren Studies catalogue and the Swiss Society for Anabaptist History chronology independently give 1882. The photograph’s unreadable year and tentative 1862 transcription do not supply the date."
     },
     {
       "id": "chart-9379-167",
@@ -9906,7 +10050,7 @@
       "photo": "sources/church-history/photos/IMG_9380.jpg",
       "recordSlugs": [],
       "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "scope_note": "The phrase and decade are readable on the Church of God in Christ, Mennonite line, but the chart supplies no description, participants or document reference. A primary church or conference account is needed to explain its meaning responsibly; unrelated churches and unverified allegations are not substituted.",
       "legibility": "uncertain-detail",
       "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
     },
@@ -9926,11 +10070,14 @@
       ],
       "type": "map_place_labels",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "source-map-global-reach"
+      ],
+      "coverage": "source-context",
+      "scope_note": "A dedicated internal guide explains the map’s worldwide geographic labels and the limits of undated lines; country names alone do not establish dated congregational histories.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "research_note": "This geographic guide supplies context without assigning unprinted dates or invented genealogy."
     },
     {
       "id": "chart-9380-199",
@@ -9981,11 +10128,14 @@
       ],
       "type": "milestone",
       "photo": "sources/church-history/photos/IMG_9379.jpg",
-      "recordSlugs": [],
-      "coverage": "scoped-gap",
-      "scope_note": "Legible source detail retained for contribution/research; no substantive internal history currently explains this specific item.",
+      "recordSlugs": [
+        "lone-tree-conference-1896"
+      ],
+      "coverage": "mapped-narrative",
+      "scope_note": "Researched internal history now explains this source detail, with numbered references. Printed dates and unclear readings remain distinct from independently established dates.",
       "legibility": "uncertain-detail",
-      "ingestion": "Do not use tentative dates or unreadable words as timeline facts."
+      "ingestion": "Do not use tentative dates or unreadable words as timeline facts.",
+      "research_note": "Date or period documented in the cited institutional, archival, or historical source; source-chart wording remains separately inventoried."
     }
   ],
   "unresolvedChartRegions": [
@@ -10078,6 +10228,200 @@
         "weaverland-groffdale-division"
       ],
       "sourceScope": "Three archival and institutional histories preserve five printed labels. Martinites is explicitly mapped to two regional uses, and the 1926–1927 Wenger/Horning division is distinguished from earlier fellowship beginnings. No new tradition node or unverified lineage edge is introduced."
+    }
+  ],
+  "closedMicroannotationGaps": [
+    {
+      "id": "chart-9375-008",
+      "recordSlug": "altona-religious-liberty"
+    },
+    {
+      "id": "chart-9376-035",
+      "recordSlug": "maria-ursula-van-beckum-1544"
+    },
+    {
+      "id": "chart-9377-041",
+      "recordSlug": "amsterdam-boat-worship-1569"
+    },
+    {
+      "id": "chart-9377-056",
+      "recordSlug": "christian-funk-separation"
+    },
+    {
+      "id": "chart-9378-082",
+      "recordSlug": "mennonitische-blaetter-1854"
+    },
+    {
+      "id": "chart-9379-085",
+      "recordSlug": "allianz-molotschna-1905"
+    },
+    {
+      "id": "chart-9379-086",
+      "recordSlug": "friesen-russian-mennonite-history-1911"
+    },
+    {
+      "id": "chart-9379-100",
+      "recordSlug": "religioeser-botschafter-1852"
+    },
+    {
+      "id": "chart-9379-102",
+      "recordSlug": "wadsworth-mennonite-school"
+    },
+    {
+      "id": "chart-9379-103",
+      "recordSlug": "mennonite-board-of-guardians"
+    },
+    {
+      "id": "chart-9379-105",
+      "recordSlug": "halstead-mennonite-seminary"
+    },
+    {
+      "id": "chart-9379-107",
+      "recordSlug": "mennonite-collegiate-institute-gretna"
+    },
+    {
+      "id": "chart-9379-109",
+      "recordSlug": "freeman-junior-college"
+    },
+    {
+      "id": "chart-9379-111",
+      "recordSlug": "witmarsum-theological-seminary"
+    },
+    {
+      "id": "chart-9379-112",
+      "recordSlug": "canadian-mennonite-board-colonization"
+    },
+    {
+      "id": "chart-9379-113",
+      "recordSlug": "elim-bible-school-altona"
+    },
+    {
+      "id": "chart-9379-114",
+      "recordSlug": "swift-current-bible-institute"
+    },
+    {
+      "id": "chart-9379-115",
+      "recordSlug": "canadian-mennonite-bible-college"
+    },
+    {
+      "id": "chart-9379-116",
+      "recordSlug": "grace-bible-institute-omaha"
+    },
+    {
+      "id": "chart-9379-117",
+      "recordSlug": "mennonite-biblical-seminary-chicago"
+    },
+    {
+      "id": "chart-9379-118",
+      "recordSlug": "associated-mennonite-biblical-seminaries"
+    },
+    {
+      "id": "chart-9379-120",
+      "recordSlug": "tabor-college-hillsboro"
+    },
+    {
+      "id": "chart-9379-121",
+      "recordSlug": "steinbach-bible-institute"
+    },
+    {
+      "id": "chart-9379-122",
+      "recordSlug": "mennonite-brethren-bible-college-winnipeg"
+    },
+    {
+      "id": "chart-9379-123",
+      "recordSlug": "pacific-bible-institute-fresno"
+    },
+    {
+      "id": "chart-9379-124",
+      "recordSlug": "mennonite-brethren-biblical-seminary"
+    },
+    {
+      "id": "chart-9379-126",
+      "recordSlug": "columbia-bible-institute-merger"
+    },
+    {
+      "id": "chart-9379-128",
+      "recordSlug": "steinbach-bible-institute"
+    },
+    {
+      "id": "chart-9379-129",
+      "recordSlug": "gemeentedagbeweging-1917"
+    },
+    {
+      "id": "chart-9379-130",
+      "recordSlug": "international-mennonite-peace-committee"
+    },
+    {
+      "id": "chart-9379-133",
+      "recordSlug": "ontario-sunday-schools-1840"
+    },
+    {
+      "id": "chart-9379-134",
+      "recordSlug": "eastern-district-1847"
+    },
+    {
+      "id": "chart-9379-136",
+      "recordSlug": "herald-of-truth-1864-1908"
+    },
+    {
+      "id": "chart-9379-138",
+      "recordSlug": "mennonite-board-of-guardians"
+    },
+    {
+      "id": "chart-9379-139",
+      "recordSlug": "masontown-revival-1872"
+    },
+    {
+      "id": "chart-9379-140",
+      "recordSlug": "evangelical-united-conference-1882"
+    },
+    {
+      "id": "chart-9379-144",
+      "recordSlug": "hesston-college-bible-school"
+    },
+    {
+      "id": "chart-9379-146",
+      "recordSlug": "mennonite-quarterly-review-1927"
+    },
+    {
+      "id": "chart-9379-147",
+      "recordSlug": "goshen-biblical-seminary"
+    },
+    {
+      "id": "chart-9379-148",
+      "recordSlug": "associated-mennonite-biblical-seminaries"
+    },
+    {
+      "id": "chart-9379-153",
+      "recordSlug": "evangelical-visitor-1887"
+    },
+    {
+      "id": "chart-9379-154",
+      "recordSlug": "messiah-college-grantham"
+    },
+    {
+      "id": "chart-9379-155",
+      "recordSlug": "beulah-upland-college"
+    },
+    {
+      "id": "chart-9379-156",
+      "recordSlug": "roxbury-holiness-camp"
+    },
+    {
+      "id": "chart-9379-160",
+      "recordSlug": "bethel-college-mishawaka"
+    },
+    {
+      "id": "chart-9379-166",
+      "recordSlug": "der-zionspilger-1882"
+    },
+    {
+      "id": "chart-9379-198",
+      "recordSlug": "source-map-global-reach"
+    },
+    {
+      "id": "chart-9379-201",
+      "recordSlug": "lone-tree-conference-1896"
     }
   ]
 }
