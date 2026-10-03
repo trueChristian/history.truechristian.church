@@ -35,7 +35,10 @@ async function refreshDaily(){
   const target=document.querySelector('#daily-stories');if(!target)return;
   const day=new Date().toISOString().slice(0,10);if(day===dailyDay)return;
   try{
-    target.innerHTML=cards(dailySelection(await loadCatalog(),day));
+    const selected=dailySelection(await loadCatalog(),day);
+    target.innerHTML=cards(selected);
+    const titles=document.querySelector('#daily-title-links');
+    if(titles)titles.innerHTML=selected.map(r=>`<li><a href="${route(r.route)}" title="${esc(r.title)}">${esc(r.title)}</a></li>`).join('');
     document.querySelector('#daily-date').textContent=`${day} · UTC`;
     dailyDay=day;
   }catch{/* The built daily selection remains readable if the request fails. */}

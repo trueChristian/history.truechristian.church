@@ -17,7 +17,7 @@ Open http://127.0.0.1:8080. `npm run build` prepares the source data and generat
 ## Included
 
 - A vertical timeline with SVG branch connections, era/stream/type filters, chronology controls, title/name search, and source-account pagination.
-- Original historical overviews for 47 traditions and shared institutions, 79 events, 67 people, and 20 places.
+- Original historical overviews for 47 traditions and shared institutions, 83 events, 74 people, and 20 places.
 - All 1,272 supplied Martyrs’ Mirror sections and 45 original book image files, the intact edition, source anchors, and readable Markdown equivalents.
 - Century guides integrated into the timeline, with direct links to the corresponding accounts.
 - Six daily source accounts and full-text search with aliases, types, eras, and date ranges.

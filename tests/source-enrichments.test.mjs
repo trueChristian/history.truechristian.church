@@ -104,3 +104,25 @@ test('core formation and martyr events have full narratives, chronology, and nav
  assert.match(merged.get('dirk-willems-rescue').date.label,/sentence dated 16 May/);
  assert.match(merged.get('hans-landis-1614').date.label,/September 1614/);
 });
+
+test('seven named chart figures have researched identities and activity dates',()=>{
+ const slugs=['hans-de-ries','cornelis-ris','christopher-dock','johann-cornies','claas-epp-jr','daniel-hege','john-fretz-funk'];
+ for(const slug of slugs){
+  const r=enrichment.find(r=>r.slug===slug);
+  assert.ok(r,slug);assert.equal(r.kind,'person');
+  assert.equal(r.paragraphs.length,3,slug);
+  assert.ok(r.paragraphs.join(' ').split(/\s+/).length>=100,slug);
+  assert.ok(r.references.filter(ref=>ref.url.startsWith('https://')).length>=2,slug);
+  assert.ok(r.traditions.length,slug);
+ }
+ assert.equal(merged.get('hans-de-ries').date.start,1615);
+ assert.equal(merged.get('cornelis-ris').date.start,1766);
+ assert.ok(merged.get('cornelis-ris').aliases.includes('Cornelius Ris'));
+ assert.equal(merged.get('christopher-dock').date.start,1718);
+ assert.match(merged.get('christopher-dock').date.basis,/1714 is not treated as his birth/);
+ assert.equal(merged.get('johann-cornies').date.start,1817);
+ assert.equal(merged.get('claas-epp-jr').date.start,1880);
+ assert.match(merged.get('claas-epp-jr').paragraphs.join(' '),/his father/);
+ assert.equal(merged.get('daniel-hege').date.start,1861);
+ assert.match(merged.get('john-fretz-funk').date.label,/1867 move to Elkhart/);
+});

@@ -51,6 +51,11 @@ try{
     await page.goto(url(''));
     await page.waitForFunction(()=>document.querySelector('#daily-date')?.textContent.startsWith('2026-10-03'));
     const first=await dailyLinks();assert.equal(first.length,6);assert.equal(new Set(first).size,6);
+    assert.equal(await page.locator('#daily-title-links a:visible').count(),6);
+    await page.locator('#daily-discovery summary').click();
+    assert.ok(await page.locator('#daily-stories .story-card').first().isVisible());
+    await page.locator('#daily-discovery summary').click();
+    assert.equal(await page.locator('#daily-stories .story-card').first().isVisible(),false);
     await page.reload();
     await page.waitForFunction(()=>document.querySelector('#daily-date')?.textContent.startsWith('2026-10-03'));
     assert.deepEqual(await dailyLinks(),first);
@@ -235,9 +240,24 @@ try{
     await page.goto(url('branches/?family=amish'));
     await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
     await page.locator('.atlas-canvas').scrollIntoViewIfNeeded();
+    const lineContrast=await page.locator('.timeline-thread').first().evaluate(element=>{
+      const rgb=value=>value.match(/\d+(?:\.\d+)?/g).slice(0,3).map(Number);
+      const paper=rgb(getComputedStyle(document.body).backgroundColor),stroke=rgb(getComputedStyle(element).stroke),alpha=Number(getComputedStyle(element).opacity);
+      const mixed=stroke.map((value,i)=>value*alpha+paper[i]*(1-alpha));
+      const luminance=values=>values.map(value=>(value/=255)<=.04045?value/12.92:((value+.055)/1.055)**2.4).reduce((sum,value,i)=>sum+value*[.2126,.7152,.0722][i],0);
+      const a=luminance(mixed),b=luminance(paper);return (Math.max(a,b)+.05)/(Math.min(a,b)+.05);
+    });
+    assert.ok(lineContrast>=3,`Connection lines need readable contrast: ${lineContrast}`);
     await page.screenshot({path:path.join(screenshots,'timeline-connections-desktop.png')});
     await page.selectOption('#theme-mode','dark');
     await page.locator('[data-record="amish"] h3 a').focus();
+    const contrast=await page.locator('[data-record="amish"] h3').evaluate(element=>{
+      const linear=c=>(c/=255)<=.04045?c/12.92:((c+.055)/1.055)**2.4;
+      const luminance=value=>{const rgb=value.match(/\d+(?:\.\d+)?/g).slice(0,3).map(Number).map(linear);return .2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2];};
+      const ink=luminance(getComputedStyle(element).color),paper=luminance(getComputedStyle(element.closest('.atlas-entry')).backgroundColor);
+      return (Math.max(ink,paper)+.05)/(Math.min(ink,paper)+.05);
+    });
+    assert.ok(contrast>=4.5,`Dark timeline headings need readable contrast: ${contrast}`);
     await page.screenshot({path:path.join(screenshots,'timeline-connections-dark.png')});
     await page.selectOption('#theme-mode','light');
     await page.goto(url('people/dirk-willems/'));
@@ -252,6 +272,17 @@ try{
     await page.locator('.prose p').first().scrollIntoViewIfNeeded();
     await page.screenshot({path:path.join(screenshots,'sourced-history-mobile.png')});
     await page.setViewportSize({width:1440,height:1000});
+  });
+
+  await check('All six daily titles and the timeline remain visible without JavaScript',async()=>{
+    const noScript=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});
+    await noScript.route('https://fonts.googleapis.com/**',route=>route.fulfill({contentType:'text/css',body:''}));
+    const staticPage=await noScript.newPage();await staticPage.goto(url(''));
+    assert.equal(await staticPage.locator('#daily-title-links a:visible').count(),6);
+    assert.ok(await staticPage.locator('.atlas-entry').count()>100);
+    await staticPage.locator('#daily-discovery summary').click();
+    assert.ok(await staticPage.locator('#daily-stories .story-card').first().isVisible());
+    await noScript.close();
   });
 
   await check('404 responses keep navigation and the shared page chrome',async()=>{

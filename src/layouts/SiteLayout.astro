@@ -23,6 +23,9 @@ const contentBase=`${base}/${page.locale}`;
     <script is:inline type="application/json" id="history-ui" set:html={JSON.stringify(page.ui).replace(/</g,"\\u003c")} />
     <link rel="icon" href={asset('assets/favicons/favicon.ico')} />
     <script is:inline>try{var mode=localStorage.getItem('history-theme')||'system';document.documentElement.dataset.theme=(mode==='light'||mode==='dark')?mode:(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch(e){document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&amp;family=Raleway:wght@400&amp;display=swap" />
     <link rel="stylesheet" href={asset('assets/theme/truechristian-theme.css')} />
     <link rel="stylesheet" href={asset('assets/site.css')} />
     <script is:inline defer src={asset('assets/theme/truechristian-theme.js')}></script>
