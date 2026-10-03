@@ -36,7 +36,7 @@ The center’s artist biography identifies Gaugel and dates completion to Octobe
 
 Overview records reference the photographed timelines, the imported edition, and institutional history sources including Mennonite World Conference, Hutterites.org, Mennonite Church USA, USMB, the Church of the Brethren, and the Bruderhof. Each record contains its own references.
 
-Modern Charity/Agape context is attributed to the site owner. The approximate 2010 division is identified as an owner-supplied account requiring documentation. The named timeline streams have original historical overviews and internal connections. Numbered references identify their source material. Contextual issue links support further names, events, records, and local histories.
+Modern fellowship histories await approved official source statements before publication. The named timeline streams have original historical overviews and internal connections. Numbered references identify their source material. Contextual issue links support further names, events, records, and local histories.
 
 ## Theme
 

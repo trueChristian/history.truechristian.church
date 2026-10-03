@@ -129,14 +129,13 @@ try{
     assert.equal(await page.locator('main img, main video').count(),0);
   });
 
-  await check('Community-account contribution links carry the topic and canonical page URL',async()=>{
-    await page.goto(url('traditions/agape-fellowships/'));
-    assert.ok(await page.getByText('Attributed community account',{exact:true}).isVisible());
+  await check('Contribution links carry the topic and canonical page URL',async()=>{
+    await page.goto(url('traditions/conservative-mennonites/'));
     const link=new URL(await page.locator('.page-tools a[href*="/issues/new?"]').first().getAttribute('href'));
     assert.equal(link.pathname,'/trueChristian/history.truechristian.church/issues/new');
-    assert.equal(link.searchParams.get('title'),'Correction: Agape fellowships');
-    assert.match(link.searchParams.get('body'),/Record: agape-fellowships/);
-    assert.match(link.searchParams.get('body'),/traditions\/agape-fellowships\//);
+    assert.equal(link.searchParams.get('title'),'Correction: Conservative Mennonite fellowships');
+    assert.match(link.searchParams.get('body'),/Record: conservative-mennonites/);
+    assert.match(link.searchParams.get('body'),/traditions\/conservative-mennonites\//);
   });
 
   await check('Branch streams have connected SVG paths and internal people and place links',async()=>{

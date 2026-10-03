@@ -1,7 +1,8 @@
 import {defineConfig} from 'astro/config';
+import {siteOrigin} from './src/lib/site-origin.mjs';
 const base=(process.env.SITE_BASE_PATH||'/').replace(/\/$/,'')||'/';
 export default defineConfig({
-  site:process.env.SITE_ORIGIN||'https://truechristian.github.io',
+  site:siteOrigin(process.env.SITE_ORIGIN),
   base,
   output:'static',
   outDir:'./_site',

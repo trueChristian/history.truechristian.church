@@ -3,6 +3,8 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {gunzipSync} from 'node:zlib';
 import {ERAS,REPOSITORY,eraFor,escapeHTML as esc,normalize,dailySelection,contributionURL,linkedHistoryText} from '../src/lib/history.mjs';
+import {filterPublicRecords,filterPublicBranches,filterPublicCoverage} from '../src/lib/publication.mjs';
+import {siteOrigin} from '../src/lib/site-origin.mjs';
 import {validateBranches} from '../src/lib/branches.mjs';
 import {validateLocales,translatedRecord,localizeMarkup,translate,availableTranslations} from '../src/lib/localization.mjs';
 
@@ -20,20 +22,21 @@ for(const file of ['source-enrichments.json','panel-histories.json','education-h
   const extra=await readJSON('content/'+file).catch(e=>{if(e.code==='ENOENT')return [];throw e;});
   for(const record of extra)authored.set(record.slug,{...record,sourcePath:'content/'+file});
 }
-const curated=[...authored.values()];
+const publicationPolicy=await readJSON('content/publication-policy.json');
+const curated=filterPublicRecords([...authored.values()],publicationPolicy);
 const localeConfig=await readJSON('content/locales/config.json');
 const locales=validateLocales(localeConfig);
 const translations=Object.fromEntries(await Promise.all(locales.map(async l=>[l.id,await readJSON(`content/locales/${l.id}/records.json`)])));
 const englishUI=await readJSON('content/locales/en/ui.json');
 const allPageTranslations=Object.fromEntries(await Promise.all(locales.map(async l=>[l.id,await readJSON(`content/locales/${l.id}/pages.json`)])));
-const branches=await readJSON('content/branches.json');
-const coverage=await readJSON('docs/source-coverage.json').catch(e=>{if(e.code==='ENOENT')return null;throw e;});
+const branches=filterPublicBranches(await readJSON('content/branches.json'),publicationPolicy,curated);
+const coverage=filterPublicCoverage(await readJSON('docs/source-coverage.json').catch(e=>{if(e.code==='ENOENT')return null;throw e;}),publicationPolicy);
 const photos=await readJSON('content/photographs.json');
 const overrides={...await readJSON('content/overrides.json'),...await readJSON('content/source-metadata-corrections.json').catch(e=>{if(e.code==='ENOENT')return {};throw e;})};
 const imported=JSON.parse(gunzipSync(await fs.readFile(path.join(ROOT,'content/martyrs-mirror.json.gz'))));
 const base=(process.env.SITE_BASE_PATH||'').replace(/\/$/,'');
 if(base && !/^\/(?:[a-zA-Z0-9._-]+\/)*[a-zA-Z0-9._-]+$/.test(base))throw new Error('Invalid SITE_BASE_PATH');
-const origin=(process.env.SITE_ORIGIN||'https://truechristian.github.io').replace(/\/$/,'');
+const origin=siteOrigin(process.env.SITE_ORIGIN);
 if(!/^https?:\/\/[^/?#]+$/.test(origin))throw new Error('SITE_ORIGIN must be an origin without a path');
 const asset=(route='')=>`${base}/${route.replace(/^\//,'')}`;
 const pretty=title=>title===title.toUpperCase()?title.toLowerCase().replace(/\b[a-z]/g,c=>c.toUpperCase()):title;
@@ -59,7 +62,7 @@ const t=(key,vars={})=>translate(ui,key,vars);
 const pageTranslations=allPageTranslations[locale.id];
 const url=(route='')=>/^(?:assets\/|sources\/martyrs-mirror\/(?:original\.html|images\/))/.test(route)?asset(route):`${base}/${locale.id}/${route.replace(/^\//,'')}`;
 const canonical=route=>origin+url(route);
-const records=[...imported.records.map(r=>({...r,title:pretty(r.title),originalTitle:r.title})),...curated].map(r=>{
+const records=filterPublicRecords([...imported.records.map(r=>({...r,title:pretty(r.title),originalTitle:r.title})),...curated].map(r=>{
   const entry=translatedRecord({...r,...(overrides[r.slug]||{})},translations[locale.id],locale.id,localeConfig.defaultLocale);
   if(!/^[a-z0-9-]+$/.test(entry.slug))throw new Error('Unsafe record slug');
   entry.era=entry.date?eraFor({date:entry.date}):eraFor(entry);
@@ -67,7 +70,7 @@ const records=[...imported.records.map(r=>({...r,title:pretty(r.title),originalT
   entry.text=entry.text||(entry.paragraphs||[]).join('\n\n');
   entry.textLength=entry.text.length;
   return entry;
-});
+}),publicationPolicy);
 if(new Set(records.map(r=>r.slug)).size!==records.length)throw new Error('Duplicate record slugs');
 const bySlug=new Map(records.map(r=>[r.slug,r]));
 validateBranches(branches,records);
@@ -183,8 +186,8 @@ await page('sources/church-history/','Research behind the timeline',lead('Resear
 await page('sources/behalt/','Behalt: research acknowledgement',lead('Research acknowledgement','Behalt','The supplied recording and exhibit panels helped explain the historical material; the website presents its own sourced timeline and articles.')+`<div class="prose"><p>IMG_9359 is the complete supplied recording of the Behalt cyclorama. It was inspected for comprehension of the exhibit and is not used as a website video or navigation image.</p><p>Behalt is an artistic interpretation of Amish, Mennonite, and Hutterite history by Heinz Gaugel at the Amish & Mennonite Heritage Center in Holmes County, Ohio. The artist and project are acknowledged as research sources. No mural images or video are included in this site’s published assets.</p><p>The archive’s dated navigation is derived principally from the supplied source chart, the historical edition of Martyrs’ Mirror, and referenced historical research.</p></div><p><a class="button primary" href="${url('timeline/')}">Explore the church history timeline →</a></p>${sourceRefs([{label:'Behalt project: Amish & Mennonite Heritage Center',url:'https://behalt.com/behalt-cyclorama/'},{label:'Heinz Gaugel: the artist',url:'https://behalt.com/meet-heinz-gaugel/'}])}`,`Behalt by Heinz Gaugel, Amish & Mennonite Heritage Center.\n\nThe supplied IMG_9359 recording and mural-containing photographs are research inputs, excluded from the published site.\n\n[Explore the timeline](${url('timeline/')})`,'sources');
 
 const gaps=records.filter(r=>r.status==='Research needed');
-await page('contribute/','Contribute to the history',lead('An archive we build together','Contribute to the history','Share a source, correct an account, or help document a community that is missing from the story.')+`<div class="contribute-steps"><article><span>01</span><h2>Choose a page or topic</h2><p>Use the contribution link on any page. It carries that page’s title, address, and record into the issue.</p></article><article><span>02</span><h2>Add what you know</h2><p>Include dates, people, places, and sources. For photographs, include the creator and permission or public-domain basis.</p></article><article><span>03</span><h2>Submit for review</h2><p>A maintainer reviews the evidence and updates the archive. A GitHub account is needed to submit an issue.</p></article></div><p><a class="button primary" href="${esc(contributionURL({title:'New Anabaptist history contribution'},canonical('contribute/'),'missing'))}">Open a history contribution →</a> <a class="text-link" href="${REPOSITORY}/issues">View existing contributions</a></p><h2>Extend the living history</h2><p>Every tradition now has a source-linked overview. Add a documented local history, another voice, or a new event through its page contribution link.</p>${cards(records.filter(r=>['agape-fellowships','charity-ministries','conservative-mennonites'].includes(r.slug)))}`,`Contributions use GitHub issues and are reviewed before publication.\n\n1. Choose a page.\n2. Add sources, dates, people, places, and image credits.\n3. Submit for review.\n\n## Histories invited\n\n`+gaps.map(r=>`- [${r.title}](${url(r.route)})`).join('\n'),'contribute');
-await page('about/','About this archive',lead('Purpose and approach','A shared record of Anabaptist history','An open archive of the Radical Reformation and the many communities whose histories grew from it.')+`<div class="prose"><p>This archive presents the history of those who held the convictions of the Radical Reformation. Scripture, Martyrs’ Mirror, and the supplied Anabaptist history chart form its foundation. The connected timeline follows the witnesses, communities, and later streams within that history.</p><p>The supporting fellowship identifies its background with Charity Ministries and the Agape stream. Charity’s institutional history and the owner’s local account are attributed separately on their pages.</p><p>Martyrs’ Mirror provides the extensive foundation collection. The Church History photographs guide coverage of later migrations and traditions. Original historical writing connects the records, with numbered references identifying its sources.</p><p>The site is published as static pages on GitHub Pages. Search and daily selections run in the visitor’s browser. Appearance follows the system by default, with an optional setting saved on the device.</p></div>`,`${site.description}\n\nThe archive includes the wider Anabaptist family. Original historical accounts and current editorial overviews retain their sources. Incomplete modern histories invite documented contributions.\n\nThe theme is taken from trueChristian/theme at ${site.themeCommit}.`,'about');
+await page('contribute/','Contribute to the history',lead('An archive we build together','Contribute to the history','Share a source, correct an account, or help document a community that is missing from the story.')+`<div class="contribute-steps"><article><span>01</span><h2>Choose a page or topic</h2><p>Use the contribution link on any page. It carries that page’s title, address, and record into the issue.</p></article><article><span>02</span><h2>Add what you know</h2><p>Include dates, people, places, and sources. For photographs, include the creator and permission or public-domain basis.</p></article><article><span>03</span><h2>Submit for review</h2><p>A maintainer reviews the evidence and updates the archive. A GitHub account is needed to submit an issue.</p></article></div><p><a class="button primary" href="${esc(contributionURL({title:'New Anabaptist history contribution'},canonical('contribute/'),'missing'))}">Open a history contribution →</a> <a class="text-link" href="${REPOSITORY}/issues">View existing contributions</a></p><h2>Extend the living history</h2><p>Every tradition now has a source-linked overview. Add a documented local history, another voice, or a new event through its page contribution link.</p>${cards(records.filter(r=>['conservative-mennonites','mennonites','hutterites'].includes(r.slug)))}`,`Contributions use GitHub issues and are reviewed before publication.\n\n1. Choose a page.\n2. Add sources, dates, people, places, and image credits.\n3. Submit for review.\n\n## Histories invited\n\n`+gaps.map(r=>`- [${r.title}](${url(r.route)})`).join('\n'),'contribute');
+await page('about/','About this archive',lead('Purpose and approach','A shared record of Anabaptist history','An open archive of the Radical Reformation and the many communities whose histories grew from it.')+`<div class="prose"><p>This archive presents the history of those who held the convictions of the Radical Reformation. Scripture, Martyrs’ Mirror, and the supplied Anabaptist history chart form its foundation. The connected timeline follows the witnesses, communities, and later streams within that history.</p><p>Martyrs’ Mirror provides the extensive foundation collection. The Church History photographs guide coverage of later migrations and traditions. Original historical writing connects the records, with numbered references identifying its sources.</p><p>The site is published as static pages on GitHub Pages. Search and daily selections run in the visitor’s browser. Appearance follows the system by default, with an optional setting saved on the device.</p></div>`,`${site.description}\n\nThe archive includes the wider Anabaptist family. Original historical accounts and current editorial overviews retain their sources. Incomplete modern histories invite documented contributions.\n\nThe theme is taken from trueChristian/theme at ${site.themeCommit}.`,'about');
 await page('not-found/','Page not found',lead('Find your way back','This page could not be found','The archive may have changed. Search for the person or event, or return to the timeline.')+`<div class="actions"><a class="button primary" href="${url('search/')}">Search the archive</a><a class="button" href="${url('timeline/')}">Open the timeline</a></div>`,'The requested page could not be found. Use the search or timeline.');
 
 }

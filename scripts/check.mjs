@@ -3,12 +3,19 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import assert from 'node:assert/strict';
+import {containsWithheldReference} from '../src/lib/publication.mjs';
 import {createHash} from 'node:crypto';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),OUT=path.join(ROOT,'_site');
+const publicationPolicy=JSON.parse(await fs.readFile(path.join(ROOT,'content/publication-policy.json'),'utf8'));
 const info=JSON.parse(await fs.readFile(path.join(OUT,'build-info.json'),'utf8'));
 async function walk(dir){const files=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){const p=path.join(dir,e.name);files.push(...(e.isDirectory()?await walk(p):[p]));}return files;}
 const files=await walk(OUT),existing=new Set(files.map(f=>path.relative(OUT,f).split(path.sep).join('/'))),errors=[];
 const allHtmlFiles=files.filter(f=>f.endsWith('.html')&&!f.endsWith('/sources/martyrs-mirror/original.html'));
+for(const filename of files.filter(f=>/\.(?:html|md|json|xml)$/.test(f)&&!f.endsWith('/sources/martyrs-mirror/original.html'))){
+ const text=await fs.readFile(filename,'utf8');
+ assert.ok(!containsWithheldReference(text,publicationPolicy),`Withheld organization reference in ${path.relative(OUT,filename)}`);
+}
+for(const slug of publicationPolicy.excludedRecordSlugs)assert.ok(!files.some(f=>f.split(path.sep).includes(slug)),`Withheld route ${slug}`);
 const htmlFiles=[];for(const f of allHtmlFiles)if(!(await fs.readFile(f,'utf8')).includes('data-legacy-redirect'))htmlFiles.push(f);
 const anchors=new Map();
 async function hasAnchor(relative,hash){
