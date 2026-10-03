@@ -109,3 +109,32 @@ if(searchForm){
   more.addEventListener('click',()=>{limit+=30;render();});
   if(initial.size)submit(false);
 }
+
+const readerPage=document.querySelector('[data-reader-page]');
+if(readerPage){
+ const control=document.querySelector('#reader-text-size');
+ let size='standard';try{size=localStorage.getItem('history-reader-text-size')||size;}catch{}
+ if(!['standard','large','larger'].includes(size))size='standard';
+ readerPage.dataset.textSize=size;if(control)control.value=size;
+ control?.addEventListener('change',()=>{readerPage.dataset.textSize=control.value;try{localStorage.setItem('history-reader-text-size',control.value);}catch{}});
+}
+const bookFilter=document.querySelector('#book-contents-query');
+bookFilter?.addEventListener('input',()=>{
+ const query=bookFilter.value.normalize('NFKD').toLowerCase().trim();
+ for(const group of document.querySelectorAll('.book-contents>details')){
+  let visible=0;
+  for(const item of group.querySelectorAll('li[data-book-section]')){item.hidden=!item.textContent.normalize('NFKD').toLowerCase().includes(query);if(!item.hidden)visible++;}
+  group.hidden=!visible;if(query&&visible)group.open=true;
+ }
+});
+
+// An old source fragment may now live on a later native page of the account.
+if(readerPage&&location.hash){
+ let anchor='';try{anchor=decodeURIComponent(location.hash.slice(1));}catch{}
+ if(anchor&&!document.getElementById(anchor)){
+  fetch(readerPage.dataset.readerAnchorMap).then(response=>response.ok?response.json():{}).then(anchors=>{
+   const target=anchors[anchor];
+   if(typeof target==='string'&&/^stories\/[a-z0-9-]+\/(?:part-\d+\/)?$/.test(target))location.replace(`${contentBase}/${target}#${encodeURIComponent(anchor)}`);
+  }).catch(()=>{/* Keep the current native page available when offline. */});
+ }
+}

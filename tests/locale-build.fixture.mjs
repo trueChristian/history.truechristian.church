@@ -41,7 +41,7 @@ try{
  assert.ok(!translated.includes('This article is available in English'));
  const fallback=await html('af/stories/mm-hans-landis-a-d-1614');
  assert.ok(fallback.includes('This article is available in English'));
- assert.ok(fallback.includes('class="prose" lang="en"'));
+ assert.match(fallback,/class="prose(?: reader-prose)?" lang="en"/);
  assert.ok(!fallback.includes('hreflang="af"'),'Untranslated source is not advertised as Afrikaans');
  const index=await read(path.join(fixture,'.history-public/assets/af/search-index.json'));
  assert.ok(index.find(r=>r.slug==='mm-dirk-willems-a-d-1569').normalized.includes('afrikaanse brongetuienis'));
