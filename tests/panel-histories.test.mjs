@@ -9,7 +9,8 @@ const source = await read('content/source-enrichments.json');
 const panels = await read('content/panel-histories.json');
 const coverage = await read('docs/source-coverage.json');
 const imported = JSON.parse(gunzipSync(await fs.readFile(new URL('../content/martyrs-mirror.json.gz', import.meta.url)))).records;
-const all = new Map([...imported, ...base, ...source, ...panels].map(record => [record.slug, record]));
+const extra = (await Promise.all(['education-histories','publication-histories','chart-milestone-histories'].map(name => read(`content/${name}.json`)))).flat();
+const all = new Map([...imported, ...base, ...source, ...panels, ...extra].map(record => [record.slug, record]));
 const words = record => record.paragraphs.join(' ').trim().split(/\s+/u).length;
 
 test('panel narratives contain substantive sourced text and no research-photo embeds', () => {

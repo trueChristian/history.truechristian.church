@@ -6,14 +6,16 @@
 | --- | --- |
 | `content/site.json` | Site name, theme revision, and source catalogue |
 | `content/martyrs-mirror.json.gz` | Reproducible normalized book import |
-| `content/curated.json` | Authored people, events, and tradition records |
+| `content/curated.json` | Foundational authored people, events, and tradition records |
+| `content/source-enrichments.json`, `content/panel-histories.json` | Researched source witnesses, events and exhibit-panel histories |
+| `content/education-histories.json`, `content/publication-histories.json`, `content/chart-milestone-histories.json` | Sourced institutional, publication, settlement, conference and service histories |
 | `content/overrides.json` | Reviewed metadata additions/corrections keyed by an imported slug |
-| `content/photographs.json` | Gallery inventory and required mural-credit flags |
+| `content/photographs.json` | Repository-only research photograph inventory and credit metadata |
 | `sources/` | Original book and web-ready supplied source photographs |
 
 ## Records
 
-Use an existing curated record as the complete editing example. The required identity fields are `slug`, `title`, and `kind`; supported kinds are `story`, `event`, `person`, and `tradition`. A record’s stable slug forms its readable URL. Imported duplicate headings receive numeric suffixes, never UUIDs.
+Use an existing curated record as the complete editing example. The required identity fields are `slug`, `title`, and `kind`; supported kinds are `story`, `event`, `person`, `place`, and `tradition`. A record’s stable slug forms its readable URL. Imported duplicate headings receive numeric suffixes, never UUIDs.
 
 `summary` gives the short card description. `paragraphs` contains the full authored account. `references` contains named links to the evidence. `aliases` contains documented alternate names and spellings. `people` and `traditions` contain related record slugs; the build rejects nonexistent relationships.
 
@@ -57,7 +59,7 @@ The preparation step copies only Martyrs’ Mirror source assets into publicatio
 
 ## Integrated source histories and coverage
 
-The build merges curated records and the two authored enrichment collections by permanent slug. `sourceAccounts` contains reviewed exact Martyrs’ Mirror section links, displayed bidirectionally. Automatic full-name mentions are a secondary discovery aid; they do not establish identity or relationships by themselves. Explicit people/place/tradition relationships also link the named entities in editorial prose. Source wording itself is preserved.
+The build merges curated records and the five authored enrichment collections by permanent slug. `sourceAccounts` contains reviewed exact Martyrs’ Mirror section links, displayed bidirectionally. Automatic full-name mentions are a secondary discovery aid; they do not establish identity or relationships by themselves. Explicit people/place/tradition relationships also link the named entities in editorial prose. Source wording itself is preserved.
 
 `imageSources` maps each editorial illustration to its owning source account, so artwork can be followed back to its context. The 45 physical source images include title/ornament material; this is not a claim of 45 distinct historical scenes.
 
