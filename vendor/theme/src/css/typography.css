@@ -1,0 +1,23 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block: 0 0.75em;
+  color: var(--tcc-color-ink);
+  font-family: var(--tcc-font-display);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+p {
+  margin-block: 0 1.25em;
+}
+
+.tcc-eyebrow {
+  font-family: var(--tcc-font-display);
+  font-size: 0.8125rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}

@@ -1,0 +1,31 @@
+:root {
+  --tcc-color-white: #ffffff;
+  --tcc-color-cyan: #00cadb;
+  --tcc-color-directory: #f7f7f7;
+  --tcc-color-charcoal: #303033;
+  --tcc-color-ink: #2d2e33;
+  --tcc-color-nav-muted: #b4b5ba;
+  --tcc-color-footer-text: rgb(255 255 255 / 70%);
+  --tcc-color-social-icon: #6c6d74;
+  --tcc-color-border: #e5e5e7;
+
+  --tcc-font-body: "Raleway", "Helvetica Neue", Arial, sans-serif;
+  --tcc-font-display: "Montserrat", Arial, sans-serif;
+
+  --tcc-container-max: 1200px;
+  --tcc-space-1: 0.5rem;
+  --tcc-space-2: 1rem;
+  --tcc-space-3: 1.5rem;
+  --tcc-space-4: 2rem;
+  --tcc-space-5: 3rem;
+  --tcc-space-6: 4rem;
+  --tcc-space-7: 4.375rem;
+
+  --tcc-radius-small: 5px;
+  --tcc-radius-round: 999px;
+  --tcc-shadow-medium: 0 5px 15px rgb(0 0 0 / 8%);
+  --tcc-focus-ring: 0 0 0 4px rgb(0 202 219 / 35%);
+
+  --tcc-breakpoint-small: 640px;
+  --tcc-breakpoint-medium: 960px;
+}

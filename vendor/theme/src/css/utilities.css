@@ -1,0 +1,40 @@
+.tcc-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media print {
+  .tcc-site-header {
+    position: static;
+  }
+
+  .tcc-header__toggle,
+  .tcc-footer-social {
+    display: none !important;
+  }
+
+  .tcc-footer-directory,
+  .tcc-footer-copyright {
+    padding-block: 1.5rem;
+    background: #fff !important;
+    color: #000 !important;
+  }
+}

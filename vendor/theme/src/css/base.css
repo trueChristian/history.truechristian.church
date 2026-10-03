@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--tcc-color-ink);
+  font-family: var(--tcc-font-body);
+  line-height: 1.7;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  background: var(--tcc-color-white);
+  color: var(--tcc-color-ink);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--tcc-color-ink);
+  outline-offset: 4px;
+  box-shadow: var(--tcc-focus-ring);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.tcc-container {
+  width: min(calc(100% - 3rem), var(--tcc-container-max));
+  margin-inline: auto;
+}
+
+@media (max-width: 639px) {
+  .tcc-container {
+    width: min(calc(100% - 2rem), var(--tcc-container-max));
+  }
+}
