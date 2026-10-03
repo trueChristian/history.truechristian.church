@@ -12,7 +12,7 @@ const base=`${import.meta.env.BASE_URL.replace(/\/$/,'')}/${locale}`;
 const initial=selectTimeline(records,branches,{q:'',era:'',kind:initialKind,family:'',direction:'oldest',sources:false});
 ---
 <section class="atlas-intro">
-  <p class="eyebrow">{t('A True Christian Church · Our Anabaptist history')}</p>
+  <p class="eyebrow">{t('A True Christian Church · history')}</p>
   <h1>{t('Follow the witness.')}<br /><em>{t('Trace the living streams.')}</em></h1>
   <p class="lead">{t('A connected history of faith, discipleship, and community. Follow the Radical Reformation and its branches, and read the witnesses preserved in Martyrs’ Mirror.')}</p>
   <div class="atlas-statistics"><span><strong>{records.filter(r=>r.kind==='story').length.toLocaleString(locale)}</strong>{t('source accounts & sections')}</span><span><strong>{records.filter(r=>r.kind==='tradition').length}</strong>{t('traditions & shared histories')}</span><span><strong>{branches.edges.length}</strong>{t('branch connections')}</span></div>
