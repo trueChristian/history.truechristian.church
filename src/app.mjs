@@ -117,6 +117,7 @@ if(readerPage){
  if(!['standard','large','larger'].includes(size))size='standard';
  readerPage.dataset.textSize=size;if(control)control.value=size;
  control?.addEventListener('change',()=>{readerPage.dataset.textSize=control.value;try{localStorage.setItem('history-reader-text-size',control.value);}catch{}});
+ if(control)control.disabled=false;readerPage.dataset.readerReady='true';
 }
 const bookFilter=document.querySelector('#book-contents-query');
 bookFilter?.addEventListener('input',()=>{

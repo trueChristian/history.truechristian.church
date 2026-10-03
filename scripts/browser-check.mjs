@@ -219,7 +219,9 @@ try{
     await page.goto(url('people/dirk-willems/'));
     await page.locator('.source-reading-entry a').first().click();
     assert.ok(await page.locator('[data-reader-page]').isVisible());
+    await page.waitForFunction(()=>document.querySelector('[data-reader-page]')?.dataset.readerReady==='true');
     await page.selectOption('#reader-text-size','larger');await page.reload();
+    await page.waitForFunction(()=>document.querySelector('[data-reader-page]')?.dataset.readerReady==='true');
     assert.equal(await page.locator('[data-reader-page]').getAttribute('data-text-size'),'larger');
     await page.selectOption('#reader-text-size','standard');
     for(const width of [320,390,768,1440]){

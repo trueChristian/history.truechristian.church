@@ -40,3 +40,7 @@ This does not claim an exhaustive independent article for each of the 201 small 
 Final visual checks must include the page-body dark-heading contrast regression (4.5:1 minimum), connection-line contrast (3:1 minimum), six visible daily title links near the top, expanded detail views, mobile layout, and no-JavaScript visibility. Header/footer brand assets remain unchanged.
 
 The approved shared-theme font stylesheet loads Montserrat 400/500 and Raleway 400 with `display=swap`. Browser behavioral tests deliberately stub that external stylesheet, so their artifacts use documented fallback fonts; the production head retains the real font request. The build validator checks that the font loading contract remains present.
+
+## Native reader acceptance
+
+The complete source body is preserved across 2,123 reading pages. `npm run check` independently compares the generated English reader text with the structured source manifest, in addition to all local links and fragment anchors. The eight reader-model tests cover deterministic regeneration, every original word/block hash, all 365 note-return pairs, 2,024 anchors, all old account routes, stable locale-prefixed continuations and original-source website provenance. Browser scenarios additionally cover the 44-page Confession of Faith, cross-section next/previous, notes/backlinks, older fragments, profile-to-full-account navigation, persisted text size, mobile poetry/tables and visible source footers.

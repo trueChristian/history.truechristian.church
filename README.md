@@ -18,7 +18,7 @@ Open http://127.0.0.1:8080. `npm run build` prepares the source data and generat
 
 - A vertical timeline with SVG branch connections, era/stream/type filters, chronology controls, title/name search, and source-account pagination.
 - Original historical overviews for 45 traditions and shared institutions, 127 events, 74 people, and 20 places.
-- All 1,272 supplied Martyrs’ Mirror sections and 45 original book image files, the intact edition, source anchors, and readable Markdown equivalents.
+- The complete Martyrs’ Mirror in 2,123 manageable reading pages, with book contents, previous/next navigation, internal notes, original-source website links, and readable Markdown equivalents. All 1,272 legacy section URLs and 45 archived image files remain intact.
 - Century guides integrated into the timeline, with direct links to the corresponding accounts.
 - Six daily source accounts and full-text search with aliases, types, eras, and date ranges.
 - Internal links connecting people, places, events, branch histories, and source accounts.
@@ -46,6 +46,8 @@ To validate the repository project path locally:
 SITE_BASE_PATH=/history.truechristian.church npm run check
 SITE_BASE_PATH=/history.truechristian.church npm run serve
 ```
+
+See [the structured reader model](docs/reader-model.md) for source preservation, segmentation, and reading-page translations.
 
 ## Languages
 

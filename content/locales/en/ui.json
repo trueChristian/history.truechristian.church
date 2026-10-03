@@ -328,7 +328,6 @@
   "This heading introduces the following sections. Continue in book order to read them.": "This heading introduces the following sections. Continue in book order to read them.",
   "Continue reading": "Continue reading",
   "The original account": "The original account",
-  "Original wording, with native book navigation and linked notes.": "Original wording, with native book navigation and linked notes.",
   "Read the complete original text in manageable pages, with its accounts, letters, notes, illustrations and index connected in book order.": "Read the complete original text in manageable pages, with its accounts, letters, notes, illustrations and index connected in book order.",
   "reading pages": "reading pages",
   "source sections": "source sections",
@@ -346,5 +345,6 @@
   "Preserved source reference": "Preserved source reference",
   "The original book, within the history": "The original book, within the history",
   "Read Martyrs’ Mirror": "Read Martyrs’ Mirror",
-  "Read the complete book with contents and page navigation →": "Read the complete book with contents and page navigation →"
+  "Read the complete book with contents and page navigation →": "Read the complete book with contents and page navigation →",
+  "Original wording, with book contents, page navigation, and linked notes.": "Original wording, with book contents, page navigation, and linked notes."
 }

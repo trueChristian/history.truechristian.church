@@ -28,3 +28,7 @@ A missing translation is never represented as a reviewed translation. A configur
 The tests include an in-memory future-language fixture to verify translation identity, explicit English fallback, escaped UI labels and Unicode search without publishing a new language.
 
 GitHub edit links use `GITHUB_HEAD_REF` for pull-request previews and `main` for production. Local preview builds may set `HISTORY_SOURCE_REF` explicitly. This keeps source-edit links pointed at files that exist in the reviewed branch before merge.
+
+## Book reading pages
+
+Reader translations use the same reviewed `records.json` overlays, keyed by each stable reading-page ID in `content/martyrs-reader.json.gz`. The first page retains the account slug; continuations have their own source-block-derived IDs. A translation never changes page boundaries, routes or book order. Untranslated continuations remain explicitly English and language availability is evaluated per reading page. See [reader-model.md](reader-model.md).

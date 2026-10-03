@@ -27,7 +27,7 @@ Use an existing curated record as the complete editing example. The required ide
 
 ## Import and source display
 
-The Python importer uses the standard library and preserves the original edition separately. A strict HTML allowlist removes executable markup and inline styling from extracted source sections. Footnotes link to the original document. The compressed JSON is reproducible with a fixed gzip timestamp.
+The Python importer uses the standard library and preserves the original edition separately. A strict HTML allowlist removes executable markup and inline styling from extracted source sections. The native reader remaps footnotes and their return links to the exact reading page that owns each original anchor. The compressed JSON is reproducible with a fixed gzip timestamp.
 
 Heading divisions include context as well as individual martyr accounts. A section is not necessarily a unique person or a distinct historical event. Keeping that distinction prevents a source count from becoming a misleading count of martyrs.
 
@@ -68,3 +68,7 @@ The build merges curated records and the five authored enrichment collections by
 `content/source-metadata-corrections.json` applies reviewed date or relationship metadata without changing imported headings, source text, anchors, or the intact edition. A dated activity is not silently reclassified as a lifespan.
 
 Read [localization.md](localization.md) before adding languages. All sources, text overlays and interface translations remain within this repository.
+
+## Complete-book reader
+
+The original book uses the structured page and block model in `content/martyrs-reader.json.gz`. See [reader-model.md](reader-model.md) for stable reading identities, lossless generation, native navigation, notes, provenance and future translation overlays. The legacy account catalog remains an account-level discovery index, while full-text search points directly to matching reading pages.
