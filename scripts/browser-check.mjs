@@ -247,6 +247,7 @@ try{
     await page.selectOption('#theme-mode','dark');
     await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
     await settledReaderMenu();
+    await page.waitForFunction(()=>window.scrollY===0&&document.querySelector('[data-tcc-global-header]').getBoundingClientRect().top>=-1);
     assert.equal(await page.locator('.reader-section-pages').evaluate(element=>element.open),false,'Optional page outline should start closed');
     const headingTop=await page.locator('.reader-heading').evaluate(element=>element.getBoundingClientRect().top);
     assert.ok(headingTop<744,'Mobile entry view must expose the account heading');
