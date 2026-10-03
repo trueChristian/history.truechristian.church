@@ -420,8 +420,10 @@ try{
       assert.ok(page.url().endsWith(sourceRoute));
       assert.equal(await page.locator('[data-reader-page]').getAttribute('data-reader-record'),'mm-dirk-willems-a-d-1569');
     }
-    await page.goto(url(reader.firstPage.route));
-    assert.equal(await page.getByRole('link',{name:'Open this record on the timeline',exact:true}).count(),0);
+    for(const route of [reader.firstPage.route,'stories/mm-section/']){
+      await page.goto(url(route));
+      assert.equal(await page.getByRole('link',{name:'Open this record on the timeline',exact:true}).count(),0);
+    }
   });
 
   await check('Deployment upgrades bypass stale unversioned code, styles and archive data',async()=>{

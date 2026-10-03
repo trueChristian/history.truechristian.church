@@ -93,7 +93,7 @@ for(const p of readerManifest.pages){
  for(const token of ['data-reader-page','reader-prose','reader-navigation','www.gutenberg.org/cache/epub/65855/pg65855-images.html'])assert.ok(html.includes(token),`${p.route}: missing ${token}`);
  const timelineLink=html.match(/href="([^"]+)">Open this record on the timeline<\/a>/)?.[1];
  const account=catalog.find(record=>record.slug===p.recordSlug);
- if(account){
+ if(account?.title?.trim()){
    assert.ok(timelineLink,`${p.route}: missing account-level timeline return`);
    const target=new URL(timelineLink.replaceAll('&amp;','&'),'https://check.test');
    assert.equal(target.searchParams.get('q'),account.title,`${p.route}: continuation title must not replace account identity`);
