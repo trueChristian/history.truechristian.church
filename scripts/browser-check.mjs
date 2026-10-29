@@ -7,6 +7,7 @@ import {spawn} from 'node:child_process';
 import {chromium} from 'playwright';
 import {gunzipSync} from 'node:zlib';
 import {buildReader} from '../src/lib/reader.mjs';
+import {checkDiscovery} from './check-discovery-browser.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const info=JSON.parse(await fs.readFile(path.join(root,'_site/build-info.json'),'utf8'));
@@ -89,6 +90,8 @@ try{
     await capture('home-desktop.png');
   });
 
+  await checkDiscovery({page,context,check,url,capture});
+
   await check('System appearance tracks the browser and saved overrides survive reload',async()=>{
     await page.emulateMedia({colorScheme:'dark'});
     await page.waitForFunction(()=>document.documentElement.dataset.theme==='dark');
@@ -105,7 +108,7 @@ try{
     const ready=()=>page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
     const order=()=>page.getByRole('combobox',{name:'Timeline order'});
     const first=()=>page.locator('.atlas-entry').first().getAttribute('data-record');
-    await page.goto(url(''));await ready();
+    await page.goto(url('timeline/'));await ready();
     assert.equal(await order().inputValue(),'oldest');assert.equal(await first(),'christian-beginnings');
     for(const prefix of ['mm-james-the-son-of-zebedee','mm-the-holy-apostle-philip','mm-andrew-the-holy-apostle','mm-bartholomew-the-holy-apostle','mm-thomas-the-holy-apostle','mm-matthew-the-holy-evangelist','mm-simon-zelotes','mm-matthias-the-holy-apostle','mm-john-the-holy-evangelist'])assert.equal(await page.locator(`.atlas-entry[data-record^="${prefix}"]`).count(),1);
     assert.ok(await page.locator('.atlas-entry[data-record="peter-waldo"]').count()>0);
@@ -125,7 +128,7 @@ try{
     await page.goto(url('timeline/?direction=oldest'));await ready();assert.equal(await first(),'christian-beginnings');
     assert.equal(await page.evaluate(()=>localStorage.getItem('history-timeline-direction')),'newest','Shared URL must not overwrite the preference');
     await order().selectOption('oldest');
-    await page.goto(url(''));await ready();assert.equal(await first(),'christian-beginnings');
+    await page.goto(url('timeline/'));await ready();assert.equal(await first(),'christian-beginnings');
     await page.setViewportSize({width:390,height:844});
     await page.locator('.atlas-entry').first().scrollIntoViewIfNeeded();
     await settledHeader();
@@ -191,7 +194,7 @@ try{
         assert.equal(dimensions.padding,'0px');assert.ok(dimensions.height<=40,`Settings should occupy only their compact controls: ${dimensions.height}px`);
       }
       await page.goto(url(''));
-      await page.waitForFunction(()=>document.querySelector('.history-atlas')?.dataset.ready==='true');
+      await page.waitForFunction(()=>document.querySelector('[data-home-history]')?.dataset.ready==='true');
       await capture(`compact-header-${width<500?'mobile':'desktop'}.png`);
     }
   });
@@ -492,13 +495,18 @@ try{
     await noScript.route('https://fonts.googleapis.com/**',route=>route.fulfill({contentType:'text/css',body:''}));
     const staticPage=await noScript.newPage();await staticPage.goto(url(''));
     assert.equal(await staticPage.locator('#daily-title-links a:visible').count(),6);
+    assert.ok(await staticPage.locator('[data-discovery-open]').count()>1500);
+    assert.equal(await staticPage.locator('[data-record]').first().getAttribute('data-record'),'christian-beginnings');
+    await staticPage.locator('.discovery-more summary').first().click();
+    assert.ok(await staticPage.locator('.discovery-more[open] [data-discovery-open]').first().isVisible());
+    await staticPage.locator('#daily-discovery summary').click();
+    assert.ok(await staticPage.locator('#daily-stories .story-card').first().isVisible());
+    await staticPage.goto(url('timeline/'));
     assert.ok(await staticPage.locator('.atlas-entry').count()>100);
     assert.equal(await staticPage.locator('.atlas-entry').first().getAttribute('data-record'),'christian-beginnings');
     assert.equal(await staticPage.locator('.atlas-era').first().getAttribute('id'),'era-acts-and-early-church');
     assert.equal(await staticPage.locator('[name=direction]').inputValue(),'oldest');
     assert.equal(await staticPage.locator('.atlas-entry[data-record^="mm-andrew-the-holy-apostle"]').count(),1);
-    await staticPage.locator('#daily-discovery summary').click();
-    assert.ok(await staticPage.locator('#daily-stories .story-card').first().isVisible());
     await noScript.close();
   });
 

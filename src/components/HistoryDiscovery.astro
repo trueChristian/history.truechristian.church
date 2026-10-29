@@ -1,0 +1,64 @@
+---
+import {discoveryGroups,discoveryLabel} from '../lib/discovery';
+import {translate} from '../lib/localization.mjs';
+import type {HistoryRecord,BranchData} from '../lib/model';
+import '../history-discovery.css';
+interface Props {records:HistoryRecord[];branches:BranchData;base:string;ui:Record<string,string>}
+const {records,branches,base,ui}=Astro.props;
+const groups=discoveryGroups(records,branches);
+const t=(key:string,vars:Record<string,string|number>={})=>translate(ui,key,vars);
+---
+<section class="history-discovery" id="navigate-history" aria-labelledby="discovery-heading" data-home-history data-content-base={base}>
+  <header class="discovery-intro">
+    <h2 id="discovery-heading">{t('Navigate the history')}</h2>
+    <p>{t('Scroll through the years. Choose a title to read, or a date to explore another period.')}</p>
+    <a href={`${base}/timeline/`} class="text-link">{t('Open the full timeline and filters →')}</a>
+  </header>
+  <div class="discovery-layout">
+    <div class="discovery-content">
+      <div class="discovery-titles" id="discovery-titles">
+        {groups.map(era=><section class="discovery-era" id={`era-${era.id}`} data-discovery-era={era.id} aria-labelledby={`discovery-era-${era.id}`}>
+          <header class="discovery-era-heading"><p class="eyebrow">{t(era.short)}</p><h3 id={`discovery-era-${era.id}`} tabindex="-1">{t(era.title)}</h3><p>{t(era.description)}</p></header>
+          <ol class="discovery-list">
+            {era.opening.map(record=><li data-record={record.slug}>
+              <a id={`discover-${record.slug}`} href={`${base}/${record.route}`} data-discovery-open={record.route} data-era={era.id} title={record.title}>
+                <span class="discovery-date">{record.date?.label||t(record.era==='living-traditions'?'Living history':'Date not assigned')}{record.kind==='story'&&<span> · {t('Martyrs’ Mirror')}</span>}</span>
+                <span class="discovery-title">{discoveryLabel(record.title)}<span class="discovery-arrow" aria-hidden="true"> ←</span></span>
+              </a>
+            </li>)}
+          </ol>
+          {era.more.length>0&&<details class="discovery-more" id={`discovery-more-${era.id}`}>
+            <summary>{t('Explore {count} more titles in this period',{count:era.more.length})}</summary>
+            <ol class="discovery-list">
+              {era.more.map(record=><li data-record={record.slug}>
+                <a id={`discover-${record.slug}`} href={`${base}/${record.route}`} data-discovery-open={record.route} data-era={era.id} title={record.title}>
+                  <span class="discovery-date">{record.date?.label||t('Date not assigned')}{record.kind==='story'&&<span> · {t('Martyrs’ Mirror')}</span>}</span>
+                  <span class="discovery-title">{discoveryLabel(record.title)}<span class="discovery-arrow" aria-hidden="true"> ←</span></span>
+                </a>
+              </li>)}
+            </ol>
+          </details>}
+        </section>)}
+        <p class="discovery-end"><a href={`${base}/search/`}>{t('Search the complete text →')}</a></p>
+      </div>
+      <section class="discovery-reader" id="discovery-reader" aria-label={t('Selected history')} hidden>
+        <div class="discovery-reader-tools"><button type="button" data-discovery-back>{t('Back to timeline')} <span aria-hidden="true">→</span></button><a data-discovery-original href={`${base}/timeline/`}>{t('Open article page ↗')}</a></div>
+        <div data-discovery-article></div>
+        <button type="button" class="discovery-return" data-discovery-back>{t('Back to timeline')} <span aria-hidden="true">→</span></button>
+      </section>
+      <p class="discovery-announcement" role="status" aria-live="polite" data-discovery-status></p>
+    </div>
+    <aside class="discovery-rail" aria-label={t('History periods')}>
+      <nav class="discovery-wheel" aria-label={t('Jump to a period')}>
+        {groups.map(era=><a class="discovery-band" href={`#era-${era.id}`} data-discovery-band={era.id}>
+          <span class="discovery-band-label"><span class="discovery-band-date">{t(era.short).split('–').map((part,index)=><span>{index>0?'–':''}{part}</span>)}</span><span class="discovery-band-title">{t(era.title)}</span></span>
+        </a>)}
+        <span class="discovery-marker" aria-hidden="true"></span>
+      </nav>
+    </aside>
+  </div>
+  <noscript><p>{t('Choose any title to open its article. Expand a period to see more titles.')}</p></noscript>
+</section>
+<script>
+  import '../history-discovery';
+</script>
