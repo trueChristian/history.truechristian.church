@@ -101,7 +101,7 @@ export async function checkDiscovery({page,context,check,url,capture}) {
     assert.equal(await active(),'source-context');
     await page.selectOption('#theme-mode','dark');
     await capture('home-discovery-mobile-dark.png');
-    await page.selectOption('#theme-mode','light');
+    await page.selectOption('#theme-mode','system');
     await page.emulateMedia({reducedMotion:'no-preference'});await page.setViewportSize({width:1440,height:1000});
   });
 
