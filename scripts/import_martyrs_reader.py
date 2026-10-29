@@ -382,7 +382,9 @@ if __name__ == "__main__":
     encoded = (json.dumps(result, ensure_ascii=False, separators=(",", ":")) + "\n").encode("utf-8")
     data = gzip.compress(encoded, mtime=0)
     if args.check:
-        if not OUTPUT.is_file() or OUTPUT.read_bytes() != data:
+        # Verify the exact manifest bytes, independent of Python/zlib gzip headers.
+        # Newer runner images can encode the same JSON in a different gzip container.
+        if not OUTPUT.is_file() or gzip.decompress(OUTPUT.read_bytes()) != encoded:
             raise SystemExit("Reader manifest is stale; regenerate and review boundary changes")
     else:
         OUTPUT.write_bytes(data)
