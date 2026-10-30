@@ -16,6 +16,7 @@ Use Node.js 24 and the pinned dependencies in this branch:
 git clone --branch feat/home-history-discovery --single-branch https://github.com/trueChristian/history.truechristian.church.git
 cd history.truechristian.church
 npm ci
+export HISTORY_SOURCE_REF=feat/home-history-discovery
 npm run check
 npm run serve
 ```
@@ -24,6 +25,60 @@ Open **http://127.0.0.1:8080/en/** and scroll to **Navigate the history**.
 After installation/build, the preview can run without an internet connection.
 The external font service and external references require a connection; readable
 fallback fonts and all bundled history pages remain available offline.
+
+## Edit locally and update the GitHub review
+
+Work in the clone above, on `feat/home-history-discovery`. Confirm the current
+branch with `git branch --show-current`. The `HISTORY_SOURCE_REF` setting above
+also makes the site's GitHub source-edit links point to this review branch.
+
+Stop the static preview with Ctrl+C, then start the development server:
+
+```bash
+npm run dev -- --host 127.0.0.1 --port 4321
+```
+
+Open **http://127.0.0.1:4321/en/**. Edit and save files in your local editor to
+preview the changes. The homepage section is defined in
+`src/components/HistoryDiscovery.astro`; its styles are in
+`src/history-discovery.css`, reader/navigation behavior in
+`src/history-discovery.ts`, and wheel/title motion in
+`src/history-discovery-motion.ts`. Interface wording is in
+`content/locales/en/ui.json`. Restart the development server after changing
+content JSON so the preparation step regenerates the page data.
+
+When ready, stop the development server with Ctrl+C and validate the result:
+
+```bash
+npm run check
+npm run serve
+```
+
+Review the built site at **http://127.0.0.1:8080/en/**, then stop the server with
+Ctrl+C. Review, stage, commit, and push your changes:
+
+```bash
+git status
+git diff
+git add -p
+git diff --cached
+git commit -m "Refine homepage history navigation"
+git push origin feat/home-history-discovery
+```
+
+`git add -p` lets you select changes to existing files. If you intentionally
+create new source files, add those files explicitly before committing.
+
+Push with a GitHub account that has write access to the repository. Each push
+updates the existing [draft pull request #7](https://github.com/trueChristian/history.truechristian.church/pull/7),
+where you can review **Files changed** and the checks. Keep the pull request
+unmerged until the local review is complete. Branch pushes do not publish the
+live site.
+
+Before a later editing session, with your previous work committed, run
+`git pull --ff-only` and `npm ci` to pick up updates on this same branch.
+
+## GitHub build artifact
 
 A draft pull request also produces the existing `history-site-preview` artifact.
 That CI artifact is built under `/history.truechristian.church`; serve it using
