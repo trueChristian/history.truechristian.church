@@ -1,4 +1,5 @@
 import {t} from './ui.mjs';
+import {createDiscoveryMotion} from './history-discovery-motion';
 
 interface TimelinePosition {y:number;anchor?:{id:string;top:number};expanded:string[];era:number;focus?:string}
 interface DiscoveryState extends TimelinePosition {route:string;depth:number;origin?:TimelinePosition}
@@ -19,6 +20,7 @@ function initializeDiscovery(root:HTMLElement) {
   const links=[...titles.querySelectorAll<HTMLAnchorElement>('[data-discovery-open]')];
   const byRoute=new Map(links.map(link=>[link.dataset.discoveryOpen!,link]));
   const motion=matchMedia('(prefers-reduced-motion: reduce)');
+  const movement=createDiscoveryMotion({titles,wheel,bands,marker,motion});
   const base=root.dataset.contentBase!+'/';
   const pageTitle=document.title;
   const cache=new Map<string,string>();
@@ -67,20 +69,8 @@ function initializeDiscovery(root:HTMLElement) {
     for(let i=0;i<anchors.length-1;i++)if(line<anchors[i+1])return i+Math.max(0,Math.min(1,(line-anchors[i])/(anchors[i+1]-anchors[i])));
     return anchors.length-1;
   }
-  function renderWheel() {
-    const height=wheel.clientHeight;if(!height)return;
-    const visible=Math.min(bands.length,height<380?3:4.2),pitch=height/visible;
-    const position=progress();
-    const shift=Math.max(0,Math.min(bands.length-visible,(wheelFocus??position)-(visible-1)/2))*pitch;
-    bands.forEach((band,i)=>{
-      band.style.height=pitch+'px';band.style.transform=`translateY(${i*pitch-shift}px)`;
-      const distance=Math.abs(i-position);
-      const label=band.firstElementChild as HTMLElement;
-      label.style.transform=motion.matches?'none':`rotateX(${Math.max(-24,Math.min(24,(i-position)*10))}deg) scale(${Math.max(.88,1-distance*.03)})`;
-    });
-    const markerY=(state.era+.5)*pitch-shift;
-    marker.style.transform=`translateY(${markerY}px)`;
-    wheel.dataset.position=String(position);
+  function renderWheel(snap=false) {
+    movement.update(wheelFocus??progress(),state.era,snap);
   }
   function onScroll() {
     frame=0;
@@ -241,7 +231,7 @@ function initializeDiscovery(root:HTMLElement) {
     }
   });
   titles.addEventListener('toggle',schedule,true);
-  wheel.addEventListener('focusin',event=>{const band=(event.target as Element).closest<HTMLAnchorElement>('[data-discovery-band]');if(band){wheelFocus=bands.indexOf(band);renderWheel();}});
+  wheel.addEventListener('focusin',event=>{const band=(event.target as Element).closest<HTMLAnchorElement>('[data-discovery-band]');if(band){wheelFocus=bands.indexOf(band);renderWheel(true);}});
   wheel.addEventListener('focusout',event=>{if(!wheel.contains(event.relatedTarget as Node)){wheelFocus=null;renderWheel();}});
   wheel.addEventListener('keydown',event=>{
     const index=bands.indexOf(event.target as HTMLAnchorElement);if(index<0)return;
@@ -250,7 +240,7 @@ function initializeDiscovery(root:HTMLElement) {
   });
   root.addEventListener('keydown',event=>{if(event.key==='Escape'&&state.route){event.preventDefault();back();}});
   addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule,{passive:true});
-  new ResizeObserver(schedule).observe(root);motion.addEventListener('change',renderWheel);
+  new ResizeObserver(schedule).observe(root);motion.addEventListener('change',()=>renderWheel(true));
   addEventListener('pagehide',remember);
   addEventListener('popstate',()=>{
     const saved=history.state?.historyDiscovery as DiscoveryState|undefined;

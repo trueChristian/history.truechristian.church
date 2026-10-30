@@ -13,6 +13,8 @@ export async function checkDiscovery({page,context,check,url,capture}) {
     assert.equal(await page.locator('#timeline-filters').count(),0);
     assert.equal(await page.locator('.atlas-intro h1').innerText(),'Follow the witness.\nTrace the living streams.');
     assert.equal(await page.locator('#daily-title-links a:visible').count(),6);
+    assert.match(await page.locator('.discovery-witness').innerText(),/cloud of witnesses[\s\S]*run with patience[\s\S]*Hebrews 12:1[\s\S]*KJV, excerpt/);
+    assert.equal(await page.locator('.discovery-witness p').getAttribute('lang'),'en');
     const catalogURL=await page.locator('html').getAttribute('data-catalog-url');
     const catalog=await (await page.request.get(new URL(catalogURL,url('')).href)).json();
     assert.equal(await page.locator('[data-discovery-open]').count(),catalog.length);
@@ -22,6 +24,39 @@ export async function checkDiscovery({page,context,check,url,capture}) {
     assert.equal(await page.locator('.discovery-list a').first().getAttribute('id'),'discover-christian-beginnings');
     await page.locator('#navigate-history').scrollIntoViewIfNeeded();
     await capture('home-discovery-desktop.png');
+  });
+
+  await check('Witness titles settle into clear text; the curved wheel keeps separate reliable targets',async()=>{
+    const row=page.locator('#discover-christian-beginnings');
+    await row.evaluate(el=>window.scrollTo({top:el.closest('li').getBoundingClientRect().top+scrollY-innerHeight*.94,behavior:'instant'}));
+    await page.waitForFunction(()=>Number(getComputedStyle(document.querySelector('#discover-christian-beginnings .discovery-entry-surface')).opacity)<.8);
+    const incoming=await row.locator('.discovery-entry-surface').evaluate(el=>({y:new DOMMatrixReadOnly(getComputedStyle(el).transform).m42,blur:getComputedStyle(el).filter}));
+    assert.ok(incoming.y<0);assert.notEqual(incoming.blur,'blur(0px)');
+    await row.focus();
+    assert.equal(await row.locator('.discovery-entry-surface').evaluate(el=>getComputedStyle(el).opacity),'1','Keyboard focus must reveal text immediately');
+    await page.locator('.discovery-intro a').last().focus();
+    await row.evaluate(el=>window.scrollTo({top:el.closest('li').getBoundingClientRect().top+scrollY-innerHeight*.45,behavior:'instant'}));
+    await page.waitForFunction(()=>getComputedStyle(document.querySelector('#discover-christian-beginnings .discovery-entry-surface')).opacity==='1');
+    assert.equal(await row.locator('.discovery-entry-surface').evaluate(el=>new DOMMatrixReadOnly(getComputedStyle(el).transform).m42),0);
+    await page.waitForFunction(()=>Math.abs(Number(document.querySelector('.discovery-wheel').dataset.position)-Number(document.querySelector('.discovery-wheel').dataset.target))<.001);
+    const shape=await page.locator('.discovery-band-face').evaluateAll(faces=>faces.slice(0,3).map(face=>Math.abs(new DOMMatrixReadOnly(getComputedStyle(face).transform).m23)));
+    assert.ok(shape[0]>shape[2]+.1,'The upper face should bend away more than the central face');
+    const railLeft=(await page.locator('.discovery-rail').boundingBox()).x;
+    assert.ok(await page.locator('.discovery-intro,.discovery-era,.discovery-end').evaluateAll((nodes,left)=>nodes.every(el=>el.getBoundingClientRect().right<left),railLeft));
+    const separated=await page.locator('[data-discovery-band]').evaluateAll(nodes=>nodes.slice(1).every((node,i)=>node.getBoundingClientRect().top>=nodes[i].getBoundingClientRect().bottom-.1));
+    assert.ok(separated,'Curved date bands must not overlap adjacent click targets');
+    await page.locator('[data-discovery-band]').first().focus();
+    await page.keyboard.press('End');
+    const hit=await page.locator('[data-discovery-band]').last().evaluate(el=>{
+      const box=el.getBoundingClientRect();return document.elementFromPoint(box.x+box.width/2,box.y+box.height/2)?.closest('[data-discovery-band]')===el;
+    });
+    assert.ok(hit,'The final date band must be fully reachable');
+    await page.keyboard.press('Enter');await timeline();assert.equal(await active(),'source-context');
+    await page.locator('[data-discovery-band]').last().focus();await page.keyboard.press('Home');
+    await page.keyboard.press('Enter');await timeline();
+    await page.waitForFunction(()=>Math.abs(document.querySelector('#era-acts-and-early-church').getBoundingClientRect().top-132)<3);
+    assert.equal(await active(),'acts-and-early-church');
+    await capture('home-discovery-witness-titles.png');
   });
 
   await check('Era wheel follows the one page scroll and its dates jump to matching sections',async()=>{
@@ -88,6 +123,8 @@ export async function checkDiscovery({page,context,check,url,capture}) {
   await check('Narrow screens reserve the right rail; reduced motion and keyboard era navigation remain usable',async()=>{
     await page.setViewportSize({width:390,height:844});await page.emulateMedia({reducedMotion:'reduce'});
     await page.goto(url(''));await ready();
+    assert.ok(await page.locator('.discovery-entry-surface').evaluateAll(nodes=>nodes.every(el=>{const css=getComputedStyle(el);return css.opacity==='1'&&css.filter==='none'&&css.transform==='none';})));
+    assert.ok(await page.locator('.discovery-band-face').evaluateAll(nodes=>nodes.every(el=>getComputedStyle(el).transform==='none')));
     await page.locator('#discover-christian-beginnings').press('Enter');await reading();
     const reader=await page.locator('.discovery-reader').boundingBox(),rail=await page.locator('.discovery-rail').boundingBox();
     assert.ok(reader.x+reader.width<rail.x);
